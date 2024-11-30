@@ -1,0 +1,50 @@
+.bg-color1 {
+    background-color: #000000
+}
+.bg-color2 {
+    background-color: #353437
+}
+
+.bg-color3 {
+    background-color: #434448
+}
+
+.bg-color4 {
+    background-color:#68666a
+}
+.text-color1{
+    color:azure
+}
+.card-color1 {
+    border-color: #698fb0;
+    background-color: #323336;
+    color:#e2eeee;
+}
+.card-color2 {
+    border-color: #698fb0;
+    background-color: #444548;
+    color:#e2eeee;
+}
+/** Dark theme primary colors 
+--color-primary-a0: #072ff2;
+--color-primary-a10: #4d45f5;
+--color-primary-a20: #6e5bf7;
+--color-primary-a30: #8871f9;
+--color-primary-a40: #9f88fb;
+--color-primary-a50: #b49ffc;
+
+/** Dark theme surface colors 
+--color-surface-a0: #121212;
+--color-surface-a10: #282828;
+--color-surface-a20: #3f3f3f;
+--color-surface-a30: #575757;
+--color-surface-a40: #717171;
+--color-surface-a50: #8b8b8b;
+
+/** Dark theme mixed surface colors 
+--color-surface-mixed-a0: #1a1625;
+--color-surface-mixed-a10: #2f2b3a;
+--color-surface-mixed-a20: #46424f;
+--color-surface-mixed-a30: #5e5a66;
+--color-surface-mixed-a40: #76737e;
+--color-surface-mixed-a50: #908d96;

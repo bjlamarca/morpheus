@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<input type="hidden" id="token" value="{{ csrf_token }}">
+
+<div class="container-fluid rounded p-4 card-color1">
+    <h1>Hue!</h1>
+
+    <button id="sync-db-btn" class="btn btn-outline-primary">Sync DB</button>
+</div>
+
+<script src="{% static 'hue.js' %}"></script>
+
+{% endblock content %}

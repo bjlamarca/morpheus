@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>Dashboard</title>
+</head>
+<body>
+    <textarea id="dash-log" cols="100" rows="20"></textarea><br>
+    <input id="dash-input" type="text" size="100"><br>
+    <input id="dash-submit" type="button" value="Send">
+    
+    <script>
+        const dashSocket = new WebSocket(
+            'ws://'
+            + window.location.host
+            + '/ws/dash/'
+            
+        );
+
+        dashSocket.onmessage = function(e) {
+            const data = JSON.parse(e.data);
+            document.querySelector('#dash-log').value += (data.message + '\n');
+        };
+
+        dashSocket.onclose = function(e) {
+            console.error('Dashboard socket closed unexpectedly');
+        };
+
+        document.querySelector('#dash-input').focus();
+        document.querySelector('#dash-input').onkeyup = function(e) {
+            if (e.key === 'Enter') {  // enter, return
+                document.querySelector('#dash-submit').click();
+            }
+        };
+        
+        document.querySelector('#dash-submit').onclick = function(e) {
+            const messageInputDom = document.querySelector('#dash-input');
+            const message = messageInputDom.value;
+            console.log(message)
+            console.log(JSON.stringify({
+                'message': message
+            }))
+            dashSocket.send(JSON.stringify({
+                'message': message
+            }));
+            messageInputDom.value = '';
+        };
+    </script>
+</body>
+</html>

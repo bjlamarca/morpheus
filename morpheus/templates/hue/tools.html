@@ -1,0 +1,113 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<input type="hidden" id="token" value="{{ csrf_token }}">
+
+<div class="container-fluid rounded p-4 card-color2">
+    <h1>Tools</h1>
+    <div class="row">
+        <div class="col col-lg-6">
+            <div class="card">
+                <div class = "card-body">
+                    <input id="diag-input" type="text" size="50">
+                    <input id="all-lights" class="btn btn-outline-primary" type="button"
+                         value="All Lights">
+                    <input id="all-devices" class="btn btn-outline-primary" type="button"
+                         value="All Devices">
+                    <input id="all-buttons" class="btn btn-outline-primary" type="button"
+                         value="All Buttons">
+                    <input id="get-device" class="btn btn-outline-primary" type="button"
+                         value="Get Device">
+                    <input id="get-light" class="btn btn-outline-primary" type="button"
+                        value="Get Light Info">
+                    <input id="get-button" class="btn btn-outline-primary" type="button"
+                        value="Get Button">
+                    <input id="sync-device-db" class="btn btn-outline-primary" type="button"
+                        value="Sync Device DB">
+                    <input id="test" class="btn btn-outline-primary" type="button"
+                        value="Test"><br><br>
+                    <textarea id="diag-log" class = "form-control bg-color4" cols="100"
+                         rows="50"></textarea><br>
+                </div>
+            </div>
+        </div>
+        <div class="col col-lg-6">
+            <div class="card">
+                <div class = "card-body">
+                    <textarea id="hue-log" class = "form-control bg-color4" cols="100"
+                         rows="50"></textarea><br>
+                </div>
+            </div>
+        </div>
+    </div>      
+</div>
+
+<script>
+    const diagSocket = new WebSocket(
+        'ws://'
+        + window.location.host
+        + '/ws/hue/diag/'
+        
+    );
+
+    diagSocket.onmessage = function(e) {
+        const data = JSON.parse(e.data);
+        document.querySelector('#diag-log').value = data.message;
+    };
+
+    diagSocket.onclose = function(e) {
+        console.error('Dashboard socket closed unexpectedly');
+    };
+
+    document.querySelector('#all-lights').onclick = function(e) {
+        diagSocket.send(JSON.stringify({
+            'message': 'all_lights'
+        }));
+    };
+    document.querySelector('#all-devices').onclick = function(e) {
+        diagSocket.send(JSON.stringify({
+            'message': 'all_devices'
+        }));
+    };
+    document.querySelector('#all-buttons').onclick = function(e) {
+        diagSocket.send(JSON.stringify({
+            'message': 'all_buttons'
+        }));
+    };
+    document.querySelector('#sync-device-db').onclick = function(e) {
+        diagSocket.send(JSON.stringify({
+            'message': 'sync_device_db'
+        }));
+    };
+    document.querySelector('#get-light').onclick = function(e) {
+        const inputValue = document.querySelector('#diag-input').value
+        diagSocket.send(JSON.stringify({
+            'message': 'get_light',
+            'input_value': inputValue,
+        }));
+    };
+    document.querySelector('#get-button').onclick = function(e) {
+        const inputValue = document.querySelector('#diag-input').value
+        diagSocket.send(JSON.stringify({
+            'message': 'get_button',
+            'input_value': inputValue,
+        }));
+    };
+    document.querySelector('#get-device').onclick = function(e) {
+        const inputValue = document.querySelector('#diag-input').value
+        diagSocket.send(JSON.stringify({
+            'message': 'get_device',
+            'input_value': inputValue,
+        }));
+    };
+    document.querySelector('#test').onclick = function(e) {
+        diagSocket.send(JSON.stringify({
+            'message': 'test'
+        }));
+    };
+
+</script>
+
+{% endblock content %}
