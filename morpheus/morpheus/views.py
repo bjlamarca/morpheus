@@ -12,9 +12,9 @@ class IndexView(View):
         hub = Hub()
         hub.set_hub(1)
         device_id = "5272447c-9bf4-4365-b7be-2404bfbac174"
-        device = hub.get_items('all_lights', device_id)
+        device = hub.get_item('light', device_id)
         #for device in devices:
-        print("DEVICE---", type(device))
+        print("DEVICE---", device)
         #light_str = json.dumps(lights, indent=4) 
         
         #result = light_str

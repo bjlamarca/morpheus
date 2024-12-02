@@ -1,0 +1,4390 @@
+[
+    {
+        "id": "047b3d91-5419-4ef2-b9b0-efadda9f628c",
+        "id_v1": "/lights/11",
+        "owner": {
+            "rid": "edffeed4-99e4-4b1b-83ca-27d08c9b2d8b",
+            "rtype": "device"
+        },
+        "metadata": {
+            "name": "Entry 2",
+            "archetype": "sultan_bulb",
+            "function": "mixed"
+        },
+        "product_data": {
+            "function": "mixed"
+        },
+        "identify": {},
+        "service_id": 0,
+        "on": {
+            "on": true
+        },
+        "dimming": {
+            "brightness": 100.0,
+            "min_dim_level": 0.2
+        },
+        "dimming_delta": {},
+        "color_temperature": {
+            "mirek": 343,
+            "mirek_valid": true,
+            "mirek_schema": {
+                "mirek_minimum": 153,
+                "mirek_maximum": 500
+            }
+        },
+        "color_temperature_delta": {},
+        "color": {
+            "xy": {
+                "x": 0.4431,
+                "y": 0.4061
+            },
+            "gamut": {
+                "red": {
+                    "x": 0.6915,
+                    "y": 0.3083
+                },
+                "green": {
+                    "x": 0.17,
+                    "y": 0.7
+                },
+                "blue": {
+                    "x": 0.1532,
+                    "y": 0.0475
+                }
+            },
+            "gamut_type": "C"
+        },
+        "dynamics": {
+            "status": "none",
+            "status_values": [
+                "none",
+                "dynamic_palette"
+            ],
+            "speed": 0.0,
+            "speed_valid": false
+        },
+        "alert": {
+            "action_values": [
+                "breathe"
+            ]
+        },
+        "signaling": {
+            "signal_values": [
+                "no_signal",
+                "on_off",
+                "on_off_color",
+                "alternating"
+            ]
+        },
+        "mode": "normal",
+        "effects": {
+            "status_values": [
+                "no_effect",
+                "candle",
+                "fire",
+                "prism",
+                "sparkle",
+                "opal",
+                "glisten",
+                "underwater",
+                "cosmos",
+                "sunbeam",
+                "enchant"
+            ],
+            "status": "no_effect",
+            "effect_values": [
+                "no_effect",
+                "candle",
+                "fire",
+                "prism",
+                "sparkle",
+                "opal",
+                "glisten",
+                "underwater",
+                "cosmos",
+                "sunbeam",
+                "enchant"
+            ]
+        },
+        "effects_v2": {
+            "action": {
+                "effect_values": [
+                    "no_effect",
+                    "candle",
+                    "fire",
+                    "prism",
+                    "sparkle",
+                    "opal",
+                    "glisten",
+                    "underwater",
+                    "cosmos",
+                    "sunbeam",
+                    "enchant"
+                ]
+            },
+            "status": {
+                "effect": "no_effect",
+                "effect_values": [
+                    "no_effect",
+                    "candle",
+                    "fire",
+                    "prism",
+                    "sparkle",
+                    "opal",
+                    "glisten",
+                    "underwater",
+                    "cosmos",
+                    "sunbeam",
+                    "enchant"
+                ]
+            }
+        },
+        "timed_effects": {
+            "status_values": [
+                "no_effect",
+                "sunrise",
+                "sunset"
+            ],
+            "status": "no_effect",
+            "effect_values": [
+                "no_effect",
+                "sunrise",
+                "sunset"
+            ]
+        },
+        "powerup": {
+            "preset": "powerfail",
+            "configured": true,
+            "on": {
+                "mode": "previous"
+            },
+            "dimming": {
+                "mode": "previous"
+            },
+            "color": {
+                "mode": "previous"
+            }
+        },
+        "type": "light"
+    },
+    {
+        "id": "12f78864-9bb4-44dc-b3a5-dac00d4d7c92",
+        "id_v1": "/lights/30",
+        "owner": {
+            "rid": "af4878ce-ac89-4b45-97a0-26b08258c408",
+            "rtype": "device"
+        },
+        "metadata": {
+            "name": "Living Room Plant",
+            "archetype": "ground_spot",
+            "function": "mixed"
+        },
+        "product_data": {
+            "function": "mixed"
+        },
+        "identify": {},
+        "service_id": 0,
+        "on": {
+            "on": false
+        },
+        "dimming": {
+            "brightness": 100.0,
+            "min_dim_level": 0.2
+        },
+        "dimming_delta": {},
+        "color_temperature": {
+            "mirek": 167,
+            "mirek_valid": true,
+            "mirek_schema": {
+                "mirek_minimum": 153,
+                "mirek_maximum": 500
+            }
+        },
+        "color_temperature_delta": {},
+        "color": {
+            "xy": {
+                "x": 0.322,
+                "y": 0.3368
+            },
+            "gamut": {
+                "red": {
+                    "x": 0.6915,
+                    "y": 0.3083
+                },
+                "green": {
+                    "x": 0.17,
+                    "y": 0.7
+                },
+                "blue": {
+                    "x": 0.1532,
+                    "y": 0.0475
+                }
+            },
+            "gamut_type": "C"
+        },
+        "dynamics": {
+            "status": "none",
+            "status_values": [
+                "none",
+                "dynamic_palette"
+            ],
+            "speed": 0.0,
+            "speed_valid": false
+        },
+        "alert": {
+            "action_values": [
+                "breathe"
+            ]
+        },
+        "signaling": {
+            "signal_values": [
+                "no_signal",
+                "on_off",
+                "on_off_color",
+                "alternating"
+            ]
+        },
+        "mode": "normal",
+        "effects": {
+            "status_values": [
+                "no_effect",
+                "candle",
+                "fire",
+                "prism",
+                "sparkle",
+                "opal",
+                "glisten",
+                "underwater",
+                "cosmos",
+                "sunbeam",
+                "enchant"
+            ],
+            "status": "no_effect",
+            "effect_values": [
+                "no_effect",
+                "candle",
+                "fire",
+                "prism",
+                "sparkle",
+                "opal",
+                "glisten",
+                "underwater",
+                "cosmos",
+                "sunbeam",
+                "enchant"
+            ]
+        },
+        "effects_v2": {
+            "action": {
+                "effect_values": [
+                    "no_effect",
+                    "candle",
+                    "fire",
+                    "prism",
+                    "sparkle",
+                    "opal",
+                    "glisten",
+                    "underwater",
+                    "cosmos",
+                    "sunbeam",
+                    "enchant"
+                ]
+            },
+            "status": {
+                "effect": "no_effect",
+                "effect_values": [
+                    "no_effect",
+                    "candle",
+                    "fire",
+                    "prism",
+                    "sparkle",
+                    "opal",
+                    "glisten",
+                    "underwater",
+                    "cosmos",
+                    "sunbeam",
+                    "enchant"
+                ]
+            }
+        },
+        "timed_effects": {
+            "status_values": [
+                "no_effect",
+                "sunrise",
+                "sunset"
+            ],
+            "status": "no_effect",
+            "effect_values": [
+                "no_effect",
+                "sunrise",
+                "sunset"
+            ]
+        },
+        "powerup": {
+            "preset": "safety",
+            "configured": true,
+            "on": {
+                "mode": "on",
+                "on": {
+                    "on": true
+                }
+            },
+            "dimming": {
+                "mode": "dimming",
+                "dimming": {
+                    "brightness": 100.0
+                }
+            },
+            "color": {
+                "mode": "color_temperature",
+                "color_temperature": {
+                    "mirek": 366
+                }
+            }
+        },
+        "type": "light"
+    },
+    {
+        "id": "2c9372b7-864d-4076-ae0d-799ab448ec49",
+        "id_v1": "/lights/15",
+        "owner": {
+            "rid": "f08f9dfd-cf42-4c67-a69b-edfcdc1d26f2",
+            "rtype": "device"
+        },
+        "metadata": {
+            "name": "Bryan Ceiling 1",
+            "archetype": "ceiling_round",
+            "function": "mixed"
+        },
+        "product_data": {
+            "function": "mixed"
+        },
+        "identify": {},
+        "service_id": 0,
+        "on": {
+            "on": false
+        },
+        "dimming": {
+            "brightness": 56.52,
+            "min_dim_level": 0.2
+        },
+        "dimming_delta": {},
+        "color_temperature": {
+            "mirek": 443,
+            "mirek_valid": true,
+            "mirek_schema": {
+                "mirek_minimum": 153,
+                "mirek_maximum": 500
+            }
+        },
+        "color_temperature_delta": {},
+        "color": {
+            "xy": {
+                "x": 0.4998,
+                "y": 0.4152
+            },
+            "gamut": {
+                "red": {
+                    "x": 0.6915,
+                    "y": 0.3083
+                },
+                "green": {
+                    "x": 0.17,
+                    "y": 0.7
+                },
+                "blue": {
+                    "x": 0.1532,
+                    "y": 0.0475
+                }
+            },
+            "gamut_type": "C"
+        },
+        "dynamics": {
+            "status": "none",
+            "status_values": [
+                "none",
+                "dynamic_palette"
+            ],
+            "speed": 0.0,
+            "speed_valid": false
+        },
+        "alert": {
+            "action_values": [
+                "breathe"
+            ]
+        },
+        "signaling": {
+            "signal_values": [
+                "no_signal",
+                "on_off",
+                "on_off_color",
+                "alternating"
+            ]
+        },
+        "mode": "normal",
+        "effects": {
+            "status_values": [
+                "no_effect",
+                "candle",
+                "fire",
+                "prism",
+                "sparkle",
+                "opal",
+                "glisten",
+                "underwater",
+                "cosmos",
+                "sunbeam",
+                "enchant"
+            ],
+            "status": "no_effect",
+            "effect_values": [
+                "no_effect",
+                "candle",
+                "fire",
+                "prism",
+                "sparkle",
+                "opal",
+                "glisten",
+                "underwater",
+                "cosmos",
+                "sunbeam",
+                "enchant"
+            ]
+        },
+        "effects_v2": {
+            "action": {
+                "effect_values": [
+                    "no_effect",
+                    "candle",
+                    "fire",
+                    "prism",
+                    "sparkle",
+                    "opal",
+                    "glisten",
+                    "underwater",
+                    "cosmos",
+                    "sunbeam",
+                    "enchant"
+                ]
+            },
+            "status": {
+                "effect": "no_effect",
+                "effect_values": [
+                    "no_effect",
+                    "candle",
+                    "fire",
+                    "prism",
+                    "sparkle",
+                    "opal",
+                    "glisten",
+                    "underwater",
+                    "cosmos",
+                    "sunbeam",
+                    "enchant"
+                ]
+            }
+        },
+        "timed_effects": {
+            "status_values": [
+                "no_effect",
+                "sunrise",
+                "sunset"
+            ],
+            "status": "no_effect",
+            "effect_values": [
+                "no_effect",
+                "sunrise",
+                "sunset"
+            ]
+        },
+        "powerup": {
+            "preset": "powerfail",
+            "configured": true,
+            "on": {
+                "mode": "previous"
+            },
+            "dimming": {
+                "mode": "previous"
+            },
+            "color": {
+                "mode": "previous"
+            }
+        },
+        "type": "light"
+    },
+    {
+        "id": "3044f19a-0179-4b32-b41b-e3c907da4167",
+        "id_v1": "/lights/13",
+        "owner": {
+            "rid": "c5bc2f42-3faa-4373-8cca-b166ed8cf2eb",
+            "rtype": "device"
+        },
+        "metadata": {
+            "name": "Hall 2",
+            "archetype": "sultan_bulb",
+            "function": "mixed"
+        },
+        "product_data": {
+            "function": "mixed"
+        },
+        "identify": {},
+        "service_id": 0,
+        "on": {
+            "on": true
+        },
+        "dimming": {
+            "brightness": 100.0,
+            "min_dim_level": 0.2
+        },
+        "dimming_delta": {},
+        "color_temperature": {
+            "mirek": 343,
+            "mirek_valid": true,
+            "mirek_schema": {
+                "mirek_minimum": 153,
+                "mirek_maximum": 500
+            }
+        },
+        "color_temperature_delta": {},
+        "color": {
+            "xy": {
+                "x": 0.4431,
+                "y": 0.4061
+            },
+            "gamut": {
+                "red": {
+                    "x": 0.6915,
+                    "y": 0.3083
+                },
+                "green": {
+                    "x": 0.17,
+                    "y": 0.7
+                },
+                "blue": {
+                    "x": 0.1532,
+                    "y": 0.0475
+                }
+            },
+            "gamut_type": "C"
+        },
+        "dynamics": {
+            "status": "none",
+            "status_values": [
+                "none",
+                "dynamic_palette"
+            ],
+            "speed": 0.0,
+            "speed_valid": false
+        },
+        "alert": {
+            "action_values": [
+                "breathe"
+            ]
+        },
+        "signaling": {
+            "signal_values": [
+                "no_signal",
+                "on_off",
+                "on_off_color",
+                "alternating"
+            ]
+        },
+        "mode": "normal",
+        "effects": {
+            "status_values": [
+                "no_effect",
+                "candle",
+                "fire",
+                "prism",
+                "sparkle",
+                "opal",
+                "glisten",
+                "underwater",
+                "cosmos",
+                "sunbeam",
+                "enchant"
+            ],
+            "status": "no_effect",
+            "effect_values": [
+                "no_effect",
+                "candle",
+                "fire",
+                "prism",
+                "sparkle",
+                "opal",
+                "glisten",
+                "underwater",
+                "cosmos",
+                "sunbeam",
+                "enchant"
+            ]
+        },
+        "effects_v2": {
+            "action": {
+                "effect_values": [
+                    "no_effect",
+                    "candle",
+                    "fire",
+                    "prism",
+                    "sparkle",
+                    "opal",
+                    "glisten",
+                    "underwater",
+                    "cosmos",
+                    "sunbeam",
+                    "enchant"
+                ]
+            },
+            "status": {
+                "effect": "no_effect",
+                "effect_values": [
+                    "no_effect",
+                    "candle",
+                    "fire",
+                    "prism",
+                    "sparkle",
+                    "opal",
+                    "glisten",
+                    "underwater",
+                    "cosmos",
+                    "sunbeam",
+                    "enchant"
+                ]
+            }
+        },
+        "timed_effects": {
+            "status_values": [
+                "no_effect",
+                "sunrise",
+                "sunset"
+            ],
+            "status": "no_effect",
+            "effect_values": [
+                "no_effect",
+                "sunrise",
+                "sunset"
+            ]
+        },
+        "powerup": {
+            "preset": "powerfail",
+            "configured": true,
+            "on": {
+                "mode": "previous"
+            },
+            "dimming": {
+                "mode": "previous"
+            },
+            "color": {
+                "mode": "previous"
+            }
+        },
+        "type": "light"
+    },
+    {
+        "id": "372a8a27-d764-4d2e-b0a7-5f39f36f4fe9",
+        "id_v1": "/lights/32",
+        "owner": {
+            "rid": "3794b88a-f569-4f40-93c4-db2f1ea7bd9b",
+            "rtype": "device"
+        },
+        "metadata": {
+            "name": "Kitchen Ceiling 2",
+            "archetype": "sultan_bulb",
+            "function": "mixed"
+        },
+        "product_data": {
+            "function": "mixed"
+        },
+        "identify": {},
+        "service_id": 0,
+        "on": {
+            "on": true
+        },
+        "dimming": {
+            "brightness": 100.0,
+            "min_dim_level": 0.2
+        },
+        "dimming_delta": {},
+        "color_temperature": {
+            "mirek": 343,
+            "mirek_valid": true,
+            "mirek_schema": {
+                "mirek_minimum": 153,
+                "mirek_maximum": 500
+            }
+        },
+        "color_temperature_delta": {},
+        "color": {
+            "xy": {
+                "x": 0.4431,
+                "y": 0.4061
+            },
+            "gamut": {
+                "red": {
+                    "x": 0.6915,
+                    "y": 0.3083
+                },
+                "green": {
+                    "x": 0.17,
+                    "y": 0.7
+                },
+                "blue": {
+                    "x": 0.1532,
+                    "y": 0.0475
+                }
+            },
+            "gamut_type": "C"
+        },
+        "dynamics": {
+            "status": "none",
+            "status_values": [
+                "none",
+                "dynamic_palette"
+            ],
+            "speed": 0.0,
+            "speed_valid": false
+        },
+        "alert": {
+            "action_values": [
+                "breathe"
+            ]
+        },
+        "signaling": {
+            "signal_values": [
+                "no_signal",
+                "on_off",
+                "on_off_color",
+                "alternating"
+            ]
+        },
+        "mode": "normal",
+        "effects": {
+            "status_values": [
+                "no_effect",
+                "candle",
+                "fire",
+                "prism",
+                "sparkle",
+                "opal",
+                "glisten",
+                "underwater",
+                "cosmos",
+                "sunbeam",
+                "enchant"
+            ],
+            "status": "no_effect",
+            "effect_values": [
+                "no_effect",
+                "candle",
+                "fire",
+                "prism",
+                "sparkle",
+                "opal",
+                "glisten",
+                "underwater",
+                "cosmos",
+                "sunbeam",
+                "enchant"
+            ]
+        },
+        "effects_v2": {
+            "action": {
+                "effect_values": [
+                    "no_effect",
+                    "candle",
+                    "fire",
+                    "prism",
+                    "sparkle",
+                    "opal",
+                    "glisten",
+                    "underwater",
+                    "cosmos",
+                    "sunbeam",
+                    "enchant"
+                ]
+            },
+            "status": {
+                "effect": "no_effect",
+                "effect_values": [
+                    "no_effect",
+                    "candle",
+                    "fire",
+                    "prism",
+                    "sparkle",
+                    "opal",
+                    "glisten",
+                    "underwater",
+                    "cosmos",
+                    "sunbeam",
+                    "enchant"
+                ]
+            }
+        },
+        "timed_effects": {
+            "status_values": [
+                "no_effect",
+                "sunrise",
+                "sunset"
+            ],
+            "status": "no_effect",
+            "effect_values": [
+                "no_effect",
+                "sunrise",
+                "sunset"
+            ]
+        },
+        "powerup": {
+            "preset": "safety",
+            "configured": true,
+            "on": {
+                "mode": "on",
+                "on": {
+                    "on": true
+                }
+            },
+            "dimming": {
+                "mode": "dimming",
+                "dimming": {
+                    "brightness": 100.0
+                }
+            },
+            "color": {
+                "mode": "color_temperature",
+                "color_temperature": {
+                    "mirek": 366
+                }
+            }
+        },
+        "type": "light"
+    },
+    {
+        "id": "4be1cb2b-aff5-4516-bd25-5868a6448b1d",
+        "id_v1": "/lights/20",
+        "owner": {
+            "rid": "f04c5464-62c6-4db0-9db3-707f114ae6b3",
+            "rtype": "device"
+        },
+        "metadata": {
+            "name": "Living Room Lamp 1",
+            "archetype": "sultan_bulb",
+            "function": "mixed"
+        },
+        "product_data": {
+            "function": "mixed"
+        },
+        "identify": {},
+        "service_id": 0,
+        "on": {
+            "on": true
+        },
+        "dimming": {
+            "brightness": 100.0,
+            "min_dim_level": 0.2
+        },
+        "dimming_delta": {},
+        "color_temperature": {
+            "mirek": 343,
+            "mirek_valid": true,
+            "mirek_schema": {
+                "mirek_minimum": 153,
+                "mirek_maximum": 500
+            }
+        },
+        "color_temperature_delta": {},
+        "color": {
+            "xy": {
+                "x": 0.445,
+                "y": 0.4067
+            },
+            "gamut": {
+                "red": {
+                    "x": 0.6915,
+                    "y": 0.3083
+                },
+                "green": {
+                    "x": 0.17,
+                    "y": 0.7
+                },
+                "blue": {
+                    "x": 0.1532,
+                    "y": 0.0475
+                }
+            },
+            "gamut_type": "C"
+        },
+        "dynamics": {
+            "status": "none",
+            "status_values": [
+                "none",
+                "dynamic_palette"
+            ],
+            "speed": 0.0,
+            "speed_valid": false
+        },
+        "alert": {
+            "action_values": [
+                "breathe"
+            ]
+        },
+        "signaling": {
+            "signal_values": [
+                "no_signal",
+                "on_off",
+                "on_off_color",
+                "alternating"
+            ]
+        },
+        "mode": "normal",
+        "effects": {
+            "status_values": [
+                "no_effect",
+                "candle",
+                "fire",
+                "prism",
+                "sparkle",
+                "opal",
+                "glisten",
+                "underwater",
+                "cosmos",
+                "sunbeam",
+                "enchant"
+            ],
+            "status": "no_effect",
+            "effect_values": [
+                "no_effect",
+                "candle",
+                "fire",
+                "prism",
+                "sparkle",
+                "opal",
+                "glisten",
+                "underwater",
+                "cosmos",
+                "sunbeam",
+                "enchant"
+            ]
+        },
+        "effects_v2": {
+            "action": {
+                "effect_values": [
+                    "no_effect",
+                    "candle",
+                    "fire",
+                    "prism",
+                    "sparkle",
+                    "opal",
+                    "glisten",
+                    "underwater",
+                    "cosmos",
+                    "sunbeam",
+                    "enchant"
+                ]
+            },
+            "status": {
+                "effect": "no_effect",
+                "effect_values": [
+                    "no_effect",
+                    "candle",
+                    "fire",
+                    "prism",
+                    "sparkle",
+                    "opal",
+                    "glisten",
+                    "underwater",
+                    "cosmos",
+                    "sunbeam",
+                    "enchant"
+                ]
+            }
+        },
+        "timed_effects": {
+            "status_values": [
+                "no_effect",
+                "sunrise",
+                "sunset"
+            ],
+            "status": "no_effect",
+            "effect_values": [
+                "no_effect",
+                "sunrise",
+                "sunset"
+            ]
+        },
+        "powerup": {
+            "preset": "safety",
+            "configured": true,
+            "on": {
+                "mode": "on",
+                "on": {
+                    "on": true
+                }
+            },
+            "dimming": {
+                "mode": "dimming",
+                "dimming": {
+                    "brightness": 100.0
+                }
+            },
+            "color": {
+                "mode": "color_temperature",
+                "color_temperature": {
+                    "mirek": 366
+                }
+            }
+        },
+        "type": "light"
+    },
+    {
+        "id": "5272447c-9bf4-4365-b7be-2404bfbac174",
+        "id_v1": "/lights/21",
+        "owner": {
+            "rid": "13a42142-0d1d-47e2-afc6-5f08d2883342",
+            "rtype": "device"
+        },
+        "metadata": {
+            "name": "Dining 2",
+            "archetype": "sultan_bulb",
+            "function": "mixed"
+        },
+        "product_data": {
+            "function": "mixed"
+        },
+        "identify": {},
+        "service_id": 0,
+        "on": {
+            "on": true
+        },
+        "dimming": {
+            "brightness": 100.0,
+            "min_dim_level": 0.2
+        },
+        "dimming_delta": {},
+        "color_temperature": {
+            "mirek": 343,
+            "mirek_valid": true,
+            "mirek_schema": {
+                "mirek_minimum": 153,
+                "mirek_maximum": 500
+            }
+        },
+        "color_temperature_delta": {},
+        "color": {
+            "xy": {
+                "x": 0.4431,
+                "y": 0.4061
+            },
+            "gamut": {
+                "red": {
+                    "x": 0.6915,
+                    "y": 0.3083
+                },
+                "green": {
+                    "x": 0.17,
+                    "y": 0.7
+                },
+                "blue": {
+                    "x": 0.1532,
+                    "y": 0.0475
+                }
+            },
+            "gamut_type": "C"
+        },
+        "dynamics": {
+            "status": "none",
+            "status_values": [
+                "none",
+                "dynamic_palette"
+            ],
+            "speed": 0.0,
+            "speed_valid": false
+        },
+        "alert": {
+            "action_values": [
+                "breathe"
+            ]
+        },
+        "signaling": {
+            "signal_values": [
+                "no_signal",
+                "on_off",
+                "on_off_color",
+                "alternating"
+            ]
+        },
+        "mode": "normal",
+        "effects": {
+            "status_values": [
+                "no_effect",
+                "candle",
+                "fire",
+                "prism",
+                "sparkle",
+                "opal",
+                "glisten",
+                "underwater",
+                "cosmos",
+                "sunbeam",
+                "enchant"
+            ],
+            "status": "no_effect",
+            "effect_values": [
+                "no_effect",
+                "candle",
+                "fire",
+                "prism",
+                "sparkle",
+                "opal",
+                "glisten",
+                "underwater",
+                "cosmos",
+                "sunbeam",
+                "enchant"
+            ]
+        },
+        "effects_v2": {
+            "action": {
+                "effect_values": [
+                    "no_effect",
+                    "candle",
+                    "fire",
+                    "prism",
+                    "sparkle",
+                    "opal",
+                    "glisten",
+                    "underwater",
+                    "cosmos",
+                    "sunbeam",
+                    "enchant"
+                ]
+            },
+            "status": {
+                "effect": "no_effect",
+                "effect_values": [
+                    "no_effect",
+                    "candle",
+                    "fire",
+                    "prism",
+                    "sparkle",
+                    "opal",
+                    "glisten",
+                    "underwater",
+                    "cosmos",
+                    "sunbeam",
+                    "enchant"
+                ]
+            }
+        },
+        "timed_effects": {
+            "status_values": [
+                "no_effect",
+                "sunrise",
+                "sunset"
+            ],
+            "status": "no_effect",
+            "effect_values": [
+                "no_effect",
+                "sunrise",
+                "sunset"
+            ]
+        },
+        "powerup": {
+            "preset": "powerfail",
+            "configured": true,
+            "on": {
+                "mode": "previous"
+            },
+            "dimming": {
+                "mode": "previous"
+            },
+            "color": {
+                "mode": "previous"
+            }
+        },
+        "type": "light"
+    },
+    {
+        "id": "612262c6-cb56-4a0a-856b-5b5030eece0d",
+        "id_v1": "/lights/12",
+        "owner": {
+            "rid": "8bb89651-349a-4d9e-b548-d593abe5fc63",
+            "rtype": "device"
+        },
+        "metadata": {
+            "name": "Hall 1",
+            "archetype": "ceiling_round",
+            "function": "mixed"
+        },
+        "product_data": {
+            "function": "mixed"
+        },
+        "identify": {},
+        "service_id": 0,
+        "on": {
+            "on": true
+        },
+        "dimming": {
+            "brightness": 100.0,
+            "min_dim_level": 0.2
+        },
+        "dimming_delta": {},
+        "color_temperature": {
+            "mirek": 343,
+            "mirek_valid": true,
+            "mirek_schema": {
+                "mirek_minimum": 153,
+                "mirek_maximum": 500
+            }
+        },
+        "color_temperature_delta": {},
+        "color": {
+            "xy": {
+                "x": 0.4431,
+                "y": 0.4061
+            },
+            "gamut": {
+                "red": {
+                    "x": 0.6915,
+                    "y": 0.3083
+                },
+                "green": {
+                    "x": 0.17,
+                    "y": 0.7
+                },
+                "blue": {
+                    "x": 0.1532,
+                    "y": 0.0475
+                }
+            },
+            "gamut_type": "C"
+        },
+        "dynamics": {
+            "status": "none",
+            "status_values": [
+                "none",
+                "dynamic_palette"
+            ],
+            "speed": 0.0,
+            "speed_valid": false
+        },
+        "alert": {
+            "action_values": [
+                "breathe"
+            ]
+        },
+        "signaling": {
+            "signal_values": [
+                "no_signal",
+                "on_off",
+                "on_off_color",
+                "alternating"
+            ]
+        },
+        "mode": "normal",
+        "effects": {
+            "status_values": [
+                "no_effect",
+                "candle",
+                "fire",
+                "prism",
+                "sparkle",
+                "opal",
+                "glisten",
+                "underwater",
+                "cosmos",
+                "sunbeam",
+                "enchant"
+            ],
+            "status": "no_effect",
+            "effect_values": [
+                "no_effect",
+                "candle",
+                "fire",
+                "prism",
+                "sparkle",
+                "opal",
+                "glisten",
+                "underwater",
+                "cosmos",
+                "sunbeam",
+                "enchant"
+            ]
+        },
+        "effects_v2": {
+            "action": {
+                "effect_values": [
+                    "no_effect",
+                    "candle",
+                    "fire",
+                    "prism",
+                    "sparkle",
+                    "opal",
+                    "glisten",
+                    "underwater",
+                    "cosmos",
+                    "sunbeam",
+                    "enchant"
+                ]
+            },
+            "status": {
+                "effect": "no_effect",
+                "effect_values": [
+                    "no_effect",
+                    "candle",
+                    "fire",
+                    "prism",
+                    "sparkle",
+                    "opal",
+                    "glisten",
+                    "underwater",
+                    "cosmos",
+                    "sunbeam",
+                    "enchant"
+                ]
+            }
+        },
+        "timed_effects": {
+            "status_values": [
+                "no_effect",
+                "sunrise",
+                "sunset"
+            ],
+            "status": "no_effect",
+            "effect_values": [
+                "no_effect",
+                "sunrise",
+                "sunset"
+            ]
+        },
+        "powerup": {
+            "preset": "powerfail",
+            "configured": true,
+            "on": {
+                "mode": "previous"
+            },
+            "dimming": {
+                "mode": "previous"
+            },
+            "color": {
+                "mode": "previous"
+            }
+        },
+        "type": "light"
+    },
+    {
+        "id": "7269a12c-af49-476f-b79d-3431c1705397",
+        "id_v1": "/lights/4",
+        "owner": {
+            "rid": "984c4894-aa39-4267-a54e-aa4a2a4a92a3",
+            "rtype": "device"
+        },
+        "metadata": {
+            "name": "Office Ceiling 1",
+            "archetype": "table_shade",
+            "function": "mixed"
+        },
+        "product_data": {
+            "function": "mixed"
+        },
+        "identify": {},
+        "service_id": 0,
+        "on": {
+            "on": true
+        },
+        "dimming": {
+            "brightness": 100.0,
+            "min_dim_level": 0.2
+        },
+        "dimming_delta": {},
+        "color_temperature": {
+            "mirek": 343,
+            "mirek_valid": true,
+            "mirek_schema": {
+                "mirek_minimum": 153,
+                "mirek_maximum": 500
+            }
+        },
+        "color_temperature_delta": {},
+        "color": {
+            "xy": {
+                "x": 0.4431,
+                "y": 0.4061
+            },
+            "gamut": {
+                "red": {
+                    "x": 0.6915,
+                    "y": 0.3083
+                },
+                "green": {
+                    "x": 0.17,
+                    "y": 0.7
+                },
+                "blue": {
+                    "x": 0.1532,
+                    "y": 0.0475
+                }
+            },
+            "gamut_type": "C"
+        },
+        "dynamics": {
+            "status": "none",
+            "status_values": [
+                "none",
+                "dynamic_palette"
+            ],
+            "speed": 0.0,
+            "speed_valid": false
+        },
+        "alert": {
+            "action_values": [
+                "breathe"
+            ]
+        },
+        "signaling": {
+            "signal_values": [
+                "no_signal",
+                "on_off",
+                "on_off_color",
+                "alternating"
+            ]
+        },
+        "mode": "normal",
+        "effects": {
+            "status_values": [
+                "no_effect",
+                "candle",
+                "fire",
+                "prism",
+                "sparkle",
+                "opal",
+                "glisten",
+                "underwater",
+                "cosmos",
+                "sunbeam",
+                "enchant"
+            ],
+            "status": "no_effect",
+            "effect_values": [
+                "no_effect",
+                "candle",
+                "fire",
+                "prism",
+                "sparkle",
+                "opal",
+                "glisten",
+                "underwater",
+                "cosmos",
+                "sunbeam",
+                "enchant"
+            ]
+        },
+        "effects_v2": {
+            "action": {
+                "effect_values": [
+                    "no_effect",
+                    "candle",
+                    "fire",
+                    "prism",
+                    "sparkle",
+                    "opal",
+                    "glisten",
+                    "underwater",
+                    "cosmos",
+                    "sunbeam",
+                    "enchant"
+                ]
+            },
+            "status": {
+                "effect": "no_effect",
+                "effect_values": [
+                    "no_effect",
+                    "candle",
+                    "fire",
+                    "prism",
+                    "sparkle",
+                    "opal",
+                    "glisten",
+                    "underwater",
+                    "cosmos",
+                    "sunbeam",
+                    "enchant"
+                ]
+            }
+        },
+        "timed_effects": {
+            "status_values": [
+                "no_effect",
+                "sunrise",
+                "sunset"
+            ],
+            "status": "no_effect",
+            "effect_values": [
+                "no_effect",
+                "sunrise",
+                "sunset"
+            ]
+        },
+        "powerup": {
+            "preset": "powerfail",
+            "configured": true,
+            "on": {
+                "mode": "previous"
+            },
+            "dimming": {
+                "mode": "previous"
+            },
+            "color": {
+                "mode": "previous"
+            }
+        },
+        "type": "light"
+    },
+    {
+        "id": "73945540-1375-4194-8341-5fb0a4b7d1ba",
+        "id_v1": "/lights/10",
+        "owner": {
+            "rid": "56daaa04-d0e0-4110-aa71-0ff092c65d5e",
+            "rtype": "device"
+        },
+        "metadata": {
+            "name": "Entry 1",
+            "archetype": "sultan_bulb",
+            "function": "mixed"
+        },
+        "product_data": {
+            "function": "mixed"
+        },
+        "identify": {},
+        "service_id": 0,
+        "on": {
+            "on": true
+        },
+        "dimming": {
+            "brightness": 100.0,
+            "min_dim_level": 0.2
+        },
+        "dimming_delta": {},
+        "color_temperature": {
+            "mirek": 343,
+            "mirek_valid": true,
+            "mirek_schema": {
+                "mirek_minimum": 153,
+                "mirek_maximum": 500
+            }
+        },
+        "color_temperature_delta": {},
+        "color": {
+            "xy": {
+                "x": 0.4431,
+                "y": 0.4061
+            },
+            "gamut": {
+                "red": {
+                    "x": 0.6915,
+                    "y": 0.3083
+                },
+                "green": {
+                    "x": 0.17,
+                    "y": 0.7
+                },
+                "blue": {
+                    "x": 0.1532,
+                    "y": 0.0475
+                }
+            },
+            "gamut_type": "C"
+        },
+        "dynamics": {
+            "status": "none",
+            "status_values": [
+                "none",
+                "dynamic_palette"
+            ],
+            "speed": 0.0,
+            "speed_valid": false
+        },
+        "alert": {
+            "action_values": [
+                "breathe"
+            ]
+        },
+        "signaling": {
+            "signal_values": [
+                "no_signal",
+                "on_off",
+                "on_off_color",
+                "alternating"
+            ]
+        },
+        "mode": "normal",
+        "effects": {
+            "status_values": [
+                "no_effect",
+                "candle",
+                "fire",
+                "prism",
+                "sparkle",
+                "opal",
+                "glisten",
+                "underwater",
+                "cosmos",
+                "sunbeam",
+                "enchant"
+            ],
+            "status": "no_effect",
+            "effect_values": [
+                "no_effect",
+                "candle",
+                "fire",
+                "prism",
+                "sparkle",
+                "opal",
+                "glisten",
+                "underwater",
+                "cosmos",
+                "sunbeam",
+                "enchant"
+            ]
+        },
+        "effects_v2": {
+            "action": {
+                "effect_values": [
+                    "no_effect",
+                    "candle",
+                    "fire",
+                    "prism",
+                    "sparkle",
+                    "opal",
+                    "glisten",
+                    "underwater",
+                    "cosmos",
+                    "sunbeam",
+                    "enchant"
+                ]
+            },
+            "status": {
+                "effect": "no_effect",
+                "effect_values": [
+                    "no_effect",
+                    "candle",
+                    "fire",
+                    "prism",
+                    "sparkle",
+                    "opal",
+                    "glisten",
+                    "underwater",
+                    "cosmos",
+                    "sunbeam",
+                    "enchant"
+                ]
+            }
+        },
+        "timed_effects": {
+            "status_values": [
+                "no_effect",
+                "sunrise",
+                "sunset"
+            ],
+            "status": "no_effect",
+            "effect_values": [
+                "no_effect",
+                "sunrise",
+                "sunset"
+            ]
+        },
+        "powerup": {
+            "preset": "powerfail",
+            "configured": true,
+            "on": {
+                "mode": "previous"
+            },
+            "dimming": {
+                "mode": "previous"
+            },
+            "color": {
+                "mode": "previous"
+            }
+        },
+        "type": "light"
+    },
+    {
+        "id": "7759e919-2535-41c9-b745-5c65b5d2accd",
+        "id_v1": "/lights/8",
+        "owner": {
+            "rid": "0d4699ea-d133-4496-907a-b2e10dc6127a",
+            "rtype": "device"
+        },
+        "metadata": {
+            "name": "Kitchen Ceiling 1",
+            "archetype": "single_spot",
+            "function": "mixed"
+        },
+        "product_data": {
+            "function": "mixed"
+        },
+        "identify": {},
+        "service_id": 0,
+        "on": {
+            "on": true
+        },
+        "dimming": {
+            "brightness": 100.0,
+            "min_dim_level": 0.2
+        },
+        "dimming_delta": {},
+        "color_temperature": {
+            "mirek": 343,
+            "mirek_valid": true,
+            "mirek_schema": {
+                "mirek_minimum": 153,
+                "mirek_maximum": 500
+            }
+        },
+        "color_temperature_delta": {},
+        "color": {
+            "xy": {
+                "x": 0.4431,
+                "y": 0.4061
+            },
+            "gamut": {
+                "red": {
+                    "x": 0.6915,
+                    "y": 0.3083
+                },
+                "green": {
+                    "x": 0.17,
+                    "y": 0.7
+                },
+                "blue": {
+                    "x": 0.1532,
+                    "y": 0.0475
+                }
+            },
+            "gamut_type": "C"
+        },
+        "dynamics": {
+            "status": "none",
+            "status_values": [
+                "none",
+                "dynamic_palette"
+            ],
+            "speed": 0.0,
+            "speed_valid": false
+        },
+        "alert": {
+            "action_values": [
+                "breathe"
+            ]
+        },
+        "signaling": {
+            "signal_values": [
+                "no_signal",
+                "on_off",
+                "on_off_color",
+                "alternating"
+            ]
+        },
+        "mode": "normal",
+        "effects": {
+            "status_values": [
+                "no_effect",
+                "candle",
+                "fire",
+                "prism",
+                "sparkle",
+                "opal",
+                "glisten",
+                "underwater",
+                "cosmos",
+                "sunbeam",
+                "enchant"
+            ],
+            "status": "no_effect",
+            "effect_values": [
+                "no_effect",
+                "candle",
+                "fire",
+                "prism",
+                "sparkle",
+                "opal",
+                "glisten",
+                "underwater",
+                "cosmos",
+                "sunbeam",
+                "enchant"
+            ]
+        },
+        "effects_v2": {
+            "action": {
+                "effect_values": [
+                    "no_effect",
+                    "candle",
+                    "fire",
+                    "prism",
+                    "sparkle",
+                    "opal",
+                    "glisten",
+                    "underwater",
+                    "cosmos",
+                    "sunbeam",
+                    "enchant"
+                ]
+            },
+            "status": {
+                "effect": "no_effect",
+                "effect_values": [
+                    "no_effect",
+                    "candle",
+                    "fire",
+                    "prism",
+                    "sparkle",
+                    "opal",
+                    "glisten",
+                    "underwater",
+                    "cosmos",
+                    "sunbeam",
+                    "enchant"
+                ]
+            }
+        },
+        "timed_effects": {
+            "status_values": [
+                "no_effect",
+                "sunrise",
+                "sunset"
+            ],
+            "status": "no_effect",
+            "effect_values": [
+                "no_effect",
+                "sunrise",
+                "sunset"
+            ]
+        },
+        "powerup": {
+            "preset": "powerfail",
+            "configured": true,
+            "on": {
+                "mode": "previous"
+            },
+            "dimming": {
+                "mode": "previous"
+            },
+            "color": {
+                "mode": "previous"
+            }
+        },
+        "type": "light"
+    },
+    {
+        "id": "791c56dd-b723-41fe-a758-2f7347b6dfd4",
+        "id_v1": "/lights/5",
+        "owner": {
+            "rid": "aeca7538-c009-4e60-a282-83e2058f96a1",
+            "rtype": "device"
+        },
+        "metadata": {
+            "name": "Office Ceiling 2",
+            "archetype": "sultan_bulb",
+            "function": "mixed"
+        },
+        "product_data": {
+            "function": "mixed"
+        },
+        "identify": {},
+        "service_id": 0,
+        "on": {
+            "on": true
+        },
+        "dimming": {
+            "brightness": 100.0,
+            "min_dim_level": 0.2
+        },
+        "dimming_delta": {},
+        "color_temperature": {
+            "mirek": 343,
+            "mirek_valid": true,
+            "mirek_schema": {
+                "mirek_minimum": 153,
+                "mirek_maximum": 500
+            }
+        },
+        "color_temperature_delta": {},
+        "color": {
+            "xy": {
+                "x": 0.4431,
+                "y": 0.4061
+            },
+            "gamut": {
+                "red": {
+                    "x": 0.6915,
+                    "y": 0.3083
+                },
+                "green": {
+                    "x": 0.17,
+                    "y": 0.7
+                },
+                "blue": {
+                    "x": 0.1532,
+                    "y": 0.0475
+                }
+            },
+            "gamut_type": "C"
+        },
+        "dynamics": {
+            "status": "none",
+            "status_values": [
+                "none",
+                "dynamic_palette"
+            ],
+            "speed": 0.0,
+            "speed_valid": false
+        },
+        "alert": {
+            "action_values": [
+                "breathe"
+            ]
+        },
+        "signaling": {
+            "signal_values": [
+                "no_signal",
+                "on_off",
+                "on_off_color",
+                "alternating"
+            ]
+        },
+        "mode": "normal",
+        "effects": {
+            "status_values": [
+                "no_effect",
+                "candle",
+                "fire",
+                "prism",
+                "sparkle",
+                "opal",
+                "glisten",
+                "underwater",
+                "cosmos",
+                "sunbeam",
+                "enchant"
+            ],
+            "status": "no_effect",
+            "effect_values": [
+                "no_effect",
+                "candle",
+                "fire",
+                "prism",
+                "sparkle",
+                "opal",
+                "glisten",
+                "underwater",
+                "cosmos",
+                "sunbeam",
+                "enchant"
+            ]
+        },
+        "effects_v2": {
+            "action": {
+                "effect_values": [
+                    "no_effect",
+                    "candle",
+                    "fire",
+                    "prism",
+                    "sparkle",
+                    "opal",
+                    "glisten",
+                    "underwater",
+                    "cosmos",
+                    "sunbeam",
+                    "enchant"
+                ]
+            },
+            "status": {
+                "effect": "no_effect",
+                "effect_values": [
+                    "no_effect",
+                    "candle",
+                    "fire",
+                    "prism",
+                    "sparkle",
+                    "opal",
+                    "glisten",
+                    "underwater",
+                    "cosmos",
+                    "sunbeam",
+                    "enchant"
+                ]
+            }
+        },
+        "timed_effects": {
+            "status_values": [
+                "no_effect",
+                "sunrise",
+                "sunset"
+            ],
+            "status": "no_effect",
+            "effect_values": [
+                "no_effect",
+                "sunrise",
+                "sunset"
+            ]
+        },
+        "powerup": {
+            "preset": "powerfail",
+            "configured": true,
+            "on": {
+                "mode": "previous"
+            },
+            "dimming": {
+                "mode": "previous"
+            },
+            "color": {
+                "mode": "previous"
+            }
+        },
+        "type": "light"
+    },
+    {
+        "id": "7d2b22e1-d12f-4895-a5c3-59c2d22399b9",
+        "id_v1": "/lights/16",
+        "owner": {
+            "rid": "b9c8e3b6-fd09-4798-aa32-e465f9bd0ec2",
+            "rtype": "device"
+        },
+        "metadata": {
+            "name": "Alex Ceiling 1",
+            "archetype": "sultan_bulb",
+            "function": "mixed"
+        },
+        "product_data": {
+            "function": "mixed"
+        },
+        "identify": {},
+        "service_id": 0,
+        "on": {
+            "on": true
+        },
+        "dimming": {
+            "brightness": 100.0,
+            "min_dim_level": 0.2
+        },
+        "dimming_delta": {},
+        "color_temperature": {
+            "mirek": 230,
+            "mirek_valid": true,
+            "mirek_schema": {
+                "mirek_minimum": 153,
+                "mirek_maximum": 500
+            }
+        },
+        "color_temperature_delta": {},
+        "color": {
+            "xy": {
+                "x": 0.3669,
+                "y": 0.3706
+            },
+            "gamut": {
+                "red": {
+                    "x": 0.6915,
+                    "y": 0.3083
+                },
+                "green": {
+                    "x": 0.17,
+                    "y": 0.7
+                },
+                "blue": {
+                    "x": 0.1532,
+                    "y": 0.0475
+                }
+            },
+            "gamut_type": "C"
+        },
+        "dynamics": {
+            "status": "none",
+            "status_values": [
+                "none",
+                "dynamic_palette"
+            ],
+            "speed": 0.0,
+            "speed_valid": false
+        },
+        "alert": {
+            "action_values": [
+                "breathe"
+            ]
+        },
+        "signaling": {
+            "signal_values": [
+                "no_signal",
+                "on_off",
+                "on_off_color",
+                "alternating"
+            ]
+        },
+        "mode": "normal",
+        "effects": {
+            "status_values": [
+                "no_effect",
+                "candle",
+                "fire",
+                "prism",
+                "sparkle",
+                "opal",
+                "glisten",
+                "underwater",
+                "cosmos",
+                "sunbeam",
+                "enchant"
+            ],
+            "status": "no_effect",
+            "effect_values": [
+                "no_effect",
+                "candle",
+                "fire",
+                "prism",
+                "sparkle",
+                "opal",
+                "glisten",
+                "underwater",
+                "cosmos",
+                "sunbeam",
+                "enchant"
+            ]
+        },
+        "effects_v2": {
+            "action": {
+                "effect_values": [
+                    "no_effect",
+                    "candle",
+                    "fire",
+                    "prism",
+                    "sparkle",
+                    "opal",
+                    "glisten",
+                    "underwater",
+                    "cosmos",
+                    "sunbeam",
+                    "enchant"
+                ]
+            },
+            "status": {
+                "effect": "no_effect",
+                "effect_values": [
+                    "no_effect",
+                    "candle",
+                    "fire",
+                    "prism",
+                    "sparkle",
+                    "opal",
+                    "glisten",
+                    "underwater",
+                    "cosmos",
+                    "sunbeam",
+                    "enchant"
+                ]
+            }
+        },
+        "timed_effects": {
+            "status_values": [
+                "no_effect",
+                "sunrise",
+                "sunset"
+            ],
+            "status": "no_effect",
+            "effect_values": [
+                "no_effect",
+                "sunrise",
+                "sunset"
+            ]
+        },
+        "powerup": {
+            "preset": "powerfail",
+            "configured": true,
+            "on": {
+                "mode": "previous"
+            },
+            "dimming": {
+                "mode": "previous"
+            },
+            "color": {
+                "mode": "previous"
+            }
+        },
+        "type": "light"
+    },
+    {
+        "id": "83abb077-5308-4a11-be39-9ab49e3d8342",
+        "id_v1": "/lights/28",
+        "owner": {
+            "rid": "6862612f-789b-41f9-85bf-c7d9f94bf135",
+            "rtype": "device"
+        },
+        "metadata": {
+            "name": "Living Room Lamp 2",
+            "archetype": "table_shade",
+            "function": "mixed"
+        },
+        "product_data": {
+            "function": "mixed"
+        },
+        "identify": {},
+        "service_id": 0,
+        "on": {
+            "on": true
+        },
+        "dimming": {
+            "brightness": 100.0,
+            "min_dim_level": 0.2
+        },
+        "dimming_delta": {},
+        "color_temperature": {
+            "mirek": 343,
+            "mirek_valid": true,
+            "mirek_schema": {
+                "mirek_minimum": 153,
+                "mirek_maximum": 500
+            }
+        },
+        "color_temperature_delta": {},
+        "color": {
+            "xy": {
+                "x": 0.445,
+                "y": 0.4067
+            },
+            "gamut": {
+                "red": {
+                    "x": 0.6915,
+                    "y": 0.3083
+                },
+                "green": {
+                    "x": 0.17,
+                    "y": 0.7
+                },
+                "blue": {
+                    "x": 0.1532,
+                    "y": 0.0475
+                }
+            },
+            "gamut_type": "C"
+        },
+        "dynamics": {
+            "status": "none",
+            "status_values": [
+                "none",
+                "dynamic_palette"
+            ],
+            "speed": 0.0,
+            "speed_valid": false
+        },
+        "alert": {
+            "action_values": [
+                "breathe"
+            ]
+        },
+        "signaling": {
+            "signal_values": [
+                "no_signal",
+                "on_off",
+                "on_off_color",
+                "alternating"
+            ]
+        },
+        "mode": "normal",
+        "effects": {
+            "status_values": [
+                "no_effect",
+                "candle",
+                "fire",
+                "prism",
+                "sparkle",
+                "opal",
+                "glisten",
+                "underwater",
+                "cosmos",
+                "sunbeam",
+                "enchant"
+            ],
+            "status": "no_effect",
+            "effect_values": [
+                "no_effect",
+                "candle",
+                "fire",
+                "prism",
+                "sparkle",
+                "opal",
+                "glisten",
+                "underwater",
+                "cosmos",
+                "sunbeam",
+                "enchant"
+            ]
+        },
+        "effects_v2": {
+            "action": {
+                "effect_values": [
+                    "no_effect",
+                    "candle",
+                    "fire",
+                    "prism",
+                    "sparkle",
+                    "opal",
+                    "glisten",
+                    "underwater",
+                    "cosmos",
+                    "sunbeam",
+                    "enchant"
+                ]
+            },
+            "status": {
+                "effect": "no_effect",
+                "effect_values": [
+                    "no_effect",
+                    "candle",
+                    "fire",
+                    "prism",
+                    "sparkle",
+                    "opal",
+                    "glisten",
+                    "underwater",
+                    "cosmos",
+                    "sunbeam",
+                    "enchant"
+                ]
+            }
+        },
+        "timed_effects": {
+            "status_values": [
+                "no_effect",
+                "sunrise",
+                "sunset"
+            ],
+            "status": "no_effect",
+            "effect_values": [
+                "no_effect",
+                "sunrise",
+                "sunset"
+            ]
+        },
+        "powerup": {
+            "preset": "powerfail",
+            "configured": true,
+            "on": {
+                "mode": "previous"
+            },
+            "dimming": {
+                "mode": "previous"
+            },
+            "color": {
+                "mode": "previous"
+            }
+        },
+        "type": "light"
+    },
+    {
+        "id": "a7f72e0e-18fd-42f2-beb3-8da314df7b72",
+        "id_v1": "/lights/2",
+        "owner": {
+            "rid": "81af7d6b-d9cb-4c38-aca0-caf5109e8ce9",
+            "rtype": "device"
+        },
+        "metadata": {
+            "name": "Living Room Ceiling 2",
+            "archetype": "sultan_bulb",
+            "function": "mixed"
+        },
+        "product_data": {
+            "function": "mixed"
+        },
+        "identify": {},
+        "service_id": 0,
+        "on": {
+            "on": true
+        },
+        "dimming": {
+            "brightness": 100.0,
+            "min_dim_level": 1.0
+        },
+        "dimming_delta": {},
+        "color_temperature": {
+            "mirek": 343,
+            "mirek_valid": true,
+            "mirek_schema": {
+                "mirek_minimum": 153,
+                "mirek_maximum": 500
+            }
+        },
+        "color_temperature_delta": {},
+        "color": {
+            "xy": {
+                "x": 0.4431,
+                "y": 0.4061
+            },
+            "gamut": {
+                "red": {
+                    "x": 0.6915,
+                    "y": 0.3083
+                },
+                "green": {
+                    "x": 0.17,
+                    "y": 0.7
+                },
+                "blue": {
+                    "x": 0.1532,
+                    "y": 0.0475
+                }
+            },
+            "gamut_type": "C"
+        },
+        "dynamics": {
+            "status": "none",
+            "status_values": [
+                "none",
+                "dynamic_palette"
+            ],
+            "speed": 0.0,
+            "speed_valid": false
+        },
+        "alert": {
+            "action_values": [
+                "breathe"
+            ]
+        },
+        "signaling": {
+            "signal_values": [
+                "no_signal",
+                "on_off",
+                "on_off_color",
+                "alternating"
+            ]
+        },
+        "mode": "normal",
+        "effects": {
+            "status_values": [
+                "no_effect",
+                "candle",
+                "fire",
+                "prism",
+                "sparkle",
+                "opal",
+                "glisten"
+            ],
+            "status": "no_effect",
+            "effect_values": [
+                "no_effect",
+                "candle",
+                "fire",
+                "prism",
+                "sparkle",
+                "opal",
+                "glisten"
+            ]
+        },
+        "effects_v2": {
+            "action": {
+                "effect_values": [
+                    "no_effect",
+                    "candle",
+                    "fire",
+                    "prism",
+                    "sparkle",
+                    "opal",
+                    "glisten"
+                ]
+            },
+            "status": {
+                "effect": "no_effect",
+                "effect_values": [
+                    "no_effect",
+                    "candle",
+                    "fire",
+                    "prism",
+                    "sparkle",
+                    "opal",
+                    "glisten"
+                ]
+            }
+        },
+        "powerup": {
+            "preset": "powerfail",
+            "configured": true,
+            "on": {
+                "mode": "previous"
+            },
+            "dimming": {
+                "mode": "previous"
+            },
+            "color": {
+                "mode": "previous"
+            }
+        },
+        "type": "light"
+    },
+    {
+        "id": "aa65958b-ddd7-4c36-a582-764226dd88a2",
+        "id_v1": "/lights/3",
+        "owner": {
+            "rid": "85d9d55f-53a3-4a4f-98bb-845190b9a39b",
+            "rtype": "device"
+        },
+        "metadata": {
+            "name": "Living Room Ceiling 3",
+            "archetype": "sultan_bulb",
+            "function": "mixed"
+        },
+        "product_data": {
+            "function": "mixed"
+        },
+        "identify": {},
+        "service_id": 0,
+        "on": {
+            "on": true
+        },
+        "dimming": {
+            "brightness": 100.0,
+            "min_dim_level": 1.0
+        },
+        "dimming_delta": {},
+        "color_temperature": {
+            "mirek": 343,
+            "mirek_valid": true,
+            "mirek_schema": {
+                "mirek_minimum": 153,
+                "mirek_maximum": 500
+            }
+        },
+        "color_temperature_delta": {},
+        "color": {
+            "xy": {
+                "x": 0.4431,
+                "y": 0.4061
+            },
+            "gamut": {
+                "red": {
+                    "x": 0.6915,
+                    "y": 0.3083
+                },
+                "green": {
+                    "x": 0.17,
+                    "y": 0.7
+                },
+                "blue": {
+                    "x": 0.1532,
+                    "y": 0.0475
+                }
+            },
+            "gamut_type": "C"
+        },
+        "dynamics": {
+            "status": "none",
+            "status_values": [
+                "none",
+                "dynamic_palette"
+            ],
+            "speed": 0.0,
+            "speed_valid": false
+        },
+        "alert": {
+            "action_values": [
+                "breathe"
+            ]
+        },
+        "signaling": {
+            "signal_values": [
+                "no_signal",
+                "on_off",
+                "on_off_color",
+                "alternating"
+            ]
+        },
+        "mode": "normal",
+        "effects": {
+            "status_values": [
+                "no_effect",
+                "candle",
+                "fire",
+                "prism",
+                "sparkle",
+                "opal",
+                "glisten"
+            ],
+            "status": "no_effect",
+            "effect_values": [
+                "no_effect",
+                "candle",
+                "fire",
+                "prism",
+                "sparkle",
+                "opal",
+                "glisten"
+            ]
+        },
+        "effects_v2": {
+            "action": {
+                "effect_values": [
+                    "no_effect",
+                    "candle",
+                    "fire",
+                    "prism",
+                    "sparkle",
+                    "opal",
+                    "glisten"
+                ]
+            },
+            "status": {
+                "effect": "no_effect",
+                "effect_values": [
+                    "no_effect",
+                    "candle",
+                    "fire",
+                    "prism",
+                    "sparkle",
+                    "opal",
+                    "glisten"
+                ]
+            }
+        },
+        "powerup": {
+            "preset": "powerfail",
+            "configured": true,
+            "on": {
+                "mode": "previous"
+            },
+            "dimming": {
+                "mode": "previous"
+            },
+            "color": {
+                "mode": "previous"
+            }
+        },
+        "type": "light"
+    },
+    {
+        "id": "ab66b5b2-26b5-49e1-a822-71164184d5c1",
+        "id_v1": "/lights/33",
+        "owner": {
+            "rid": "7d0b4322-ac4f-413e-b39e-f1c42110d1c5",
+            "rtype": "device"
+        },
+        "metadata": {
+            "name": "Bathroom 1",
+            "archetype": "classic_bulb",
+            "fixed_mired": 366,
+            "function": "mixed"
+        },
+        "product_data": {
+            "function": "mixed"
+        },
+        "identify": {},
+        "service_id": 0,
+        "on": {
+            "on": true
+        },
+        "dimming": {
+            "brightness": 100.0,
+            "min_dim_level": 2.0
+        },
+        "dimming_delta": {},
+        "dynamics": {
+            "status": "none",
+            "status_values": [
+                "none"
+            ],
+            "speed": 0.0,
+            "speed_valid": false
+        },
+        "alert": {
+            "action_values": [
+                "breathe"
+            ]
+        },
+        "signaling": {
+            "signal_values": [
+                "no_signal",
+                "on_off"
+            ]
+        },
+        "mode": "normal",
+        "effects": {
+            "status_values": [
+                "no_effect",
+                "candle"
+            ],
+            "status": "no_effect",
+            "effect_values": [
+                "no_effect",
+                "candle"
+            ]
+        },
+        "effects_v2": {
+            "action": {
+                "effect_values": [
+                    "no_effect",
+                    "candle"
+                ]
+            },
+            "status": {
+                "effect": "no_effect",
+                "effect_values": [
+                    "no_effect",
+                    "candle"
+                ]
+            }
+        },
+        "powerup": {
+            "preset": "safety",
+            "configured": true,
+            "on": {
+                "mode": "on",
+                "on": {
+                    "on": true
+                }
+            },
+            "dimming": {
+                "mode": "dimming",
+                "dimming": {
+                    "brightness": 100.0
+                }
+            }
+        },
+        "type": "light"
+    },
+    {
+        "id": "adbc90f8-69c8-48d1-a070-e92e057b0c8f",
+        "id_v1": "/lights/24",
+        "owner": {
+            "rid": "de2ab469-e9ca-4486-ba88-74605f210a27",
+            "rtype": "device"
+        },
+        "metadata": {
+            "name": "Counter",
+            "archetype": "ground_spot",
+            "function": "mixed"
+        },
+        "product_data": {
+            "function": "mixed"
+        },
+        "identify": {},
+        "service_id": 0,
+        "on": {
+            "on": true
+        },
+        "dimming": {
+            "brightness": 100.0,
+            "min_dim_level": 0.2
+        },
+        "dimming_delta": {},
+        "color_temperature": {
+            "mirek": 343,
+            "mirek_valid": true,
+            "mirek_schema": {
+                "mirek_minimum": 153,
+                "mirek_maximum": 500
+            }
+        },
+        "color_temperature_delta": {},
+        "color": {
+            "xy": {
+                "x": 0.4431,
+                "y": 0.4061
+            },
+            "gamut": {
+                "red": {
+                    "x": 0.6915,
+                    "y": 0.3083
+                },
+                "green": {
+                    "x": 0.17,
+                    "y": 0.7
+                },
+                "blue": {
+                    "x": 0.1532,
+                    "y": 0.0475
+                }
+            },
+            "gamut_type": "C"
+        },
+        "dynamics": {
+            "status": "none",
+            "status_values": [
+                "none",
+                "dynamic_palette"
+            ],
+            "speed": 0.0,
+            "speed_valid": false
+        },
+        "alert": {
+            "action_values": [
+                "breathe"
+            ]
+        },
+        "signaling": {
+            "signal_values": [
+                "no_signal",
+                "on_off",
+                "on_off_color",
+                "alternating"
+            ]
+        },
+        "mode": "normal",
+        "effects": {
+            "status_values": [
+                "no_effect",
+                "candle",
+                "fire",
+                "prism",
+                "sparkle",
+                "opal",
+                "glisten",
+                "underwater",
+                "cosmos",
+                "sunbeam",
+                "enchant"
+            ],
+            "status": "no_effect",
+            "effect_values": [
+                "no_effect",
+                "candle",
+                "fire",
+                "prism",
+                "sparkle",
+                "opal",
+                "glisten",
+                "underwater",
+                "cosmos",
+                "sunbeam",
+                "enchant"
+            ]
+        },
+        "effects_v2": {
+            "action": {
+                "effect_values": [
+                    "no_effect",
+                    "candle",
+                    "fire",
+                    "prism",
+                    "sparkle",
+                    "opal",
+                    "glisten",
+                    "underwater",
+                    "cosmos",
+                    "sunbeam",
+                    "enchant"
+                ]
+            },
+            "status": {
+                "effect": "no_effect",
+                "effect_values": [
+                    "no_effect",
+                    "candle",
+                    "fire",
+                    "prism",
+                    "sparkle",
+                    "opal",
+                    "glisten",
+                    "underwater",
+                    "cosmos",
+                    "sunbeam",
+                    "enchant"
+                ]
+            }
+        },
+        "timed_effects": {
+            "status_values": [
+                "no_effect",
+                "sunrise",
+                "sunset"
+            ],
+            "status": "no_effect",
+            "effect_values": [
+                "no_effect",
+                "sunrise",
+                "sunset"
+            ]
+        },
+        "powerup": {
+            "preset": "safety",
+            "configured": true,
+            "on": {
+                "mode": "on",
+                "on": {
+                    "on": true
+                }
+            },
+            "dimming": {
+                "mode": "dimming",
+                "dimming": {
+                    "brightness": 100.0
+                }
+            },
+            "color": {
+                "mode": "color_temperature",
+                "color_temperature": {
+                    "mirek": 366
+                }
+            }
+        },
+        "type": "light"
+    },
+    {
+        "id": "ba53a457-72af-48d0-a123-115fb093c135",
+        "id_v1": "/lights/18",
+        "owner": {
+            "rid": "7d5ad34b-1722-4325-9e7c-be6f5771f0fe",
+            "rtype": "device"
+        },
+        "metadata": {
+            "name": "Living Room Can Corner",
+            "archetype": "sultan_bulb",
+            "function": "mixed"
+        },
+        "product_data": {
+            "function": "mixed"
+        },
+        "identify": {},
+        "service_id": 0,
+        "on": {
+            "on": true
+        },
+        "dimming": {
+            "brightness": 100.0,
+            "min_dim_level": 1.0
+        },
+        "dimming_delta": {},
+        "color_temperature": {
+            "mirek": 343,
+            "mirek_valid": true,
+            "mirek_schema": {
+                "mirek_minimum": 153,
+                "mirek_maximum": 500
+            }
+        },
+        "color_temperature_delta": {},
+        "color": {
+            "xy": {
+                "x": 0.4431,
+                "y": 0.4061
+            },
+            "gamut": {
+                "red": {
+                    "x": 0.6915,
+                    "y": 0.3083
+                },
+                "green": {
+                    "x": 0.17,
+                    "y": 0.7
+                },
+                "blue": {
+                    "x": 0.1532,
+                    "y": 0.0475
+                }
+            },
+            "gamut_type": "C"
+        },
+        "dynamics": {
+            "status": "none",
+            "status_values": [
+                "none",
+                "dynamic_palette"
+            ],
+            "speed": 0.0,
+            "speed_valid": false
+        },
+        "alert": {
+            "action_values": [
+                "breathe"
+            ]
+        },
+        "signaling": {
+            "signal_values": [
+                "no_signal",
+                "on_off",
+                "on_off_color",
+                "alternating"
+            ]
+        },
+        "mode": "normal",
+        "effects": {
+            "status_values": [
+                "no_effect",
+                "candle",
+                "fire",
+                "prism",
+                "sparkle",
+                "opal",
+                "glisten"
+            ],
+            "status": "no_effect",
+            "effect_values": [
+                "no_effect",
+                "candle",
+                "fire",
+                "prism",
+                "sparkle",
+                "opal",
+                "glisten"
+            ]
+        },
+        "effects_v2": {
+            "action": {
+                "effect_values": [
+                    "no_effect",
+                    "candle",
+                    "fire",
+                    "prism",
+                    "sparkle",
+                    "opal",
+                    "glisten"
+                ]
+            },
+            "status": {
+                "effect": "no_effect",
+                "effect_values": [
+                    "no_effect",
+                    "candle",
+                    "fire",
+                    "prism",
+                    "sparkle",
+                    "opal",
+                    "glisten"
+                ]
+            }
+        },
+        "powerup": {
+            "preset": "powerfail",
+            "configured": true,
+            "on": {
+                "mode": "previous"
+            },
+            "dimming": {
+                "mode": "previous"
+            },
+            "color": {
+                "mode": "previous"
+            }
+        },
+        "type": "light"
+    },
+    {
+        "id": "bb177249-0806-4407-a1c4-263011a6ecfd",
+        "id_v1": "/lights/6",
+        "owner": {
+            "rid": "9cb19b03-9f7c-4649-9966-ee62157481fd",
+            "rtype": "device"
+        },
+        "metadata": {
+            "name": "Dining 1",
+            "archetype": "sultan_bulb",
+            "function": "mixed"
+        },
+        "product_data": {
+            "function": "mixed"
+        },
+        "identify": {},
+        "service_id": 0,
+        "on": {
+            "on": true
+        },
+        "dimming": {
+            "brightness": 100.0,
+            "min_dim_level": 1.0
+        },
+        "dimming_delta": {},
+        "color_temperature": {
+            "mirek": 343,
+            "mirek_valid": true,
+            "mirek_schema": {
+                "mirek_minimum": 153,
+                "mirek_maximum": 500
+            }
+        },
+        "color_temperature_delta": {},
+        "color": {
+            "xy": {
+                "x": 0.4431,
+                "y": 0.4061
+            },
+            "gamut": {
+                "red": {
+                    "x": 0.6915,
+                    "y": 0.3083
+                },
+                "green": {
+                    "x": 0.17,
+                    "y": 0.7
+                },
+                "blue": {
+                    "x": 0.1532,
+                    "y": 0.0475
+                }
+            },
+            "gamut_type": "C"
+        },
+        "dynamics": {
+            "status": "none",
+            "status_values": [
+                "none",
+                "dynamic_palette"
+            ],
+            "speed": 0.0,
+            "speed_valid": false
+        },
+        "alert": {
+            "action_values": [
+                "breathe"
+            ]
+        },
+        "signaling": {
+            "signal_values": [
+                "no_signal",
+                "on_off",
+                "on_off_color",
+                "alternating"
+            ]
+        },
+        "mode": "normal",
+        "effects": {
+            "status_values": [
+                "no_effect",
+                "candle",
+                "fire",
+                "prism",
+                "sparkle",
+                "opal",
+                "glisten"
+            ],
+            "status": "no_effect",
+            "effect_values": [
+                "no_effect",
+                "candle",
+                "fire",
+                "prism",
+                "sparkle",
+                "opal",
+                "glisten"
+            ]
+        },
+        "effects_v2": {
+            "action": {
+                "effect_values": [
+                    "no_effect",
+                    "candle",
+                    "fire",
+                    "prism",
+                    "sparkle",
+                    "opal",
+                    "glisten"
+                ]
+            },
+            "status": {
+                "effect": "no_effect",
+                "effect_values": [
+                    "no_effect",
+                    "candle",
+                    "fire",
+                    "prism",
+                    "sparkle",
+                    "opal",
+                    "glisten"
+                ]
+            }
+        },
+        "powerup": {
+            "preset": "powerfail",
+            "configured": true,
+            "on": {
+                "mode": "previous"
+            },
+            "dimming": {
+                "mode": "previous"
+            },
+            "color": {
+                "mode": "previous"
+            }
+        },
+        "type": "light"
+    },
+    {
+        "id": "c6744e5d-513d-4357-909c-00b912767a75",
+        "id_v1": "/lights/22",
+        "owner": {
+            "rid": "cf6a5523-365a-463d-b946-4311bbc5c56e",
+            "rtype": "device"
+        },
+        "metadata": {
+            "name": "Alex Lamp",
+            "archetype": "sultan_bulb",
+            "function": "mixed"
+        },
+        "product_data": {
+            "function": "mixed"
+        },
+        "identify": {},
+        "service_id": 0,
+        "on": {
+            "on": true
+        },
+        "dimming": {
+            "brightness": 100.0,
+            "min_dim_level": 0.2
+        },
+        "dimming_delta": {},
+        "color_temperature": {
+            "mirek": 230,
+            "mirek_valid": true,
+            "mirek_schema": {
+                "mirek_minimum": 153,
+                "mirek_maximum": 500
+            }
+        },
+        "color_temperature_delta": {},
+        "color": {
+            "xy": {
+                "x": 0.3669,
+                "y": 0.3706
+            },
+            "gamut": {
+                "red": {
+                    "x": 0.6915,
+                    "y": 0.3083
+                },
+                "green": {
+                    "x": 0.17,
+                    "y": 0.7
+                },
+                "blue": {
+                    "x": 0.1532,
+                    "y": 0.0475
+                }
+            },
+            "gamut_type": "C"
+        },
+        "dynamics": {
+            "status": "none",
+            "status_values": [
+                "none",
+                "dynamic_palette"
+            ],
+            "speed": 0.0,
+            "speed_valid": false
+        },
+        "alert": {
+            "action_values": [
+                "breathe"
+            ]
+        },
+        "signaling": {
+            "signal_values": [
+                "no_signal",
+                "on_off",
+                "on_off_color",
+                "alternating"
+            ]
+        },
+        "mode": "normal",
+        "effects": {
+            "status_values": [
+                "no_effect",
+                "candle",
+                "fire",
+                "prism",
+                "sparkle",
+                "opal",
+                "glisten",
+                "underwater",
+                "cosmos",
+                "sunbeam",
+                "enchant"
+            ],
+            "status": "no_effect",
+            "effect_values": [
+                "no_effect",
+                "candle",
+                "fire",
+                "prism",
+                "sparkle",
+                "opal",
+                "glisten",
+                "underwater",
+                "cosmos",
+                "sunbeam",
+                "enchant"
+            ]
+        },
+        "effects_v2": {
+            "action": {
+                "effect_values": [
+                    "no_effect",
+                    "candle",
+                    "fire",
+                    "prism",
+                    "sparkle",
+                    "opal",
+                    "glisten",
+                    "underwater",
+                    "cosmos",
+                    "sunbeam",
+                    "enchant"
+                ]
+            },
+            "status": {
+                "effect": "no_effect",
+                "effect_values": [
+                    "no_effect",
+                    "candle",
+                    "fire",
+                    "prism",
+                    "sparkle",
+                    "opal",
+                    "glisten",
+                    "underwater",
+                    "cosmos",
+                    "sunbeam",
+                    "enchant"
+                ]
+            }
+        },
+        "timed_effects": {
+            "status_values": [
+                "no_effect",
+                "sunrise",
+                "sunset"
+            ],
+            "status": "no_effect",
+            "effect_values": [
+                "no_effect",
+                "sunrise",
+                "sunset"
+            ]
+        },
+        "powerup": {
+            "preset": "safety",
+            "configured": true,
+            "on": {
+                "mode": "on",
+                "on": {
+                    "on": true
+                }
+            },
+            "dimming": {
+                "mode": "dimming",
+                "dimming": {
+                    "brightness": 100.0
+                }
+            },
+            "color": {
+                "mode": "color_temperature",
+                "color_temperature": {
+                    "mirek": 366
+                }
+            }
+        },
+        "type": "light"
+    },
+    {
+        "id": "ca661496-835f-421c-8192-c23a6f5b02b4",
+        "id_v1": "/lights/29",
+        "owner": {
+            "rid": "67182151-4946-499c-a9f0-f69d29f04e11",
+            "rtype": "device"
+        },
+        "metadata": {
+            "name": "Bryan Ceiling 2",
+            "archetype": "ceiling_round",
+            "function": "mixed"
+        },
+        "product_data": {
+            "function": "mixed"
+        },
+        "identify": {},
+        "service_id": 0,
+        "on": {
+            "on": false
+        },
+        "dimming": {
+            "brightness": 56.52,
+            "min_dim_level": 0.2
+        },
+        "dimming_delta": {},
+        "color_temperature": {
+            "mirek": 443,
+            "mirek_valid": true,
+            "mirek_schema": {
+                "mirek_minimum": 153,
+                "mirek_maximum": 500
+            }
+        },
+        "color_temperature_delta": {},
+        "color": {
+            "xy": {
+                "x": 0.4998,
+                "y": 0.4152
+            },
+            "gamut": {
+                "red": {
+                    "x": 0.6915,
+                    "y": 0.3083
+                },
+                "green": {
+                    "x": 0.17,
+                    "y": 0.7
+                },
+                "blue": {
+                    "x": 0.1532,
+                    "y": 0.0475
+                }
+            },
+            "gamut_type": "C"
+        },
+        "dynamics": {
+            "status": "none",
+            "status_values": [
+                "none",
+                "dynamic_palette"
+            ],
+            "speed": 0.0,
+            "speed_valid": false
+        },
+        "alert": {
+            "action_values": [
+                "breathe"
+            ]
+        },
+        "signaling": {
+            "signal_values": [
+                "no_signal",
+                "on_off",
+                "on_off_color",
+                "alternating"
+            ]
+        },
+        "mode": "normal",
+        "effects": {
+            "status_values": [
+                "no_effect",
+                "candle",
+                "fire",
+                "prism",
+                "sparkle",
+                "opal",
+                "glisten",
+                "underwater",
+                "cosmos",
+                "sunbeam",
+                "enchant"
+            ],
+            "status": "no_effect",
+            "effect_values": [
+                "no_effect",
+                "candle",
+                "fire",
+                "prism",
+                "sparkle",
+                "opal",
+                "glisten",
+                "underwater",
+                "cosmos",
+                "sunbeam",
+                "enchant"
+            ]
+        },
+        "effects_v2": {
+            "action": {
+                "effect_values": [
+                    "no_effect",
+                    "candle",
+                    "fire",
+                    "prism",
+                    "sparkle",
+                    "opal",
+                    "glisten",
+                    "underwater",
+                    "cosmos",
+                    "sunbeam",
+                    "enchant"
+                ]
+            },
+            "status": {
+                "effect": "no_effect",
+                "effect_values": [
+                    "no_effect",
+                    "candle",
+                    "fire",
+                    "prism",
+                    "sparkle",
+                    "opal",
+                    "glisten",
+                    "underwater",
+                    "cosmos",
+                    "sunbeam",
+                    "enchant"
+                ]
+            }
+        },
+        "timed_effects": {
+            "status_values": [
+                "no_effect",
+                "sunrise",
+                "sunset"
+            ],
+            "status": "no_effect",
+            "effect_values": [
+                "no_effect",
+                "sunrise",
+                "sunset"
+            ]
+        },
+        "powerup": {
+            "preset": "last_on_state",
+            "configured": true,
+            "on": {
+                "mode": "on",
+                "on": {
+                    "on": true
+                }
+            },
+            "dimming": {
+                "mode": "previous"
+            },
+            "color": {
+                "mode": "previous"
+            }
+        },
+        "type": "light"
+    },
+    {
+        "id": "d7015ea4-dfa7-49dc-999a-0f74d5bcf357",
+        "id_v1": "/lights/17",
+        "owner": {
+            "rid": "57022a48-3ca9-414c-a3a6-e981932c7b42",
+            "rtype": "device"
+        },
+        "metadata": {
+            "name": "Alex Ceiling 2",
+            "archetype": "sultan_bulb",
+            "function": "mixed"
+        },
+        "product_data": {
+            "function": "mixed"
+        },
+        "identify": {},
+        "service_id": 0,
+        "on": {
+            "on": true
+        },
+        "dimming": {
+            "brightness": 100.0,
+            "min_dim_level": 0.2
+        },
+        "dimming_delta": {},
+        "color_temperature": {
+            "mirek": 230,
+            "mirek_valid": true,
+            "mirek_schema": {
+                "mirek_minimum": 153,
+                "mirek_maximum": 500
+            }
+        },
+        "color_temperature_delta": {},
+        "color": {
+            "xy": {
+                "x": 0.3669,
+                "y": 0.3706
+            },
+            "gamut": {
+                "red": {
+                    "x": 0.6915,
+                    "y": 0.3083
+                },
+                "green": {
+                    "x": 0.17,
+                    "y": 0.7
+                },
+                "blue": {
+                    "x": 0.1532,
+                    "y": 0.0475
+                }
+            },
+            "gamut_type": "C"
+        },
+        "dynamics": {
+            "status": "none",
+            "status_values": [
+                "none",
+                "dynamic_palette"
+            ],
+            "speed": 0.0,
+            "speed_valid": false
+        },
+        "alert": {
+            "action_values": [
+                "breathe"
+            ]
+        },
+        "signaling": {
+            "signal_values": [
+                "no_signal",
+                "on_off",
+                "on_off_color",
+                "alternating"
+            ]
+        },
+        "mode": "normal",
+        "effects": {
+            "status_values": [
+                "no_effect",
+                "candle",
+                "fire",
+                "prism",
+                "sparkle",
+                "opal",
+                "glisten",
+                "underwater",
+                "cosmos",
+                "sunbeam",
+                "enchant"
+            ],
+            "status": "no_effect",
+            "effect_values": [
+                "no_effect",
+                "candle",
+                "fire",
+                "prism",
+                "sparkle",
+                "opal",
+                "glisten",
+                "underwater",
+                "cosmos",
+                "sunbeam",
+                "enchant"
+            ]
+        },
+        "effects_v2": {
+            "action": {
+                "effect_values": [
+                    "no_effect",
+                    "candle",
+                    "fire",
+                    "prism",
+                    "sparkle",
+                    "opal",
+                    "glisten",
+                    "underwater",
+                    "cosmos",
+                    "sunbeam",
+                    "enchant"
+                ]
+            },
+            "status": {
+                "effect": "no_effect",
+                "effect_values": [
+                    "no_effect",
+                    "candle",
+                    "fire",
+                    "prism",
+                    "sparkle",
+                    "opal",
+                    "glisten",
+                    "underwater",
+                    "cosmos",
+                    "sunbeam",
+                    "enchant"
+                ]
+            }
+        },
+        "timed_effects": {
+            "status_values": [
+                "no_effect",
+                "sunrise",
+                "sunset"
+            ],
+            "status": "no_effect",
+            "effect_values": [
+                "no_effect",
+                "sunrise",
+                "sunset"
+            ]
+        },
+        "powerup": {
+            "preset": "powerfail",
+            "configured": true,
+            "on": {
+                "mode": "previous"
+            },
+            "dimming": {
+                "mode": "previous"
+            },
+            "color": {
+                "mode": "previous"
+            }
+        },
+        "type": "light"
+    },
+    {
+        "id": "e13f8489-8d8a-4d97-8a39-60dd774a729b",
+        "id_v1": "/lights/34",
+        "owner": {
+            "rid": "248a593e-d706-4fd0-8b1f-7bfb074f6f75",
+            "rtype": "device"
+        },
+        "metadata": {
+            "name": "New 100Watt",
+            "archetype": "sultan_bulb",
+            "function": "mixed"
+        },
+        "product_data": {
+            "function": "mixed"
+        },
+        "identify": {},
+        "service_id": 0,
+        "on": {
+            "on": true
+        },
+        "dimming": {
+            "brightness": 100.0,
+            "min_dim_level": 0.2
+        },
+        "dimming_delta": {},
+        "color_temperature": {
+            "mirek": 366,
+            "mirek_valid": true,
+            "mirek_schema": {
+                "mirek_minimum": 153,
+                "mirek_maximum": 500
+            }
+        },
+        "color_temperature_delta": {},
+        "color": {
+            "xy": {
+                "x": 0.4572,
+                "y": 0.4099
+            },
+            "gamut": {
+                "red": {
+                    "x": 0.6915,
+                    "y": 0.3083
+                },
+                "green": {
+                    "x": 0.17,
+                    "y": 0.7
+                },
+                "blue": {
+                    "x": 0.1532,
+                    "y": 0.0475
+                }
+            },
+            "gamut_type": "C"
+        },
+        "dynamics": {
+            "status": "none",
+            "status_values": [
+                "none",
+                "dynamic_palette"
+            ],
+            "speed": 0.0,
+            "speed_valid": false
+        },
+        "alert": {
+            "action_values": [
+                "breathe"
+            ]
+        },
+        "signaling": {
+            "signal_values": [
+                "no_signal",
+                "on_off",
+                "on_off_color",
+                "alternating"
+            ]
+        },
+        "mode": "normal",
+        "effects": {
+            "status_values": [
+                "no_effect",
+                "candle",
+                "fire",
+                "prism",
+                "sparkle",
+                "opal",
+                "glisten",
+                "underwater",
+                "cosmos",
+                "sunbeam",
+                "enchant"
+            ],
+            "status": "no_effect",
+            "effect_values": [
+                "no_effect",
+                "candle",
+                "fire",
+                "prism",
+                "sparkle",
+                "opal",
+                "glisten",
+                "underwater",
+                "cosmos",
+                "sunbeam",
+                "enchant"
+            ]
+        },
+        "effects_v2": {
+            "action": {
+                "effect_values": [
+                    "no_effect",
+                    "candle",
+                    "fire",
+                    "prism",
+                    "sparkle",
+                    "opal",
+                    "glisten",
+                    "underwater",
+                    "cosmos",
+                    "sunbeam",
+                    "enchant"
+                ]
+            },
+            "status": {
+                "effect": "no_effect",
+                "effect_values": [
+                    "no_effect",
+                    "candle",
+                    "fire",
+                    "prism",
+                    "sparkle",
+                    "opal",
+                    "glisten",
+                    "underwater",
+                    "cosmos",
+                    "sunbeam",
+                    "enchant"
+                ]
+            }
+        },
+        "timed_effects": {
+            "status_values": [
+                "no_effect",
+                "sunrise",
+                "sunset"
+            ],
+            "status": "no_effect",
+            "effect_values": [
+                "no_effect",
+                "sunrise",
+                "sunset"
+            ]
+        },
+        "powerup": {
+            "preset": "safety",
+            "configured": true,
+            "on": {
+                "mode": "on",
+                "on": {
+                    "on": true
+                }
+            },
+            "dimming": {
+                "mode": "dimming",
+                "dimming": {
+                    "brightness": 100.0
+                }
+            },
+            "color": {
+                "mode": "color_temperature",
+                "color_temperature": {
+                    "mirek": 366
+                }
+            }
+        },
+        "type": "light"
+    },
+    {
+        "id": "ec344e87-512c-45fd-8601-be82766b216d",
+        "id_v1": "/lights/23",
+        "owner": {
+            "rid": "c8ccbaf2-7a4c-4679-bcfe-c2513a536646",
+            "rtype": "device"
+        },
+        "metadata": {
+            "name": "Bryan Lamp",
+            "archetype": "table_shade",
+            "function": "mixed"
+        },
+        "product_data": {
+            "function": "mixed"
+        },
+        "identify": {},
+        "service_id": 0,
+        "on": {
+            "on": false
+        },
+        "dimming": {
+            "brightness": 56.52,
+            "min_dim_level": 0.2
+        },
+        "dimming_delta": {},
+        "color_temperature": {
+            "mirek": 443,
+            "mirek_valid": true,
+            "mirek_schema": {
+                "mirek_minimum": 153,
+                "mirek_maximum": 500
+            }
+        },
+        "color_temperature_delta": {},
+        "color": {
+            "xy": {
+                "x": 0.4998,
+                "y": 0.4152
+            },
+            "gamut": {
+                "red": {
+                    "x": 0.6915,
+                    "y": 0.3083
+                },
+                "green": {
+                    "x": 0.17,
+                    "y": 0.7
+                },
+                "blue": {
+                    "x": 0.1532,
+                    "y": 0.0475
+                }
+            },
+            "gamut_type": "C"
+        },
+        "dynamics": {
+            "status": "none",
+            "status_values": [
+                "none",
+                "dynamic_palette"
+            ],
+            "speed": 0.0,
+            "speed_valid": false
+        },
+        "alert": {
+            "action_values": [
+                "breathe"
+            ]
+        },
+        "signaling": {
+            "signal_values": [
+                "no_signal",
+                "on_off",
+                "on_off_color",
+                "alternating"
+            ]
+        },
+        "mode": "normal",
+        "effects": {
+            "status_values": [
+                "no_effect",
+                "candle",
+                "fire",
+                "prism",
+                "sparkle",
+                "opal",
+                "glisten",
+                "underwater",
+                "cosmos",
+                "sunbeam",
+                "enchant"
+            ],
+            "status": "no_effect",
+            "effect_values": [
+                "no_effect",
+                "candle",
+                "fire",
+                "prism",
+                "sparkle",
+                "opal",
+                "glisten",
+                "underwater",
+                "cosmos",
+                "sunbeam",
+                "enchant"
+            ]
+        },
+        "effects_v2": {
+            "action": {
+                "effect_values": [
+                    "no_effect",
+                    "candle",
+                    "fire",
+                    "prism",
+                    "sparkle",
+                    "opal",
+                    "glisten",
+                    "underwater",
+                    "cosmos",
+                    "sunbeam",
+                    "enchant"
+                ]
+            },
+            "status": {
+                "effect": "no_effect",
+                "effect_values": [
+                    "no_effect",
+                    "candle",
+                    "fire",
+                    "prism",
+                    "sparkle",
+                    "opal",
+                    "glisten",
+                    "underwater",
+                    "cosmos",
+                    "sunbeam",
+                    "enchant"
+                ]
+            }
+        },
+        "timed_effects": {
+            "status_values": [
+                "no_effect",
+                "sunrise",
+                "sunset"
+            ],
+            "status": "no_effect",
+            "effect_values": [
+                "no_effect",
+                "sunrise",
+                "sunset"
+            ]
+        },
+        "powerup": {
+            "preset": "safety",
+            "configured": true,
+            "on": {
+                "mode": "on",
+                "on": {
+                    "on": true
+                }
+            },
+            "dimming": {
+                "mode": "dimming",
+                "dimming": {
+                    "brightness": 100.0
+                }
+            },
+            "color": {
+                "mode": "color_temperature",
+                "color_temperature": {
+                    "mirek": 366
+                }
+            }
+        },
+        "type": "light"
+    },
+    {
+        "id": "fa47b36e-dd7d-458f-8e66-f2f142b6c483",
+        "id_v1": "/lights/1",
+        "owner": {
+            "rid": "aa1eb74f-ab3b-474b-93c4-79ae38b8572d",
+            "rtype": "device"
+        },
+        "metadata": {
+            "name": "Living Room Ceiling 1",
+            "archetype": "sultan_bulb",
+            "function": "mixed"
+        },
+        "product_data": {
+            "function": "mixed"
+        },
+        "identify": {},
+        "service_id": 0,
+        "on": {
+            "on": true
+        },
+        "dimming": {
+            "brightness": 100.0,
+            "min_dim_level": 1.0
+        },
+        "dimming_delta": {},
+        "color_temperature": {
+            "mirek": 346,
+            "mirek_valid": true,
+            "mirek_schema": {
+                "mirek_minimum": 153,
+                "mirek_maximum": 500
+            }
+        },
+        "color_temperature_delta": {},
+        "color": {
+            "xy": {
+                "x": 0.445,
+                "y": 0.4067
+            },
+            "gamut": {
+                "red": {
+                    "x": 0.6915,
+                    "y": 0.3083
+                },
+                "green": {
+                    "x": 0.17,
+                    "y": 0.7
+                },
+                "blue": {
+                    "x": 0.1532,
+                    "y": 0.0475
+                }
+            },
+            "gamut_type": "C"
+        },
+        "dynamics": {
+            "status": "none",
+            "status_values": [
+                "none",
+                "dynamic_palette"
+            ],
+            "speed": 0.0,
+            "speed_valid": false
+        },
+        "alert": {
+            "action_values": [
+                "breathe"
+            ]
+        },
+        "signaling": {
+            "signal_values": [
+                "no_signal",
+                "on_off",
+                "on_off_color",
+                "alternating"
+            ]
+        },
+        "mode": "normal",
+        "effects": {
+            "status_values": [
+                "no_effect",
+                "candle",
+                "fire",
+                "prism",
+                "sparkle",
+                "opal",
+                "glisten"
+            ],
+            "status": "no_effect",
+            "effect_values": [
+                "no_effect",
+                "candle",
+                "fire",
+                "prism",
+                "sparkle",
+                "opal",
+                "glisten"
+            ]
+        },
+        "effects_v2": {
+            "action": {
+                "effect_values": [
+                    "no_effect",
+                    "candle",
+                    "fire",
+                    "prism",
+                    "sparkle",
+                    "opal",
+                    "glisten"
+                ]
+            },
+            "status": {
+                "effect": "no_effect",
+                "effect_values": [
+                    "no_effect",
+                    "candle",
+                    "fire",
+                    "prism",
+                    "sparkle",
+                    "opal",
+                    "glisten"
+                ]
+            }
+        },
+        "powerup": {
+            "preset": "powerfail",
+            "configured": true,
+            "on": {
+                "mode": "previous"
+            },
+            "dimming": {
+                "mode": "previous"
+            },
+            "color": {
+                "mode": "previous"
+            }
+        },
+        "type": "light"
+    },
+    {
+        "id": "fb0d2a88-51f6-4a1f-b14a-aa416b554ac2",
+        "id_v1": "/lights/31",
+        "owner": {
+            "rid": "cf275c36-afbc-4014-80ce-06aa9fd146fb",
+            "rtype": "device"
+        },
+        "metadata": {
+            "name": "Bryan Lamp 2",
+            "archetype": "table_shade",
+            "function": "mixed"
+        },
+        "product_data": {
+            "function": "mixed"
+        },
+        "identify": {},
+        "service_id": 0,
+        "on": {
+            "on": false
+        },
+        "dimming": {
+            "brightness": 56.52,
+            "min_dim_level": 0.2
+        },
+        "dimming_delta": {},
+        "color_temperature": {
+            "mirek": 443,
+            "mirek_valid": true,
+            "mirek_schema": {
+                "mirek_minimum": 153,
+                "mirek_maximum": 500
+            }
+        },
+        "color_temperature_delta": {},
+        "color": {
+            "xy": {
+                "x": 0.4998,
+                "y": 0.4152
+            },
+            "gamut": {
+                "red": {
+                    "x": 0.6915,
+                    "y": 0.3083
+                },
+                "green": {
+                    "x": 0.17,
+                    "y": 0.7
+                },
+                "blue": {
+                    "x": 0.1532,
+                    "y": 0.0475
+                }
+            },
+            "gamut_type": "C"
+        },
+        "dynamics": {
+            "status": "none",
+            "status_values": [
+                "none",
+                "dynamic_palette"
+            ],
+            "speed": 0.0,
+            "speed_valid": false
+        },
+        "alert": {
+            "action_values": [
+                "breathe"
+            ]
+        },
+        "signaling": {
+            "signal_values": [
+                "no_signal",
+                "on_off",
+                "on_off_color",
+                "alternating"
+            ]
+        },
+        "mode": "normal",
+        "effects": {
+            "status_values": [
+                "no_effect",
+                "candle",
+                "fire",
+                "prism",
+                "sparkle",
+                "opal",
+                "glisten",
+                "underwater",
+                "cosmos",
+                "sunbeam",
+                "enchant"
+            ],
+            "status": "no_effect",
+            "effect_values": [
+                "no_effect",
+                "candle",
+                "fire",
+                "prism",
+                "sparkle",
+                "opal",
+                "glisten",
+                "underwater",
+                "cosmos",
+                "sunbeam",
+                "enchant"
+            ]
+        },
+        "effects_v2": {
+            "action": {
+                "effect_values": [
+                    "no_effect",
+                    "candle",
+                    "fire",
+                    "prism",
+                    "sparkle",
+                    "opal",
+                    "glisten",
+                    "underwater",
+                    "cosmos",
+                    "sunbeam",
+                    "enchant"
+                ]
+            },
+            "status": {
+                "effect": "no_effect",
+                "effect_values": [
+                    "no_effect",
+                    "candle",
+                    "fire",
+                    "prism",
+                    "sparkle",
+                    "opal",
+                    "glisten",
+                    "underwater",
+                    "cosmos",
+                    "sunbeam",
+                    "enchant"
+                ]
+            }
+        },
+        "timed_effects": {
+            "status_values": [
+                "no_effect",
+                "sunrise",
+                "sunset"
+            ],
+            "status": "no_effect",
+            "effect_values": [
+                "no_effect",
+                "sunrise",
+                "sunset"
+            ]
+        },
+        "powerup": {
+            "preset": "safety",
+            "configured": true,
+            "on": {
+                "mode": "on",
+                "on": {
+                    "on": true
+                }
+            },
+            "dimming": {
+                "mode": "dimming",
+                "dimming": {
+                    "brightness": 100.0
+                }
+            },
+            "color": {
+                "mode": "color_temperature",
+                "color_temperature": {
+                    "mirek": 366
+                }
+            }
+        },
+        "type": "light"
+    }
+]

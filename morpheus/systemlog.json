@@ -1,0 +1,7 @@
+{
+  "area": "Update Device Status",
+  "message": "Error updating status",
+  "details": "Device matching query does not exist.",
+  "level": "ERROR",
+  "date_time": "2024-12-02 00:27:28.120302"
+}

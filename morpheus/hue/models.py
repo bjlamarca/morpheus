@@ -3,6 +3,11 @@ from django.urls import reverse
 
 
 class Device(models.Model):
+    #Morpheus categorization of Hue devices  
+    hue_device_type = models.CharField(
+        max_length=100,
+        blank=True
+    )
     hub_id = models.IntegerField(
         blank=False,
     )
@@ -31,11 +36,18 @@ class Device(models.Model):
         max_length=100
     )
     power_rid = models.CharField(
-        max_length=100
+        max_length=100,
+        blank=True
+    )
+    bridge_rid = models.CharField(
+        max_length=100,
+        blank=True
     )
     last_checkin = models.DateTimeField(
         blank=True,
-        default=None
+        null=True,
+        default=None,
+        
     )
 
     class Meta:
@@ -61,10 +73,6 @@ class Light(models.Model):
         null=True
     )
     dimming = models.IntegerField(
-        blank=True,
-        null=True
-        )
-    color_enabled = models.BooleanField(
         blank=True,
         null=True
         )

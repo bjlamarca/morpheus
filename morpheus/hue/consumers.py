@@ -1,8 +1,8 @@
 import os, json, threading
-from asgiref.sync import sync_to_async
+from asgiref.sync import sync_to_async, async_to_sync
 from channels.generic.websocket import AsyncWebsocketConsumer
 from .hub import Hub
-from .database import sync_device_db
+from .devices import HueDevice 
 
 
 
@@ -43,7 +43,7 @@ class DiagConsumer(AsyncWebsocketConsumer):
 
         
         if message == 'all_lights':
-            lights = hub.get_all_lights()
+            lights = hub.get_items('lights')
             f = open(current_file_directory + '/json/all_lights.json', 'w')
             lights_str = json.dumps(lights, indent=4) 
             f.write(lights_str)
@@ -51,7 +51,7 @@ class DiagConsumer(AsyncWebsocketConsumer):
             result = lights_str
 
         elif message == 'all_devices':
-            devices = hub.get_all_devices()
+            devices = hub.get_items('devices')
             f = open(current_file_directory + '/json/all_devices.json', 'w')
             devices_str = json.dumps(devices, indent=4) 
             f.write(devices_str)
@@ -93,11 +93,15 @@ class DiagConsumer(AsyncWebsocketConsumer):
             result = button_str
         
         elif message == 'sync_device_db':
-            result = await sync_to_async(sync_device_db)()
+            hue = HueDevice()
+            await sync_to_async(hue.sync_device_db)(1)
+            result = 'ok'
+            #result = await sync_to_async(sync_device_db)()
 
         elif message == 'test':
-            
-            result = 'Good'
+            hue = HueDevice()
+            await sync_to_async(hue.update_device_status)(230)
+            result = 'ok'
 
 
         await self.channel_layer.group_send(

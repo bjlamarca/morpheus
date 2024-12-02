@@ -40,16 +40,42 @@ class Hub():
         result = requests.post(url=url, data=data, verify=False)
         return result.text
 
-    #Function to get info from the hub
-    def get_items(self, item, device_id=None):
-        if item == 'all_lights':
+    #Get items from the hub, return a list of dicts
+    def get_items(self, item):
+        if item == 'lights':
             url = self.url_pre + '/clip/v2/resource/light'
-        elif item == 'all_devices':
+        elif item == 'devices':
             url = self.url_pre + '/clip/v2/resource/device'
-        elif item == 'device':
+        elif item == 'buttons':
+            url = self.url_pre + '/clip/v2/resource/button'
+        else:
+            sys_log = SystemLogger('Hue Hub', 'Get Items','Not vaild Item(s)', 'ERROR')
+            sys_log.log()
+            return None
+        try:
+            result = requests.get(url, headers=self.header, verify=False)
+            return_dict = dict(json.loads(result.text))
+            errors_list = return_dict['errors']
+            if bool(errors_list):
+                sys_log = SystemLogger('Hue Hub','Hub returned Errors attempting to get Items', errors_list, 'ERROR')
+                sys_log.log()
+                return None
+            else:
+                data_list = return_dict['data']
+                return data_list
+        except Exception as error:
+            sys_log = SystemLogger('Hue Hub','Cannot retrieve items from Hub.', str(error), 'ERROR')
+            sys_log.log()
+            return None
+
+    #Get an item from the hub, returns a dict
+    def get_item(self, item, device_id=None):
+        if item == 'device':
             url = self.url_pre + '/clip/v2/resource/device/' + device_id
         elif item == 'light':
             url = self.url_pre + '/clip/v2/resource/light/' + device_id
+        elif item == 'button':
+            url = self.url_pre + '/clip/v2/resource/button.' + device_id
         else:
             sys_log = SystemLogger('Hue Hub', 'Get All Devices','Not a vaild Item(s)', 'ERROR')
             sys_log.log()
@@ -58,53 +84,18 @@ class Hub():
             result = requests.get(url, headers=self.header, verify=False)
             return_dict = dict(json.loads(result.text))
             errors_list = return_dict['errors']
-            print("Error", errors_list)
             if bool(errors_list):
                 sys_log = SystemLogger('Hue Hub','Cannot retrieve data from Hub', errors_list, 'ERROR')
                 sys_log.log()
                 return None
             else:
-                print('TYPE')
                 data_list = return_dict['data']
-                return data_list
-            
-
+                #return first (only) item from list as a dict
+                return dict(data_list[0])
         except Exception as error:
-            pass     
-    
-    
-    def get_device(self, device_id):
-        url = self.url_pre + '/clip/v2/resource/device/' + device_id
-        result = requests.get(url, headers=self.header, verify=False)
-        result_dict = json.loads(result.text)
-        device_list = result_dict['data']
-        device_dict = dict(device_list[0]) 
-        return(device_dict)
-    
-    
-    
-    def get_all_buttons(self):
-        url = self.url_pre + '/clip/v2/resource/button'
-        result = requests.get(url, headers=self.header, verify=False)
-        button_dict = json.loads(result.text)
-        button_list = button_dict['data'] 
-        return button_list
-    
-    def get_light(self, light_id):
-        self.url = self.url_pre + '/clip/v2/resource/light/' + light_id
-        result = self.get_from_hub()
-        print("RESULT", result, type(result) )
-        
-        #light_dict = dict(light_list[0]) 
-        return(result)
-    
-    def get_button(self, button_id):
-        url = self.url_pre + '/clip/v2/resource/button/' + button_id
-        result = requests.get(url, headers=self.header, verify=False)
-        result_dict = json.loads(result.text)
-        button_list = result_dict['data']
-        button_dict = dict(button_list[0]) 
-        return button_dict
+            sys_log = SystemLogger('Hue Hub','Cannot retrieve item from Hub.', error, 'ERROR')
+            sys_log.log()
+            return None         
     
     
     ###Functions to control devices
