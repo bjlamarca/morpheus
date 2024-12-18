@@ -5,7 +5,7 @@ from django.urls import reverse
 from utilities.models import SystemLog
 
 BASE_DIR = Path(__file__).resolve().parent.parent
-print(type(BASE_DIR), BASE_DIR)            
+         
 
 LOG_LEVEL = (
         'VERBOSE',
@@ -19,7 +19,6 @@ LOG_LEVEL = (
 class SystemLogger():
     def __init__(self, area, message, details, level='INFO'):
         self.logitem = {}
-        print("Type", type(self.logitem))
         self.logitem['area'] = area
         self.logitem['message'] = message
         self.logitem['details'] = details

@@ -43,6 +43,11 @@ class Device(models.Model):
         max_length=100,
         blank=True
     )
+    online = models.BooleanField(
+        blank=True,
+        null=True,
+        default=True
+    )
     last_checkin = models.DateTimeField(
         blank=True,
         null=True,
@@ -72,7 +77,9 @@ class Light(models.Model):
         blank=True,
         null=True
     )
-    dimming = models.IntegerField(
+    dimming = models.DecimalField(
+        max_digits=10, 
+        decimal_places=2,
         blank=True,
         null=True
         )

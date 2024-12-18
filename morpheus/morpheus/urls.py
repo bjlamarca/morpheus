@@ -5,5 +5,6 @@ from django.urls import path, include
 urlpatterns = [
     path('', views.IndexView.as_view(), name='index'),
     path('hue/', include('hue.urls')),
+    path('navbar/', views.navbar_view, name="navbar"),
     path('admin/', admin.site.urls),
 ]

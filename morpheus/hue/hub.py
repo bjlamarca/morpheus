@@ -3,6 +3,8 @@ from pprint import pprint
 from django.dispatch import receiver
 from .signals import hue_receive
 from utilities.logging import SystemLogger
+from pprint import pprint
+
 
 
 class Hub():
@@ -111,10 +113,13 @@ class Hub():
     def get_stream(self):
         url = self.url_pre + '/eventstream/clip/v2'
         with httpx.stream('GET', url, headers=self.header, verify=False, timeout=None) as s:
-            for data in s.iter_text():
-                #print("d1",data)
-                yield data
-                #yield s.iter_text()
+            s.read()
+            yield s.text
+            #for data in s.iter_text():
+                
+            #     #print("d1",data)
+            #    yield data
+            #     #yield s.iter_text()
 
     def loop_stream(self):
         while True:
@@ -131,16 +136,23 @@ class Hub():
         t.start()
     
     def hue_process_events(self, hue_data):
-        try:
-            event_dict = json.loads(hue_data)
-            hue_receive.send(sender='hue_process_events', data=event_dict)
-            #pprint(event_dict)
-        except Exception as error:
-            print("Hue Receive Error:", error)
+        #refer to hueupdates.md
+        #try:
+            event_list = json.loads(hue_data)
+            for event_dict in event_list:
+                print(event_dict['creationtime'])
+                for data_item in event_dict['data']:
+                    update_type = data_item['type']
+                    print('DATA ITEM', update_type)
+                    
 
-        
-        
-    
+
+
+
+
+        #except Exception as error:
+            #print("Hue Receive Error:", error)
+
 
 
 def list_lights(device_list):

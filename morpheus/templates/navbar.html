@@ -1,37 +1,26 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-color1" >
+{% load static %}
+
+<nav class="navbar navbar-expand-lg navbar-theme">
     <div class="container-fluid">
-        <a class="navbar-brand" href="{% url 'index' %}">SSS Links</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" >
+        <a class="navbar-brand text-white" href="{% url 'index' %}">Morpheus</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
+                data-bs-target="#navbarSupportedContent" >
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav">
-                {% if user.is_authenticated %}
-                <li class="nav-item">
-                    <a class="nav-link" hx-get="{% url 'assets:view' %}" hx-target="#main-area" style="cursor: pointer;">Assets</a>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle m-nav-link" href="#" id="navbarDropdownMenuLink" 
+                            role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Interfaces
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                      <li><a class="dropdown-item" href="{% url 'hue:main' %}">Philips Hue</a></li>
+                    </ul>
                 </li>
-
-                <li class="nav-item">
-                    <a class="nav-link" hx-get="{% url 'users:view' %}" hx-target="#main-area" style="cursor: pointer;">Users</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" hx-get="{% url 'accounts:view' %}" hx-target="#main-area" style="cursor: pointer;">Accounts</a>
-                </li>
-                
-                <li class="nav-item">
-                    <a class="nav-link" hx-get="{% url 'users:logout' %}" hx-target="#main-area" style="cursor: pointer;">Logout</a>
-                </li>
-                
-                {% else %}
-                <li class="nav-item">
-                    <a class="nav-link" hx-get="{% url 'users:login' %}" hx-target="#main-area" style="cursor: pointer;">Login</a>
-                </li>		
-                
-                {% endif %}
             </ul>		  
         </div>
     </div>
-    
-  </nav>
+</nav>
   
   

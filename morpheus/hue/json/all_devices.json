@@ -315,7 +315,7 @@
             "product_name": "Hue Bridge",
             "product_archetype": "bridge_v2",
             "certified": true,
-            "software_version": "1.67.1967054020"
+            "software_version": "1.68.1968096020"
         },
         "metadata": {
             "name": "PC Hue",

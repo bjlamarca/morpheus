@@ -32,6 +32,7 @@ ALLOWED_HOSTS = ['*']
 
 INSTALLED_APPS = [
     'daphne',
+    'django_tables2',
     'hue',
     'utilities',
     'django.contrib.admin',

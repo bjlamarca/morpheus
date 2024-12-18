@@ -60,7 +60,7 @@ class DiagConsumer(AsyncWebsocketConsumer):
 
 
         elif message == 'all_buttons':
-            devices = hub.get_all_buttons()
+            devices = hub.get_items('lights')
             f = open(current_file_directory + '/json/all_buttons.json', 'w')
             buttons_str = json.dumps(devices, indent=4) 
             f.write(buttons_str)
@@ -68,15 +68,19 @@ class DiagConsumer(AsyncWebsocketConsumer):
             result = buttons_str
         
         elif message == 'get_light':
-            t = threading.Thread(target=self.get_lights())
-            t.daemon = True
-            t.start()
+            input_value = text_data_json['input_value']
+            device = hub.get_item('light',input_value)
+            print("device---", type(device))
+            f = open(current_file_directory + f'/json/device-{input_value}.json', 'w')
+            device_str = json.dumps(device, indent=4) 
+            f.write(device_str)
+            f.close
+            result = device_str
             
 
         elif message == 'get_device':
             input_value = text_data_json['input_value']
-            device = hub.get_device(input_value)
-            print("device---", type(device))
+            device = hub.get_item(input_value)
             f = open(current_file_directory + f'/json/device-{input_value}.json', 'w')
             device_str = json.dumps(device, indent=4) 
             f.write(device_str)
@@ -85,7 +89,7 @@ class DiagConsumer(AsyncWebsocketConsumer):
         
         elif message == 'get_button':
             input_value = text_data_json['input_value']
-            button = hub.get_button(input_value)
+            button = hub.get_item(input_value)
             f = open(current_file_directory + f'/json/button-{input_value}.json', 'w')
             button_str = json.dumps(button, indent=4) 
             f.write(button_str)
@@ -100,7 +104,7 @@ class DiagConsumer(AsyncWebsocketConsumer):
 
         elif message == 'test':
             hue = HueDevice()
-            await sync_to_async(hue.update_device_status)(230)
+            await sync_to_async(hue.update_all_device_status)(1)
             result = 'ok'
 
 

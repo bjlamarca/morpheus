@@ -20,3 +20,6 @@ class IndexView(View):
         #result = light_str
         return render(request, self.template_name)
     
+def navbar_view(request):
+    return render(request, 'navbar.html')
+    

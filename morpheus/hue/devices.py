@@ -2,6 +2,7 @@ import json
 from .models import Device, Light, Button
 from .hub import Hub
 from .color import Converter
+from decimal import Decimal
 from utilities.logging import SystemLogger
 from django.shortcuts import get_object_or_404
 
@@ -123,15 +124,47 @@ class HueDevice():
                                            'Hue Type: ' + device['product_data']['model_id'], 'ERROR')
                     sys_log.log()   
 
-    def update_device_status(self, device_id):
+    def update_device_status(self, device_id, hub_id):
         try:
             device = Device.objects.get(pk=device_id)
-            print(device.name)
-        
-        
+            hub = Hub()
+            hub.set_hub(hub_id)
+
+            print(device.hue_device_type)
+            if device.hue_device_type == 'COLORLAMP' or device.hue_device_type == 'WHITELAMP':
+                light_qs = Light.objects.get(device=device)
+                print('qs', light_qs.rid)
+                light_item = hub.get_item('light',light_qs.rid)
+                #print('TYPE', light_item)
+                print('LI' )
+                light_qs.light_on = bool(light_item['on']['on'])
+                light_qs.dimming =  Decimal(light_item['dimming']['brightness'])
+                light_qs.effect = light_item['effects']['status']
+                if device.hue_device_type == 'COLORLAMP':
+                    convert = Converter(light_qs.gamut_type)
+                    rgb = convert.xy_to_rgb(light_item['color']['xy']['x'], light_item['color']['xy']['y'])
+                    light_qs.red = rgb[0]
+                    light_qs.green = rgb[1]
+                    light_qs.blue = rgb[2]
+                light_qs.save()
         except Exception as error:
-            sys_log = SystemLogger('Update Device Status','Error updating status', str(error), 'ERROR')
-            sys_log.log()   
+            sys_log = SystemLogger('HueDevice','update_device_status', str(error), 'ERROR')
+            sys_log.log()       
+
+    def update_all_device_status(self, hub_id):
+        try: 
+            devices = Device.objects.all()
+            for device in devices:
+                self.update_device_status(device.pk, hub_id)
+
+        except Exception as error:
+            sys_log = SystemLogger('HueDevice','update_device_status', str(error), 'ERROR')
+            sys_log.log()    
+
+
+        
+        
+        
         
 
         

@@ -1,0 +1,168 @@
+{
+    "id": "7759e919-2535-41c9-b745-5c65b5d2accd",
+    "id_v1": "/lights/8",
+    "owner": {
+        "rid": "0d4699ea-d133-4496-907a-b2e10dc6127a",
+        "rtype": "device"
+    },
+    "metadata": {
+        "name": "Kitchen Ceiling 1",
+        "archetype": "single_spot",
+        "function": "mixed"
+    },
+    "product_data": {
+        "function": "mixed"
+    },
+    "identify": {},
+    "service_id": 0,
+    "on": {
+        "on": true
+    },
+    "dimming": {
+        "brightness": 56.52,
+        "min_dim_level": 0.2
+    },
+    "dimming_delta": {},
+    "color_temperature": {
+        "mirek": 443,
+        "mirek_valid": true,
+        "mirek_schema": {
+            "mirek_minimum": 153,
+            "mirek_maximum": 500
+        }
+    },
+    "color_temperature_delta": {},
+    "color": {
+        "xy": {
+            "x": 0.4998,
+            "y": 0.4152
+        },
+        "gamut": {
+            "red": {
+                "x": 0.6915,
+                "y": 0.3083
+            },
+            "green": {
+                "x": 0.17,
+                "y": 0.7
+            },
+            "blue": {
+                "x": 0.1532,
+                "y": 0.0475
+            }
+        },
+        "gamut_type": "C"
+    },
+    "dynamics": {
+        "status": "none",
+        "status_values": [
+            "none",
+            "dynamic_palette"
+        ],
+        "speed": 0.0,
+        "speed_valid": false
+    },
+    "alert": {
+        "action_values": [
+            "breathe"
+        ]
+    },
+    "signaling": {
+        "signal_values": [
+            "no_signal",
+            "on_off",
+            "on_off_color",
+            "alternating"
+        ]
+    },
+    "mode": "normal",
+    "effects": {
+        "status_values": [
+            "no_effect",
+            "candle",
+            "fire",
+            "prism",
+            "sparkle",
+            "opal",
+            "glisten",
+            "underwater",
+            "cosmos",
+            "sunbeam",
+            "enchant"
+        ],
+        "status": "no_effect",
+        "effect_values": [
+            "no_effect",
+            "candle",
+            "fire",
+            "prism",
+            "sparkle",
+            "opal",
+            "glisten",
+            "underwater",
+            "cosmos",
+            "sunbeam",
+            "enchant"
+        ]
+    },
+    "effects_v2": {
+        "action": {
+            "effect_values": [
+                "no_effect",
+                "candle",
+                "fire",
+                "prism",
+                "sparkle",
+                "opal",
+                "glisten",
+                "underwater",
+                "cosmos",
+                "sunbeam",
+                "enchant"
+            ]
+        },
+        "status": {
+            "effect": "no_effect",
+            "effect_values": [
+                "no_effect",
+                "candle",
+                "fire",
+                "prism",
+                "sparkle",
+                "opal",
+                "glisten",
+                "underwater",
+                "cosmos",
+                "sunbeam",
+                "enchant"
+            ]
+        }
+    },
+    "timed_effects": {
+        "status_values": [
+            "no_effect",
+            "sunrise",
+            "sunset"
+        ],
+        "status": "no_effect",
+        "effect_values": [
+            "no_effect",
+            "sunrise",
+            "sunset"
+        ]
+    },
+    "powerup": {
+        "preset": "powerfail",
+        "configured": true,
+        "on": {
+            "mode": "previous"
+        },
+        "dimming": {
+            "mode": "previous"
+        },
+        "color": {
+            "mode": "previous"
+        }
+    },
+    "type": "light"
+}

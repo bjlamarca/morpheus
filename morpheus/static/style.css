@@ -25,6 +25,32 @@
     background-color: #444548;
     color:#e2eeee;
 }
+.text-white {
+    color: #FFFFFF;
+}
+.navbar-theme {
+    background-color: var(--theme-7);
+    color: #FFFFFF;
+    /* font-size: 30px; */
+}
+.m-nav-link{
+    color: #FFFFFF;
+}
+:root {
+--theme-l: #e9f5ff;
+--theme-2: #b5dffd;
+--theme-3: #6bc0fc;
+--theme-4: #21a0fa;
+--theme-4: #0479cc;
+--theme-5: #034f84;
+--theme-7: #024575;
+--theme-8: #023e68;
+--theme-9: #02365b;
+--theme-l0: #022e4e;
+--theme-l1: #012641;
+}
+
+
 /** Dark theme primary colors 
 --color-primary-a0: #072ff2;
 --color-primary-a10: #4d45f5;
