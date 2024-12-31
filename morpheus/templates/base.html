@@ -1,6 +1,6 @@
 {% load static %}
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-bs-theme="dark">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,7 +9,7 @@
   
     
       <!-- Bootstrap CSS -->
-    <link  rel="stylesheet" type="text/css" href="{% static 'bootstrap\css\bootstrap.min.css' %}">
+   <link  rel="stylesheet" type="text/css" href="{% static '/bootstrap/css/bootstrap.css' %}">
 
      <!-- Custom CSS -->
     <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
@@ -18,15 +18,15 @@
     <!-- HTMX -->
     <script src="{% static 'htmx.min.js' %}"></script>
 </head>
-<body class="bg-color1">
- 
-        {% block content %}
+<body>
+  
+        {% block layout %}
         {% endblock %}
-    
+ 
     
     
     <script src="{% static 'popper.min.js' %}"></script>
-    <script src="{% static '/bootstrap/js/bootstrap.min.js' %}"></script>
+    <script src="{% static '/bootstrap/js/bootstrap.js' %}"></script>
     
     
 

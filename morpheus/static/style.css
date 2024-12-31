@@ -36,13 +36,43 @@
 .m-nav-link{
     color: #FFFFFF;
 }
+.m-table {
+    background-color: var(--theme-9);
+    /* --bs-table-striped-color: #212529;
+    --bs-table-striped-bg: rgba(0, 0, 0, 0.05);
+    --bs-table-active-color: #212529;
+    --bs-table-active-bg: rgba(0, 0, 0, 0.1);
+    --bs-table-hover-color: #212529;
+    --bs-table-hover-bg: rgba(0, 0, 0, 0.075); */
+    width: 100%;
+    margin-bottom: 1rem;
+    color: #ffffff;
+    vertical-align: top;
+    border-color: #dee2e6;
+    /* box-shadow: inset 0 0 0 9999px var(--theme-2); */
+  }
+  .m-table > :not(caption) > * > * {
+    padding: 0.5rem 0.5rem;
+    /* background-color: var(--theme-4); */
+    /* border-bottom-width: 1px; */
+    /* box-shadow: inset 0 0 0 9999px var(--theme-8); */
+  }
+  .m-table-striped > tbody > tr:nth-of-type(odd) {
+    background-color: var(--theme-8);
+    color: var(--color-primary-a20);
+  }
+  .m-table-hover > tbody > tr:hover {
+    background-color: var(--theme-9);
+    color: var(--theme-4);
+  }
+
 :root {
 --theme-l: #e9f5ff;
 --theme-2: #b5dffd;
 --theme-3: #6bc0fc;
 --theme-4: #21a0fa;
---theme-4: #0479cc;
---theme-5: #034f84;
+--theme-5: #0479cc;
+--theme-6: #034f84;
 --theme-7: #024575;
 --theme-8: #023e68;
 --theme-9: #02365b;
@@ -51,7 +81,8 @@
 }
 
 
-/** Dark theme primary colors 
+:root {
+ /* Dark theme primary colors  */
 --color-primary-a0: #072ff2;
 --color-primary-a10: #4d45f5;
 --color-primary-a20: #6e5bf7;
@@ -59,7 +90,7 @@
 --color-primary-a40: #9f88fb;
 --color-primary-a50: #b49ffc;
 
-/** Dark theme surface colors 
+/* Dark theme surface colors */ 
 --color-surface-a0: #121212;
 --color-surface-a10: #282828;
 --color-surface-a20: #3f3f3f;
@@ -67,10 +98,11 @@
 --color-surface-a40: #717171;
 --color-surface-a50: #8b8b8b;
 
-/** Dark theme mixed surface colors 
+/* Dark theme mixed surface colors */
 --color-surface-mixed-a0: #1a1625;
 --color-surface-mixed-a10: #2f2b3a;
 --color-surface-mixed-a20: #46424f;
 --color-surface-mixed-a30: #5e5a66;
 --color-surface-mixed-a40: #76737e;
 --color-surface-mixed-a50: #908d96;
+}

@@ -6,7 +6,7 @@ from decimal import Decimal
 from utilities.logging import SystemLogger
 from django.shortcuts import get_object_or_404
 
-class DeviceType():
+class HueDeviceType():
     HUE_DEVICE_TYPE = [
         ['WHITELAMP', 'White Lamp'],
         ['COLORLAMP', 'Color Lamp'],
@@ -53,7 +53,7 @@ class HueDevice():
             device_qs = Device.objects.filter(hue_id=device['id'])
             if device_qs:
                 device_qs[0].name = device['metadata']['name']
-                device_qs[0].software_version = device['metadata']['name']
+                device_qs[0].software_version = device['product_data']['software_version']
                 device_qs[0].save()
             else:
                 #create parent device
@@ -74,7 +74,7 @@ class HueDevice():
                         new_device.zigbee_rid = service_dict['rid']
 
                 #get the device type, add it
-                device_type = DeviceType()
+                device_type = HueDeviceType()
                 hue_type = device_type.huetype_from_modelid(device['product_data']['model_id'])
                 new_device.hue_device_type = hue_type
                 

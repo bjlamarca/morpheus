@@ -1,7 +1,7 @@
-{% extends 'base.html' %}
+{% extends 'layout.html' %}
 {% load static %}
 
-{% block content %}
+{% block page %}
 
 <input type="hidden" id="token" value="{{ csrf_token }}">
 
@@ -110,4 +110,4 @@
 
 </script>
 
-{% endblock content %}
+{% endblock %}

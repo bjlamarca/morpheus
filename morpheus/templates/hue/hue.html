@@ -1,33 +1,67 @@
-{% extends 'base.html' %}
+{% extends 'layout.html' %}
 {% load static %}
 {% load render_table from django_tables2 %}
 
-{% block content %}
+{% block page %}
 
-{% include 'navbar.html' %}
+
 
 
 
 <input type="hidden" id="token" value="{{ csrf_token }}">
 
 <div class="container-fluid rounded p-4">
-   
+    
     <div class="row">
         <div class="col col-lg-12">
-            <div class="card">
+          <ul class="nav nav-tabs" id="myTab" role="tablist">
+            <li class="nav-item" role="presentation">
+              <button class="nav-link active" id="lights-tab" data-bs-toggle="tab" data-bs-target="#lights" type="button" role="tab" aria-controls="lights" aria-selected="true">Lights</button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" id="buttons-tab" data-bs-toggle="tab" data-bs-target="#buttons" type="button" role="tab" aria-controls="lights" aria-selected="false">Buttons</button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" id="alldevices-tab" data-bs-toggle="tab" data-bs-target="#alldevices" type="button" role="tab" aria-controls="alldevices" aria-selected="false">All Devices</button>
+            </li>
+          </ul>
+        
+          <div class="tab-content mt-3" id="myTabContent">
+            <div class="tab-pane fade show active" id="lights" role="tabpanel" aria-labelledby="lights-tab">
+              <h2 class="mb-3">Lights</h2>
+              <div class="card">
                 <div class = "card-body">
-                    <table class="table table-striped table-hover">
-                        <tbody>
-                            {% render_table object_list %}
-                        </tbody>
-                    </table>   
-                    
+                  <div id="light-area" hx-get="{% url 'hue:light-list' %}" hx-trigger="load" hx-swap="outerHTML">
+
+                  </div>
                 </div>
+              </div>
             </div>
+            <div class="tab-pane fade" id="buttons" role="tabpanel" aria-labelledby="buttons-tab">
+              <h2 class="mb-3">Buttons</h2>
+              <p class="lead">This is the buttons tab content.</p>
+            </div>
+            <div class="tab-pane fade" id="alldevices" role="tabpanel" aria-labelledby="alldevices-tab">
+              <h2 class="mb-3">All Devices</h2>
+              <div class="card">
+                <div class = "card-body">
+                  <div id="device-area" hx-get="{% url 'hue:device-list' %}" hx-trigger="load" hx-swap="outerHTML">
+
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+           
+            
         </div>
     </div>      
 </div>
 
 <script src="{% static 'hue.js' %}"></script>
 
-{% endblock content %}
+{% endblock %}

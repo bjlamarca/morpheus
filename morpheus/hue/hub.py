@@ -144,6 +144,22 @@ class Hub():
                 for data_item in event_dict['data']:
                     update_type = data_item['type']
                     print('DATA ITEM', update_type)
+                    if update_type == 'light':
+                        if 'on' in data_item:
+                            print('on:', data_item['on'] )
+                        if 'dimming' in data_item:
+                            print('Dim:', data_item['dimming'])
+                        if 'color' in data_item:
+                            print('color:', data_item['color'])
+                    elif update_type == 'zigbee_connectivity':
+                        if 'status' in data_item:
+                            print(data_item['status'])
+                    elif update_type == 'device_power':
+                        if 'power_state' in data_item:
+                            print(data_item['power_state'])
+                    elif update_type == 'button':
+                        print(data_item)
+
                     
 
 

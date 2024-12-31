@@ -1,6 +1,8 @@
 from django.shortcuts import render
 from django.views.generic import ListView
-from .models import Device
+from django_tables2 import SingleTableView, MultiTableMixin
+from .models import Device, Light
+from .tables import DeviceTable, LightTable
 
 def hue_main_view(request):
     return render(request, 'hue/hue.html')
@@ -12,6 +14,15 @@ def tools_view(request):
         print(x)
     return render(request, 'hue/tools.html')
 
-class DeviceListView(ListView):
+class DeviceListView(SingleTableView):
     model = Device
-    template_name = 'hue/hue.html'
+    paginate_by = 100
+    table_class = DeviceTable
+    template_name = 'hue/device-list.html'
+
+class LightListView(SingleTableView):
+    model = Light
+    paginate_by = 100
+    table_class = LightTable
+    template_name = 'hue/device-list.html'
+
