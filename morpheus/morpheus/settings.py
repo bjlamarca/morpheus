@@ -34,6 +34,7 @@ INSTALLED_APPS = [
     'daphne',
     'django_tables2',
     'hue',
+    'devices',
     'utilities',
     'django.contrib.admin',
     'django.contrib.auth',

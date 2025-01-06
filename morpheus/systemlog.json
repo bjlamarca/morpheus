@@ -1,70 +1,7 @@
 {
-  "area": "Hue Hub",
-  "message": "Get All Devices",
-  "details": "Not a vaild Item(s)",
+  "area": "hue.utilities",
+  "message": "update_device_status",
+  "details": "'interface_name'",
   "level": "ERROR",
-  "date_time": "2024-12-18 00:31:19.388502"
-},
-{
-  "area": "System Log",
-  "message": "Unable to write error to DB",
-  "details": "You cannot call this from an async context - use a thread or sync_to_async.",
-  "level": "WARNING",
-  "date_time": "2024-12-18 00:31:19.389594"
-},
-{
-  "area": "Hue Hub",
-  "message": "Get All Devices",
-  "details": "Not a vaild Item(s)",
-  "level": "ERROR",
-  "date_time": "2024-12-18 00:31:24.956443"
-},
-{
-  "area": "System Log",
-  "message": "Unable to write error to DB",
-  "details": "You cannot call this from an async context - use a thread or sync_to_async.",
-  "level": "WARNING",
-  "date_time": "2024-12-18 00:31:24.957067"
-},
-{
-  "area": "Hue Hub",
-  "message": "Get All Devices",
-  "details": "Not a vaild Item(s)",
-  "level": "ERROR",
-  "date_time": "2024-12-18 00:38:04.428607"
-},
-{
-  "area": "System Log",
-  "message": "Unable to write error to DB",
-  "details": "You cannot call this from an async context - use a thread or sync_to_async.",
-  "level": "WARNING",
-  "date_time": "2024-12-18 00:38:04.429700"
-},
-{
-  "area": "Hue Hub",
-  "message": "Get All Devices",
-  "details": "Not a vaild Item(s)",
-  "level": "ERROR",
-  "date_time": "2024-12-18 00:38:52.524106"
-},
-{
-  "area": "System Log",
-  "message": "Unable to write error to DB",
-  "details": "You cannot call this from an async context - use a thread or sync_to_async.",
-  "level": "WARNING",
-  "date_time": "2024-12-18 00:38:52.524725"
-},
-{
-  "area": "Hue Hub",
-  "message": "Get All Devices",
-  "details": "Not a vaild Item(s)",
-  "level": "ERROR",
-  "date_time": "2024-12-18 00:39:19.106631"
-},
-{
-  "area": "System Log",
-  "message": "Unable to write error to DB",
-  "details": "You cannot call this from an async context - use a thread or sync_to_async.",
-  "level": "WARNING",
-  "date_time": "2024-12-18 00:39:19.107232"
+  "date_time": "2025-01-05 23:44:05.607864"
 },

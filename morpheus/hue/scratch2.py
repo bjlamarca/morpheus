@@ -1,166 +1,123 @@
-[{'creationtime': '2024-12-18T00:00:15Z',
-  'data': [{'button': {'button_report': {'event': 'initial_press',
-                                         'updated': '2024-12-18T00:00:15.276Z'},
-                       'last_event': 'initial_press'},
-            'id': '4b538982-d989-49aa-af75-4f75e1d97f72',
-            'id_v1': '/sensors/25',
-            'owner': {'rid': '3f13df38-5727-43c5-9219-a4f54fa77ad8',
-                      'rtype': 'device'},
-            'type': 'button'}],
-  'id': 'f3caff7f-10da-4d7f-9098-020d24200bb7',
-  'type': 'update'}]
-[{'creationtime': '2024-12-18T00:00:15Z',
-  'data': [{'button': {'button_report': {'event': 'short_release',
-                                         'updated': '2024-12-18T00:00:15.407Z'},
-                       'last_event': 'short_release'},
-            'id': '4b538982-d989-49aa-af75-4f75e1d97f72',
-            'id_v1': '/sensors/25',
-            'owner': {'rid': '3f13df38-5727-43c5-9219-a4f54fa77ad8',
-                      'rtype': 'device'},
-            'type': 'button'}],
-  'id': '621cb27a-8a7a-43c3-b3a5-781c732ef876',
-  'type': 'update'},
- {'creationtime': '2024-12-18T00:00:15Z',
-  'data': [{'button': {'button_report': {'event': 'initial_press',
-                                         'updated': '2024-12-18T00:00:15.539Z'},
-                       'last_event': 'initial_press'},
-            'id': '4b538982-d989-49aa-af75-4f75e1d97f72',
-            'id_v1': '/sensors/25',
-            'owner': {'rid': '3f13df38-5727-43c5-9219-a4f54fa77ad8',
-                      'rtype': 'device'},
-            'type': 'button'}],
-  'id': '972e4895-f7d6-49fc-b645-937a731587fe',
-  'type': 'update'},
- {'creationtime': '2024-12-18T00:00:15Z',
-  'data': [{'button': {'button_report': {'event': 'short_release',
-                                         'updated': '2024-12-18T00:00:15.671Z'},
-                       'last_event': 'short_release'},
-            'id': '4b538982-d989-49aa-af75-4f75e1d97f72',
-            'id_v1': '/sensors/25',
-            'owner': {'rid': '3f13df38-5727-43c5-9219-a4f54fa77ad8',
-                      'rtype': 'device'},
-            'type': 'button'}],
-  'id': '29aad3d2-a2f6-44e4-acd0-43a8d57a9782',
-  'type': 'update'},
- {'creationtime': '2024-12-18T00:00:15Z',
-  'data': [{'button': {'button_report': {'event': 'initial_press',
-                                         'updated': '2024-12-18T00:00:15.802Z'},
-                       'last_event': 'initial_press'},
-            'id': '4b538982-d989-49aa-af75-4f75e1d97f72',
-            'id_v1': '/sensors/25',
-            'owner': {'rid': '3f13df38-5727-43c5-9219-a4f54fa77ad8',
-                      'rtype': 'device'},
-            'type': 'button'}],
-  'id': '11fabe67-5646-4c59-9097-0b77bc259c92',
-  'type': 'update'},
- {'creationtime': '2024-12-18T00:00:15Z',
-  'data': [{'button': {'button_report': {'event': 'short_release',
-                                         'updated': '2024-12-18T00:00:15.824Z'},
-                       'last_event': 'short_release'},
-            'id': '4b538982-d989-49aa-af75-4f75e1d97f72',
-            'id_v1': '/sensors/25',
-            'owner': {'rid': '3f13df38-5727-43c5-9219-a4f54fa77ad8',
-                      'rtype': 'device'},
-            'type': 'button'}],
-  'id': '8927901b-31fb-4bfd-bfd4-fd5024ad6b82',
-  'type': 'update'},
- {'creationtime': '2024-12-18T00:00:16Z',
-  'data': [{'button': {'button_report': {'event': 'initial_press',
-                                         'updated': '2024-12-18T00:00:16.017Z'},
-                       'last_event': 'initial_press'},
-            'id': '4b538982-d989-49aa-af75-4f75e1d97f72',
-            'id_v1': '/sensors/25',
-            'owner': {'rid': '3f13df38-5727-43c5-9219-a4f54fa77ad8',
-                      'rtype': 'device'},
-            'type': 'button'}],
-  'id': '7800deec-7ecf-4257-9719-38714b96432e',
-  'type': 'update'},
- {'creationtime': '2024-12-18T00:00:16Z',
-  'data': [{'dimming': {'brightness': 1.19},
-            'id': '12f78864-9bb4-44dc-b3a5-dac00d4d7c92',
-            'id_v1': '/lights/30',
-            'owner': {'rid': 'af4878ce-ac89-4b45-97a0-26b08258c408',
-                      'rtype': 'device'},
-            'service_id': 0,
-            'type': 'light'},
-           {'color': {'xy': {'x': 0.561, 'y': 0.4042}},
-            'color_temperature': {'mirek': None, 'mirek_valid': False},
-            'id': '12f78864-9bb4-44dc-b3a5-dac00d4d7c92',
-            'id_v1': '/lights/30',
-            'owner': {'rid': 'af4878ce-ac89-4b45-97a0-26b08258c408',
-                      'rtype': 'device'},
-            'service_id': 0,
-            'type': 'light'}],
-  'id': 'bd50a1e1-2bef-49b8-8f91-94be5dfaba4b',
-  'type': 'update'},
- {'creationtime': '2024-12-18T00:00:16Z',
-  'data': [{'button': {'button_report': {'event': 'short_release',
-                                         'updated': '2024-12-18T00:00:16.149Z'},
-                       'last_event': 'short_release'},
-            'id': '4b538982-d989-49aa-af75-4f75e1d97f72',
-            'id_v1': '/sensors/25',
-            'owner': {'rid': '3f13df38-5727-43c5-9219-a4f54fa77ad8',
-                      'rtype': 'device'},
-            'type': 'button'}],
-  'id': 'ac256090-8e9c-471d-94dc-e552b1f03ec6',
-  'type': 'update'},
- {'creationtime': '2024-12-18T00:00:16Z',
-  'data': [{'dimming': {'brightness': 1.19},
-            'id': '5b38ae5e-2136-4dfb-b832-8845c961e4ee',
-            'id_v1': '/groups/83',
-            'owner': {'rid': '94b62f1b-2271-409a-a274-0d28cb6c1abc',
-                      'rtype': 'private_group'},
-            'type': 'grouped_light'},
-           {'dimming': {'brightness': 23.915},
-            'id': '75a4899c-f855-4661-9964-4b9d833d2764',
-            'id_v1': '/groups/5',
-            'owner': {'rid': 'f1370cbb-3f1e-4548-ad6e-969db68e0e17',
-                      'rtype': 'room'},
-            'type': 'grouped_light'},
-           {'dimming': {'brightness': 93.65958333333333},
-            'id': 'fa73131a-c020-4dcb-bc5d-ae4cdf0c1787',
-            'id_v1': '/groups/0',
-            'owner': {'rid': 'd92cc474-9fd3-4de4-ba39-3534eaae548b',
-                      'rtype': 'bridge_home'},
-            'type': 'grouped_light'}],
-  'id': '698d7b99-0692-474d-80c8-99b541e5c1f7',
-  'type': 'update'}]
-[{'creationtime': '2024-12-18T00:00:16Z',
-  'data': [{'dimming': {'brightness': 100.0},
-            'id': '12f78864-9bb4-44dc-b3a5-dac00d4d7c92',
-            'id_v1': '/lights/30',
-            'owner': {'rid': 'af4878ce-ac89-4b45-97a0-26b08258c408',
-                      'rtype': 'device'},
-            'service_id': 0,
-            'type': 'light'},
-           {'color': {'xy': {'x': 0.3143, 'y': 0.3301}},
-            'color_temperature': {'mirek': None, 'mirek_valid': False},
-            'id': '12f78864-9bb4-44dc-b3a5-dac00d4d7c92',
-            'id_v1': '/lights/30',
-            'owner': {'rid': 'af4878ce-ac89-4b45-97a0-26b08258c408',
-                      'rtype': 'device'},
-            'service_id': 0,
-            'type': 'light'}],
-  'id': '0d0058fd-e0ec-4d33-b53c-2413afd863aa',
-  'type': 'update'},
- {'creationtime': '2024-12-18T00:00:16Z',
-  'data': [{'dimming': {'brightness': 100.0},
-            'id': '5b38ae5e-2136-4dfb-b832-8845c961e4ee',
-            'id_v1': '/groups/83',
-            'owner': {'rid': '94b62f1b-2271-409a-a274-0d28cb6c1abc',
-                      'rtype': 'private_group'},
-            'type': 'grouped_light'},
-           {'dimming': {'brightness': 73.32},
-            'id': '75a4899c-f855-4661-9964-4b9d833d2764',
-            'id_v1': '/groups/5',
-            'owner': {'rid': 'f1370cbb-3f1e-4548-ad6e-969db68e0e17',
-                      'rtype': 'room'},
-            'type': 'grouped_light'},
-           {'dimming': {'brightness': 97.77666666666669},
-            'id': 'fa73131a-c020-4dcb-bc5d-ae4cdf0c1787',
-            'id_v1': '/groups/0',
-            'owner': {'rid': 'd92cc474-9fd3-4de4-ba39-3534eaae548b',
-                      'rtype': 'bridge_home'},
-            'type': 'grouped_light'}],
-  'id': '0dfecc1c-2958-4e92-9b29-d2d58e791120',
-  'type': 'update'}]
+{'button': {'button_report': {'event': 'initial_press', 'updated': '2025-01-01T21:52:29.601Z'}, 'last_event': 'initial_press'}, 'id': '4b538982-d989-49aa-af75-4f75e1d97f72', 'id_v1': '/sensors/25', 'owner': {'rid': '3f13df38-5727-43c5-9219-a4f54fa77ad8', 'rtype': 'device'}, 'type': 'button'}
+
+
+[
+    {
+        "capabilities":
+        [
+            "Actuator",
+            "Refresh",
+            "ColorTemperature",
+            {
+                "attributes":
+                [
+                    {
+                        "name":"colorTemperature",
+                        "currentValue":"4348",
+                        "dataType":"NUMBER",
+                        "values":null
+                    },
+                    {
+                        "name":"colorName",
+                        "currentValue":null,
+                        "dataType":"STRING",
+                        "values":null
+                    }
+                ]
+            },
+            "ColorMode",
+            {
+                "attributes":
+                [
+                    {
+                        "name":"colorMode",
+                        "currentValue":"CT",
+                        "dataType":"ENUM",
+                        "values":
+                        [
+                            "CT","RGB"
+                        ]
+                    }
+                ]
+            },
+            "ColorControl",
+            {
+                "attributes":
+                [
+                    {
+                        "name":"hue",
+                        "currentValue":"60",
+                        "dataType":"NUMBER",
+                        "values":null
+                    },
+                    {
+                        "name":"saturation",
+                        "currentValue":"6",
+                        "dataType":"NUMBER",
+                        "values":null
+                    },
+                    {
+                        "name":"color",
+                        "currentValue":null,
+                        "dataType":"STRING",
+                        "values":null
+                    },
+                    {
+                        "name":"colorName",
+                        "currentValue":null,
+                        "dataType":"STRING",
+                        "values":null
+                    },
+                    {
+                        "name":"RGB",
+                        "currentValue":null,
+                        "dataType":"STRING",
+                        "values":null
+                    }
+                ]
+            },
+            "ChangeLevel",
+            "SwitchLevel",
+            {
+                "attributes":
+                [
+                    {
+                        "name":"level",
+                        "currentValue":"100",
+                        "dataType":"NUMBER","values":null
+                    }
+                ]
+            },
+            "Light",
+            {
+                "attributes":
+                [
+                    {
+                        "name":"switch",
+                        "currentValue":"off",
+                        "dataType":"ENUM",
+                        "values":
+                        [
+                            "on","off"
+                        ]
+                    }
+                ]
+            },
+            "Switch",
+            {
+                "attributes":
+                [
+                    {
+                        "name":"switch",
+                        "currentValue":"off",
+                        "dataType":"ENUM",
+                        "values":
+                        [
+                            "on","off"
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+]

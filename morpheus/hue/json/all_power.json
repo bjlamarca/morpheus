@@ -1,0 +1,106 @@
+[
+    {
+        "id": "192ea2b1-fc29-4735-b647-363adc2531d5",
+        "id_v1": "/sensors/20",
+        "owner": {
+            "rid": "3bcb1457-a010-436e-a149-b403659336d8",
+            "rtype": "device"
+        },
+        "power_state": {
+            "battery_state": "normal",
+            "battery_level": 22
+        },
+        "type": "device_power"
+    },
+    {
+        "id": "2ba77c4c-88c2-43e8-ada3-d101164b6873",
+        "id_v1": "/sensors/25",
+        "owner": {
+            "rid": "3f13df38-5727-43c5-9219-a4f54fa77ad8",
+            "rtype": "device"
+        },
+        "power_state": {
+            "battery_state": "normal",
+            "battery_level": 100
+        },
+        "type": "device_power"
+    },
+    {
+        "id": "905ef71e-f7a8-41d8-a87a-9dbb1441292f",
+        "id_v1": "/sensors/8",
+        "owner": {
+            "rid": "0bc30ef2-6aca-4a40-a8b4-db16bb2e21a0",
+            "rtype": "device"
+        },
+        "power_state": {
+            "battery_state": "low",
+            "battery_level": 4
+        },
+        "type": "device_power"
+    },
+    {
+        "id": "96e30ab0-42a4-4af2-b4f9-627cfae9c5de",
+        "id_v1": "/sensors/2",
+        "owner": {
+            "rid": "0373a708-10a0-466d-8342-24479c3ac736",
+            "rtype": "device"
+        },
+        "power_state": {
+            "battery_state": "normal",
+            "battery_level": 58
+        },
+        "type": "device_power"
+    },
+    {
+        "id": "a63de086-37d7-4163-bb7b-639d6530f223",
+        "id_v1": "/sensors/5",
+        "owner": {
+            "rid": "d6ce4c0a-86e0-44af-99a3-27dee291a8ef",
+            "rtype": "device"
+        },
+        "power_state": {
+            "battery_state": "normal",
+            "battery_level": 70
+        },
+        "type": "device_power"
+    },
+    {
+        "id": "e22855d8-3778-498d-8569-dcda51a5fca8",
+        "id_v1": "/sensors/17",
+        "owner": {
+            "rid": "b18cda88-d57a-4d53-a6ae-21ed9ba2e8d2",
+            "rtype": "device"
+        },
+        "power_state": {
+            "battery_state": "normal",
+            "battery_level": 77
+        },
+        "type": "device_power"
+    },
+    {
+        "id": "f525dcf9-c406-4097-a4b9-5f887d9e4b43",
+        "id_v1": "/sensors/11",
+        "owner": {
+            "rid": "5cad3bf3-89af-4375-b562-9bad9eb860c9",
+            "rtype": "device"
+        },
+        "power_state": {
+            "battery_state": "normal",
+            "battery_level": 55
+        },
+        "type": "device_power"
+    },
+    {
+        "id": "f9f7a6c9-d3e8-4e93-a213-2fa7c3ef6f3f",
+        "id_v1": "/sensors/14",
+        "owner": {
+            "rid": "32932333-78a5-4198-8f3b-2d98405c2a01",
+            "rtype": "device"
+        },
+        "power_state": {
+            "battery_state": "normal",
+            "battery_level": 80
+        },
+        "type": "device_power"
+    }
+]

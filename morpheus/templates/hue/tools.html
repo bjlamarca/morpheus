@@ -18,12 +18,20 @@
                          value="All Devices">
                     <input id="all-buttons" class="btn btn-outline-primary" type="button"
                          value="All Buttons">
+                    <input id="all-zigbee" class="btn btn-outline-primary" type="button"
+                         value="All Zigbee">
+                    <input id="all-power" class="btn btn-outline-primary" type="button"
+                         value="All Power">
                     <input id="get-device" class="btn btn-outline-primary" type="button"
                          value="Get Device">
                     <input id="get-light" class="btn btn-outline-primary" type="button"
                         value="Get Light Info">
                     <input id="get-button" class="btn btn-outline-primary" type="button"
                         value="Get Button">
+                    <input id="get-zigbee" class="btn btn-outline-primary" type="button"
+                        value="Get Zigbee">
+                    <input id="get-power" class="btn btn-outline-primary" type="button"
+                        value="Get Power">
                     <input id="sync-device-db" class="btn btn-outline-primary" type="button"
                         value="Sync Device DB">
                     <input id="test" class="btn btn-outline-primary" type="button"
@@ -76,6 +84,16 @@
             'message': 'all_buttons'
         }));
     };
+    document.querySelector('#all-zigbee').onclick = function(e) {
+        diagSocket.send(JSON.stringify({
+            'message': 'all_zigbee'
+        }));
+    };
+    document.querySelector('#all-power').onclick = function(e) {
+        diagSocket.send(JSON.stringify({
+            'message': 'all_power'
+        }));
+    };
     document.querySelector('#sync-device-db').onclick = function(e) {
         diagSocket.send(JSON.stringify({
             'message': 'sync_device_db'
@@ -99,6 +117,20 @@
         const inputValue = document.querySelector('#diag-input').value
         diagSocket.send(JSON.stringify({
             'message': 'get_device',
+            'input_value': inputValue,
+        }));
+    };
+    document.querySelector('#get-zigbee').onclick = function(e) {
+        const inputValue = document.querySelector('#diag-input').value
+        diagSocket.send(JSON.stringify({
+            'message': 'get_zigbee',
+            'input_value': inputValue,
+        }));
+    };
+    document.querySelector('#get-power').onclick = function(e) {
+        const inputValue = document.querySelector('#diag-input').value
+        diagSocket.send(JSON.stringify({
+            'message': 'get_power',
             'input_value': inputValue,
         }));
     };

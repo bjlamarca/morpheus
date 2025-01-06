@@ -1,28 +1,35 @@
 from django.shortcuts import render
-from django.views.generic import ListView
+from django.views.generic import ListView, TemplateView, FormView
 from django_tables2 import SingleTableView, MultiTableMixin
-from .models import Device, Light
-from .tables import DeviceTable, LightTable
+from .models import HueDevice, HueLight, HueButton
+from .tables import DeviceTable, LightTable, ButtonTable
 
 def hue_main_view(request):
     return render(request, 'hue/hue.html')
 
 def tools_view(request):
-    from .models import Device
-    qs = Device.objects.values_list('model_id').distinct()
-    for x in qs:
-        print(x)
+      
     return render(request, 'hue/tools.html')
 
 class DeviceListView(SingleTableView):
-    model = Device
+    model = HueDevice
     paginate_by = 100
     table_class = DeviceTable
     template_name = 'hue/device-list.html'
 
 class LightListView(SingleTableView):
-    model = Light
+    model = HueLight
     paginate_by = 100
     table_class = LightTable
     template_name = 'hue/device-list.html'
+
+class ButtonListView(SingleTableView):
+    model = HueButton
+    paginate_by = 100
+    table_class = ButtonTable
+    template_name = 'hue/device-list.html'
+
+class DeviceDetailView(TemplateView):
+    pass
+
 

@@ -1,4390 +1,866 @@
 [
     {
-        "id": "047b3d91-5419-4ef2-b9b0-efadda9f628c",
-        "id_v1": "/lights/11",
+        "id": "0267f2b2-cffc-4e5e-8a4b-fb4343acce5c",
+        "id_v1": "/sensors/2",
         "owner": {
-            "rid": "edffeed4-99e4-4b1b-83ca-27d08c9b2d8b",
+            "rid": "0373a708-10a0-466d-8342-24479c3ac736",
             "rtype": "device"
         },
         "metadata": {
-            "name": "Entry 2",
-            "archetype": "sultan_bulb",
-            "function": "mixed"
+            "control_id": 2
         },
-        "product_data": {
-            "function": "mixed"
-        },
-        "identify": {},
-        "service_id": 0,
-        "on": {
-            "on": true
-        },
-        "dimming": {
-            "brightness": 100.0,
-            "min_dim_level": 0.2
-        },
-        "dimming_delta": {},
-        "color_temperature": {
-            "mirek": 343,
-            "mirek_valid": true,
-            "mirek_schema": {
-                "mirek_minimum": 153,
-                "mirek_maximum": 500
-            }
-        },
-        "color_temperature_delta": {},
-        "color": {
-            "xy": {
-                "x": 0.4431,
-                "y": 0.4061
+        "button": {
+            "last_event": "long_release",
+            "button_report": {
+                "updated": "1970-01-01T00:00:00.000Z",
+                "event": "long_release"
             },
-            "gamut": {
-                "red": {
-                    "x": 0.6915,
-                    "y": 0.3083
-                },
-                "green": {
-                    "x": 0.17,
-                    "y": 0.7
-                },
-                "blue": {
-                    "x": 0.1532,
-                    "y": 0.0475
-                }
-            },
-            "gamut_type": "C"
-        },
-        "dynamics": {
-            "status": "none",
-            "status_values": [
-                "none",
-                "dynamic_palette"
-            ],
-            "speed": 0.0,
-            "speed_valid": false
-        },
-        "alert": {
-            "action_values": [
-                "breathe"
+            "repeat_interval": 800,
+            "event_values": [
+                "initial_press",
+                "repeat",
+                "short_release",
+                "long_release",
+                "long_press"
             ]
         },
-        "signaling": {
-            "signal_values": [
-                "no_signal",
-                "on_off",
-                "on_off_color",
-                "alternating"
-            ]
-        },
-        "mode": "normal",
-        "effects": {
-            "status_values": [
-                "no_effect",
-                "candle",
-                "fire",
-                "prism",
-                "sparkle",
-                "opal",
-                "glisten",
-                "underwater",
-                "cosmos",
-                "sunbeam",
-                "enchant"
-            ],
-            "status": "no_effect",
-            "effect_values": [
-                "no_effect",
-                "candle",
-                "fire",
-                "prism",
-                "sparkle",
-                "opal",
-                "glisten",
-                "underwater",
-                "cosmos",
-                "sunbeam",
-                "enchant"
-            ]
-        },
-        "effects_v2": {
-            "action": {
-                "effect_values": [
-                    "no_effect",
-                    "candle",
-                    "fire",
-                    "prism",
-                    "sparkle",
-                    "opal",
-                    "glisten",
-                    "underwater",
-                    "cosmos",
-                    "sunbeam",
-                    "enchant"
-                ]
-            },
-            "status": {
-                "effect": "no_effect",
-                "effect_values": [
-                    "no_effect",
-                    "candle",
-                    "fire",
-                    "prism",
-                    "sparkle",
-                    "opal",
-                    "glisten",
-                    "underwater",
-                    "cosmos",
-                    "sunbeam",
-                    "enchant"
-                ]
-            }
-        },
-        "timed_effects": {
-            "status_values": [
-                "no_effect",
-                "sunrise",
-                "sunset"
-            ],
-            "status": "no_effect",
-            "effect_values": [
-                "no_effect",
-                "sunrise",
-                "sunset"
-            ]
-        },
-        "powerup": {
-            "preset": "powerfail",
-            "configured": true,
-            "on": {
-                "mode": "previous"
-            },
-            "dimming": {
-                "mode": "previous"
-            },
-            "color": {
-                "mode": "previous"
-            }
-        },
-        "type": "light"
+        "type": "button"
     },
     {
-        "id": "12f78864-9bb4-44dc-b3a5-dac00d4d7c92",
-        "id_v1": "/lights/30",
+        "id": "0268a7b3-0e03-4043-b2d7-3f40fe180394",
+        "id_v1": "/sensors/14",
         "owner": {
-            "rid": "af4878ce-ac89-4b45-97a0-26b08258c408",
+            "rid": "32932333-78a5-4198-8f3b-2d98405c2a01",
             "rtype": "device"
         },
         "metadata": {
-            "name": "Living Room Plant",
-            "archetype": "ground_spot",
-            "function": "mixed"
+            "control_id": 3
         },
-        "product_data": {
-            "function": "mixed"
-        },
-        "identify": {},
-        "service_id": 0,
-        "on": {
-            "on": true
-        },
-        "dimming": {
-            "brightness": 100.0,
-            "min_dim_level": 0.2
-        },
-        "dimming_delta": {},
-        "color_temperature": {
-            "mirek": null,
-            "mirek_valid": false,
-            "mirek_schema": {
-                "mirek_minimum": 153,
-                "mirek_maximum": 500
-            }
-        },
-        "color_temperature_delta": {},
-        "color": {
-            "xy": {
-                "x": 0.3143,
-                "y": 0.3301
+        "button": {
+            "last_event": "long_release",
+            "button_report": {
+                "updated": "2024-12-21T02:12:03.138Z",
+                "event": "long_release"
             },
-            "gamut": {
-                "red": {
-                    "x": 0.6915,
-                    "y": 0.3083
-                },
-                "green": {
-                    "x": 0.17,
-                    "y": 0.7
-                },
-                "blue": {
-                    "x": 0.1532,
-                    "y": 0.0475
-                }
-            },
-            "gamut_type": "C"
-        },
-        "dynamics": {
-            "status": "none",
-            "status_values": [
-                "none",
-                "dynamic_palette"
-            ],
-            "speed": 0.0,
-            "speed_valid": false
-        },
-        "alert": {
-            "action_values": [
-                "breathe"
+            "repeat_interval": 800,
+            "event_values": [
+                "initial_press",
+                "repeat",
+                "short_release",
+                "long_release",
+                "long_press"
             ]
         },
-        "signaling": {
-            "signal_values": [
-                "no_signal",
-                "on_off",
-                "on_off_color",
-                "alternating"
-            ]
-        },
-        "mode": "normal",
-        "effects": {
-            "status_values": [
-                "no_effect",
-                "candle",
-                "fire",
-                "prism",
-                "sparkle",
-                "opal",
-                "glisten",
-                "underwater",
-                "cosmos",
-                "sunbeam",
-                "enchant"
-            ],
-            "status": "no_effect",
-            "effect_values": [
-                "no_effect",
-                "candle",
-                "fire",
-                "prism",
-                "sparkle",
-                "opal",
-                "glisten",
-                "underwater",
-                "cosmos",
-                "sunbeam",
-                "enchant"
-            ]
-        },
-        "effects_v2": {
-            "action": {
-                "effect_values": [
-                    "no_effect",
-                    "candle",
-                    "fire",
-                    "prism",
-                    "sparkle",
-                    "opal",
-                    "glisten",
-                    "underwater",
-                    "cosmos",
-                    "sunbeam",
-                    "enchant"
-                ]
-            },
-            "status": {
-                "effect": "no_effect",
-                "effect_values": [
-                    "no_effect",
-                    "candle",
-                    "fire",
-                    "prism",
-                    "sparkle",
-                    "opal",
-                    "glisten",
-                    "underwater",
-                    "cosmos",
-                    "sunbeam",
-                    "enchant"
-                ]
-            }
-        },
-        "timed_effects": {
-            "status_values": [
-                "no_effect",
-                "sunrise",
-                "sunset"
-            ],
-            "status": "no_effect",
-            "effect_values": [
-                "no_effect",
-                "sunrise",
-                "sunset"
-            ]
-        },
-        "powerup": {
-            "preset": "safety",
-            "configured": true,
-            "on": {
-                "mode": "on",
-                "on": {
-                    "on": true
-                }
-            },
-            "dimming": {
-                "mode": "dimming",
-                "dimming": {
-                    "brightness": 100.0
-                }
-            },
-            "color": {
-                "mode": "color_temperature",
-                "color_temperature": {
-                    "mirek": 366
-                }
-            }
-        },
-        "type": "light"
+        "type": "button"
     },
     {
-        "id": "2c9372b7-864d-4076-ae0d-799ab448ec49",
-        "id_v1": "/lights/15",
+        "id": "072ebdad-f2eb-4942-9f9e-2a0e2df09be4",
+        "id_v1": "/sensors/25",
         "owner": {
-            "rid": "f08f9dfd-cf42-4c67-a69b-edfcdc1d26f2",
+            "rid": "3f13df38-5727-43c5-9219-a4f54fa77ad8",
             "rtype": "device"
         },
         "metadata": {
-            "name": "Bryan Ceiling 1",
-            "archetype": "ceiling_round",
-            "function": "mixed"
+            "control_id": 3
         },
-        "product_data": {
-            "function": "mixed"
-        },
-        "identify": {},
-        "service_id": 0,
-        "on": {
-            "on": true
-        },
-        "dimming": {
-            "brightness": 100.0,
-            "min_dim_level": 0.2
-        },
-        "dimming_delta": {},
-        "color_temperature": {
-            "mirek": 343,
-            "mirek_valid": true,
-            "mirek_schema": {
-                "mirek_minimum": 153,
-                "mirek_maximum": 500
-            }
-        },
-        "color_temperature_delta": {},
-        "color": {
-            "xy": {
-                "x": 0.4431,
-                "y": 0.4061
+        "button": {
+            "last_event": "long_release",
+            "button_report": {
+                "updated": "2024-12-30T00:12:50.592Z",
+                "event": "long_release"
             },
-            "gamut": {
-                "red": {
-                    "x": 0.6915,
-                    "y": 0.3083
-                },
-                "green": {
-                    "x": 0.17,
-                    "y": 0.7
-                },
-                "blue": {
-                    "x": 0.1532,
-                    "y": 0.0475
-                }
-            },
-            "gamut_type": "C"
-        },
-        "dynamics": {
-            "status": "none",
-            "status_values": [
-                "none",
-                "dynamic_palette"
-            ],
-            "speed": 0.0,
-            "speed_valid": false
-        },
-        "alert": {
-            "action_values": [
-                "breathe"
+            "repeat_interval": 800,
+            "event_values": [
+                "initial_press",
+                "repeat",
+                "short_release",
+                "long_release",
+                "long_press"
             ]
         },
-        "signaling": {
-            "signal_values": [
-                "no_signal",
-                "on_off",
-                "on_off_color",
-                "alternating"
-            ]
-        },
-        "mode": "normal",
-        "effects": {
-            "status_values": [
-                "no_effect",
-                "candle",
-                "fire",
-                "prism",
-                "sparkle",
-                "opal",
-                "glisten",
-                "underwater",
-                "cosmos",
-                "sunbeam",
-                "enchant"
-            ],
-            "status": "no_effect",
-            "effect_values": [
-                "no_effect",
-                "candle",
-                "fire",
-                "prism",
-                "sparkle",
-                "opal",
-                "glisten",
-                "underwater",
-                "cosmos",
-                "sunbeam",
-                "enchant"
-            ]
-        },
-        "effects_v2": {
-            "action": {
-                "effect_values": [
-                    "no_effect",
-                    "candle",
-                    "fire",
-                    "prism",
-                    "sparkle",
-                    "opal",
-                    "glisten",
-                    "underwater",
-                    "cosmos",
-                    "sunbeam",
-                    "enchant"
-                ]
-            },
-            "status": {
-                "effect": "no_effect",
-                "effect_values": [
-                    "no_effect",
-                    "candle",
-                    "fire",
-                    "prism",
-                    "sparkle",
-                    "opal",
-                    "glisten",
-                    "underwater",
-                    "cosmos",
-                    "sunbeam",
-                    "enchant"
-                ]
-            }
-        },
-        "timed_effects": {
-            "status_values": [
-                "no_effect",
-                "sunrise",
-                "sunset"
-            ],
-            "status": "no_effect",
-            "effect_values": [
-                "no_effect",
-                "sunrise",
-                "sunset"
-            ]
-        },
-        "powerup": {
-            "preset": "powerfail",
-            "configured": true,
-            "on": {
-                "mode": "previous"
-            },
-            "dimming": {
-                "mode": "previous"
-            },
-            "color": {
-                "mode": "previous"
-            }
-        },
-        "type": "light"
+        "type": "button"
     },
     {
-        "id": "3044f19a-0179-4b32-b41b-e3c907da4167",
-        "id_v1": "/lights/13",
+        "id": "07d8ef90-bd79-4926-b066-22ca7dae3c70",
+        "id_v1": "/sensors/8",
         "owner": {
-            "rid": "c5bc2f42-3faa-4373-8cca-b166ed8cf2eb",
+            "rid": "0bc30ef2-6aca-4a40-a8b4-db16bb2e21a0",
             "rtype": "device"
         },
         "metadata": {
-            "name": "Hall 2",
-            "archetype": "sultan_bulb",
-            "function": "mixed"
+            "control_id": 2
         },
-        "product_data": {
-            "function": "mixed"
-        },
-        "identify": {},
-        "service_id": 0,
-        "on": {
-            "on": true
-        },
-        "dimming": {
-            "brightness": 100.0,
-            "min_dim_level": 0.2
-        },
-        "dimming_delta": {},
-        "color_temperature": {
-            "mirek": 343,
-            "mirek_valid": true,
-            "mirek_schema": {
-                "mirek_minimum": 153,
-                "mirek_maximum": 500
-            }
-        },
-        "color_temperature_delta": {},
-        "color": {
-            "xy": {
-                "x": 0.4431,
-                "y": 0.4061
+        "button": {
+            "last_event": "short_release",
+            "button_report": {
+                "updated": "1970-01-01T00:00:00.000Z",
+                "event": "short_release"
             },
-            "gamut": {
-                "red": {
-                    "x": 0.6915,
-                    "y": 0.3083
-                },
-                "green": {
-                    "x": 0.17,
-                    "y": 0.7
-                },
-                "blue": {
-                    "x": 0.1532,
-                    "y": 0.0475
-                }
-            },
-            "gamut_type": "C"
-        },
-        "dynamics": {
-            "status": "none",
-            "status_values": [
-                "none",
-                "dynamic_palette"
-            ],
-            "speed": 0.0,
-            "speed_valid": false
-        },
-        "alert": {
-            "action_values": [
-                "breathe"
+            "repeat_interval": 800,
+            "event_values": [
+                "initial_press",
+                "repeat",
+                "short_release",
+                "long_release",
+                "long_press"
             ]
         },
-        "signaling": {
-            "signal_values": [
-                "no_signal",
-                "on_off",
-                "on_off_color",
-                "alternating"
-            ]
-        },
-        "mode": "normal",
-        "effects": {
-            "status_values": [
-                "no_effect",
-                "candle",
-                "fire",
-                "prism",
-                "sparkle",
-                "opal",
-                "glisten",
-                "underwater",
-                "cosmos",
-                "sunbeam",
-                "enchant"
-            ],
-            "status": "no_effect",
-            "effect_values": [
-                "no_effect",
-                "candle",
-                "fire",
-                "prism",
-                "sparkle",
-                "opal",
-                "glisten",
-                "underwater",
-                "cosmos",
-                "sunbeam",
-                "enchant"
-            ]
-        },
-        "effects_v2": {
-            "action": {
-                "effect_values": [
-                    "no_effect",
-                    "candle",
-                    "fire",
-                    "prism",
-                    "sparkle",
-                    "opal",
-                    "glisten",
-                    "underwater",
-                    "cosmos",
-                    "sunbeam",
-                    "enchant"
-                ]
-            },
-            "status": {
-                "effect": "no_effect",
-                "effect_values": [
-                    "no_effect",
-                    "candle",
-                    "fire",
-                    "prism",
-                    "sparkle",
-                    "opal",
-                    "glisten",
-                    "underwater",
-                    "cosmos",
-                    "sunbeam",
-                    "enchant"
-                ]
-            }
-        },
-        "timed_effects": {
-            "status_values": [
-                "no_effect",
-                "sunrise",
-                "sunset"
-            ],
-            "status": "no_effect",
-            "effect_values": [
-                "no_effect",
-                "sunrise",
-                "sunset"
-            ]
-        },
-        "powerup": {
-            "preset": "powerfail",
-            "configured": true,
-            "on": {
-                "mode": "previous"
-            },
-            "dimming": {
-                "mode": "previous"
-            },
-            "color": {
-                "mode": "previous"
-            }
-        },
-        "type": "light"
+        "type": "button"
     },
     {
-        "id": "372a8a27-d764-4d2e-b0a7-5f39f36f4fe9",
-        "id_v1": "/lights/32",
+        "id": "07f8acd4-1083-47bf-9bd1-ab4a591452c1",
+        "id_v1": "/sensors/8",
         "owner": {
-            "rid": "3794b88a-f569-4f40-93c4-db2f1ea7bd9b",
+            "rid": "0bc30ef2-6aca-4a40-a8b4-db16bb2e21a0",
             "rtype": "device"
         },
         "metadata": {
-            "name": "Kitchen Ceiling 2",
-            "archetype": "sultan_bulb",
-            "function": "mixed"
+            "control_id": 3
         },
-        "product_data": {
-            "function": "mixed"
-        },
-        "identify": {},
-        "service_id": 0,
-        "on": {
-            "on": true
-        },
-        "dimming": {
-            "brightness": 100.0,
-            "min_dim_level": 0.2
-        },
-        "dimming_delta": {},
-        "color_temperature": {
-            "mirek": 343,
-            "mirek_valid": true,
-            "mirek_schema": {
-                "mirek_minimum": 153,
-                "mirek_maximum": 500
-            }
-        },
-        "color_temperature_delta": {},
-        "color": {
-            "xy": {
-                "x": 0.4431,
-                "y": 0.4061
+        "button": {
+            "last_event": "short_release",
+            "button_report": {
+                "updated": "1970-01-01T00:00:00.000Z",
+                "event": "short_release"
             },
-            "gamut": {
-                "red": {
-                    "x": 0.6915,
-                    "y": 0.3083
-                },
-                "green": {
-                    "x": 0.17,
-                    "y": 0.7
-                },
-                "blue": {
-                    "x": 0.1532,
-                    "y": 0.0475
-                }
-            },
-            "gamut_type": "C"
-        },
-        "dynamics": {
-            "status": "none",
-            "status_values": [
-                "none",
-                "dynamic_palette"
-            ],
-            "speed": 0.0,
-            "speed_valid": false
-        },
-        "alert": {
-            "action_values": [
-                "breathe"
+            "repeat_interval": 800,
+            "event_values": [
+                "initial_press",
+                "repeat",
+                "short_release",
+                "long_release",
+                "long_press"
             ]
         },
-        "signaling": {
-            "signal_values": [
-                "no_signal",
-                "on_off",
-                "on_off_color",
-                "alternating"
-            ]
-        },
-        "mode": "normal",
-        "effects": {
-            "status_values": [
-                "no_effect",
-                "candle",
-                "fire",
-                "prism",
-                "sparkle",
-                "opal",
-                "glisten",
-                "underwater",
-                "cosmos",
-                "sunbeam",
-                "enchant"
-            ],
-            "status": "no_effect",
-            "effect_values": [
-                "no_effect",
-                "candle",
-                "fire",
-                "prism",
-                "sparkle",
-                "opal",
-                "glisten",
-                "underwater",
-                "cosmos",
-                "sunbeam",
-                "enchant"
-            ]
-        },
-        "effects_v2": {
-            "action": {
-                "effect_values": [
-                    "no_effect",
-                    "candle",
-                    "fire",
-                    "prism",
-                    "sparkle",
-                    "opal",
-                    "glisten",
-                    "underwater",
-                    "cosmos",
-                    "sunbeam",
-                    "enchant"
-                ]
-            },
-            "status": {
-                "effect": "no_effect",
-                "effect_values": [
-                    "no_effect",
-                    "candle",
-                    "fire",
-                    "prism",
-                    "sparkle",
-                    "opal",
-                    "glisten",
-                    "underwater",
-                    "cosmos",
-                    "sunbeam",
-                    "enchant"
-                ]
-            }
-        },
-        "timed_effects": {
-            "status_values": [
-                "no_effect",
-                "sunrise",
-                "sunset"
-            ],
-            "status": "no_effect",
-            "effect_values": [
-                "no_effect",
-                "sunrise",
-                "sunset"
-            ]
-        },
-        "powerup": {
-            "preset": "safety",
-            "configured": true,
-            "on": {
-                "mode": "on",
-                "on": {
-                    "on": true
-                }
-            },
-            "dimming": {
-                "mode": "dimming",
-                "dimming": {
-                    "brightness": 100.0
-                }
-            },
-            "color": {
-                "mode": "color_temperature",
-                "color_temperature": {
-                    "mirek": 366
-                }
-            }
-        },
-        "type": "light"
+        "type": "button"
     },
     {
-        "id": "4be1cb2b-aff5-4516-bd25-5868a6448b1d",
-        "id_v1": "/lights/20",
+        "id": "0ba58dcb-1827-4fd6-ab8a-e87c5fb95cd1",
+        "id_v1": "/sensors/25",
         "owner": {
-            "rid": "f04c5464-62c6-4db0-9db3-707f114ae6b3",
+            "rid": "3f13df38-5727-43c5-9219-a4f54fa77ad8",
             "rtype": "device"
         },
         "metadata": {
-            "name": "Living Room Lamp 1",
-            "archetype": "sultan_bulb",
-            "function": "mixed"
+            "control_id": 2
         },
-        "product_data": {
-            "function": "mixed"
-        },
-        "identify": {},
-        "service_id": 0,
-        "on": {
-            "on": true
-        },
-        "dimming": {
-            "brightness": 100.0,
-            "min_dim_level": 0.2
-        },
-        "dimming_delta": {},
-        "color_temperature": {
-            "mirek": 343,
-            "mirek_valid": true,
-            "mirek_schema": {
-                "mirek_minimum": 153,
-                "mirek_maximum": 500
-            }
-        },
-        "color_temperature_delta": {},
-        "color": {
-            "xy": {
-                "x": 0.445,
-                "y": 0.4067
+        "button": {
+            "last_event": "long_release",
+            "button_report": {
+                "updated": "2024-12-30T00:14:12.317Z",
+                "event": "long_release"
             },
-            "gamut": {
-                "red": {
-                    "x": 0.6915,
-                    "y": 0.3083
-                },
-                "green": {
-                    "x": 0.17,
-                    "y": 0.7
-                },
-                "blue": {
-                    "x": 0.1532,
-                    "y": 0.0475
-                }
-            },
-            "gamut_type": "C"
-        },
-        "dynamics": {
-            "status": "none",
-            "status_values": [
-                "none",
-                "dynamic_palette"
-            ],
-            "speed": 0.0,
-            "speed_valid": false
-        },
-        "alert": {
-            "action_values": [
-                "breathe"
+            "repeat_interval": 800,
+            "event_values": [
+                "initial_press",
+                "repeat",
+                "short_release",
+                "long_release",
+                "long_press"
             ]
         },
-        "signaling": {
-            "signal_values": [
-                "no_signal",
-                "on_off",
-                "on_off_color",
-                "alternating"
-            ]
-        },
-        "mode": "normal",
-        "effects": {
-            "status_values": [
-                "no_effect",
-                "candle",
-                "fire",
-                "prism",
-                "sparkle",
-                "opal",
-                "glisten",
-                "underwater",
-                "cosmos",
-                "sunbeam",
-                "enchant"
-            ],
-            "status": "no_effect",
-            "effect_values": [
-                "no_effect",
-                "candle",
-                "fire",
-                "prism",
-                "sparkle",
-                "opal",
-                "glisten",
-                "underwater",
-                "cosmos",
-                "sunbeam",
-                "enchant"
-            ]
-        },
-        "effects_v2": {
-            "action": {
-                "effect_values": [
-                    "no_effect",
-                    "candle",
-                    "fire",
-                    "prism",
-                    "sparkle",
-                    "opal",
-                    "glisten",
-                    "underwater",
-                    "cosmos",
-                    "sunbeam",
-                    "enchant"
-                ]
-            },
-            "status": {
-                "effect": "no_effect",
-                "effect_values": [
-                    "no_effect",
-                    "candle",
-                    "fire",
-                    "prism",
-                    "sparkle",
-                    "opal",
-                    "glisten",
-                    "underwater",
-                    "cosmos",
-                    "sunbeam",
-                    "enchant"
-                ]
-            }
-        },
-        "timed_effects": {
-            "status_values": [
-                "no_effect",
-                "sunrise",
-                "sunset"
-            ],
-            "status": "no_effect",
-            "effect_values": [
-                "no_effect",
-                "sunrise",
-                "sunset"
-            ]
-        },
-        "powerup": {
-            "preset": "safety",
-            "configured": true,
-            "on": {
-                "mode": "on",
-                "on": {
-                    "on": true
-                }
-            },
-            "dimming": {
-                "mode": "dimming",
-                "dimming": {
-                    "brightness": 100.0
-                }
-            },
-            "color": {
-                "mode": "color_temperature",
-                "color_temperature": {
-                    "mirek": 366
-                }
-            }
-        },
-        "type": "light"
+        "type": "button"
     },
     {
-        "id": "5272447c-9bf4-4365-b7be-2404bfbac174",
-        "id_v1": "/lights/21",
+        "id": "12156e33-a776-4174-9db6-9e22ebc999d5",
+        "id_v1": "/sensors/25",
         "owner": {
-            "rid": "13a42142-0d1d-47e2-afc6-5f08d2883342",
+            "rid": "3f13df38-5727-43c5-9219-a4f54fa77ad8",
             "rtype": "device"
         },
         "metadata": {
-            "name": "Dining 2",
-            "archetype": "sultan_bulb",
-            "function": "mixed"
+            "control_id": 4
         },
-        "product_data": {
-            "function": "mixed"
-        },
-        "identify": {},
-        "service_id": 0,
-        "on": {
-            "on": true
-        },
-        "dimming": {
-            "brightness": 100.0,
-            "min_dim_level": 0.2
-        },
-        "dimming_delta": {},
-        "color_temperature": {
-            "mirek": 343,
-            "mirek_valid": true,
-            "mirek_schema": {
-                "mirek_minimum": 153,
-                "mirek_maximum": 500
-            }
-        },
-        "color_temperature_delta": {},
-        "color": {
-            "xy": {
-                "x": 0.4431,
-                "y": 0.4061
+        "button": {
+            "last_event": "short_release",
+            "button_report": {
+                "updated": "2024-12-29T23:48:43.931Z",
+                "event": "short_release"
             },
-            "gamut": {
-                "red": {
-                    "x": 0.6915,
-                    "y": 0.3083
-                },
-                "green": {
-                    "x": 0.17,
-                    "y": 0.7
-                },
-                "blue": {
-                    "x": 0.1532,
-                    "y": 0.0475
-                }
-            },
-            "gamut_type": "C"
-        },
-        "dynamics": {
-            "status": "none",
-            "status_values": [
-                "none",
-                "dynamic_palette"
-            ],
-            "speed": 0.0,
-            "speed_valid": false
-        },
-        "alert": {
-            "action_values": [
-                "breathe"
+            "repeat_interval": 800,
+            "event_values": [
+                "initial_press",
+                "repeat",
+                "short_release",
+                "long_release",
+                "long_press"
             ]
         },
-        "signaling": {
-            "signal_values": [
-                "no_signal",
-                "on_off",
-                "on_off_color",
-                "alternating"
-            ]
-        },
-        "mode": "normal",
-        "effects": {
-            "status_values": [
-                "no_effect",
-                "candle",
-                "fire",
-                "prism",
-                "sparkle",
-                "opal",
-                "glisten",
-                "underwater",
-                "cosmos",
-                "sunbeam",
-                "enchant"
-            ],
-            "status": "no_effect",
-            "effect_values": [
-                "no_effect",
-                "candle",
-                "fire",
-                "prism",
-                "sparkle",
-                "opal",
-                "glisten",
-                "underwater",
-                "cosmos",
-                "sunbeam",
-                "enchant"
-            ]
-        },
-        "effects_v2": {
-            "action": {
-                "effect_values": [
-                    "no_effect",
-                    "candle",
-                    "fire",
-                    "prism",
-                    "sparkle",
-                    "opal",
-                    "glisten",
-                    "underwater",
-                    "cosmos",
-                    "sunbeam",
-                    "enchant"
-                ]
-            },
-            "status": {
-                "effect": "no_effect",
-                "effect_values": [
-                    "no_effect",
-                    "candle",
-                    "fire",
-                    "prism",
-                    "sparkle",
-                    "opal",
-                    "glisten",
-                    "underwater",
-                    "cosmos",
-                    "sunbeam",
-                    "enchant"
-                ]
-            }
-        },
-        "timed_effects": {
-            "status_values": [
-                "no_effect",
-                "sunrise",
-                "sunset"
-            ],
-            "status": "no_effect",
-            "effect_values": [
-                "no_effect",
-                "sunrise",
-                "sunset"
-            ]
-        },
-        "powerup": {
-            "preset": "powerfail",
-            "configured": true,
-            "on": {
-                "mode": "previous"
-            },
-            "dimming": {
-                "mode": "previous"
-            },
-            "color": {
-                "mode": "previous"
-            }
-        },
-        "type": "light"
+        "type": "button"
     },
     {
-        "id": "612262c6-cb56-4a0a-856b-5b5030eece0d",
-        "id_v1": "/lights/12",
+        "id": "15cf3528-4477-4d31-bc4a-5c92f8937764",
+        "id_v1": "/sensors/5",
         "owner": {
-            "rid": "8bb89651-349a-4d9e-b548-d593abe5fc63",
+            "rid": "d6ce4c0a-86e0-44af-99a3-27dee291a8ef",
             "rtype": "device"
         },
         "metadata": {
-            "name": "Hall 1",
-            "archetype": "ceiling_round",
-            "function": "mixed"
+            "control_id": 3
         },
-        "product_data": {
-            "function": "mixed"
-        },
-        "identify": {},
-        "service_id": 0,
-        "on": {
-            "on": true
-        },
-        "dimming": {
-            "brightness": 100.0,
-            "min_dim_level": 0.2
-        },
-        "dimming_delta": {},
-        "color_temperature": {
-            "mirek": 343,
-            "mirek_valid": true,
-            "mirek_schema": {
-                "mirek_minimum": 153,
-                "mirek_maximum": 500
-            }
-        },
-        "color_temperature_delta": {},
-        "color": {
-            "xy": {
-                "x": 0.4431,
-                "y": 0.4061
+        "button": {
+            "last_event": "short_release",
+            "button_report": {
+                "updated": "1970-01-01T00:00:00.000Z",
+                "event": "short_release"
             },
-            "gamut": {
-                "red": {
-                    "x": 0.6915,
-                    "y": 0.3083
-                },
-                "green": {
-                    "x": 0.17,
-                    "y": 0.7
-                },
-                "blue": {
-                    "x": 0.1532,
-                    "y": 0.0475
-                }
-            },
-            "gamut_type": "C"
-        },
-        "dynamics": {
-            "status": "none",
-            "status_values": [
-                "none",
-                "dynamic_palette"
-            ],
-            "speed": 0.0,
-            "speed_valid": false
-        },
-        "alert": {
-            "action_values": [
-                "breathe"
+            "repeat_interval": 800,
+            "event_values": [
+                "initial_press",
+                "repeat",
+                "short_release",
+                "long_release",
+                "long_press"
             ]
         },
-        "signaling": {
-            "signal_values": [
-                "no_signal",
-                "on_off",
-                "on_off_color",
-                "alternating"
-            ]
-        },
-        "mode": "normal",
-        "effects": {
-            "status_values": [
-                "no_effect",
-                "candle",
-                "fire",
-                "prism",
-                "sparkle",
-                "opal",
-                "glisten",
-                "underwater",
-                "cosmos",
-                "sunbeam",
-                "enchant"
-            ],
-            "status": "no_effect",
-            "effect_values": [
-                "no_effect",
-                "candle",
-                "fire",
-                "prism",
-                "sparkle",
-                "opal",
-                "glisten",
-                "underwater",
-                "cosmos",
-                "sunbeam",
-                "enchant"
-            ]
-        },
-        "effects_v2": {
-            "action": {
-                "effect_values": [
-                    "no_effect",
-                    "candle",
-                    "fire",
-                    "prism",
-                    "sparkle",
-                    "opal",
-                    "glisten",
-                    "underwater",
-                    "cosmos",
-                    "sunbeam",
-                    "enchant"
-                ]
-            },
-            "status": {
-                "effect": "no_effect",
-                "effect_values": [
-                    "no_effect",
-                    "candle",
-                    "fire",
-                    "prism",
-                    "sparkle",
-                    "opal",
-                    "glisten",
-                    "underwater",
-                    "cosmos",
-                    "sunbeam",
-                    "enchant"
-                ]
-            }
-        },
-        "timed_effects": {
-            "status_values": [
-                "no_effect",
-                "sunrise",
-                "sunset"
-            ],
-            "status": "no_effect",
-            "effect_values": [
-                "no_effect",
-                "sunrise",
-                "sunset"
-            ]
-        },
-        "powerup": {
-            "preset": "powerfail",
-            "configured": true,
-            "on": {
-                "mode": "previous"
-            },
-            "dimming": {
-                "mode": "previous"
-            },
-            "color": {
-                "mode": "previous"
-            }
-        },
-        "type": "light"
+        "type": "button"
     },
     {
-        "id": "7269a12c-af49-476f-b79d-3431c1705397",
-        "id_v1": "/lights/4",
+        "id": "1ad3de5f-ebcf-47cc-9c6e-2994d5856dee",
+        "id_v1": "/sensors/11",
         "owner": {
-            "rid": "984c4894-aa39-4267-a54e-aa4a2a4a92a3",
+            "rid": "5cad3bf3-89af-4375-b562-9bad9eb860c9",
             "rtype": "device"
         },
         "metadata": {
-            "name": "Office Ceiling 1",
-            "archetype": "table_shade",
-            "function": "mixed"
+            "control_id": 4
         },
-        "product_data": {
-            "function": "mixed"
-        },
-        "identify": {},
-        "service_id": 0,
-        "on": {
-            "on": true
-        },
-        "dimming": {
-            "brightness": 100.0,
-            "min_dim_level": 0.2
-        },
-        "dimming_delta": {},
-        "color_temperature": {
-            "mirek": 343,
-            "mirek_valid": true,
-            "mirek_schema": {
-                "mirek_minimum": 153,
-                "mirek_maximum": 500
-            }
-        },
-        "color_temperature_delta": {},
-        "color": {
-            "xy": {
-                "x": 0.4431,
-                "y": 0.4061
+        "button": {
+            "last_event": "short_release",
+            "button_report": {
+                "updated": "2024-12-30T14:02:28.476Z",
+                "event": "short_release"
             },
-            "gamut": {
-                "red": {
-                    "x": 0.6915,
-                    "y": 0.3083
-                },
-                "green": {
-                    "x": 0.17,
-                    "y": 0.7
-                },
-                "blue": {
-                    "x": 0.1532,
-                    "y": 0.0475
-                }
-            },
-            "gamut_type": "C"
-        },
-        "dynamics": {
-            "status": "none",
-            "status_values": [
-                "none",
-                "dynamic_palette"
-            ],
-            "speed": 0.0,
-            "speed_valid": false
-        },
-        "alert": {
-            "action_values": [
-                "breathe"
+            "repeat_interval": 800,
+            "event_values": [
+                "initial_press",
+                "repeat",
+                "short_release",
+                "long_release",
+                "long_press"
             ]
         },
-        "signaling": {
-            "signal_values": [
-                "no_signal",
-                "on_off",
-                "on_off_color",
-                "alternating"
-            ]
-        },
-        "mode": "normal",
-        "effects": {
-            "status_values": [
-                "no_effect",
-                "candle",
-                "fire",
-                "prism",
-                "sparkle",
-                "opal",
-                "glisten",
-                "underwater",
-                "cosmos",
-                "sunbeam",
-                "enchant"
-            ],
-            "status": "no_effect",
-            "effect_values": [
-                "no_effect",
-                "candle",
-                "fire",
-                "prism",
-                "sparkle",
-                "opal",
-                "glisten",
-                "underwater",
-                "cosmos",
-                "sunbeam",
-                "enchant"
-            ]
-        },
-        "effects_v2": {
-            "action": {
-                "effect_values": [
-                    "no_effect",
-                    "candle",
-                    "fire",
-                    "prism",
-                    "sparkle",
-                    "opal",
-                    "glisten",
-                    "underwater",
-                    "cosmos",
-                    "sunbeam",
-                    "enchant"
-                ]
-            },
-            "status": {
-                "effect": "no_effect",
-                "effect_values": [
-                    "no_effect",
-                    "candle",
-                    "fire",
-                    "prism",
-                    "sparkle",
-                    "opal",
-                    "glisten",
-                    "underwater",
-                    "cosmos",
-                    "sunbeam",
-                    "enchant"
-                ]
-            }
-        },
-        "timed_effects": {
-            "status_values": [
-                "no_effect",
-                "sunrise",
-                "sunset"
-            ],
-            "status": "no_effect",
-            "effect_values": [
-                "no_effect",
-                "sunrise",
-                "sunset"
-            ]
-        },
-        "powerup": {
-            "preset": "powerfail",
-            "configured": true,
-            "on": {
-                "mode": "previous"
-            },
-            "dimming": {
-                "mode": "previous"
-            },
-            "color": {
-                "mode": "previous"
-            }
-        },
-        "type": "light"
+        "type": "button"
     },
     {
-        "id": "73945540-1375-4194-8341-5fb0a4b7d1ba",
-        "id_v1": "/lights/10",
+        "id": "1f2996bd-bfe2-4abf-ad7d-6d0d3ba4fab5",
+        "id_v1": "/sensors/20",
         "owner": {
-            "rid": "56daaa04-d0e0-4110-aa71-0ff092c65d5e",
+            "rid": "3bcb1457-a010-436e-a149-b403659336d8",
             "rtype": "device"
         },
         "metadata": {
-            "name": "Entry 1",
-            "archetype": "sultan_bulb",
-            "function": "mixed"
+            "control_id": 1
         },
-        "product_data": {
-            "function": "mixed"
-        },
-        "identify": {},
-        "service_id": 0,
-        "on": {
-            "on": true
-        },
-        "dimming": {
-            "brightness": 100.0,
-            "min_dim_level": 0.2
-        },
-        "dimming_delta": {},
-        "color_temperature": {
-            "mirek": 343,
-            "mirek_valid": true,
-            "mirek_schema": {
-                "mirek_minimum": 153,
-                "mirek_maximum": 500
-            }
-        },
-        "color_temperature_delta": {},
-        "color": {
-            "xy": {
-                "x": 0.4431,
-                "y": 0.4061
+        "button": {
+            "last_event": "short_release",
+            "button_report": {
+                "updated": "2024-12-23T03:32:57.261Z",
+                "event": "short_release"
             },
-            "gamut": {
-                "red": {
-                    "x": 0.6915,
-                    "y": 0.3083
-                },
-                "green": {
-                    "x": 0.17,
-                    "y": 0.7
-                },
-                "blue": {
-                    "x": 0.1532,
-                    "y": 0.0475
-                }
-            },
-            "gamut_type": "C"
-        },
-        "dynamics": {
-            "status": "none",
-            "status_values": [
-                "none",
-                "dynamic_palette"
-            ],
-            "speed": 0.0,
-            "speed_valid": false
-        },
-        "alert": {
-            "action_values": [
-                "breathe"
+            "repeat_interval": 800,
+            "event_values": [
+                "initial_press",
+                "repeat",
+                "short_release",
+                "long_release",
+                "long_press"
             ]
         },
-        "signaling": {
-            "signal_values": [
-                "no_signal",
-                "on_off",
-                "on_off_color",
-                "alternating"
-            ]
-        },
-        "mode": "normal",
-        "effects": {
-            "status_values": [
-                "no_effect",
-                "candle",
-                "fire",
-                "prism",
-                "sparkle",
-                "opal",
-                "glisten",
-                "underwater",
-                "cosmos",
-                "sunbeam",
-                "enchant"
-            ],
-            "status": "no_effect",
-            "effect_values": [
-                "no_effect",
-                "candle",
-                "fire",
-                "prism",
-                "sparkle",
-                "opal",
-                "glisten",
-                "underwater",
-                "cosmos",
-                "sunbeam",
-                "enchant"
-            ]
-        },
-        "effects_v2": {
-            "action": {
-                "effect_values": [
-                    "no_effect",
-                    "candle",
-                    "fire",
-                    "prism",
-                    "sparkle",
-                    "opal",
-                    "glisten",
-                    "underwater",
-                    "cosmos",
-                    "sunbeam",
-                    "enchant"
-                ]
-            },
-            "status": {
-                "effect": "no_effect",
-                "effect_values": [
-                    "no_effect",
-                    "candle",
-                    "fire",
-                    "prism",
-                    "sparkle",
-                    "opal",
-                    "glisten",
-                    "underwater",
-                    "cosmos",
-                    "sunbeam",
-                    "enchant"
-                ]
-            }
-        },
-        "timed_effects": {
-            "status_values": [
-                "no_effect",
-                "sunrise",
-                "sunset"
-            ],
-            "status": "no_effect",
-            "effect_values": [
-                "no_effect",
-                "sunrise",
-                "sunset"
-            ]
-        },
-        "powerup": {
-            "preset": "powerfail",
-            "configured": true,
-            "on": {
-                "mode": "previous"
-            },
-            "dimming": {
-                "mode": "previous"
-            },
-            "color": {
-                "mode": "previous"
-            }
-        },
-        "type": "light"
+        "type": "button"
     },
     {
-        "id": "7759e919-2535-41c9-b745-5c65b5d2accd",
-        "id_v1": "/lights/8",
+        "id": "2b862913-7644-45e2-86a0-48802cb8132b",
+        "id_v1": "/sensors/20",
         "owner": {
-            "rid": "0d4699ea-d133-4496-907a-b2e10dc6127a",
+            "rid": "3bcb1457-a010-436e-a149-b403659336d8",
             "rtype": "device"
         },
         "metadata": {
-            "name": "Kitchen Ceiling 1",
-            "archetype": "single_spot",
-            "function": "mixed"
+            "control_id": 2
         },
-        "product_data": {
-            "function": "mixed"
-        },
-        "identify": {},
-        "service_id": 0,
-        "on": {
-            "on": true
-        },
-        "dimming": {
-            "brightness": 100.0,
-            "min_dim_level": 0.2
-        },
-        "dimming_delta": {},
-        "color_temperature": {
-            "mirek": 343,
-            "mirek_valid": true,
-            "mirek_schema": {
-                "mirek_minimum": 153,
-                "mirek_maximum": 500
-            }
-        },
-        "color_temperature_delta": {},
-        "color": {
-            "xy": {
-                "x": 0.4431,
-                "y": 0.4061
+        "button": {
+            "last_event": "long_release",
+            "button_report": {
+                "updated": "1970-01-01T00:00:00.000Z",
+                "event": "long_release"
             },
-            "gamut": {
-                "red": {
-                    "x": 0.6915,
-                    "y": 0.3083
-                },
-                "green": {
-                    "x": 0.17,
-                    "y": 0.7
-                },
-                "blue": {
-                    "x": 0.1532,
-                    "y": 0.0475
-                }
-            },
-            "gamut_type": "C"
-        },
-        "dynamics": {
-            "status": "none",
-            "status_values": [
-                "none",
-                "dynamic_palette"
-            ],
-            "speed": 0.0,
-            "speed_valid": false
-        },
-        "alert": {
-            "action_values": [
-                "breathe"
+            "repeat_interval": 800,
+            "event_values": [
+                "initial_press",
+                "repeat",
+                "short_release",
+                "long_release",
+                "long_press"
             ]
         },
-        "signaling": {
-            "signal_values": [
-                "no_signal",
-                "on_off",
-                "on_off_color",
-                "alternating"
-            ]
-        },
-        "mode": "normal",
-        "effects": {
-            "status_values": [
-                "no_effect",
-                "candle",
-                "fire",
-                "prism",
-                "sparkle",
-                "opal",
-                "glisten",
-                "underwater",
-                "cosmos",
-                "sunbeam",
-                "enchant"
-            ],
-            "status": "no_effect",
-            "effect_values": [
-                "no_effect",
-                "candle",
-                "fire",
-                "prism",
-                "sparkle",
-                "opal",
-                "glisten",
-                "underwater",
-                "cosmos",
-                "sunbeam",
-                "enchant"
-            ]
-        },
-        "effects_v2": {
-            "action": {
-                "effect_values": [
-                    "no_effect",
-                    "candle",
-                    "fire",
-                    "prism",
-                    "sparkle",
-                    "opal",
-                    "glisten",
-                    "underwater",
-                    "cosmos",
-                    "sunbeam",
-                    "enchant"
-                ]
-            },
-            "status": {
-                "effect": "no_effect",
-                "effect_values": [
-                    "no_effect",
-                    "candle",
-                    "fire",
-                    "prism",
-                    "sparkle",
-                    "opal",
-                    "glisten",
-                    "underwater",
-                    "cosmos",
-                    "sunbeam",
-                    "enchant"
-                ]
-            }
-        },
-        "timed_effects": {
-            "status_values": [
-                "no_effect",
-                "sunrise",
-                "sunset"
-            ],
-            "status": "no_effect",
-            "effect_values": [
-                "no_effect",
-                "sunrise",
-                "sunset"
-            ]
-        },
-        "powerup": {
-            "preset": "powerfail",
-            "configured": true,
-            "on": {
-                "mode": "previous"
-            },
-            "dimming": {
-                "mode": "previous"
-            },
-            "color": {
-                "mode": "previous"
-            }
-        },
-        "type": "light"
+        "type": "button"
     },
     {
-        "id": "791c56dd-b723-41fe-a758-2f7347b6dfd4",
-        "id_v1": "/lights/5",
+        "id": "2db27d3e-c477-43c9-97b7-c99167bedb16",
+        "id_v1": "/sensors/2",
         "owner": {
-            "rid": "aeca7538-c009-4e60-a282-83e2058f96a1",
+            "rid": "0373a708-10a0-466d-8342-24479c3ac736",
             "rtype": "device"
         },
         "metadata": {
-            "name": "Office Ceiling 2",
-            "archetype": "sultan_bulb",
-            "function": "mixed"
+            "control_id": 1
         },
-        "product_data": {
-            "function": "mixed"
-        },
-        "identify": {},
-        "service_id": 0,
-        "on": {
-            "on": true
-        },
-        "dimming": {
-            "brightness": 100.0,
-            "min_dim_level": 0.2
-        },
-        "dimming_delta": {},
-        "color_temperature": {
-            "mirek": 343,
-            "mirek_valid": true,
-            "mirek_schema": {
-                "mirek_minimum": 153,
-                "mirek_maximum": 500
-            }
-        },
-        "color_temperature_delta": {},
-        "color": {
-            "xy": {
-                "x": 0.4431,
-                "y": 0.4061
+        "button": {
+            "last_event": "short_release",
+            "button_report": {
+                "updated": "2024-12-31T23:19:19.854Z",
+                "event": "short_release"
             },
-            "gamut": {
-                "red": {
-                    "x": 0.6915,
-                    "y": 0.3083
-                },
-                "green": {
-                    "x": 0.17,
-                    "y": 0.7
-                },
-                "blue": {
-                    "x": 0.1532,
-                    "y": 0.0475
-                }
-            },
-            "gamut_type": "C"
-        },
-        "dynamics": {
-            "status": "none",
-            "status_values": [
-                "none",
-                "dynamic_palette"
-            ],
-            "speed": 0.0,
-            "speed_valid": false
-        },
-        "alert": {
-            "action_values": [
-                "breathe"
+            "repeat_interval": 800,
+            "event_values": [
+                "initial_press",
+                "repeat",
+                "short_release",
+                "long_release",
+                "long_press"
             ]
         },
-        "signaling": {
-            "signal_values": [
-                "no_signal",
-                "on_off",
-                "on_off_color",
-                "alternating"
-            ]
-        },
-        "mode": "normal",
-        "effects": {
-            "status_values": [
-                "no_effect",
-                "candle",
-                "fire",
-                "prism",
-                "sparkle",
-                "opal",
-                "glisten",
-                "underwater",
-                "cosmos",
-                "sunbeam",
-                "enchant"
-            ],
-            "status": "no_effect",
-            "effect_values": [
-                "no_effect",
-                "candle",
-                "fire",
-                "prism",
-                "sparkle",
-                "opal",
-                "glisten",
-                "underwater",
-                "cosmos",
-                "sunbeam",
-                "enchant"
-            ]
-        },
-        "effects_v2": {
-            "action": {
-                "effect_values": [
-                    "no_effect",
-                    "candle",
-                    "fire",
-                    "prism",
-                    "sparkle",
-                    "opal",
-                    "glisten",
-                    "underwater",
-                    "cosmos",
-                    "sunbeam",
-                    "enchant"
-                ]
-            },
-            "status": {
-                "effect": "no_effect",
-                "effect_values": [
-                    "no_effect",
-                    "candle",
-                    "fire",
-                    "prism",
-                    "sparkle",
-                    "opal",
-                    "glisten",
-                    "underwater",
-                    "cosmos",
-                    "sunbeam",
-                    "enchant"
-                ]
-            }
-        },
-        "timed_effects": {
-            "status_values": [
-                "no_effect",
-                "sunrise",
-                "sunset"
-            ],
-            "status": "no_effect",
-            "effect_values": [
-                "no_effect",
-                "sunrise",
-                "sunset"
-            ]
-        },
-        "powerup": {
-            "preset": "powerfail",
-            "configured": true,
-            "on": {
-                "mode": "previous"
-            },
-            "dimming": {
-                "mode": "previous"
-            },
-            "color": {
-                "mode": "previous"
-            }
-        },
-        "type": "light"
+        "type": "button"
     },
     {
-        "id": "7d2b22e1-d12f-4895-a5c3-59c2d22399b9",
-        "id_v1": "/lights/16",
+        "id": "32de526a-28eb-4cb0-af24-5143dde2d0b6",
+        "id_v1": "/sensors/5",
         "owner": {
-            "rid": "b9c8e3b6-fd09-4798-aa32-e465f9bd0ec2",
+            "rid": "d6ce4c0a-86e0-44af-99a3-27dee291a8ef",
             "rtype": "device"
         },
         "metadata": {
-            "name": "Alex Ceiling 1",
-            "archetype": "sultan_bulb",
-            "function": "mixed"
+            "control_id": 1
         },
-        "product_data": {
-            "function": "mixed"
-        },
-        "identify": {},
-        "service_id": 0,
-        "on": {
-            "on": false
-        },
-        "dimming": {
-            "brightness": 100.0,
-            "min_dim_level": 0.2
-        },
-        "dimming_delta": {},
-        "color_temperature": {
-            "mirek": 230,
-            "mirek_valid": true,
-            "mirek_schema": {
-                "mirek_minimum": 153,
-                "mirek_maximum": 500
-            }
-        },
-        "color_temperature_delta": {},
-        "color": {
-            "xy": {
-                "x": 0.3669,
-                "y": 0.3706
+        "button": {
+            "last_event": "short_release",
+            "button_report": {
+                "updated": "2024-12-31T23:10:02.278Z",
+                "event": "short_release"
             },
-            "gamut": {
-                "red": {
-                    "x": 0.6915,
-                    "y": 0.3083
-                },
-                "green": {
-                    "x": 0.17,
-                    "y": 0.7
-                },
-                "blue": {
-                    "x": 0.1532,
-                    "y": 0.0475
-                }
-            },
-            "gamut_type": "C"
-        },
-        "dynamics": {
-            "status": "none",
-            "status_values": [
-                "none",
-                "dynamic_palette"
-            ],
-            "speed": 0.0,
-            "speed_valid": false
-        },
-        "alert": {
-            "action_values": [
-                "breathe"
+            "repeat_interval": 800,
+            "event_values": [
+                "initial_press",
+                "repeat",
+                "short_release",
+                "long_release",
+                "long_press"
             ]
         },
-        "signaling": {
-            "signal_values": [
-                "no_signal",
-                "on_off",
-                "on_off_color",
-                "alternating"
-            ]
-        },
-        "mode": "normal",
-        "effects": {
-            "status_values": [
-                "no_effect",
-                "candle",
-                "fire",
-                "prism",
-                "sparkle",
-                "opal",
-                "glisten",
-                "underwater",
-                "cosmos",
-                "sunbeam",
-                "enchant"
-            ],
-            "status": "no_effect",
-            "effect_values": [
-                "no_effect",
-                "candle",
-                "fire",
-                "prism",
-                "sparkle",
-                "opal",
-                "glisten",
-                "underwater",
-                "cosmos",
-                "sunbeam",
-                "enchant"
-            ]
-        },
-        "effects_v2": {
-            "action": {
-                "effect_values": [
-                    "no_effect",
-                    "candle",
-                    "fire",
-                    "prism",
-                    "sparkle",
-                    "opal",
-                    "glisten",
-                    "underwater",
-                    "cosmos",
-                    "sunbeam",
-                    "enchant"
-                ]
-            },
-            "status": {
-                "effect": "no_effect",
-                "effect_values": [
-                    "no_effect",
-                    "candle",
-                    "fire",
-                    "prism",
-                    "sparkle",
-                    "opal",
-                    "glisten",
-                    "underwater",
-                    "cosmos",
-                    "sunbeam",
-                    "enchant"
-                ]
-            }
-        },
-        "timed_effects": {
-            "status_values": [
-                "no_effect",
-                "sunrise",
-                "sunset"
-            ],
-            "status": "no_effect",
-            "effect_values": [
-                "no_effect",
-                "sunrise",
-                "sunset"
-            ]
-        },
-        "powerup": {
-            "preset": "powerfail",
-            "configured": true,
-            "on": {
-                "mode": "previous"
-            },
-            "dimming": {
-                "mode": "previous"
-            },
-            "color": {
-                "mode": "previous"
-            }
-        },
-        "type": "light"
+        "type": "button"
     },
     {
-        "id": "83abb077-5308-4a11-be39-9ab49e3d8342",
-        "id_v1": "/lights/28",
+        "id": "4b538982-d989-49aa-af75-4f75e1d97f72",
+        "id_v1": "/sensors/25",
         "owner": {
-            "rid": "6862612f-789b-41f9-85bf-c7d9f94bf135",
+            "rid": "3f13df38-5727-43c5-9219-a4f54fa77ad8",
             "rtype": "device"
         },
         "metadata": {
-            "name": "Living Room Lamp 2",
-            "archetype": "table_shade",
-            "function": "mixed"
+            "control_id": 1
         },
-        "product_data": {
-            "function": "mixed"
-        },
-        "identify": {},
-        "service_id": 0,
-        "on": {
-            "on": true
-        },
-        "dimming": {
-            "brightness": 100.0,
-            "min_dim_level": 0.2
-        },
-        "dimming_delta": {},
-        "color_temperature": {
-            "mirek": 343,
-            "mirek_valid": true,
-            "mirek_schema": {
-                "mirek_minimum": 153,
-                "mirek_maximum": 500
-            }
-        },
-        "color_temperature_delta": {},
-        "color": {
-            "xy": {
-                "x": 0.445,
-                "y": 0.4067
+        "button": {
+            "last_event": "short_release",
+            "button_report": {
+                "updated": "2025-01-01T00:30:14.339Z",
+                "event": "short_release"
             },
-            "gamut": {
-                "red": {
-                    "x": 0.6915,
-                    "y": 0.3083
-                },
-                "green": {
-                    "x": 0.17,
-                    "y": 0.7
-                },
-                "blue": {
-                    "x": 0.1532,
-                    "y": 0.0475
-                }
-            },
-            "gamut_type": "C"
-        },
-        "dynamics": {
-            "status": "none",
-            "status_values": [
-                "none",
-                "dynamic_palette"
-            ],
-            "speed": 0.0,
-            "speed_valid": false
-        },
-        "alert": {
-            "action_values": [
-                "breathe"
+            "repeat_interval": 800,
+            "event_values": [
+                "initial_press",
+                "repeat",
+                "short_release",
+                "long_release",
+                "long_press"
             ]
         },
-        "signaling": {
-            "signal_values": [
-                "no_signal",
-                "on_off",
-                "on_off_color",
-                "alternating"
-            ]
-        },
-        "mode": "normal",
-        "effects": {
-            "status_values": [
-                "no_effect",
-                "candle",
-                "fire",
-                "prism",
-                "sparkle",
-                "opal",
-                "glisten",
-                "underwater",
-                "cosmos",
-                "sunbeam",
-                "enchant"
-            ],
-            "status": "no_effect",
-            "effect_values": [
-                "no_effect",
-                "candle",
-                "fire",
-                "prism",
-                "sparkle",
-                "opal",
-                "glisten",
-                "underwater",
-                "cosmos",
-                "sunbeam",
-                "enchant"
-            ]
-        },
-        "effects_v2": {
-            "action": {
-                "effect_values": [
-                    "no_effect",
-                    "candle",
-                    "fire",
-                    "prism",
-                    "sparkle",
-                    "opal",
-                    "glisten",
-                    "underwater",
-                    "cosmos",
-                    "sunbeam",
-                    "enchant"
-                ]
-            },
-            "status": {
-                "effect": "no_effect",
-                "effect_values": [
-                    "no_effect",
-                    "candle",
-                    "fire",
-                    "prism",
-                    "sparkle",
-                    "opal",
-                    "glisten",
-                    "underwater",
-                    "cosmos",
-                    "sunbeam",
-                    "enchant"
-                ]
-            }
-        },
-        "timed_effects": {
-            "status_values": [
-                "no_effect",
-                "sunrise",
-                "sunset"
-            ],
-            "status": "no_effect",
-            "effect_values": [
-                "no_effect",
-                "sunrise",
-                "sunset"
-            ]
-        },
-        "powerup": {
-            "preset": "powerfail",
-            "configured": true,
-            "on": {
-                "mode": "previous"
-            },
-            "dimming": {
-                "mode": "previous"
-            },
-            "color": {
-                "mode": "previous"
-            }
-        },
-        "type": "light"
+        "type": "button"
     },
     {
-        "id": "a7f72e0e-18fd-42f2-beb3-8da314df7b72",
-        "id_v1": "/lights/2",
+        "id": "4dbda0b7-100f-4f93-9918-11e9e9b102b8",
+        "id_v1": "/sensors/11",
         "owner": {
-            "rid": "81af7d6b-d9cb-4c38-aca0-caf5109e8ce9",
+            "rid": "5cad3bf3-89af-4375-b562-9bad9eb860c9",
             "rtype": "device"
         },
         "metadata": {
-            "name": "Living Room Ceiling 2",
-            "archetype": "sultan_bulb",
-            "function": "mixed"
+            "control_id": 1
         },
-        "product_data": {
-            "function": "mixed"
-        },
-        "identify": {},
-        "service_id": 0,
-        "on": {
-            "on": true
-        },
-        "dimming": {
-            "brightness": 100.0,
-            "min_dim_level": 1.0
-        },
-        "dimming_delta": {},
-        "color_temperature": {
-            "mirek": 343,
-            "mirek_valid": true,
-            "mirek_schema": {
-                "mirek_minimum": 153,
-                "mirek_maximum": 500
-            }
-        },
-        "color_temperature_delta": {},
-        "color": {
-            "xy": {
-                "x": 0.4431,
-                "y": 0.4061
+        "button": {
+            "last_event": "short_release",
+            "button_report": {
+                "updated": "2024-12-30T13:33:31.575Z",
+                "event": "short_release"
             },
-            "gamut": {
-                "red": {
-                    "x": 0.6915,
-                    "y": 0.3083
-                },
-                "green": {
-                    "x": 0.17,
-                    "y": 0.7
-                },
-                "blue": {
-                    "x": 0.1532,
-                    "y": 0.0475
-                }
-            },
-            "gamut_type": "C"
-        },
-        "dynamics": {
-            "status": "none",
-            "status_values": [
-                "none",
-                "dynamic_palette"
-            ],
-            "speed": 0.0,
-            "speed_valid": false
-        },
-        "alert": {
-            "action_values": [
-                "breathe"
+            "repeat_interval": 800,
+            "event_values": [
+                "initial_press",
+                "repeat",
+                "short_release",
+                "long_release",
+                "long_press"
             ]
         },
-        "signaling": {
-            "signal_values": [
-                "no_signal",
-                "on_off",
-                "on_off_color",
-                "alternating"
-            ]
-        },
-        "mode": "normal",
-        "effects": {
-            "status_values": [
-                "no_effect",
-                "candle",
-                "fire",
-                "prism",
-                "sparkle",
-                "opal",
-                "glisten"
-            ],
-            "status": "no_effect",
-            "effect_values": [
-                "no_effect",
-                "candle",
-                "fire",
-                "prism",
-                "sparkle",
-                "opal",
-                "glisten"
-            ]
-        },
-        "effects_v2": {
-            "action": {
-                "effect_values": [
-                    "no_effect",
-                    "candle",
-                    "fire",
-                    "prism",
-                    "sparkle",
-                    "opal",
-                    "glisten"
-                ]
-            },
-            "status": {
-                "effect": "no_effect",
-                "effect_values": [
-                    "no_effect",
-                    "candle",
-                    "fire",
-                    "prism",
-                    "sparkle",
-                    "opal",
-                    "glisten"
-                ]
-            }
-        },
-        "powerup": {
-            "preset": "powerfail",
-            "configured": true,
-            "on": {
-                "mode": "previous"
-            },
-            "dimming": {
-                "mode": "previous"
-            },
-            "color": {
-                "mode": "previous"
-            }
-        },
-        "type": "light"
+        "type": "button"
     },
     {
-        "id": "aa65958b-ddd7-4c36-a582-764226dd88a2",
-        "id_v1": "/lights/3",
+        "id": "4dc9b801-3976-4c0b-899c-65fc3f24ffd9",
+        "id_v1": "/sensors/20",
         "owner": {
-            "rid": "85d9d55f-53a3-4a4f-98bb-845190b9a39b",
+            "rid": "3bcb1457-a010-436e-a149-b403659336d8",
             "rtype": "device"
         },
         "metadata": {
-            "name": "Living Room Ceiling 3",
-            "archetype": "sultan_bulb",
-            "function": "mixed"
+            "control_id": 4
         },
-        "product_data": {
-            "function": "mixed"
-        },
-        "identify": {},
-        "service_id": 0,
-        "on": {
-            "on": true
-        },
-        "dimming": {
-            "brightness": 100.0,
-            "min_dim_level": 1.0
-        },
-        "dimming_delta": {},
-        "color_temperature": {
-            "mirek": 343,
-            "mirek_valid": true,
-            "mirek_schema": {
-                "mirek_minimum": 153,
-                "mirek_maximum": 500
-            }
-        },
-        "color_temperature_delta": {},
-        "color": {
-            "xy": {
-                "x": 0.4431,
-                "y": 0.4061
+        "button": {
+            "last_event": "short_release",
+            "button_report": {
+                "updated": "2024-12-31T04:30:16.181Z",
+                "event": "short_release"
             },
-            "gamut": {
-                "red": {
-                    "x": 0.6915,
-                    "y": 0.3083
-                },
-                "green": {
-                    "x": 0.17,
-                    "y": 0.7
-                },
-                "blue": {
-                    "x": 0.1532,
-                    "y": 0.0475
-                }
-            },
-            "gamut_type": "C"
-        },
-        "dynamics": {
-            "status": "none",
-            "status_values": [
-                "none",
-                "dynamic_palette"
-            ],
-            "speed": 0.0,
-            "speed_valid": false
-        },
-        "alert": {
-            "action_values": [
-                "breathe"
+            "repeat_interval": 800,
+            "event_values": [
+                "initial_press",
+                "repeat",
+                "short_release",
+                "long_release",
+                "long_press"
             ]
         },
-        "signaling": {
-            "signal_values": [
-                "no_signal",
-                "on_off",
-                "on_off_color",
-                "alternating"
-            ]
-        },
-        "mode": "normal",
-        "effects": {
-            "status_values": [
-                "no_effect",
-                "candle",
-                "fire",
-                "prism",
-                "sparkle",
-                "opal",
-                "glisten"
-            ],
-            "status": "no_effect",
-            "effect_values": [
-                "no_effect",
-                "candle",
-                "fire",
-                "prism",
-                "sparkle",
-                "opal",
-                "glisten"
-            ]
-        },
-        "effects_v2": {
-            "action": {
-                "effect_values": [
-                    "no_effect",
-                    "candle",
-                    "fire",
-                    "prism",
-                    "sparkle",
-                    "opal",
-                    "glisten"
-                ]
-            },
-            "status": {
-                "effect": "no_effect",
-                "effect_values": [
-                    "no_effect",
-                    "candle",
-                    "fire",
-                    "prism",
-                    "sparkle",
-                    "opal",
-                    "glisten"
-                ]
-            }
-        },
-        "powerup": {
-            "preset": "powerfail",
-            "configured": true,
-            "on": {
-                "mode": "previous"
-            },
-            "dimming": {
-                "mode": "previous"
-            },
-            "color": {
-                "mode": "previous"
-            }
-        },
-        "type": "light"
+        "type": "button"
     },
     {
-        "id": "ab66b5b2-26b5-49e1-a822-71164184d5c1",
-        "id_v1": "/lights/33",
+        "id": "51efdee2-78d2-4bc7-bc52-4c9a5352b6b0",
+        "id_v1": "/sensors/20",
         "owner": {
-            "rid": "7d0b4322-ac4f-413e-b39e-f1c42110d1c5",
+            "rid": "3bcb1457-a010-436e-a149-b403659336d8",
             "rtype": "device"
         },
         "metadata": {
-            "name": "Bathroom 1",
-            "archetype": "classic_bulb",
-            "fixed_mired": 366,
-            "function": "mixed"
+            "control_id": 3
         },
-        "product_data": {
-            "function": "mixed"
-        },
-        "identify": {},
-        "service_id": 0,
-        "on": {
-            "on": true
-        },
-        "dimming": {
-            "brightness": 100.0,
-            "min_dim_level": 2.0
-        },
-        "dimming_delta": {},
-        "dynamics": {
-            "status": "none",
-            "status_values": [
-                "none"
-            ],
-            "speed": 0.0,
-            "speed_valid": false
-        },
-        "alert": {
-            "action_values": [
-                "breathe"
-            ]
-        },
-        "signaling": {
-            "signal_values": [
-                "no_signal",
-                "on_off"
-            ]
-        },
-        "mode": "normal",
-        "effects": {
-            "status_values": [
-                "no_effect",
-                "candle"
-            ],
-            "status": "no_effect",
-            "effect_values": [
-                "no_effect",
-                "candle"
-            ]
-        },
-        "effects_v2": {
-            "action": {
-                "effect_values": [
-                    "no_effect",
-                    "candle"
-                ]
+        "button": {
+            "last_event": "long_release",
+            "button_report": {
+                "updated": "1970-01-01T00:00:00.000Z",
+                "event": "long_release"
             },
-            "status": {
-                "effect": "no_effect",
-                "effect_values": [
-                    "no_effect",
-                    "candle"
-                ]
-            }
+            "repeat_interval": 800,
+            "event_values": [
+                "initial_press",
+                "repeat",
+                "short_release",
+                "long_release",
+                "long_press"
+            ]
         },
-        "powerup": {
-            "preset": "safety",
-            "configured": true,
-            "on": {
-                "mode": "on",
-                "on": {
-                    "on": true
-                }
-            },
-            "dimming": {
-                "mode": "dimming",
-                "dimming": {
-                    "brightness": 100.0
-                }
-            }
-        },
-        "type": "light"
+        "type": "button"
     },
     {
-        "id": "adbc90f8-69c8-48d1-a070-e92e057b0c8f",
-        "id_v1": "/lights/24",
+        "id": "57034233-2159-4be4-b60c-10510803844a",
+        "id_v1": "/sensors/8",
         "owner": {
-            "rid": "de2ab469-e9ca-4486-ba88-74605f210a27",
+            "rid": "0bc30ef2-6aca-4a40-a8b4-db16bb2e21a0",
             "rtype": "device"
         },
         "metadata": {
-            "name": "Counter",
-            "archetype": "ground_spot",
-            "function": "mixed"
+            "control_id": 1
         },
-        "product_data": {
-            "function": "mixed"
-        },
-        "identify": {},
-        "service_id": 0,
-        "on": {
-            "on": true
-        },
-        "dimming": {
-            "brightness": 100.0,
-            "min_dim_level": 0.2
-        },
-        "dimming_delta": {},
-        "color_temperature": {
-            "mirek": 343,
-            "mirek_valid": true,
-            "mirek_schema": {
-                "mirek_minimum": 153,
-                "mirek_maximum": 500
-            }
-        },
-        "color_temperature_delta": {},
-        "color": {
-            "xy": {
-                "x": 0.4431,
-                "y": 0.4061
+        "button": {
+            "last_event": "short_release",
+            "button_report": {
+                "updated": "2024-12-27T03:53:50.465Z",
+                "event": "short_release"
             },
-            "gamut": {
-                "red": {
-                    "x": 0.6915,
-                    "y": 0.3083
-                },
-                "green": {
-                    "x": 0.17,
-                    "y": 0.7
-                },
-                "blue": {
-                    "x": 0.1532,
-                    "y": 0.0475
-                }
-            },
-            "gamut_type": "C"
-        },
-        "dynamics": {
-            "status": "none",
-            "status_values": [
-                "none",
-                "dynamic_palette"
-            ],
-            "speed": 0.0,
-            "speed_valid": false
-        },
-        "alert": {
-            "action_values": [
-                "breathe"
+            "repeat_interval": 800,
+            "event_values": [
+                "initial_press",
+                "repeat",
+                "short_release",
+                "long_release",
+                "long_press"
             ]
         },
-        "signaling": {
-            "signal_values": [
-                "no_signal",
-                "on_off",
-                "on_off_color",
-                "alternating"
-            ]
-        },
-        "mode": "normal",
-        "effects": {
-            "status_values": [
-                "no_effect",
-                "candle",
-                "fire",
-                "prism",
-                "sparkle",
-                "opal",
-                "glisten",
-                "underwater",
-                "cosmos",
-                "sunbeam",
-                "enchant"
-            ],
-            "status": "no_effect",
-            "effect_values": [
-                "no_effect",
-                "candle",
-                "fire",
-                "prism",
-                "sparkle",
-                "opal",
-                "glisten",
-                "underwater",
-                "cosmos",
-                "sunbeam",
-                "enchant"
-            ]
-        },
-        "effects_v2": {
-            "action": {
-                "effect_values": [
-                    "no_effect",
-                    "candle",
-                    "fire",
-                    "prism",
-                    "sparkle",
-                    "opal",
-                    "glisten",
-                    "underwater",
-                    "cosmos",
-                    "sunbeam",
-                    "enchant"
-                ]
-            },
-            "status": {
-                "effect": "no_effect",
-                "effect_values": [
-                    "no_effect",
-                    "candle",
-                    "fire",
-                    "prism",
-                    "sparkle",
-                    "opal",
-                    "glisten",
-                    "underwater",
-                    "cosmos",
-                    "sunbeam",
-                    "enchant"
-                ]
-            }
-        },
-        "timed_effects": {
-            "status_values": [
-                "no_effect",
-                "sunrise",
-                "sunset"
-            ],
-            "status": "no_effect",
-            "effect_values": [
-                "no_effect",
-                "sunrise",
-                "sunset"
-            ]
-        },
-        "powerup": {
-            "preset": "safety",
-            "configured": true,
-            "on": {
-                "mode": "on",
-                "on": {
-                    "on": true
-                }
-            },
-            "dimming": {
-                "mode": "dimming",
-                "dimming": {
-                    "brightness": 100.0
-                }
-            },
-            "color": {
-                "mode": "color_temperature",
-                "color_temperature": {
-                    "mirek": 366
-                }
-            }
-        },
-        "type": "light"
+        "type": "button"
     },
     {
-        "id": "ba53a457-72af-48d0-a123-115fb093c135",
-        "id_v1": "/lights/18",
+        "id": "738bbc9e-9a44-48bd-9370-b1ef1aa59523",
+        "id_v1": "/sensors/17",
         "owner": {
-            "rid": "7d5ad34b-1722-4325-9e7c-be6f5771f0fe",
+            "rid": "b18cda88-d57a-4d53-a6ae-21ed9ba2e8d2",
             "rtype": "device"
         },
         "metadata": {
-            "name": "Living Room Can Corner",
-            "archetype": "sultan_bulb",
-            "function": "mixed"
+            "control_id": 1
         },
-        "product_data": {
-            "function": "mixed"
-        },
-        "identify": {},
-        "service_id": 0,
-        "on": {
-            "on": true
-        },
-        "dimming": {
-            "brightness": 100.0,
-            "min_dim_level": 1.0
-        },
-        "dimming_delta": {},
-        "color_temperature": {
-            "mirek": 343,
-            "mirek_valid": true,
-            "mirek_schema": {
-                "mirek_minimum": 153,
-                "mirek_maximum": 500
-            }
-        },
-        "color_temperature_delta": {},
-        "color": {
-            "xy": {
-                "x": 0.4431,
-                "y": 0.4061
+        "button": {
+            "last_event": "short_release",
+            "button_report": {
+                "updated": "2024-12-31T23:13:31.731Z",
+                "event": "short_release"
             },
-            "gamut": {
-                "red": {
-                    "x": 0.6915,
-                    "y": 0.3083
-                },
-                "green": {
-                    "x": 0.17,
-                    "y": 0.7
-                },
-                "blue": {
-                    "x": 0.1532,
-                    "y": 0.0475
-                }
-            },
-            "gamut_type": "C"
-        },
-        "dynamics": {
-            "status": "none",
-            "status_values": [
-                "none",
-                "dynamic_palette"
-            ],
-            "speed": 0.0,
-            "speed_valid": false
-        },
-        "alert": {
-            "action_values": [
-                "breathe"
+            "repeat_interval": 800,
+            "event_values": [
+                "initial_press",
+                "repeat",
+                "short_release",
+                "long_release",
+                "long_press"
             ]
         },
-        "signaling": {
-            "signal_values": [
-                "no_signal",
-                "on_off",
-                "on_off_color",
-                "alternating"
-            ]
-        },
-        "mode": "normal",
-        "effects": {
-            "status_values": [
-                "no_effect",
-                "candle",
-                "fire",
-                "prism",
-                "sparkle",
-                "opal",
-                "glisten"
-            ],
-            "status": "no_effect",
-            "effect_values": [
-                "no_effect",
-                "candle",
-                "fire",
-                "prism",
-                "sparkle",
-                "opal",
-                "glisten"
-            ]
-        },
-        "effects_v2": {
-            "action": {
-                "effect_values": [
-                    "no_effect",
-                    "candle",
-                    "fire",
-                    "prism",
-                    "sparkle",
-                    "opal",
-                    "glisten"
-                ]
-            },
-            "status": {
-                "effect": "no_effect",
-                "effect_values": [
-                    "no_effect",
-                    "candle",
-                    "fire",
-                    "prism",
-                    "sparkle",
-                    "opal",
-                    "glisten"
-                ]
-            }
-        },
-        "powerup": {
-            "preset": "powerfail",
-            "configured": true,
-            "on": {
-                "mode": "previous"
-            },
-            "dimming": {
-                "mode": "previous"
-            },
-            "color": {
-                "mode": "previous"
-            }
-        },
-        "type": "light"
+        "type": "button"
     },
     {
-        "id": "bb177249-0806-4407-a1c4-263011a6ecfd",
-        "id_v1": "/lights/6",
+        "id": "73ebd450-49a1-47c3-ac19-56bc594a73ec",
+        "id_v1": "/sensors/17",
         "owner": {
-            "rid": "9cb19b03-9f7c-4649-9966-ee62157481fd",
+            "rid": "b18cda88-d57a-4d53-a6ae-21ed9ba2e8d2",
             "rtype": "device"
         },
         "metadata": {
-            "name": "Dining 1",
-            "archetype": "sultan_bulb",
-            "function": "mixed"
+            "control_id": 2
         },
-        "product_data": {
-            "function": "mixed"
-        },
-        "identify": {},
-        "service_id": 0,
-        "on": {
-            "on": true
-        },
-        "dimming": {
-            "brightness": 100.0,
-            "min_dim_level": 1.0
-        },
-        "dimming_delta": {},
-        "color_temperature": {
-            "mirek": 343,
-            "mirek_valid": true,
-            "mirek_schema": {
-                "mirek_minimum": 153,
-                "mirek_maximum": 500
-            }
-        },
-        "color_temperature_delta": {},
-        "color": {
-            "xy": {
-                "x": 0.4431,
-                "y": 0.4061
+        "button": {
+            "last_event": "long_release",
+            "button_report": {
+                "updated": "1970-01-01T00:00:00.000Z",
+                "event": "long_release"
             },
-            "gamut": {
-                "red": {
-                    "x": 0.6915,
-                    "y": 0.3083
-                },
-                "green": {
-                    "x": 0.17,
-                    "y": 0.7
-                },
-                "blue": {
-                    "x": 0.1532,
-                    "y": 0.0475
-                }
-            },
-            "gamut_type": "C"
-        },
-        "dynamics": {
-            "status": "none",
-            "status_values": [
-                "none",
-                "dynamic_palette"
-            ],
-            "speed": 0.0,
-            "speed_valid": false
-        },
-        "alert": {
-            "action_values": [
-                "breathe"
+            "repeat_interval": 800,
+            "event_values": [
+                "initial_press",
+                "repeat",
+                "short_release",
+                "long_release",
+                "long_press"
             ]
         },
-        "signaling": {
-            "signal_values": [
-                "no_signal",
-                "on_off",
-                "on_off_color",
-                "alternating"
-            ]
-        },
-        "mode": "normal",
-        "effects": {
-            "status_values": [
-                "no_effect",
-                "candle",
-                "fire",
-                "prism",
-                "sparkle",
-                "opal",
-                "glisten"
-            ],
-            "status": "no_effect",
-            "effect_values": [
-                "no_effect",
-                "candle",
-                "fire",
-                "prism",
-                "sparkle",
-                "opal",
-                "glisten"
-            ]
-        },
-        "effects_v2": {
-            "action": {
-                "effect_values": [
-                    "no_effect",
-                    "candle",
-                    "fire",
-                    "prism",
-                    "sparkle",
-                    "opal",
-                    "glisten"
-                ]
-            },
-            "status": {
-                "effect": "no_effect",
-                "effect_values": [
-                    "no_effect",
-                    "candle",
-                    "fire",
-                    "prism",
-                    "sparkle",
-                    "opal",
-                    "glisten"
-                ]
-            }
-        },
-        "powerup": {
-            "preset": "powerfail",
-            "configured": true,
-            "on": {
-                "mode": "previous"
-            },
-            "dimming": {
-                "mode": "previous"
-            },
-            "color": {
-                "mode": "previous"
-            }
-        },
-        "type": "light"
+        "type": "button"
     },
     {
-        "id": "c6744e5d-513d-4357-909c-00b912767a75",
-        "id_v1": "/lights/22",
+        "id": "86b79d12-5290-4b4e-8a83-7528ecd11a2a",
+        "id_v1": "/sensors/2",
         "owner": {
-            "rid": "cf6a5523-365a-463d-b946-4311bbc5c56e",
+            "rid": "0373a708-10a0-466d-8342-24479c3ac736",
             "rtype": "device"
         },
         "metadata": {
-            "name": "Alex Lamp",
-            "archetype": "sultan_bulb",
-            "function": "mixed"
+            "control_id": 3
         },
-        "product_data": {
-            "function": "mixed"
-        },
-        "identify": {},
-        "service_id": 0,
-        "on": {
-            "on": false
-        },
-        "dimming": {
-            "brightness": 100.0,
-            "min_dim_level": 0.2
-        },
-        "dimming_delta": {},
-        "color_temperature": {
-            "mirek": 230,
-            "mirek_valid": true,
-            "mirek_schema": {
-                "mirek_minimum": 153,
-                "mirek_maximum": 500
-            }
-        },
-        "color_temperature_delta": {},
-        "color": {
-            "xy": {
-                "x": 0.3669,
-                "y": 0.3706
+        "button": {
+            "last_event": "long_release",
+            "button_report": {
+                "updated": "2024-12-30T06:07:18.597Z",
+                "event": "long_release"
             },
-            "gamut": {
-                "red": {
-                    "x": 0.6915,
-                    "y": 0.3083
-                },
-                "green": {
-                    "x": 0.17,
-                    "y": 0.7
-                },
-                "blue": {
-                    "x": 0.1532,
-                    "y": 0.0475
-                }
-            },
-            "gamut_type": "C"
-        },
-        "dynamics": {
-            "status": "none",
-            "status_values": [
-                "none",
-                "dynamic_palette"
-            ],
-            "speed": 0.0,
-            "speed_valid": false
-        },
-        "alert": {
-            "action_values": [
-                "breathe"
+            "repeat_interval": 800,
+            "event_values": [
+                "initial_press",
+                "repeat",
+                "short_release",
+                "long_release",
+                "long_press"
             ]
         },
-        "signaling": {
-            "signal_values": [
-                "no_signal",
-                "on_off",
-                "on_off_color",
-                "alternating"
-            ]
-        },
-        "mode": "normal",
-        "effects": {
-            "status_values": [
-                "no_effect",
-                "candle",
-                "fire",
-                "prism",
-                "sparkle",
-                "opal",
-                "glisten",
-                "underwater",
-                "cosmos",
-                "sunbeam",
-                "enchant"
-            ],
-            "status": "no_effect",
-            "effect_values": [
-                "no_effect",
-                "candle",
-                "fire",
-                "prism",
-                "sparkle",
-                "opal",
-                "glisten",
-                "underwater",
-                "cosmos",
-                "sunbeam",
-                "enchant"
-            ]
-        },
-        "effects_v2": {
-            "action": {
-                "effect_values": [
-                    "no_effect",
-                    "candle",
-                    "fire",
-                    "prism",
-                    "sparkle",
-                    "opal",
-                    "glisten",
-                    "underwater",
-                    "cosmos",
-                    "sunbeam",
-                    "enchant"
-                ]
-            },
-            "status": {
-                "effect": "no_effect",
-                "effect_values": [
-                    "no_effect",
-                    "candle",
-                    "fire",
-                    "prism",
-                    "sparkle",
-                    "opal",
-                    "glisten",
-                    "underwater",
-                    "cosmos",
-                    "sunbeam",
-                    "enchant"
-                ]
-            }
-        },
-        "timed_effects": {
-            "status_values": [
-                "no_effect",
-                "sunrise",
-                "sunset"
-            ],
-            "status": "no_effect",
-            "effect_values": [
-                "no_effect",
-                "sunrise",
-                "sunset"
-            ]
-        },
-        "powerup": {
-            "preset": "safety",
-            "configured": true,
-            "on": {
-                "mode": "on",
-                "on": {
-                    "on": true
-                }
-            },
-            "dimming": {
-                "mode": "dimming",
-                "dimming": {
-                    "brightness": 100.0
-                }
-            },
-            "color": {
-                "mode": "color_temperature",
-                "color_temperature": {
-                    "mirek": 366
-                }
-            }
-        },
-        "type": "light"
+        "type": "button"
     },
     {
-        "id": "ca661496-835f-421c-8192-c23a6f5b02b4",
-        "id_v1": "/lights/29",
+        "id": "8b48594a-e5c2-48db-bae3-63cc5bedff79",
+        "id_v1": "/sensors/5",
         "owner": {
-            "rid": "67182151-4946-499c-a9f0-f69d29f04e11",
+            "rid": "d6ce4c0a-86e0-44af-99a3-27dee291a8ef",
             "rtype": "device"
         },
         "metadata": {
-            "name": "Bryan Ceiling 2",
-            "archetype": "ceiling_round",
-            "function": "mixed"
+            "control_id": 2
         },
-        "product_data": {
-            "function": "mixed"
-        },
-        "identify": {},
-        "service_id": 0,
-        "on": {
-            "on": true
-        },
-        "dimming": {
-            "brightness": 100.0,
-            "min_dim_level": 0.2
-        },
-        "dimming_delta": {},
-        "color_temperature": {
-            "mirek": 343,
-            "mirek_valid": true,
-            "mirek_schema": {
-                "mirek_minimum": 153,
-                "mirek_maximum": 500
-            }
-        },
-        "color_temperature_delta": {},
-        "color": {
-            "xy": {
-                "x": 0.4431,
-                "y": 0.4061
+        "button": {
+            "last_event": "long_release",
+            "button_report": {
+                "updated": "2024-12-17T00:18:16.309Z",
+                "event": "long_release"
             },
-            "gamut": {
-                "red": {
-                    "x": 0.6915,
-                    "y": 0.3083
-                },
-                "green": {
-                    "x": 0.17,
-                    "y": 0.7
-                },
-                "blue": {
-                    "x": 0.1532,
-                    "y": 0.0475
-                }
-            },
-            "gamut_type": "C"
-        },
-        "dynamics": {
-            "status": "none",
-            "status_values": [
-                "none",
-                "dynamic_palette"
-            ],
-            "speed": 0.0,
-            "speed_valid": false
-        },
-        "alert": {
-            "action_values": [
-                "breathe"
+            "repeat_interval": 800,
+            "event_values": [
+                "initial_press",
+                "repeat",
+                "short_release",
+                "long_release",
+                "long_press"
             ]
         },
-        "signaling": {
-            "signal_values": [
-                "no_signal",
-                "on_off",
-                "on_off_color",
-                "alternating"
-            ]
-        },
-        "mode": "normal",
-        "effects": {
-            "status_values": [
-                "no_effect",
-                "candle",
-                "fire",
-                "prism",
-                "sparkle",
-                "opal",
-                "glisten",
-                "underwater",
-                "cosmos",
-                "sunbeam",
-                "enchant"
-            ],
-            "status": "no_effect",
-            "effect_values": [
-                "no_effect",
-                "candle",
-                "fire",
-                "prism",
-                "sparkle",
-                "opal",
-                "glisten",
-                "underwater",
-                "cosmos",
-                "sunbeam",
-                "enchant"
-            ]
-        },
-        "effects_v2": {
-            "action": {
-                "effect_values": [
-                    "no_effect",
-                    "candle",
-                    "fire",
-                    "prism",
-                    "sparkle",
-                    "opal",
-                    "glisten",
-                    "underwater",
-                    "cosmos",
-                    "sunbeam",
-                    "enchant"
-                ]
-            },
-            "status": {
-                "effect": "no_effect",
-                "effect_values": [
-                    "no_effect",
-                    "candle",
-                    "fire",
-                    "prism",
-                    "sparkle",
-                    "opal",
-                    "glisten",
-                    "underwater",
-                    "cosmos",
-                    "sunbeam",
-                    "enchant"
-                ]
-            }
-        },
-        "timed_effects": {
-            "status_values": [
-                "no_effect",
-                "sunrise",
-                "sunset"
-            ],
-            "status": "no_effect",
-            "effect_values": [
-                "no_effect",
-                "sunrise",
-                "sunset"
-            ]
-        },
-        "powerup": {
-            "preset": "last_on_state",
-            "configured": true,
-            "on": {
-                "mode": "on",
-                "on": {
-                    "on": true
-                }
-            },
-            "dimming": {
-                "mode": "previous"
-            },
-            "color": {
-                "mode": "previous"
-            }
-        },
-        "type": "light"
+        "type": "button"
     },
     {
-        "id": "d7015ea4-dfa7-49dc-999a-0f74d5bcf357",
-        "id_v1": "/lights/17",
+        "id": "982b524d-f170-4182-9c15-25f64d92685d",
+        "id_v1": "/sensors/14",
         "owner": {
-            "rid": "57022a48-3ca9-414c-a3a6-e981932c7b42",
+            "rid": "32932333-78a5-4198-8f3b-2d98405c2a01",
             "rtype": "device"
         },
         "metadata": {
-            "name": "Alex Ceiling 2",
-            "archetype": "sultan_bulb",
-            "function": "mixed"
+            "control_id": 2
         },
-        "product_data": {
-            "function": "mixed"
-        },
-        "identify": {},
-        "service_id": 0,
-        "on": {
-            "on": false
-        },
-        "dimming": {
-            "brightness": 100.0,
-            "min_dim_level": 0.2
-        },
-        "dimming_delta": {},
-        "color_temperature": {
-            "mirek": 230,
-            "mirek_valid": true,
-            "mirek_schema": {
-                "mirek_minimum": 153,
-                "mirek_maximum": 500
-            }
-        },
-        "color_temperature_delta": {},
-        "color": {
-            "xy": {
-                "x": 0.3669,
-                "y": 0.3706
+        "button": {
+            "last_event": "long_release",
+            "button_report": {
+                "updated": "1970-01-01T00:00:00.000Z",
+                "event": "long_release"
             },
-            "gamut": {
-                "red": {
-                    "x": 0.6915,
-                    "y": 0.3083
-                },
-                "green": {
-                    "x": 0.17,
-                    "y": 0.7
-                },
-                "blue": {
-                    "x": 0.1532,
-                    "y": 0.0475
-                }
-            },
-            "gamut_type": "C"
-        },
-        "dynamics": {
-            "status": "none",
-            "status_values": [
-                "none",
-                "dynamic_palette"
-            ],
-            "speed": 0.0,
-            "speed_valid": false
-        },
-        "alert": {
-            "action_values": [
-                "breathe"
+            "repeat_interval": 800,
+            "event_values": [
+                "initial_press",
+                "repeat",
+                "short_release",
+                "long_release",
+                "long_press"
             ]
         },
-        "signaling": {
-            "signal_values": [
-                "no_signal",
-                "on_off",
-                "on_off_color",
-                "alternating"
-            ]
-        },
-        "mode": "normal",
-        "effects": {
-            "status_values": [
-                "no_effect",
-                "candle",
-                "fire",
-                "prism",
-                "sparkle",
-                "opal",
-                "glisten",
-                "underwater",
-                "cosmos",
-                "sunbeam",
-                "enchant"
-            ],
-            "status": "no_effect",
-            "effect_values": [
-                "no_effect",
-                "candle",
-                "fire",
-                "prism",
-                "sparkle",
-                "opal",
-                "glisten",
-                "underwater",
-                "cosmos",
-                "sunbeam",
-                "enchant"
-            ]
-        },
-        "effects_v2": {
-            "action": {
-                "effect_values": [
-                    "no_effect",
-                    "candle",
-                    "fire",
-                    "prism",
-                    "sparkle",
-                    "opal",
-                    "glisten",
-                    "underwater",
-                    "cosmos",
-                    "sunbeam",
-                    "enchant"
-                ]
-            },
-            "status": {
-                "effect": "no_effect",
-                "effect_values": [
-                    "no_effect",
-                    "candle",
-                    "fire",
-                    "prism",
-                    "sparkle",
-                    "opal",
-                    "glisten",
-                    "underwater",
-                    "cosmos",
-                    "sunbeam",
-                    "enchant"
-                ]
-            }
-        },
-        "timed_effects": {
-            "status_values": [
-                "no_effect",
-                "sunrise",
-                "sunset"
-            ],
-            "status": "no_effect",
-            "effect_values": [
-                "no_effect",
-                "sunrise",
-                "sunset"
-            ]
-        },
-        "powerup": {
-            "preset": "powerfail",
-            "configured": true,
-            "on": {
-                "mode": "previous"
-            },
-            "dimming": {
-                "mode": "previous"
-            },
-            "color": {
-                "mode": "previous"
-            }
-        },
-        "type": "light"
+        "type": "button"
     },
     {
-        "id": "e13f8489-8d8a-4d97-8a39-60dd774a729b",
-        "id_v1": "/lights/34",
+        "id": "98f9b880-41a7-4ab3-8a35-26783c597537",
+        "id_v1": "/sensors/2",
         "owner": {
-            "rid": "248a593e-d706-4fd0-8b1f-7bfb074f6f75",
+            "rid": "0373a708-10a0-466d-8342-24479c3ac736",
             "rtype": "device"
         },
         "metadata": {
-            "name": "New 100Watt",
-            "archetype": "sultan_bulb",
-            "function": "mixed"
+            "control_id": 4
         },
-        "product_data": {
-            "function": "mixed"
-        },
-        "identify": {},
-        "service_id": 0,
-        "on": {
-            "on": true
-        },
-        "dimming": {
-            "brightness": 46.64,
-            "min_dim_level": 0.2
-        },
-        "dimming_delta": {},
-        "color_temperature": {
-            "mirek": 418,
-            "mirek_valid": true,
-            "mirek_schema": {
-                "mirek_minimum": 153,
-                "mirek_maximum": 500
-            }
-        },
-        "color_temperature_delta": {},
-        "color": {
-            "xy": {
-                "x": 0.4868,
-                "y": 0.4146
+        "button": {
+            "last_event": "initial_press",
+            "button_report": {
+                "updated": "2024-12-27T18:11:51.756Z",
+                "event": "initial_press"
             },
-            "gamut": {
-                "red": {
-                    "x": 0.6915,
-                    "y": 0.3083
-                },
-                "green": {
-                    "x": 0.17,
-                    "y": 0.7
-                },
-                "blue": {
-                    "x": 0.1532,
-                    "y": 0.0475
-                }
-            },
-            "gamut_type": "C"
-        },
-        "dynamics": {
-            "status": "none",
-            "status_values": [
-                "none",
-                "dynamic_palette"
-            ],
-            "speed": 0.0,
-            "speed_valid": false
-        },
-        "alert": {
-            "action_values": [
-                "breathe"
+            "repeat_interval": 800,
+            "event_values": [
+                "initial_press",
+                "repeat",
+                "short_release",
+                "long_release",
+                "long_press"
             ]
         },
-        "signaling": {
-            "signal_values": [
-                "no_signal",
-                "on_off",
-                "on_off_color",
-                "alternating"
-            ]
-        },
-        "mode": "normal",
-        "effects": {
-            "status_values": [
-                "no_effect",
-                "candle",
-                "fire",
-                "prism",
-                "sparkle",
-                "opal",
-                "glisten",
-                "underwater",
-                "cosmos",
-                "sunbeam",
-                "enchant"
-            ],
-            "status": "no_effect",
-            "effect_values": [
-                "no_effect",
-                "candle",
-                "fire",
-                "prism",
-                "sparkle",
-                "opal",
-                "glisten",
-                "underwater",
-                "cosmos",
-                "sunbeam",
-                "enchant"
-            ]
-        },
-        "effects_v2": {
-            "action": {
-                "effect_values": [
-                    "no_effect",
-                    "candle",
-                    "fire",
-                    "prism",
-                    "sparkle",
-                    "opal",
-                    "glisten",
-                    "underwater",
-                    "cosmos",
-                    "sunbeam",
-                    "enchant"
-                ]
-            },
-            "status": {
-                "effect": "no_effect",
-                "effect_values": [
-                    "no_effect",
-                    "candle",
-                    "fire",
-                    "prism",
-                    "sparkle",
-                    "opal",
-                    "glisten",
-                    "underwater",
-                    "cosmos",
-                    "sunbeam",
-                    "enchant"
-                ]
-            }
-        },
-        "timed_effects": {
-            "status_values": [
-                "no_effect",
-                "sunrise",
-                "sunset"
-            ],
-            "status": "no_effect",
-            "effect_values": [
-                "no_effect",
-                "sunrise",
-                "sunset"
-            ]
-        },
-        "powerup": {
-            "preset": "safety",
-            "configured": true,
-            "on": {
-                "mode": "on",
-                "on": {
-                    "on": true
-                }
-            },
-            "dimming": {
-                "mode": "dimming",
-                "dimming": {
-                    "brightness": 100.0
-                }
-            },
-            "color": {
-                "mode": "color_temperature",
-                "color_temperature": {
-                    "mirek": 366
-                }
-            }
-        },
-        "type": "light"
+        "type": "button"
     },
     {
-        "id": "ec344e87-512c-45fd-8601-be82766b216d",
-        "id_v1": "/lights/23",
+        "id": "9afe485f-c09b-4ee2-9de6-0756fd61ea48",
+        "id_v1": "/sensors/11",
         "owner": {
-            "rid": "c8ccbaf2-7a4c-4679-bcfe-c2513a536646",
+            "rid": "5cad3bf3-89af-4375-b562-9bad9eb860c9",
             "rtype": "device"
         },
         "metadata": {
-            "name": "Bryan Lamp",
-            "archetype": "table_shade",
-            "function": "mixed"
+            "control_id": 2
         },
-        "product_data": {
-            "function": "mixed"
-        },
-        "identify": {},
-        "service_id": 0,
-        "on": {
-            "on": true
-        },
-        "dimming": {
-            "brightness": 100.0,
-            "min_dim_level": 0.2
-        },
-        "dimming_delta": {},
-        "color_temperature": {
-            "mirek": 343,
-            "mirek_valid": true,
-            "mirek_schema": {
-                "mirek_minimum": 153,
-                "mirek_maximum": 500
-            }
-        },
-        "color_temperature_delta": {},
-        "color": {
-            "xy": {
-                "x": 0.4431,
-                "y": 0.4061
+        "button": {
+            "last_event": "long_release",
+            "button_report": {
+                "updated": "2024-12-18T23:22:42.183Z",
+                "event": "long_release"
             },
-            "gamut": {
-                "red": {
-                    "x": 0.6915,
-                    "y": 0.3083
-                },
-                "green": {
-                    "x": 0.17,
-                    "y": 0.7
-                },
-                "blue": {
-                    "x": 0.1532,
-                    "y": 0.0475
-                }
-            },
-            "gamut_type": "C"
-        },
-        "dynamics": {
-            "status": "none",
-            "status_values": [
-                "none",
-                "dynamic_palette"
-            ],
-            "speed": 0.0,
-            "speed_valid": false
-        },
-        "alert": {
-            "action_values": [
-                "breathe"
+            "repeat_interval": 800,
+            "event_values": [
+                "initial_press",
+                "repeat",
+                "short_release",
+                "long_release",
+                "long_press"
             ]
         },
-        "signaling": {
-            "signal_values": [
-                "no_signal",
-                "on_off",
-                "on_off_color",
-                "alternating"
-            ]
-        },
-        "mode": "normal",
-        "effects": {
-            "status_values": [
-                "no_effect",
-                "candle",
-                "fire",
-                "prism",
-                "sparkle",
-                "opal",
-                "glisten",
-                "underwater",
-                "cosmos",
-                "sunbeam",
-                "enchant"
-            ],
-            "status": "no_effect",
-            "effect_values": [
-                "no_effect",
-                "candle",
-                "fire",
-                "prism",
-                "sparkle",
-                "opal",
-                "glisten",
-                "underwater",
-                "cosmos",
-                "sunbeam",
-                "enchant"
-            ]
-        },
-        "effects_v2": {
-            "action": {
-                "effect_values": [
-                    "no_effect",
-                    "candle",
-                    "fire",
-                    "prism",
-                    "sparkle",
-                    "opal",
-                    "glisten",
-                    "underwater",
-                    "cosmos",
-                    "sunbeam",
-                    "enchant"
-                ]
-            },
-            "status": {
-                "effect": "no_effect",
-                "effect_values": [
-                    "no_effect",
-                    "candle",
-                    "fire",
-                    "prism",
-                    "sparkle",
-                    "opal",
-                    "glisten",
-                    "underwater",
-                    "cosmos",
-                    "sunbeam",
-                    "enchant"
-                ]
-            }
-        },
-        "timed_effects": {
-            "status_values": [
-                "no_effect",
-                "sunrise",
-                "sunset"
-            ],
-            "status": "no_effect",
-            "effect_values": [
-                "no_effect",
-                "sunrise",
-                "sunset"
-            ]
-        },
-        "powerup": {
-            "preset": "safety",
-            "configured": true,
-            "on": {
-                "mode": "on",
-                "on": {
-                    "on": true
-                }
-            },
-            "dimming": {
-                "mode": "dimming",
-                "dimming": {
-                    "brightness": 100.0
-                }
-            },
-            "color": {
-                "mode": "color_temperature",
-                "color_temperature": {
-                    "mirek": 366
-                }
-            }
-        },
-        "type": "light"
+        "type": "button"
     },
     {
-        "id": "fa47b36e-dd7d-458f-8e66-f2f142b6c483",
-        "id_v1": "/lights/1",
+        "id": "9cf86471-26c2-4923-9221-3f8c6cc003a6",
+        "id_v1": "/sensors/11",
         "owner": {
-            "rid": "aa1eb74f-ab3b-474b-93c4-79ae38b8572d",
+            "rid": "5cad3bf3-89af-4375-b562-9bad9eb860c9",
             "rtype": "device"
         },
         "metadata": {
-            "name": "Living Room Ceiling 1",
-            "archetype": "sultan_bulb",
-            "function": "mixed"
+            "control_id": 3
         },
-        "product_data": {
-            "function": "mixed"
-        },
-        "identify": {},
-        "service_id": 0,
-        "on": {
-            "on": true
-        },
-        "dimming": {
-            "brightness": 100.0,
-            "min_dim_level": 1.0
-        },
-        "dimming_delta": {},
-        "color_temperature": {
-            "mirek": 346,
-            "mirek_valid": true,
-            "mirek_schema": {
-                "mirek_minimum": 153,
-                "mirek_maximum": 500
-            }
-        },
-        "color_temperature_delta": {},
-        "color": {
-            "xy": {
-                "x": 0.445,
-                "y": 0.4067
+        "button": {
+            "last_event": "long_release",
+            "button_report": {
+                "updated": "2024-12-19T06:26:39.261Z",
+                "event": "long_release"
             },
-            "gamut": {
-                "red": {
-                    "x": 0.6915,
-                    "y": 0.3083
-                },
-                "green": {
-                    "x": 0.17,
-                    "y": 0.7
-                },
-                "blue": {
-                    "x": 0.1532,
-                    "y": 0.0475
-                }
-            },
-            "gamut_type": "C"
-        },
-        "dynamics": {
-            "status": "none",
-            "status_values": [
-                "none",
-                "dynamic_palette"
-            ],
-            "speed": 0.0,
-            "speed_valid": false
-        },
-        "alert": {
-            "action_values": [
-                "breathe"
+            "repeat_interval": 800,
+            "event_values": [
+                "initial_press",
+                "repeat",
+                "short_release",
+                "long_release",
+                "long_press"
             ]
         },
-        "signaling": {
-            "signal_values": [
-                "no_signal",
-                "on_off",
-                "on_off_color",
-                "alternating"
-            ]
-        },
-        "mode": "normal",
-        "effects": {
-            "status_values": [
-                "no_effect",
-                "candle",
-                "fire",
-                "prism",
-                "sparkle",
-                "opal",
-                "glisten"
-            ],
-            "status": "no_effect",
-            "effect_values": [
-                "no_effect",
-                "candle",
-                "fire",
-                "prism",
-                "sparkle",
-                "opal",
-                "glisten"
-            ]
-        },
-        "effects_v2": {
-            "action": {
-                "effect_values": [
-                    "no_effect",
-                    "candle",
-                    "fire",
-                    "prism",
-                    "sparkle",
-                    "opal",
-                    "glisten"
-                ]
-            },
-            "status": {
-                "effect": "no_effect",
-                "effect_values": [
-                    "no_effect",
-                    "candle",
-                    "fire",
-                    "prism",
-                    "sparkle",
-                    "opal",
-                    "glisten"
-                ]
-            }
-        },
-        "powerup": {
-            "preset": "powerfail",
-            "configured": true,
-            "on": {
-                "mode": "previous"
-            },
-            "dimming": {
-                "mode": "previous"
-            },
-            "color": {
-                "mode": "previous"
-            }
-        },
-        "type": "light"
+        "type": "button"
     },
     {
-        "id": "fb0d2a88-51f6-4a1f-b14a-aa416b554ac2",
-        "id_v1": "/lights/31",
+        "id": "a1d28242-2704-4b8e-9ca6-3f483a91e28c",
+        "id_v1": "/sensors/8",
         "owner": {
-            "rid": "cf275c36-afbc-4014-80ce-06aa9fd146fb",
+            "rid": "0bc30ef2-6aca-4a40-a8b4-db16bb2e21a0",
             "rtype": "device"
         },
         "metadata": {
-            "name": "Bryan Lamp 2",
-            "archetype": "table_shade",
-            "function": "mixed"
+            "control_id": 4
         },
-        "product_data": {
-            "function": "mixed"
-        },
-        "identify": {},
-        "service_id": 0,
-        "on": {
-            "on": true
-        },
-        "dimming": {
-            "brightness": 100.0,
-            "min_dim_level": 0.2
-        },
-        "dimming_delta": {},
-        "color_temperature": {
-            "mirek": 343,
-            "mirek_valid": true,
-            "mirek_schema": {
-                "mirek_minimum": 153,
-                "mirek_maximum": 500
-            }
-        },
-        "color_temperature_delta": {},
-        "color": {
-            "xy": {
-                "x": 0.4431,
-                "y": 0.4061
+        "button": {
+            "last_event": "short_release",
+            "button_report": {
+                "updated": "2024-12-27T03:54:17.746Z",
+                "event": "short_release"
             },
-            "gamut": {
-                "red": {
-                    "x": 0.6915,
-                    "y": 0.3083
-                },
-                "green": {
-                    "x": 0.17,
-                    "y": 0.7
-                },
-                "blue": {
-                    "x": 0.1532,
-                    "y": 0.0475
-                }
-            },
-            "gamut_type": "C"
-        },
-        "dynamics": {
-            "status": "none",
-            "status_values": [
-                "none",
-                "dynamic_palette"
-            ],
-            "speed": 0.0,
-            "speed_valid": false
-        },
-        "alert": {
-            "action_values": [
-                "breathe"
+            "repeat_interval": 800,
+            "event_values": [
+                "initial_press",
+                "repeat",
+                "short_release",
+                "long_release",
+                "long_press"
             ]
         },
-        "signaling": {
-            "signal_values": [
-                "no_signal",
-                "on_off",
-                "on_off_color",
-                "alternating"
+        "type": "button"
+    },
+    {
+        "id": "ac57d3ef-5cc4-423c-bbe8-2d2195820d78",
+        "id_v1": "/sensors/5",
+        "owner": {
+            "rid": "d6ce4c0a-86e0-44af-99a3-27dee291a8ef",
+            "rtype": "device"
+        },
+        "metadata": {
+            "control_id": 4
+        },
+        "button": {
+            "last_event": "short_release",
+            "button_report": {
+                "updated": "2024-12-31T04:27:53.853Z",
+                "event": "short_release"
+            },
+            "repeat_interval": 800,
+            "event_values": [
+                "initial_press",
+                "repeat",
+                "short_release",
+                "long_release",
+                "long_press"
             ]
         },
-        "mode": "normal",
-        "effects": {
-            "status_values": [
-                "no_effect",
-                "candle",
-                "fire",
-                "prism",
-                "sparkle",
-                "opal",
-                "glisten",
-                "underwater",
-                "cosmos",
-                "sunbeam",
-                "enchant"
-            ],
-            "status": "no_effect",
-            "effect_values": [
-                "no_effect",
-                "candle",
-                "fire",
-                "prism",
-                "sparkle",
-                "opal",
-                "glisten",
-                "underwater",
-                "cosmos",
-                "sunbeam",
-                "enchant"
+        "type": "button"
+    },
+    {
+        "id": "b22c55ef-d01d-4780-88cf-ec38cbf9d35c",
+        "id_v1": "/sensors/17",
+        "owner": {
+            "rid": "b18cda88-d57a-4d53-a6ae-21ed9ba2e8d2",
+            "rtype": "device"
+        },
+        "metadata": {
+            "control_id": 3
+        },
+        "button": {
+            "last_event": "short_release",
+            "button_report": {
+                "updated": "2024-12-19T05:03:52.451Z",
+                "event": "short_release"
+            },
+            "repeat_interval": 800,
+            "event_values": [
+                "initial_press",
+                "repeat",
+                "short_release",
+                "long_release",
+                "long_press"
             ]
         },
-        "effects_v2": {
-            "action": {
-                "effect_values": [
-                    "no_effect",
-                    "candle",
-                    "fire",
-                    "prism",
-                    "sparkle",
-                    "opal",
-                    "glisten",
-                    "underwater",
-                    "cosmos",
-                    "sunbeam",
-                    "enchant"
-                ]
-            },
-            "status": {
-                "effect": "no_effect",
-                "effect_values": [
-                    "no_effect",
-                    "candle",
-                    "fire",
-                    "prism",
-                    "sparkle",
-                    "opal",
-                    "glisten",
-                    "underwater",
-                    "cosmos",
-                    "sunbeam",
-                    "enchant"
-                ]
-            }
+        "type": "button"
+    },
+    {
+        "id": "c4e41bef-b400-4fe8-b36e-a420a0ace859",
+        "id_v1": "/sensors/14",
+        "owner": {
+            "rid": "32932333-78a5-4198-8f3b-2d98405c2a01",
+            "rtype": "device"
         },
-        "timed_effects": {
-            "status_values": [
-                "no_effect",
-                "sunrise",
-                "sunset"
-            ],
-            "status": "no_effect",
-            "effect_values": [
-                "no_effect",
-                "sunrise",
-                "sunset"
+        "metadata": {
+            "control_id": 4
+        },
+        "button": {
+            "last_event": "short_release",
+            "button_report": {
+                "updated": "2024-12-31T13:51:52.017Z",
+                "event": "short_release"
+            },
+            "repeat_interval": 800,
+            "event_values": [
+                "initial_press",
+                "repeat",
+                "short_release",
+                "long_release",
+                "long_press"
             ]
         },
-        "powerup": {
-            "preset": "safety",
-            "configured": true,
-            "on": {
-                "mode": "on",
-                "on": {
-                    "on": true
-                }
-            },
-            "dimming": {
-                "mode": "dimming",
-                "dimming": {
-                    "brightness": 100.0
-                }
-            },
-            "color": {
-                "mode": "color_temperature",
-                "color_temperature": {
-                    "mirek": 366
-                }
-            }
+        "type": "button"
+    },
+    {
+        "id": "ec624c31-cfca-4c1d-852a-38a5885616ac",
+        "id_v1": "/sensors/17",
+        "owner": {
+            "rid": "b18cda88-d57a-4d53-a6ae-21ed9ba2e8d2",
+            "rtype": "device"
         },
-        "type": "light"
+        "metadata": {
+            "control_id": 4
+        },
+        "button": {
+            "last_event": "short_release",
+            "button_report": {
+                "updated": "2024-12-30T23:54:21.852Z",
+                "event": "short_release"
+            },
+            "repeat_interval": 800,
+            "event_values": [
+                "initial_press",
+                "repeat",
+                "short_release",
+                "long_release",
+                "long_press"
+            ]
+        },
+        "type": "button"
+    },
+    {
+        "id": "f7cd8214-d449-425e-adef-bd3906ddf1b4",
+        "id_v1": "/sensors/14",
+        "owner": {
+            "rid": "32932333-78a5-4198-8f3b-2d98405c2a01",
+            "rtype": "device"
+        },
+        "metadata": {
+            "control_id": 1
+        },
+        "button": {
+            "last_event": "short_release",
+            "button_report": {
+                "updated": "2024-12-31T23:14:01.478Z",
+                "event": "short_release"
+            },
+            "repeat_interval": 800,
+            "event_values": [
+                "initial_press",
+                "repeat",
+                "short_release",
+                "long_release",
+                "long_press"
+            ]
+        },
+        "type": "button"
     }
 ]

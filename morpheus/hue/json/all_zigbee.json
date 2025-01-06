@@ -1,0 +1,402 @@
+[
+    {
+        "id": "02961a01-a468-4ce8-aa99-b9798243b4a3",
+        "id_v1": "/lights/2",
+        "owner": {
+            "rid": "81af7d6b-d9cb-4c38-aca0-caf5109e8ce9",
+            "rtype": "device"
+        },
+        "status": "connected",
+        "mac_address": "00:17:88:01:03:ee:17:22",
+        "type": "zigbee_connectivity"
+    },
+    {
+        "id": "02b35b31-f70e-4848-a24a-eda6045afb6c",
+        "id_v1": "/lights/8",
+        "owner": {
+            "rid": "0d4699ea-d133-4496-907a-b2e10dc6127a",
+            "rtype": "device"
+        },
+        "status": "connected",
+        "mac_address": "00:17:88:01:09:cd:14:a7",
+        "type": "zigbee_connectivity"
+    },
+    {
+        "id": "143277df-d635-4fca-a8f3-b625a4d02246",
+        "id_v1": "/lights/28",
+        "owner": {
+            "rid": "6862612f-789b-41f9-85bf-c7d9f94bf135",
+            "rtype": "device"
+        },
+        "status": "connected",
+        "mac_address": "00:17:88:01:0b:61:fd:64",
+        "type": "zigbee_connectivity"
+    },
+    {
+        "id": "1b11efa5-4414-4c1d-9998-f628562640ab",
+        "id_v1": "/lights/23",
+        "owner": {
+            "rid": "c8ccbaf2-7a4c-4679-bcfe-c2513a536646",
+            "rtype": "device"
+        },
+        "status": "connected",
+        "mac_address": "00:17:88:01:09:cd:14:a6",
+        "type": "zigbee_connectivity"
+    },
+    {
+        "id": "20cb0e26-37ed-46d5-b792-33ba2356dd99",
+        "id_v1": "/sensors/17",
+        "owner": {
+            "rid": "b18cda88-d57a-4d53-a6ae-21ed9ba2e8d2",
+            "rtype": "device"
+        },
+        "status": "connected",
+        "mac_address": "00:17:88:01:09:65:82:92",
+        "type": "zigbee_connectivity"
+    },
+    {
+        "id": "21af4ecf-0096-4243-83af-d73e9f635d31",
+        "id_v1": "/lights/1",
+        "owner": {
+            "rid": "aa1eb74f-ab3b-474b-93c4-79ae38b8572d",
+            "rtype": "device"
+        },
+        "status": "connectivity_issue",
+        "mac_address": "00:17:88:01:02:55:09:0e",
+        "type": "zigbee_connectivity"
+    },
+    {
+        "id": "234ac050-f6fe-4264-9ce8-5200423b1d9f",
+        "id_v1": "/lights/34",
+        "owner": {
+            "rid": "248a593e-d706-4fd0-8b1f-7bfb074f6f75",
+            "rtype": "device"
+        },
+        "status": "connectivity_issue",
+        "mac_address": "00:17:88:01:0d:93:a3:86",
+        "type": "zigbee_connectivity"
+    },
+    {
+        "id": "28bca917-07ca-49af-96bb-39fa38d25353",
+        "id_v1": "/lights/31",
+        "owner": {
+            "rid": "cf275c36-afbc-4014-80ce-06aa9fd146fb",
+            "rtype": "device"
+        },
+        "status": "connected",
+        "mac_address": "00:17:88:01:0b:6b:03:f4",
+        "type": "zigbee_connectivity"
+    },
+    {
+        "id": "28ddde2a-d861-4208-98ba-983f783b3870",
+        "id_v1": "/lights/22",
+        "owner": {
+            "rid": "cf6a5523-365a-463d-b946-4311bbc5c56e",
+            "rtype": "device"
+        },
+        "status": "connected",
+        "mac_address": "00:17:88:01:06:94:e0:d8",
+        "type": "zigbee_connectivity"
+    },
+    {
+        "id": "2a7c6942-6daa-4b84-9630-9a928b1ec791",
+        "id_v1": "/lights/4",
+        "owner": {
+            "rid": "984c4894-aa39-4267-a54e-aa4a2a4a92a3",
+            "rtype": "device"
+        },
+        "status": "connected",
+        "mac_address": "00:17:88:01:09:cd:0c:7e",
+        "type": "zigbee_connectivity"
+    },
+    {
+        "id": "2cfd2ff9-725f-43c7-a3ff-48678824e9a8",
+        "id_v1": "/lights/30",
+        "owner": {
+            "rid": "af4878ce-ac89-4b45-97a0-26b08258c408",
+            "rtype": "device"
+        },
+        "status": "connectivity_issue",
+        "mac_address": "00:17:88:01:0b:6b:02:c8",
+        "type": "zigbee_connectivity"
+    },
+    {
+        "id": "31a83d0f-97ef-438b-8080-fe65cdeb4e4d",
+        "id_v1": "/lights/17",
+        "owner": {
+            "rid": "57022a48-3ca9-414c-a3a6-e981932c7b42",
+            "rtype": "device"
+        },
+        "status": "connected",
+        "mac_address": "00:17:88:01:09:cc:de:80",
+        "type": "zigbee_connectivity"
+    },
+    {
+        "id": "372501c1-1702-4423-bc35-29845a3d212a",
+        "id_v1": "/lights/29",
+        "owner": {
+            "rid": "67182151-4946-499c-a9f0-f69d29f04e11",
+            "rtype": "device"
+        },
+        "status": "connected",
+        "mac_address": "00:17:88:01:0b:6b:03:66",
+        "type": "zigbee_connectivity"
+    },
+    {
+        "id": "3b4f6e52-ec79-41c1-a480-8e86b05272ae",
+        "id_v1": "/lights/16",
+        "owner": {
+            "rid": "b9c8e3b6-fd09-4798-aa32-e465f9bd0ec2",
+            "rtype": "device"
+        },
+        "status": "connected",
+        "mac_address": "00:17:88:01:08:9c:0e:8b",
+        "type": "zigbee_connectivity"
+    },
+    {
+        "id": "3c6018f4-04e5-49d5-a92e-37cd835e849f",
+        "id_v1": "/lights/6",
+        "owner": {
+            "rid": "9cb19b03-9f7c-4649-9966-ee62157481fd",
+            "rtype": "device"
+        },
+        "status": "connected",
+        "mac_address": "00:17:88:01:02:cb:e6:6e",
+        "type": "zigbee_connectivity"
+    },
+    {
+        "id": "57a3c542-9206-4c90-a0ae-ecb37f7360c8",
+        "id_v1": "/lights/24",
+        "owner": {
+            "rid": "de2ab469-e9ca-4486-ba88-74605f210a27",
+            "rtype": "device"
+        },
+        "status": "connected",
+        "mac_address": "00:17:88:01:0b:62:01:b9",
+        "type": "zigbee_connectivity"
+    },
+    {
+        "id": "5ceaaf40-0de1-4a44-938c-f66850aa878a",
+        "id_v1": "/sensors/14",
+        "owner": {
+            "rid": "32932333-78a5-4198-8f3b-2d98405c2a01",
+            "rtype": "device"
+        },
+        "status": "connected",
+        "mac_address": "00:17:88:01:08:75:31:c9",
+        "type": "zigbee_connectivity"
+    },
+    {
+        "id": "609d0c2d-c165-4f33-9c3f-8cdac0b44f27",
+        "id_v1": "/sensors/25",
+        "owner": {
+            "rid": "3f13df38-5727-43c5-9219-a4f54fa77ad8",
+            "rtype": "device"
+        },
+        "status": "connected",
+        "mac_address": "00:17:88:01:03:e6:8f:c9",
+        "type": "zigbee_connectivity"
+    },
+    {
+        "id": "6825095f-b81b-48c3-9229-5bce30240dba",
+        "id_v1": "/lights/20",
+        "owner": {
+            "rid": "f04c5464-62c6-4db0-9db3-707f114ae6b3",
+            "rtype": "device"
+        },
+        "status": "connected",
+        "mac_address": "00:17:88:01:08:7f:a3:51",
+        "type": "zigbee_connectivity"
+    },
+    {
+        "id": "6eefb39d-ca30-48e5-aa31-e9693b6133c6",
+        "id_v1": "/lights/12",
+        "owner": {
+            "rid": "8bb89651-349a-4d9e-b548-d593abe5fc63",
+            "rtype": "device"
+        },
+        "status": "connected",
+        "mac_address": "00:17:88:01:09:58:f8:82",
+        "type": "zigbee_connectivity"
+    },
+    {
+        "id": "6f8ef7ca-227e-48f0-a2fe-ef12f143601d",
+        "id_v1": "/lights/10",
+        "owner": {
+            "rid": "56daaa04-d0e0-4110-aa71-0ff092c65d5e",
+            "rtype": "device"
+        },
+        "status": "connected",
+        "mac_address": "00:17:88:01:09:cf:74:52",
+        "type": "zigbee_connectivity"
+    },
+    {
+        "id": "782fb27b-2c2a-446f-9a9c-6958599f0e34",
+        "id_v1": "/lights/32",
+        "owner": {
+            "rid": "3794b88a-f569-4f40-93c4-db2f1ea7bd9b",
+            "rtype": "device"
+        },
+        "status": "connected",
+        "mac_address": "00:17:88:01:0b:61:f5:0a",
+        "type": "zigbee_connectivity"
+    },
+    {
+        "id": "7f8d2d9d-e12a-44be-a7df-28d8358cd179",
+        "id_v1": "/lights/11",
+        "owner": {
+            "rid": "edffeed4-99e4-4b1b-83ca-27d08c9b2d8b",
+            "rtype": "device"
+        },
+        "status": "connected",
+        "mac_address": "00:17:88:01:09:cd:14:1a",
+        "type": "zigbee_connectivity"
+    },
+    {
+        "id": "82b68538-c7b9-487e-a2ae-facf8e5eabee",
+        "id_v1": "/sensors/2",
+        "owner": {
+            "rid": "0373a708-10a0-466d-8342-24479c3ac736",
+            "rtype": "device"
+        },
+        "status": "connected",
+        "mac_address": "00:17:88:01:09:65:83:2b",
+        "type": "zigbee_connectivity"
+    },
+    {
+        "id": "a1828b45-1e53-439a-b9d3-9687a7c8d229",
+        "id_v1": "/sensors/11",
+        "owner": {
+            "rid": "5cad3bf3-89af-4375-b562-9bad9eb860c9",
+            "rtype": "device"
+        },
+        "status": "connected",
+        "mac_address": "00:17:88:01:08:75:32:50",
+        "type": "zigbee_connectivity"
+    },
+    {
+        "id": "b5cbfa0c-3e8c-4cea-b169-0577fcc0f7c1",
+        "id_v1": "/lights/3",
+        "owner": {
+            "rid": "85d9d55f-53a3-4a4f-98bb-845190b9a39b",
+            "rtype": "device"
+        },
+        "status": "connected",
+        "mac_address": "00:17:88:01:03:50:79:25",
+        "type": "zigbee_connectivity"
+    },
+    {
+        "id": "d1166563-6818-407c-a321-e101dd3874f7",
+        "id_v1": "/lights/33",
+        "owner": {
+            "rid": "7d0b4322-ac4f-413e-b39e-f1c42110d1c5",
+            "rtype": "device"
+        },
+        "status": "connected",
+        "mac_address": "00:17:88:01:03:5e:de:88",
+        "type": "zigbee_connectivity"
+    },
+    {
+        "id": "d4b60b5f-d19c-494d-b241-ed29f10d28b5",
+        "owner": {
+            "rid": "384481dd-115d-46fe-8566-dbe327ae7b16",
+            "rtype": "device"
+        },
+        "status": "connected",
+        "mac_address": "00:17:88:01:05:42:ce:ab",
+        "channel": {
+            "status": "set",
+            "value": "channel_25"
+        },
+        "extended_pan_id": "06997d74fac37fe2",
+        "type": "zigbee_connectivity"
+    },
+    {
+        "id": "d4f5b9cc-81f3-48bc-8e32-1ff67e633a56",
+        "id_v1": "/sensors/20",
+        "owner": {
+            "rid": "3bcb1457-a010-436e-a149-b403659336d8",
+            "rtype": "device"
+        },
+        "status": "connected",
+        "mac_address": "00:17:88:01:08:75:36:f0",
+        "type": "zigbee_connectivity"
+    },
+    {
+        "id": "da8fd280-82f5-4655-8e88-067caee7d598",
+        "id_v1": "/sensors/5",
+        "owner": {
+            "rid": "d6ce4c0a-86e0-44af-99a3-27dee291a8ef",
+            "rtype": "device"
+        },
+        "status": "connected",
+        "mac_address": "00:17:88:01:08:75:31:fa",
+        "type": "zigbee_connectivity"
+    },
+    {
+        "id": "e9a51063-5c81-400a-a8f2-009a7893ddcd",
+        "id_v1": "/lights/21",
+        "owner": {
+            "rid": "13a42142-0d1d-47e2-afc6-5f08d2883342",
+            "rtype": "device"
+        },
+        "status": "connected",
+        "mac_address": "00:17:88:01:09:cd:0a:b6",
+        "type": "zigbee_connectivity"
+    },
+    {
+        "id": "f161e3d6-3fef-4481-8e4c-c0d9fdd28968",
+        "id_v1": "/lights/18",
+        "owner": {
+            "rid": "7d5ad34b-1722-4325-9e7c-be6f5771f0fe",
+            "rtype": "device"
+        },
+        "status": "connected",
+        "mac_address": "00:17:88:01:02:51:16:be",
+        "type": "zigbee_connectivity"
+    },
+    {
+        "id": "f35a2e58-6f39-4d1a-9878-eba9817a9d19",
+        "id_v1": "/sensors/8",
+        "owner": {
+            "rid": "0bc30ef2-6aca-4a40-a8b4-db16bb2e21a0",
+            "rtype": "device"
+        },
+        "status": "connected",
+        "mac_address": "00:17:88:01:10:5f:58:2d",
+        "type": "zigbee_connectivity"
+    },
+    {
+        "id": "f6f98f25-f107-47dd-89d9-37d1cf8b38e1",
+        "id_v1": "/lights/5",
+        "owner": {
+            "rid": "aeca7538-c009-4e60-a282-83e2058f96a1",
+            "rtype": "device"
+        },
+        "status": "connected",
+        "mac_address": "00:17:88:01:08:7f:5b:21",
+        "type": "zigbee_connectivity"
+    },
+    {
+        "id": "fa13c127-8c7c-4c2e-a2d8-532ab1b71006",
+        "id_v1": "/lights/15",
+        "owner": {
+            "rid": "f08f9dfd-cf42-4c67-a69b-edfcdc1d26f2",
+            "rtype": "device"
+        },
+        "status": "connected",
+        "mac_address": "00:17:88:01:09:59:10:94",
+        "type": "zigbee_connectivity"
+    },
+    {
+        "id": "fa518b2c-71bb-4390-914d-47ea704dc7aa",
+        "id_v1": "/lights/13",
+        "owner": {
+            "rid": "c5bc2f42-3faa-4373-8cca-b166ed8cf2eb",
+            "rtype": "device"
+        },
+        "status": "connected",
+        "mac_address": "00:17:88:01:08:7d:90:d0",
+        "type": "zigbee_connectivity"
+    }
+]

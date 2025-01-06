@@ -2,6 +2,7 @@ from django.db import models
 from django.urls import reverse
 
 
+
 HUE_DEVICE_TYPE = [
         ['WHITELAMP', 'White Lamp'],
         ['COLORLAMP', 'Color Lamp'],
@@ -9,7 +10,7 @@ HUE_DEVICE_TYPE = [
         ['HUB', 'Hue Hub']
     ]
 
-class Device(models.Model):
+class HueDevice(models.Model):
     #Morpheus categorization of Hue devices  
     hue_device_type = models.CharField(
         max_length=100,
@@ -78,6 +79,12 @@ class Device(models.Model):
         verbose_name='Last Check-in'
         
     )
+    battery_level = models.IntegerField(
+        blank=True,
+        null=True,
+        default=None,
+        verbose_name='Battery Level'
+    )
 
     class Meta:
         verbose_name = 'Hue Device'
@@ -88,10 +95,10 @@ class Device(models.Model):
     def get_absolute_url(self):
         return reverse('hue:device', args=[self.pk])
 
-class Light(models.Model):
+class HueLight(models.Model):
     
     device = models.ForeignKey(
-        Device,
+        HueDevice,
         on_delete = models.CASCADE,
         verbose_name='Device'
     )
@@ -104,9 +111,7 @@ class Light(models.Model):
         null=True,
         verbose_name='Light On'
     )
-    dimming = models.DecimalField(
-        max_digits=10, 
-        decimal_places=2,
+    dimming = models.IntegerField(
         blank=True,
         null=True,
         verbose_name='Dimming'
@@ -146,9 +151,9 @@ class Light(models.Model):
     def get_absolute_url(self):
         return reverse('hue:light', args=[self.pk])
         
-class Button(models.Model):
+class HueButton(models.Model):
     device = models.ForeignKey(
-        Device,
+        HueDevice,
         on_delete = models.CASCADE,
         verbose_name='Device'
     )
@@ -160,7 +165,18 @@ class Button(models.Model):
         max_length=300,
         verbose_name='Name'
     )
-    battery_level = models.IntegerField()
+    updated = models.DateTimeField(
+        blank=True,
+        null=True,
+        default=None,
+        verbose_name='Last Update'
+    )
+    event = models.CharField(
+        blank=True,
+        null=True,
+        default=None,
+        verbose_name='Last Event'
+    )
     
 
     class Meta:

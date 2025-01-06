@@ -16,10 +16,13 @@
         <div class="col col-lg-12">
           <ul class="nav nav-tabs" id="myTab" role="tablist">
             <li class="nav-item" role="presentation">
-              <button class="nav-link active" id="lights-tab" data-bs-toggle="tab" data-bs-target="#lights" type="button" role="tab" aria-controls="lights" aria-selected="true">Lights</button>
+              <button class="nav-link active" id="general-tab" data-bs-toggle="tab" data-bs-target="#general" type="button" role="tab" aria-controls="tools" aria-selected="true">General</button>
             </li>
             <li class="nav-item" role="presentation">
-              <button class="nav-link" id="buttons-tab" data-bs-toggle="tab" data-bs-target="#buttons" type="button" role="tab" aria-controls="lights" aria-selected="false">Buttons</button>
+              <button class="nav-link" id="lights-tab" data-bs-toggle="tab" data-bs-target="#lights" type="button" role="tab" aria-controls="lights" aria-selected="false">Lights</button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" id="buttons-tab" data-bs-toggle="tab" data-bs-target="#buttons" type="button" role="tab" aria-controls="buttonss" aria-selected="false">Buttons</button>
             </li>
             <li class="nav-item" role="presentation">
               <button class="nav-link" id="alldevices-tab" data-bs-toggle="tab" data-bs-target="#alldevices" type="button" role="tab" aria-controls="alldevices" aria-selected="false">All Devices</button>
@@ -27,8 +30,26 @@
           </ul>
         
           <div class="tab-content mt-3" id="myTabContent">
-            <div class="tab-pane fade show active" id="lights" role="tabpanel" aria-labelledby="lights-tab">
-              <h2 class="mb-3">Lights</h2>
+            <div class="tab-pane fade show active" id="general" role="tabpanel" aria-labelledby="general-tab">
+              <div class="card">
+                <div class = "card-body">
+                  <div class="d-grid gap-2 col-4 d-md-block">
+                  
+                    <p id="message">Message</p>
+                    <input id="sync-device-db" class="btn btn-outline-primary" type="button"
+                          value="Sync Hue Device DB">
+                      <input id="sync-morph-dev" class="btn btn-outline-primary" type="button"
+                          value="Sync Morpheus Device Types">
+                    
+                    <input id="test" class="btn btn-outline-primary" type="button"
+                          value="Test">
+                  
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="tab-pane fade" id="lights" role="tabpanel" aria-labelledby="lights-tab">
               <div class="card">
                 <div class = "card-body">
                   <div id="light-area" hx-get="{% url 'hue:light-list' %}" hx-trigger="load" hx-swap="outerHTML">
@@ -37,12 +58,18 @@
                 </div>
               </div>
             </div>
+
             <div class="tab-pane fade" id="buttons" role="tabpanel" aria-labelledby="buttons-tab">
-              <h2 class="mb-3">Buttons</h2>
-              <p class="lead">This is the buttons tab content.</p>
+              <div class="card">
+                <div class = "card-body">
+                  <div id="button-area" hx-get="{% url 'hue:button-list' %}" hx-trigger="load" hx-swap="outerHTML">
+
+                  </div>
+                </div>
+              </div>
             </div>
+
             <div class="tab-pane fade" id="alldevices" role="tabpanel" aria-labelledby="alldevices-tab">
-              <h2 class="mb-3">All Devices</h2>
               <div class="card">
                 <div class = "card-body">
                   <div id="device-area" hx-get="{% url 'hue:device-list' %}" hx-trigger="load" hx-swap="outerHTML">
@@ -52,6 +79,7 @@
               </div>
             </div>
           </div>
+
         </div>
 
 
@@ -62,6 +90,42 @@
     </div>      
 </div>
 
-<script src="{% static 'hue.js' %}"></script>
+<script>
+  const genSocket = new WebSocket(
+      'ws://'
+      + window.location.host
+      + '/ws/hue/gen/'
+      
+  );
+
+  genSocket.onmessage = function(e) {
+    const data = JSON.parse(e.data);
+    document.querySelector('#message').innerHTML = data.message;
+  };
+
+  genSocket.onclose = function(e) {
+    console.error('Dashboard socket closed unexpectedly');
+  };
+
+  document.querySelector('#sync-device-db').onclick = function(e) {
+    genSocket.send(JSON.stringify({
+      'message': 'sync_device_db'
+    }));
+  };
+
+  document.querySelector('#sync-morph-dev').onclick = function(e) {
+    genSocket.send(JSON.stringify({
+      'message': 'sync_morph_dev'
+    }));
+  };
+  
+  document.querySelector('#test').onclick = function(e) {
+    genSocket.send(JSON.stringify({
+            'message': 'test'
+    }));
+  };
+
+</script>
 
 {% endblock %}
+

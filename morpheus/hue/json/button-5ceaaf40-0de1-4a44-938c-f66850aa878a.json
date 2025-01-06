@@ -1,0 +1,11 @@
+{
+    "id": "5ceaaf40-0de1-4a44-938c-f66850aa878a",
+    "id_v1": "/sensors/14",
+    "owner": {
+        "rid": "32932333-78a5-4198-8f3b-2d98405c2a01",
+        "rtype": "device"
+    },
+    "status": "connected",
+    "mac_address": "00:17:88:01:08:75:31:c9",
+    "type": "zigbee_connectivity"
+}

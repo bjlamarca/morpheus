@@ -1,0 +1,13 @@
+{
+    "id": "192ea2b1-fc29-4735-b647-363adc2531d5",
+    "id_v1": "/sensors/20",
+    "owner": {
+        "rid": "3bcb1457-a010-436e-a149-b403659336d8",
+        "rtype": "device"
+    },
+    "power_state": {
+        "battery_state": "normal",
+        "battery_level": 22
+    },
+    "type": "device_power"
+}

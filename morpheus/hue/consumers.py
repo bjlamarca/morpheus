@@ -2,12 +2,51 @@ import os, json, threading
 from asgiref.sync import sync_to_async, async_to_sync
 from channels.generic.websocket import AsyncWebsocketConsumer
 from .hub import Hub
-from .devices import HueDevice 
+from .utilities import HueUtilities
+
 
 
 
 current_file_directory = os.path.dirname(os.path.abspath(__file__))
 result = 'None'
+
+class GenConsumer(AsyncWebsocketConsumer):
+    async def connect(self):
+         self.group_name = 'hue-gen'
+         await self.channel_layer.group_add(self.group_name, self.channel_name)
+         await self.accept()
+         
+
+    async def disconnect(self, close_code):
+        await self.channel_layer.group_discard(self.group_name, self.channel_name)
+
+    async def receive(self, text_data):
+        text_data_json = json.loads(text_data)
+        message = text_data_json['message']
+        print('msg', message)
+        result = 'Ok'
+        if message == 'sync_device_db':
+            hue = HueUtilities()
+            result = await sync_to_async(hue.sync_device_db)(1)
+        elif message == 'sync_morph_dev':
+            hue = HueUtilities()
+            result = await sync_to_async(hue.sync_morph_device_types)()
+
+        else:
+            result = "Unknown command"
+        
+        
+        await self.channel_layer.group_send(
+             self.group_name, {"type": "chat.message", "message": result}
+        )
+
+    async def chat_message(self, event):
+        message = event["message"]
+        
+        # Send message to WebSocket
+        await self.send(text_data=json.dumps({"message": message}))
+            
+
 
 class DiagConsumer(AsyncWebsocketConsumer):
     async def connect(self):
@@ -60,8 +99,24 @@ class DiagConsumer(AsyncWebsocketConsumer):
 
 
         elif message == 'all_buttons':
-            devices = hub.get_items('lights')
+            devices = hub.get_items('buttons')
             f = open(current_file_directory + '/json/all_buttons.json', 'w')
+            buttons_str = json.dumps(devices, indent=4) 
+            f.write(buttons_str)
+            f.close
+            result = buttons_str
+
+        elif message == 'all_zigbee':
+            devices = hub.get_items('zigbee')
+            f = open(current_file_directory + '/json/all_zigbee.json', 'w')
+            buttons_str = json.dumps(devices, indent=4) 
+            f.write(buttons_str)
+            f.close
+            result = buttons_str
+        
+        elif message == 'all_power':
+            devices = hub.get_items('power')
+            f = open(current_file_directory + '/json/all_power.json', 'w')
             buttons_str = json.dumps(devices, indent=4) 
             f.write(buttons_str)
             f.close
@@ -80,7 +135,7 @@ class DiagConsumer(AsyncWebsocketConsumer):
 
         elif message == 'get_device':
             input_value = text_data_json['input_value']
-            device = hub.get_item(input_value)
+            device = hub.get_item('device', input_value)
             f = open(current_file_directory + f'/json/device-{input_value}.json', 'w')
             device_str = json.dumps(device, indent=4) 
             f.write(device_str)
@@ -89,23 +144,43 @@ class DiagConsumer(AsyncWebsocketConsumer):
         
         elif message == 'get_button':
             input_value = text_data_json['input_value']
-            button = hub.get_item(input_value)
+            button = hub.get_item('button', input_value)
             f = open(current_file_directory + f'/json/button-{input_value}.json', 'w')
             button_str = json.dumps(button, indent=4) 
             f.write(button_str)
             f.close
             result = button_str
         
+        elif message == 'get_zigbee':
+            input_value = text_data_json['input_value']
+            zigbee = hub.get_item('zigbee', input_value)
+            f = open(current_file_directory + f'/json/zigbee-{input_value}.json', 'w')
+            button_str = json.dumps(zigbee, indent=4) 
+            f.write(button_str)
+            f.close
+            result = button_str
+
+        elif message == 'get_power':
+            input_value = text_data_json['input_value']
+            zigbee = hub.get_item('power', input_value)
+            f = open(current_file_directory + f'/json/power-{input_value}.json', 'w')
+            button_str = json.dumps(zigbee, indent=4) 
+            f.write(button_str)
+            f.close
+            result = button_str
+
+                
         elif message == 'sync_device_db':
-            hue = HueDevice()
+            hue = HueUtilities()
             await sync_to_async(hue.sync_device_db)(1)
             result = 'ok'
             #result = await sync_to_async(sync_device_db)()
 
         elif message == 'test':
-            hue = HueDevice()
-            await sync_to_async(hue.update_all_device_status)(1)
+            from hue.utilities import HueUtilities
             result = 'ok'
+            dev = HueUtilities()
+            dev.sync_morph_device_types()
 
 
         await self.channel_layer.group_send(

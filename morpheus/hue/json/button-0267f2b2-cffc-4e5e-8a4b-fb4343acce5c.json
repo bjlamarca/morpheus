@@ -1,0 +1,27 @@
+{
+    "id": "0267f2b2-cffc-4e5e-8a4b-fb4343acce5c",
+    "id_v1": "/sensors/2",
+    "owner": {
+        "rid": "0373a708-10a0-466d-8342-24479c3ac736",
+        "rtype": "device"
+    },
+    "metadata": {
+        "control_id": 2
+    },
+    "button": {
+        "last_event": "long_release",
+        "button_report": {
+            "updated": "1970-01-01T00:00:00.000Z",
+            "event": "long_release"
+        },
+        "repeat_interval": 800,
+        "event_values": [
+            "initial_press",
+            "repeat",
+            "short_release",
+            "long_release",
+            "long_press"
+        ]
+    },
+    "type": "button"
+}

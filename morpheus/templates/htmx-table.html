@@ -1,4 +1,4 @@
-{% extends 'django_tables2/bootstrap5.html' %}
+{% extends 'table-bootstrap5.html' %}
 {% load i18n %}
 {% load django_tables2 %}
 
@@ -11,7 +11,7 @@
       {% if column.orderable %}
       hx-get="{{ request.path_info }}{% querystring table.prefixed_order_by_field=column.order_by_alias.next %}"
       hx-trigger="click"
-      hx-target="div.table-container"
+      hx-target="div.{{ table.Meta.div_name }}"
       hx-swap="outerHTML"
       style="cursor: pointer;"
       {% endif %}>
@@ -31,7 +31,7 @@
        {% if table.page.has_previous %}
        hx-get="{{ request.path_info }}{% querystring table.prefixed_page_field=table.page.previous_page_number %}"
        hx-trigger="click"
-       hx-target="div.table-container"
+       hx-target="div.{{ table.Meta.div_name }}"
        hx-swap="outerHTML"
        {% else %}disabled{% endif %}>
       <span aria-hidden="true">&laquo;</span>
@@ -47,7 +47,7 @@
        {% if table.page.has_next %}
        hx-get="{{ request.path_info }}{% querystring table.prefixed_page_field=table.page.next_page_number %}"
        hx-trigger="click"
-       hx-target="div.table-container"
+       hx-target="div.{{ table.Meta.div_name }}"
        hx-swap="outerHTML"
        {% else %}disabled{% endif %}>
       <span aria-hidden="true">&raquo;</span>
