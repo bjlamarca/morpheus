@@ -1,12 +1,14 @@
 import json
+from django.contrib.contenttypes.models import ContentType
+from django.shortcuts import get_object_or_404
 from .models import HueDevice, HueLight, HueButton
 from .hub import Hub
 from .color import Converter
 from decimal import Decimal
 from utilities.logging import SystemLogger
-from django.shortcuts import get_object_or_404
 from .device import HueDeviceTypes
 from devices.models import Device, DeviceType
+
 
         
       
@@ -184,10 +186,11 @@ class HueUtilities():
             devices = HueDevice.objects.all()
             for device in devices:
                 self.update_device_status(device.pk, hub_id)
-            print('Update All Hue Complete')
+            return 'Update All Hue Complete'
         except Exception as error:
             sys_log = SystemLogger(__name__,'update_device_status', str(error), 'ERROR')
             sys_log.log()
+            return str(error)
 
     def sync_morph_device_types(self):
         try:
@@ -219,12 +222,32 @@ class HueUtilities():
             return str(error)
 
     def sync_morph_devices(self):
-        hue_dev_types = HueDeviceTypes()
-        hue_devices = HueDevice.objects.all()
-        for hue_device in hue_devices:
-            for hue_dev_type in hue_dev_types:
-                pass
-                #if hue_device.hue_device_type == 
+        try:
+            hue_dev_content_type = ContentType.objects.get(app_label='hue', model='huedevice')
+            print('content', hue_dev_content_type)
+            hue_dev_types = HueDeviceTypes()
+            hue_dev_type_list = hue_dev_types.get_device_list()
+            hue_devices = HueDevice.objects.all()
+            for hue_device in hue_devices:
+                for hue_dev_type in hue_dev_type_list:
+                    if hue_device.hue_device_type == hue_dev_type['hue_device_type']:
+                        if hue_dev_type['morph_sync'] == True:
+                            morph_dev_type_qs = DeviceType.objects.get(interface_device_type=hue_dev_type['hue_device_type'])
+                            #morph_dev_qs = Device.objects.filter()
+                            
+                            new_morph_dev = Device(
+                                name = hue_device.name,
+                                device_content_type = hue_dev_content_type,
+                                device_object_id = hue_device.pk,
+                                device_type = morph_dev_type_qs
+                            )
+                            new_morph_dev.save()
+                        #print(hue_dev_type['morph_sync'], hue_dev_type['hue_device_type'])
+            return 'Device Sync Complete'
+        except Exception as error:
+            sys_log = SystemLogger(__name__,'sync_morph_devices', str(error), 'ERROR')
+            sys_log.log()
+            return str(error)
 
 
         

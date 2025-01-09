@@ -9,15 +9,6 @@ class IndexView(View):
     template_name = 'index.html'
 
     def get(self, request):
-        hub = Hub()
-        hub.set_hub(1)
-        device_id = "5272447c-9bf4-4365-b7be-2404bfbac174"
-        device = hub.get_item('light', device_id)
-        #for device in devices:
-        print("DEVICE---", device)
-        #light_str = json.dumps(lights, indent=4) 
-        
-        #result = light_str
         return render(request, self.template_name)
     
 def navbar_view(request):

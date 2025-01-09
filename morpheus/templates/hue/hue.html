@@ -16,32 +16,36 @@
         <div class="col col-lg-12">
           <ul class="nav nav-tabs" id="myTab" role="tablist">
             <li class="nav-item" role="presentation">
-              <button class="nav-link active" id="general-tab" data-bs-toggle="tab" data-bs-target="#general" type="button" role="tab" aria-controls="tools" aria-selected="true">General</button>
+              <button class="nav-link active" id="hue-general-tab" data-bs-toggle="tab" data-bs-target="#general" type="button" role="tab" aria-controls="tools" aria-selected="true">General</button>
             </li>
             <li class="nav-item" role="presentation">
-              <button class="nav-link" id="lights-tab" data-bs-toggle="tab" data-bs-target="#lights" type="button" role="tab" aria-controls="lights" aria-selected="false">Lights</button>
+              <button class="nav-link" id="hue-lights-tab" data-bs-toggle="tab" data-bs-target="#lights" type="button" role="tab" aria-controls="lights" aria-selected="false">Lights</button>
             </li>
             <li class="nav-item" role="presentation">
-              <button class="nav-link" id="buttons-tab" data-bs-toggle="tab" data-bs-target="#buttons" type="button" role="tab" aria-controls="buttonss" aria-selected="false">Buttons</button>
+              <button class="nav-link" id="hue-buttons-tab" data-bs-toggle="tab" data-bs-target="#buttons" type="button" role="tab" aria-controls="buttonss" aria-selected="false">Buttons</button>
             </li>
             <li class="nav-item" role="presentation">
-              <button class="nav-link" id="alldevices-tab" data-bs-toggle="tab" data-bs-target="#alldevices" type="button" role="tab" aria-controls="alldevices" aria-selected="false">All Devices</button>
+              <button class="nav-link" id="hue-alldevices-tab" data-bs-toggle="tab" data-bs-target="#alldevices" type="button" role="tab" aria-controls="alldevices" aria-selected="false">All Devices</button>
             </li>
           </ul>
         
           <div class="tab-content mt-3" id="myTabContent">
-            <div class="tab-pane fade show active" id="general" role="tabpanel" aria-labelledby="general-tab">
+            <div class="tab-pane fade show active" id="general" role="tabpanel" aria-labelledby="hue-general-tab">
               <div class="card">
                 <div class = "card-body">
-                  <div class="d-grid gap-2 col-4 d-md-block">
+                  <div class="d-grid gap-2 col-6 d-md-block">
                   
                     <p id="message">Message</p>
-                    <input id="sync-device-db" class="btn btn-outline-primary" type="button"
+                      <input id="sync-device-db" class="btn btn-outline-primary m-2" type="button"
                           value="Sync Hue Device DB">
-                      <input id="sync-morph-dev" class="btn btn-outline-primary" type="button"
+                      <input id="update-status" class="btn btn-outline-primary m-2" type="button"
+                          value="Update Hue Device Status">
+                      <input id="sync-morph-dev-type" class="btn btn-outline-primary m-2" type="button"
                           value="Sync Morpheus Device Types">
+                      <input id="sync-morph-dev" class="btn btn-outline-primary m-2" type="button"
+                          value="Sync Morpheus Devices">
                     
-                    <input id="test" class="btn btn-outline-primary" type="button"
+                      <input id="test" class="btn btn-outline-primary m-2" type="button"
                           value="Test">
                   
                   </div>
@@ -49,7 +53,7 @@
               </div>
             </div>
 
-            <div class="tab-pane fade" id="lights" role="tabpanel" aria-labelledby="lights-tab">
+            <div class="tab-pane fade" id="lights" role="tabpanel" aria-labelledby="hue-lights-tab">
               <div class="card">
                 <div class = "card-body">
                   <div id="light-area" hx-get="{% url 'hue:light-list' %}" hx-trigger="load" hx-swap="outerHTML">
@@ -59,7 +63,7 @@
               </div>
             </div>
 
-            <div class="tab-pane fade" id="buttons" role="tabpanel" aria-labelledby="buttons-tab">
+            <div class="tab-pane fade" id="buttons" role="tabpanel" aria-labelledby="hue-buttons-tab">
               <div class="card">
                 <div class = "card-body">
                   <div id="button-area" hx-get="{% url 'hue:button-list' %}" hx-trigger="load" hx-swap="outerHTML">
@@ -69,7 +73,7 @@
               </div>
             </div>
 
-            <div class="tab-pane fade" id="alldevices" role="tabpanel" aria-labelledby="alldevices-tab">
+            <div class="tab-pane fade" id="alldevices" role="tabpanel" aria-labelledby="hue-alldevices-tab">
               <div class="card">
                 <div class = "card-body">
                   <div id="device-area" hx-get="{% url 'hue:device-list' %}" hx-trigger="load" hx-swap="outerHTML">
@@ -112,7 +116,17 @@
       'message': 'sync_device_db'
     }));
   };
+  document.querySelector('#update-status').onclick = function(e) {
+    genSocket.send(JSON.stringify({
+      'message': 'update_status'
+    }));
+  };
 
+  document.querySelector('#sync-morph-dev-type').onclick = function(e) {
+    genSocket.send(JSON.stringify({
+      'message': 'sync_morph_dev_type'
+    }));
+  };
   document.querySelector('#sync-morph-dev').onclick = function(e) {
     genSocket.send(JSON.stringify({
       'message': 'sync_morph_dev'

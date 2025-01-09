@@ -3,7 +3,6 @@ from pprint import pprint
 from django.dispatch import receiver
 from .signals import hue_receive
 from utilities.logging import SystemLogger
-from pprint import pprint
 from .models import HueDevice, HueLight, HueButton
 from .color import Converter
 
@@ -125,15 +124,29 @@ class Hub():
             light_qs = HueLight.objects.get(pk=light_id)
             url = self.url_pre + '/clip/v2/resource/light/' + light_qs.rid
             if state == 'on':
-                state_bln = 'true'
+                 data = '{"on": {"on": true}}'
             elif state == 'off':
-                state_bln == 'false'
-
-            data = {"on": {"on": state_bln}}
+                 data = '{"on": {"on": false}}'
             result = requests.put(url, data=data, headers=self.header, verify=False)
             print(result)
 
-      
+    def light_set_dimming(self, dim_level, light_id):
+            #light is pk from Light Model
+            light_qs = HueLight.objects.get(pk=light_id)
+            url = self.url_pre + '/clip/v2/resource/light/' + light_qs.rid
+            data = '{"dimming":{"brightness":' + str(dim_level) + '}}'
+            result = requests.put(url, data=data, headers=self.header, verify=False)
+            print(result)
+
+    def light_set_color(self, red, green, blue, light_id):
+        light_qs = HueLight.objects.get(pk=light_id)
+        url = self.url_pre + '/clip/v2/resource/light/' + light_qs.rid
+        convert = Converter(light_qs.gamut_type)
+        xy = convert.rgb_to_xy(red, green, blue)
+        data = '{"color":{"xy":{"x":' + str(xy[0]) + ',"y":' + str(xy[1]) + '}}}'
+        result = requests.put(url, data=data, headers=self.header, verify=False)
+        print(result)
+        
 
     #System for processing messages from Hub
     def get_stream(self):

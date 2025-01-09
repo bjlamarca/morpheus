@@ -11,6 +11,16 @@ def tools_view(request):
       
     return render(request, 'hue/tools.html')
 
+def morph_view(request, device_id):
+    device = HueDevice.objects.get(pk=device_id)
+    device_type = device.hue_device_type
+    if device_type == 'COLORLAMP' or device_type == 'WHITELAMP':
+        context = {
+         'device_id': device.pk,
+        }
+        return render(request, 'hue/huelight.html', context=context)
+    return 'Not Found'
+
 class DeviceListView(SingleTableView):
     model = HueDevice
     paginate_by = 100

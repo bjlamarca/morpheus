@@ -5,3 +5,17 @@
   "level": "ERROR",
   "date_time": "2025-01-05 23:44:05.607864"
 },
+{
+  "area": "hue.utilities",
+  "message": "update_device_status",
+  "details": "You cannot call this from an async context - use a thread or sync_to_async.",
+  "level": "ERROR",
+  "date_time": "2025-01-06 14:19:39.693557"
+},
+{
+  "area": "System Log",
+  "message": "Unable to write error to DB",
+  "details": "You cannot call this from an async context - use a thread or sync_to_async.",
+  "level": "WARNING",
+  "date_time": "2025-01-06 14:19:39.694331"
+},

@@ -1,3 +1,20 @@
+height="100" width="auto"
+
+//change tabs
+        if (document.querySelector("#dev-general-tab")) {
+            genTab = document.querySelector("#dev-general-tab")
+            genTab.setAttribute("aria-selected", "false"); 
+        }
+        if (document.querySelector("#dev-list-tab")) {
+            listTab = document.querySelector("#dev-list-tab")
+            genTab.setAttribute("aria-selected", "false"); 
+        }
+        if (document.querySelector("#dev-detail-tab")) {
+            genTab = document.querySelector("#dev-detail-tab")
+            genTab.setAttribute("aria-selected", "true"); 
+        }
+
+
 {'button': {'button_report': {'event': 'initial_press', 'updated': '2025-01-01T21:52:29.601Z'}, 'last_event': 'initial_press'}, 'id': '4b538982-d989-49aa-af75-4f75e1d97f72', 'id_v1': '/sensors/25', 'owner': {'rid': '3f13df38-5727-43c5-9219-a4f54fa77ad8', 'rtype': 'device'}, 'type': 'button'}
 
 

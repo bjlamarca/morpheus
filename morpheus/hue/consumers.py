@@ -3,12 +3,31 @@ from asgiref.sync import sync_to_async, async_to_sync
 from channels.generic.websocket import AsyncWebsocketConsumer
 from .hub import Hub
 from .utilities import HueUtilities
+from .models import HueLight, HueDevice
+from .device import light_view
+
 
 
 
 
 current_file_directory = os.path.dirname(os.path.abspath(__file__))
 result = 'None'
+
+
+class HueDeviceConsumer(AsyncWebsocketConsumer):
+    async def connect(self):
+        await self.accept()
+         
+
+    async def disconnect(self, close_code):
+        pass
+
+    async def receive(self, text_data):
+        message = await sync_to_async(light_view)(text_data)
+        await self.send(text_data=json.dumps(message))
+
+
+   
 
 class GenConsumer(AsyncWebsocketConsumer):
     async def connect(self):
@@ -23,14 +42,21 @@ class GenConsumer(AsyncWebsocketConsumer):
     async def receive(self, text_data):
         text_data_json = json.loads(text_data)
         message = text_data_json['message']
-        print('msg', message)
+        
         result = 'Ok'
         if message == 'sync_device_db':
             hue = HueUtilities()
             result = await sync_to_async(hue.sync_device_db)(1)
-        elif message == 'sync_morph_dev':
+        elif message == 'sync_morph_dev_type':
             hue = HueUtilities()
             result = await sync_to_async(hue.sync_morph_device_types)()
+        elif message == 'sync_morph_dev':
+            hue = HueUtilities()
+            result = await sync_to_async(hue.sync_morph_devices)()
+        elif message == 'update_status':
+            hue = HueUtilities()
+            result = await sync_to_async(hue.update_all_device_status)(1)
+        
 
         else:
             result = "Unknown command"
@@ -177,10 +203,10 @@ class DiagConsumer(AsyncWebsocketConsumer):
             #result = await sync_to_async(sync_device_db)()
 
         elif message == 'test':
-            from hue.utilities import HueUtilities
+            from .capabilities import Capabilities
             result = 'ok'
-            dev = HueUtilities()
-            dev.sync_morph_device_types()
+            cap = Capabilities
+            await sync_to_async(cap.Color)(18,255,0,0)
 
 
         await self.channel_layer.group_send(

@@ -1,0 +1,142 @@
+{% load static %}
+<input type="text" id="dev-id" class = "d-none" value="{{ device_id }}">
+<p id="dev-name" class="display-5"></p2>
+<div class="row">
+    <div>
+        <img src = "{% static 'image/lightbulb_off_2.png' %}" id="bulb-off" height="100" width="100" class="">
+        <img src = "{% static 'image/lightbulb_on_2.png' %}" id="bulb-on" height="100" width="100" class="">
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-8">
+        <table>
+            <tr>
+                <td class="display-6">State:</td>
+                <td id="dev-on-off" class="display-6"></td>
+            </tr>
+            <tr>
+                <td class="display-6">Level:</td>
+                <td id="dev-dim" class="display-6"></td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-6">
+    <input id="btn-on" class="btn btn-outline-primary m-2" type="button"
+        value="On">
+
+    <input id="btn-off" class="btn btn-outline-primary m-2" type="button"
+        value="Off">
+    </div>
+</div>
+<div class="row">
+    <div class="slidecontainer">
+        <input type="range" min="1" max="100" value="50" class="slider" id="dim-slider">
+        <p>Value: <span id="dim-slider-value">50</span></p>
+    </div>
+</div>
+
+    
+    
+    
+  
+
+
+
+<script>
+    devID = document.querySelector('#dev-id').value
+    console.log(hueLightWebsocketLoaded)
+    if (hueLightWebsocketLoaded === false){
+        var hueLightWebsocket = new WebSocket(
+            'ws://'
+            + window.location.host
+            + '/ws/hue/hue-device/'
+        );
+        
+        hueLightWebsocket.onmessage = function(e) {
+            const data = JSON.parse(e.data);
+            console.log(data.light_on);
+            console.log(data)
+            lightBulbDisplay(data.light_on)
+            document.querySelector("#dev-name").innerHTML = data.name
+            document.querySelector("#dev-on-off").innerHTML = data.light_on
+            document.querySelector("#dev-dim").innerHTML = data.dimming
+        };
+        hueLightWebsocket.onopen = function(event){
+            hueLightWebsocketLoaded = true
+            hueLightWebsocket.send(JSON.stringify({
+            'type': 'update','dev_id': devID
+            }));
+            
+        }
+        hueLightWebsocket.onclose = function(e) {
+            console.error('Dashboard socket closed unexpectedly');
+        };
+    
+    } else {
+        hueLightWebsocket.send(JSON.stringify({
+            'type': 'update','dev_id': devID
+        }));
+    }
+
+    triggerTab('dev-detail')
+
+    document.querySelector('#btn-on').onclick = function(e) {
+                hueLightWebsocket.send(JSON.stringify({
+                'type': 'control', 'dev_id': devID, 'command': 'on'
+            }));
+    };
+    document.querySelector('#btn-off').onclick = function(e) {
+                hueLightWebsocket.send(JSON.stringify({
+                'type': 'control', 'dev_id': devID, 'command': 'off'
+            }));
+    };
+    var slider = document.querySelector("#dim-slider");
+    var output = document.querySelector("#dim-slider-value");
+    output.innerHTML = slider.value;
+    
+    slider.onchange = function() {
+      output.innerHTML = this.value;
+    }
+
+
+    function lightBulbDisplay(display) {
+        var bulbOn = document.querySelector("#bulb-on")
+        var bulbOff = document.querySelector("#bulb-off")
+        if (display === 'On'){
+            bulbOff.className = "d-none";
+            bulbOn.className = "d-inline-block align-top";
+        }
+        if (display === 'Off'){
+            bulbOn.className = "d-none";
+            bulbOff.className = "d-inline-block align-top";
+        }    
+        bulbOn = null
+        bulbOff = null
+    }
+
+   
+    
+    
+        
+    
+    
+    //socket.onopen = function(event) {
+        // if (document.querySelector("#dev-detail")) {
+            
+        //     var sel = document.querySelector('#dev-detail');
+        //     var detailTab = new bootstrap.Tab(sel);
+        //     detailTab.show();
+        // }
+      //  )
+
+
+
+        
+   // };
+    
+
+</script>
