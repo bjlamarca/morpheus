@@ -101,7 +101,9 @@
       + '/ws/hue/gen/'
       
   );
-
+  genSocket.onopen = function(e) {
+    console.log("open")
+  };
   genSocket.onmessage = function(e) {
     const data = JSON.parse(e.data);
     document.querySelector('#message').innerHTML = data.message;

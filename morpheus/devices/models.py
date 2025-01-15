@@ -34,6 +34,9 @@ class DeviceType(models.Model):
 
     def get_absolute_url(self):
         return reverse('devices:devicetype', args=[self.pk])
+    
+    
+
 
 
 class Device(models.Model):
@@ -72,5 +75,9 @@ class Device(models.Model):
 
     def get_absolute_url(self):
         return reverse('devices:device-detail', args=[self.pk])
+    
+    @property
+    def interface_name(self):
+        return (self.device_content_type.app_label).capitalize()
 
 

@@ -6,7 +6,7 @@ class HueConfig(AppConfig):
     name = 'hue'
 
     def ready(self):
-    # import hue.signals
+        import hue.signals
         from .hub import Hub
         hub = Hub()
         hub.set_hub(1)

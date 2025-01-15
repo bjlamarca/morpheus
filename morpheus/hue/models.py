@@ -95,6 +95,11 @@ class HueDevice(models.Model):
     def get_absolute_url(self):
         return reverse('hue:device', args=[self.pk])
 
+SWITCH_CHOICES = [
+    ['on', 'On'],
+    ['off', 'Off']
+]
+
 class HueLight(models.Model):
     
     device = models.ForeignKey(
@@ -110,6 +115,13 @@ class HueLight(models.Model):
         blank=True,
         null=True,
         verbose_name='Light On'
+    )
+    switch = models.CharField(
+        max_length=50,
+        blank=True,
+        null=True,
+        choices=SWITCH_CHOICES,
+        verbose_name='Switch'
     )
     dimming = models.IntegerField(
         blank=True,

@@ -8,6 +8,7 @@ from decimal import Decimal
 from utilities.logging import SystemLogger
 from .device import HueDeviceTypes
 from devices.models import Device, DeviceType
+from .signals import hue_device_signal
 
 
         
@@ -44,6 +45,7 @@ class HueUtilities():
             return None
     
     def sync_device_db(self, hub_id):
+        print('sync')
         try:
             self.hub_id = hub_id
             hub = Hub()
@@ -157,7 +159,14 @@ class HueUtilities():
                 #query Light model
                 light_qs = HueLight.objects.get(device=device)
                 light_item = hub.get_item('light',light_qs.rid)
-                light_qs.light_on = bool(light_item['on']['on'])
+                if light_item['on']['on'] == True:
+                    light_qs.switch = 'on'
+                elif light_item['on']['on'] == False:
+                    light_qs.switch = 'off'
+                if light_item['on']['on'] == True:
+                    light_qs.switch = 'on'
+                elif light_item['on']['on'] == False:
+                    light_qs.switch = 'off'
                 light_qs.dimming =  int(light_item['dimming']['brightness'])
                 light_qs.effect = light_item['effects']['status']
                 if device.hue_device_type == 'COLORLAMP':
@@ -182,6 +191,7 @@ class HueUtilities():
 
 
     def update_all_device_status(self, hub_id):
+        print('update')
         try: 
             devices = HueDevice.objects.all()
             for device in devices:

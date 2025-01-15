@@ -3,7 +3,7 @@ from channels.generic.websocket import AsyncWebsocketConsumer
 
 class GenConsumer(AsyncWebsocketConsumer):
     async def connect(self):
-         self.group_name = 'hue-gen'
+         self.group_name = 'dev-gen'
          await self.channel_layer.group_add(self.group_name, self.channel_name)
          await self.accept()
          

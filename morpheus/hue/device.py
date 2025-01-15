@@ -57,31 +57,47 @@ def light_view(text_data):
     device_id = text_data_json['dev_id']    
     device = HueDevice.objects.get(pk=device_id)
     light = HueLight.objects.get(device=device)
-    
+    light_dict = {}
+
     if text_data_json['type'] == 'control':
         hub = Hub()
         print('hub', device.hub_id)
         hub.set_hub(device.hub_id)
-        print(text_data_json['dev_id'])
         if text_data_json['command'] == 'on':
             hub.light_set_on('on', light.pk)
         if text_data_json['command'] == 'off':
             hub.light_set_on('off', light.pk)
-    
-    elif text_data_json['type'] == 'update':
-        light_dict = {}
+        if text_data_json['command'] == 'dimming':
+            hub.light_set_dimming(text_data_json['value'], light.pk)
+        if text_data_json['command'] == 'color':
+            hex_value = (text_data_json['value']).lstrip('#')
+            rgb = tuple(int(hex_value[i:i+2], 16) for i in (0, 2, 4))
+            hub.light_set_color(rgb[0], rgb[1], rgb[2], light.pk)
+      
+    elif text_data_json['type'] == 'update' or text_data_json['type'] == 'open':
         
+        light_dict['type'] = 'update'
         if device.hue_device_type == 'COLORLAMP':
             light_dict['is_color'] = 'true'
+            light_dict['color_hex'] = "#{:02x}{:02x}{:02x}".format(light.red, light.green, light.blue)
         elif device.hue_device_type == 'WHITELAMP':
-            light_dict['is_color'] == 'false'
+            light_dict['is_color'] = 'false'
         light_dict['name'] = device.name
         light_dict['dimming'] = light.dimming
-        if light.light_on == True:
-            light_dict['light_on'] = 'On'
-        elif light.light_on == False:
-            light_dict['light_on'] = 'Off'
+        light_dict['switch'] = (light.switch).capitalize()
         
         
         return light_dict
+    
+    
+
+def hex_to_rgb(hex):
+  rgb = []
+  for i in (0, 2, 4):
+    decimal = int(hex[i:i+2], 16)
+    rgb.append(decimal)
+  
+  return tuple(rgb)
+
+
             

@@ -15,35 +15,23 @@
     <div class="row">
         <div class="col col-lg-6">
           <ul class="nav nav-tabs" id="myTab" role="tablist">
+            
             <li class="nav-item" role="presentation">
-              <button class="nav-link active" id="dev-general-tab" data-bs-toggle="tab" data-bs-target="#dev-general" type="button" role="tab" aria-controls="dev-general" aria-selected="true">General</button>
-            </li>
-            <li class="nav-item" role="presentation">
-              <button class="nav-link" id="dev-list-tab" data-bs-toggle="tab" data-bs-target="#dev-list" type="button" role="tab" aria-controls="dev-list" aria-selected="false">Devices</button>
+              <button class="nav-link  active" id="dev-list-tab" data-bs-toggle="tab" data-bs-target="#dev-list" type="button" role="tab" aria-controls="dev-list" aria-selected="true">Devices</button>
             </li>
             <li class="nav-item" role="presentation">
               <button class="nav-link" id="dev-detail-tab" data-bs-toggle="tab" data-bs-target="#dev-detail" type="button" role="tab" aria-controls="dev-detail" aria-selected="false">Detail</button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" id="dev-general-tab" data-bs-toggle="tab" data-bs-target="#dev-general" type="button" role="tab" aria-controls="dev-general" aria-selected="false">General</button>
             </li>
             
           </ul>
         
           <div class="tab-content mt-3" id="myTabContent">
-            <div class="tab-pane fade show active" id="dev-general" role="tabpanel" aria-labelledby="dev-general-tab">
-              <div class="card">
-                <div class = "card-body">
-                  <div class="d-grid gap-2 col-4 d-md-block">
-                  
-                    <p id="message">Message</p>
-                      <input id="sync-device-db" class="btn btn-outline-primary m-2" type="button"
-                          value="Device">
-                      
-                  
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="tab-pane fade" id="dev-list" role="tabpanel" aria-labelledby="dev-list-tab">
+            
+            
+            <div class="tab-pane fade  show active" id="dev-list" role="tabpanel" aria-labelledby="dev-list-tab">
               <div class="card">
                 <div class = "card-body">
                   <div id="dev-list-area" hx-get="{% url 'devices:device-list' %}" hx-trigger="load" hx-swap="outerHTML">
@@ -63,7 +51,21 @@
               </div>
             </div>
 
-            
+            <div class="tab-pane fade" id="dev-general" role="tabpanel" aria-labelledby="dev-general-tab">
+              <div class="card">
+                <div class = "card-body">
+                  <div class="d-grid gap-2 col-4 d-md-block">
+                  
+                    <p id="message">Message</p>
+                      <input id="sync-device-db" class="btn btn-outline-primary m-2" type="button"
+                          value="Device">
+                      
+                  
+                  </div>
+                </div>
+              </div>
+            </div>
+
 
         </div>
 

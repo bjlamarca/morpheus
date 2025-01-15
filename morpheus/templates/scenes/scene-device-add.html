@@ -1,0 +1,28 @@
+{% load render_table from django_tables2 %}
+<input type="text" id="scene-id" class = "d-none" value="{{ scene_id }}">
+
+<div class="row">
+    <div class="container-fluid">
+    <div class="col">
+        <button id="btn-add" class="btn btn-outline-primary m-2" type="button">Add / Remove Devices</button>
+        <div id="sc-add-list-area" hx-get="{{ list_url }}" hx-trigger="load" hx-swap="outerHTML">
+
+        </div>
+    </div>
+    </div>
+</div>
+
+
+
+<script>
+    deviceList = document.querySelectorAll("#sc-detail-list-area");
+    sceneID = document.querySelector('#scene-id').value
+    document.querySelector('#btn-add').onclick = function(e) {
+        Socket.send(JSON.stringify({
+        'type': 'add','scene_id': sceneID
+        }));
+    }
+    
+
+</script>
+

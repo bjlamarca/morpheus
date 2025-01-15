@@ -12,12 +12,15 @@ class LightTable(tables.Table):
     online = tables.BooleanColumn(
         accessor='device.online'
         )
+    name = tables.Column(
+        accessor='device.name'
+        )    
     
     #dimming = tables.Column(attrs={'cell': {'style': 'background-color: blue'}})
     class Meta:
         model = HueLight
         div_name = 'light_div'
-        fields = ('id','device', 'light_on', 'dimming', 'red', 'green', 'blue', 'online')
+        fields = ('id','name', 'switch', 'dimming', 'red', 'green', 'blue', 'online')
         template_name = "htmx-table.html"
         
 class ButtonTable(tables.Table):

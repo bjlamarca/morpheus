@@ -7,14 +7,14 @@ from .models import Device, DeviceType
 class DeviceTable(tables.Table):
     #name = tables.Column(linkify=True)
     #name = tables.LinkColumn()
-    device_content_type = tables.Column(verbose_name='Interface')
+    interface_name = tables.Column(
+        verbose_name='Interface')
     class Meta:
         model = Device
         div_name = 'device_div'
-        fields = ('name', 'device_content_type', 'device_type')
+        fields = ('name', 'interface_name', 'device_type')
         template_name = "htmx-table.html"
 
     def render_name(self, value, record):
-         #print('V', value, record.pk)
          url = reverse('devices:device-detail', kwargs={'device_id':record.pk})
          return format_html("<a hx-get='{}' hx-target='#dev-detail-area' class='link-primary' style='cursor: pointer;'>{}</a>", url, value)

@@ -1,10 +1,11 @@
 import threading, requests, json , httpx
 from pprint import pprint
 from django.dispatch import receiver
-from .signals import hue_receive
+from .signals import hue_device_signal
 from utilities.logging import SystemLogger
 from .models import HueDevice, HueLight, HueButton
 from .color import Converter
+from django.contrib.auth.models import User
 
 
 
@@ -146,6 +147,21 @@ class Hub():
         data = '{"color":{"xy":{"x":' + str(xy[0]) + ',"y":' + str(xy[1]) + '}}}'
         result = requests.put(url, data=data, headers=self.header, verify=False)
         print(result)
+
+    def light_set_color_dim_on(self, red, green, blue, dim_level, on_state, light_id):
+        light_qs = HueLight.objects.get(pk=light_id)
+        url = self.url_pre + '/clip/v2/resource/light/' + light_qs.rid
+        convert = Converter(light_qs.gamut_type)
+        xy = convert.rgb_to_xy(red, green, blue)
+        if on_state == 'on':
+            on_data = '{"on": {"on": true}}'
+        elif on_state == 'off':
+            on_data = '{"on": {"on": false}}'
+        data = '{"color":{"xy":{"x":' + str(xy[0]) + ',"y":' + str(xy[1]) + '}}, "dimming":{"brightness":' + str(dim_level) + '},' + on_data + '}'
+        result = requests.put(url, data=data, headers=self.header, verify=False)
+        print(result)
+
+
         
 
     #System for processing messages from Hub
@@ -154,19 +170,14 @@ class Hub():
         with httpx.stream('GET', url, headers=self.header, verify=False, timeout=None) as s:
             s.read()
             yield s.text
-            #for data in s.iter_text():
-                
-            #     #print("d1",data)
-            #    yield data
-            #     #yield s.iter_text()
+            
 
     def loop_stream(self):
         while True:
             result = self.get_stream()
             for data in result:
                 self.hue_process_events(data) 
-            #time.sleep(.1)
-
+           
 
     def hue_receive_events(self):
         print("Start Hue")
@@ -182,21 +193,37 @@ class Hub():
                 
                 for data_item in event_dict['data']:
                     update_type = data_item['type']
-                    
+                    hue_signal = {}
+                    hue_signal['type'] = 'update'
+                    hue_signal['update_type'] = update_type
                     if update_type == 'light':
                         device_qs = HueDevice.objects.get(hue_id=data_item['owner']['rid'])
                         light_qs = HueLight.objects.get(rid=data_item['id'])
+                        hue_signal['device_id'] = device_qs.pk
+                        hue_signal['light_id'] = light_qs.pk
                         if 'on' in data_item:
-                            light_qs.light_on = data_item['on']['on']
+                            if data_item['on']['on'] == True:
+                                light_qs.switch = 'on'
+                                hue_signal['switch'] = 'on'
+                            elif data_item['on']['on'] == False:
+                                light_qs.switch = 'off'
+                                hue_signal['switch'] = 'off'
+                            hue_signal['light_on'] = data_item['on']['on']
                         if 'dimming' in data_item:
                             light_qs.dimming =  int(data_item['dimming']['brightness'])
+                            hue_signal['dimming'] = int(data_item['dimming']['brightness'])
                         if 'color' in data_item:
                             convert = Converter(light_qs.gamut_type)
                             rgb = convert.xy_to_rgb(data_item['color']['xy']['x'], data_item['color']['xy']['y'])
                             light_qs.red = rgb[0]
                             light_qs.green = rgb[1]
                             light_qs.blue = rgb[2]
+                            hue_signal['red'] = rgb[0]
+                            hue_signal['green'] = rgb[1]
+                            hue_signal['blue'] = rgb[0]
                         light_qs.save()
+                        hue_device_signal.send(sender='hue_process_events', data=hue_signal)
+
                     elif update_type == 'zigbee_connectivity':
                         device_qs = HueDevice.objects.get(hue_id=data_item['owner']['rid'])
                         if 'status' in data_item:

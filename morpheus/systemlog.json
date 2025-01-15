@@ -19,3 +19,269 @@
   "level": "WARNING",
   "date_time": "2025-01-06 14:19:39.694331"
 },
+{
+  "area": "hue.hub",
+  "message": "hue_process_events",
+  "details": "'type'",
+  "level": "ERROR",
+  "date_time": "2025-01-10 02:02:17.122553"
+},
+{
+  "area": "hue.hub",
+  "message": "hue_process_events",
+  "details": "'type'",
+  "level": "ERROR",
+  "date_time": "2025-01-10 02:02:19.862129"
+},
+{
+  "area": "hue.hub",
+  "message": "hue_process_events",
+  "details": "'type'",
+  "level": "ERROR",
+  "date_time": "2025-01-10 02:02:24.104845"
+},
+{
+  "area": "hue.hub",
+  "message": "hue_process_events",
+  "details": "'type'",
+  "level": "ERROR",
+  "date_time": "2025-01-10 02:02:27.447509"
+},
+{
+  "area": "hue.hub",
+  "message": "hue_process_events",
+  "details": "behavior_instance is an unknow device type",
+  "level": "WARNING",
+  "date_time": "2025-01-10 04:37:34.476888"
+},
+{
+  "area": "hue.hub",
+  "message": "hue_process_events",
+  "details": "behavior_instance is an unknow device type",
+  "level": "WARNING",
+  "date_time": "2025-01-10 04:37:35.486750"
+},
+{
+  "area": "hue.hub",
+  "message": "hue_process_events",
+  "details": "behavior_instance is an unknow device type",
+  "level": "WARNING",
+  "date_time": "2025-01-10 04:37:35.497119"
+},
+{
+  "area": "hue.hub",
+  "message": "hue_process_events",
+  "details": "behavior_instance is an unknow device type",
+  "level": "WARNING",
+  "date_time": "2025-01-10 04:37:36.699149"
+},
+{
+  "area": "hue.hub",
+  "message": "hue_process_events",
+  "details": "behavior_instance is an unknow device type",
+  "level": "WARNING",
+  "date_time": "2025-01-10 04:37:36.709365"
+},
+{
+  "area": "hue.hub",
+  "message": "hue_process_events",
+  "details": "device_software_update is an unknow device type",
+  "level": "WARNING",
+  "date_time": "2025-01-14 22:50:27.184388"
+},
+{
+  "area": "hue.hub",
+  "message": "hue_process_events",
+  "details": "device_software_update is an unknow device type",
+  "level": "WARNING",
+  "date_time": "2025-01-14 22:50:27.196236"
+},
+{
+  "area": "hue.hub",
+  "message": "hue_process_events",
+  "details": "device_software_update is an unknow device type",
+  "level": "WARNING",
+  "date_time": "2025-01-14 22:50:27.179737"
+},
+{
+  "area": "hue.hub",
+  "message": "hue_process_events",
+  "details": "device_software_update is an unknow device type",
+  "level": "WARNING",
+  "date_time": "2025-01-14 22:50:27.199638"
+},
+{
+  "area": "hue.hub",
+  "message": "hue_process_events",
+  "details": "device_software_update is an unknow device type",
+  "level": "WARNING",
+  "date_time": "2025-01-14 23:02:43.972603"
+},
+{
+  "area": "hue.hub",
+  "message": "hue_process_events",
+  "details": "device_software_update is an unknow device type",
+  "level": "WARNING",
+  "date_time": "2025-01-14 23:02:43.971387"
+},
+{
+  "area": "hue.hub",
+  "message": "hue_process_events",
+  "details": "device_software_update is an unknow device type",
+  "level": "WARNING",
+  "date_time": "2025-01-14 23:02:46.152077"
+},
+{
+  "area": "hue.hub",
+  "message": "hue_process_events",
+  "details": "device_software_update is an unknow device type",
+  "level": "WARNING",
+  "date_time": "2025-01-14 23:02:46.152495"
+},
+{
+  "area": "hue.hub",
+  "message": "hue_process_events",
+  "details": "device_software_update is an unknow device type",
+  "level": "WARNING",
+  "date_time": "2025-01-14 23:04:18.691665"
+},
+{
+  "area": "hue.hub",
+  "message": "hue_process_events",
+  "details": "device_software_update is an unknow device type",
+  "level": "WARNING",
+  "date_time": "2025-01-14 23:04:18.691939"
+},
+{
+  "area": "hue.hub",
+  "message": "hue_process_events",
+  "details": "device_software_update is an unknow device type",
+  "level": "WARNING",
+  "date_time": "2025-01-14 23:18:42.802685"
+},
+{
+  "area": "hue.hub",
+  "message": "hue_process_events",
+  "details": "device_software_update is an unknow device type",
+  "level": "WARNING",
+  "date_time": "2025-01-14 23:18:42.801345"
+},
+{
+  "area": "hue.hub",
+  "message": "hue_process_events",
+  "details": "device_software_update is an unknow device type",
+  "level": "WARNING",
+  "date_time": "2025-01-14 23:18:44.995306"
+},
+{
+  "area": "hue.hub",
+  "message": "hue_process_events",
+  "details": "device_software_update is an unknow device type",
+  "level": "WARNING",
+  "date_time": "2025-01-14 23:18:44.996219"
+},
+{
+  "area": "scenes.scene_devices",
+  "message": "update_device_status",
+  "details": "'QuerySet' object has no attribute 'device_id'",
+  "level": "ERROR",
+  "date_time": "2025-01-14 23:19:25.497798"
+},
+{
+  "area": "scenes.scene_devices",
+  "message": "update_device_status",
+  "details": "'QuerySet' object has no attribute 'device_id'",
+  "level": "ERROR",
+  "date_time": "2025-01-14 23:20:04.012586"
+},
+{
+  "area": "hue.hub",
+  "message": "hue_process_events",
+  "details": "device_software_update is an unknow device type",
+  "level": "WARNING",
+  "date_time": "2025-01-14 23:20:17.423048"
+},
+{
+  "area": "hue.hub",
+  "message": "hue_process_events",
+  "details": "device_software_update is an unknow device type",
+  "level": "WARNING",
+  "date_time": "2025-01-14 23:20:17.423090"
+},
+{
+  "area": "scenes.scene_devices",
+  "message": "update_device_status",
+  "details": "'QuerySet' object has no attribute 'device_id'",
+  "level": "ERROR",
+  "date_time": "2025-01-14 23:22:10.058279"
+},
+{
+  "area": "hue.hub",
+  "message": "hue_process_events",
+  "details": "device is an unknow device type",
+  "level": "WARNING",
+  "date_time": "2025-01-15 21:00:39.363586"
+},
+{
+  "area": "hue.hub",
+  "message": "hue_process_events",
+  "details": "device is an unknow device type",
+  "level": "WARNING",
+  "date_time": "2025-01-15 21:00:39.366657"
+},
+{
+  "area": "hue.hub",
+  "message": "hue_process_events",
+  "details": "zigbee_device_discovery is an unknow device type",
+  "level": "WARNING",
+  "date_time": "2025-01-15 21:00:40.424972"
+},
+{
+  "area": "hue.hub",
+  "message": "hue_process_events",
+  "details": "zigbee_device_discovery is an unknow device type",
+  "level": "WARNING",
+  "date_time": "2025-01-15 21:00:40.425203"
+},
+{
+  "area": "hue.hub",
+  "message": "hue_process_events",
+  "details": "device_software_update is an unknow device type",
+  "level": "WARNING",
+  "date_time": "2025-01-15 21:00:42.548982"
+},
+{
+  "area": "hue.hub",
+  "message": "hue_process_events",
+  "details": "device_software_update is an unknow device type",
+  "level": "WARNING",
+  "date_time": "2025-01-15 21:00:42.553181"
+},
+{
+  "area": "hue.hub",
+  "message": "hue_process_events",
+  "details": "device is an unknow device type",
+  "level": "WARNING",
+  "date_time": "2025-01-15 21:00:48.812459"
+},
+{
+  "area": "hue.hub",
+  "message": "hue_process_events",
+  "details": "device is an unknow device type",
+  "level": "WARNING",
+  "date_time": "2025-01-15 21:00:48.813419"
+},
+{
+  "area": "hue.hub",
+  "message": "hue_process_events",
+  "details": "'button_report'",
+  "level": "ERROR",
+  "date_time": "2025-01-15 21:00:48.818195"
+},
+{
+  "area": "hue.hub",
+  "message": "hue_process_events",
+  "details": "'button_report'",
+  "level": "ERROR",
+  "date_time": "2025-01-15 21:00:48.819150"
+},

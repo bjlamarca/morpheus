@@ -1,0 +1,86 @@
+
+
+
+<div class="container-fluid m-3">
+    <form hx-post="{{ post_url }}" hx-target="#sc-detail-area">
+        {% csrf_token %}
+        <div class="row g-3 align-items-center">
+            
+            <div class="col-auto">
+                <label for="name" class="col-form-label">Name</label>
+            </div>
+            <div class="col-auto">
+                {{ form.name }}  
+            </div>
+            <div class="col-auto">
+                <button type="submit" class="btn btn-outline-primary btn-sm">Save</button>
+            </div>
+        </div>
+    </form>
+</div>
+
+<div class = "{{ create }}">
+    <div class="row g-3 m-3">
+        <div class="col-auto">
+            <button id="btn-activate" type="button" class="btn btn-outline-primary btn-sm">Activate</button>
+        </div>
+    </div>
+
+    <ul class="nav nav-tabs" id="sc-detail-tabs" role="tablist">
+        <li class="nav-item" role="presentation">
+            <button class="nav-link  active" id="sc-detail-devices-tab" data-bs-toggle="tab" data-bs-target="#sc-detail-list" type="button" role="tab" aria-controls="sc-detail-list" aria-selected="true">Devices</button>
+        </li>
+        <li class="nav-item" role="presentation">
+            <button class="nav-link" id="sc-detail-add-tab" data-bs-toggle="tab" data-bs-target="#sc-detail-add" type="button" role="tab" aria-controls="sc-detail-add" aria-selected="false">Add Devices</button>
+            </li>
+        
+    </ul>
+    <div class="tab-content mt-3" id="myTabContent">
+    <div class="tab-pane fade show active" id="sc-detail-list" role="tabpanel" aria-labelledby="sc-detail-devices-tab">
+        
+            <div id="sc-detail-list-area" hx-get="{{ list_url }}" hx-trigger="load" >
+                <p>Add a Device</p>
+            
+        </div>
+    </div>
+    <div class="tab-pane fade" id="sc-detail-add" role="tabpanel" aria-labelledby="sc-detail-add-tab">
+        
+        <div id="sc-detail-add-area" hx-get="{{ add_url }}" hx-trigger="load" >
+            <p>No available Devices</p>
+        </div>
+        
+    </div>
+    </div>
+</div>
+    <script>
+        triggerTab('sc-detail')
+        document.querySelector('#btn-activate').onclick = function(e) {
+            Socket.send(JSON.stringify({
+                    'type': 'activate','scene_id': sceneID
+                }));
+            }
+        
+        var Socket = new WebSocket(
+            'ws://'
+            + window.location.host
+            + '/ws/scenes/scene/'
+        );
+    
+        Socket.onopen = function(event){
+            Socket.send(JSON.stringify({
+            'type': 'open','scene_id': sceneID
+            }));
+            
+        }
+        Socket.onmessage = function(e) {
+            const data = JSON.parse(e.data);
+            console.log(data)
+            if (data['type'] === 'add_remove_complete') {
+                alert(data['message'])
+                htmx.trigger(deviceList, 'load')
+
+            }
+        }
+        
+    
+    </script>

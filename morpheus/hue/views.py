@@ -4,6 +4,7 @@ from django_tables2 import SingleTableView, MultiTableMixin
 from .models import HueDevice, HueLight, HueButton
 from .tables import DeviceTable, LightTable, ButtonTable
 
+
 def hue_main_view(request):
     return render(request, 'hue/hue.html')
 

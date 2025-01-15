@@ -33,14 +33,18 @@
     </div>
 </div>
 <div class="row">
-    <div class="slidecontainer">
-        <input type="range" min="1" max="100" value="50" class="slider" id="dim-slider">
-        <p>Value: <span id="dim-slider-value">50</span></p>
+    <div class="col-6">
+        <div class="slidecontainer m-2">
+            <input type="range" min="1" max-width="150" max="100" value="50" class="slider m-2" id="dim-slider">
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-6">
+        <input type="color" id="dev-color" name="color" value="#e66465" class="m-2" />
     </div>
 </div>
 
-    
-    
     
   
 
@@ -58,17 +62,29 @@
         
         hueLightWebsocket.onmessage = function(e) {
             const data = JSON.parse(e.data);
-            console.log(data.light_on);
-            console.log(data)
-            lightBulbDisplay(data.light_on)
-            document.querySelector("#dev-name").innerHTML = data.name
-            document.querySelector("#dev-on-off").innerHTML = data.light_on
-            document.querySelector("#dev-dim").innerHTML = data.dimming
+            console.log(data);
+            if (data && data.type === 'update') {
+                lightBulbDisplay(data.switch)
+                document.querySelector("#dev-name").innerHTML = data.name;
+                document.querySelector("#dev-on-off").innerHTML = data.switch;
+                document.querySelector("#dev-dim").innerHTML = data.dimming;
+                document.querySelector("#dim-slider").value = data.dimming;
+                color_picker = document.querySelector("#dev-color")
+                if (data.is_color === 'true') {
+                    color_picker.className = ""
+                    color_picker.value = data.color_hex;
+                }
+                if (data.is_color === 'false') {
+                    color_picker.className = "d-none"
+                }
+                
+            }
+            
         };
         hueLightWebsocket.onopen = function(event){
             hueLightWebsocketLoaded = true
             hueLightWebsocket.send(JSON.stringify({
-            'type': 'update','dev_id': devID
+            'type': 'open','dev_id': devID
             }));
             
         }
@@ -95,11 +111,16 @@
             }));
     };
     var slider = document.querySelector("#dim-slider");
-    var output = document.querySelector("#dim-slider-value");
-    output.innerHTML = slider.value;
-    
+        
     slider.onchange = function() {
-      output.innerHTML = this.value;
+        hueLightWebsocket.send(JSON.stringify({
+                'type': 'control', 'dev_id': devID, 'command': 'dimming', 'value': this.value
+            }));
+    }
+    document.querySelector("#dev-color").onchange = function() {
+        hueLightWebsocket.send(JSON.stringify({
+                'type': 'control', 'dev_id': devID, 'command': 'color', 'value': this.value
+            }));
     }
 
 
@@ -117,26 +138,5 @@
         bulbOn = null
         bulbOff = null
     }
-
-   
-    
-    
-        
-    
-    
-    //socket.onopen = function(event) {
-        // if (document.querySelector("#dev-detail")) {
-            
-        //     var sel = document.querySelector('#dev-detail');
-        //     var detailTab = new bootstrap.Tab(sel);
-        //     detailTab.show();
-        // }
-      //  )
-
-
-
-        
-   // };
-    
 
 </script>

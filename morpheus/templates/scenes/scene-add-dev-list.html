@@ -1,0 +1,45 @@
+{% load render_table from django_tables2 %}
+
+{% render_table table %}
+
+
+<script>
+    checkboxes = document.querySelectorAll("[name=selected]");
+    
+    
+    
+
+    // for (var i = 0; i < checkboxes.length; i++) {
+    //     checkboxes[i].addEventListener("click", displayCheck);
+    // }
+    // function displayCheck(e) {
+    //     console.log(e.target.checked, e.target.value)
+        
+
+    // }
+
+    document.querySelector('#btn-add').onclick = function(e) {
+        if (confirm('Are you sure you want to add / remove these devices to the scene?') == true) {
+            checked_id_list = [];
+            not_checked_id_list = [];
+            for (var i = 0; i < checkboxes.length; i++) {
+                console.log(checkboxes[i].checked)
+                if (checkboxes[i].checked === true) {
+                    checked_id_list.push(checkboxes[i].value)        
+                } else {
+                    not_checked_id_list.push(checkboxes[i].value)        
+                }     
+        
+            }   
+        
+            Socket.send(JSON.stringify({
+                'type': 'add_remove_devices','checked_id_list': checked_id_list, 'not_checked_id_list': not_checked_id_list,  'scene_id': sceneID
+            }));
+    
+
+        }
+        
+    };
+    
+    
+</script>

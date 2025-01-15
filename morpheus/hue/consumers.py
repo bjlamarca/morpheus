@@ -5,6 +5,7 @@ from .hub import Hub
 from .utilities import HueUtilities
 from .models import HueLight, HueDevice
 from .device import light_view
+from django.dispatch import receiver
 
 
 
@@ -16,18 +17,32 @@ result = 'None'
 
 class HueDeviceConsumer(AsyncWebsocketConsumer):
     async def connect(self):
+        self.group_name = 'hue-dev'
+        await self.channel_layer.group_add(self.group_name, self.channel_name)
+        self.my_device_id = 0
         await self.accept()
+        
          
 
     async def disconnect(self, close_code):
-        pass
+        await self.channel_layer.group_discard(self.group_name, self.channel_name)
 
     async def receive(self, text_data):
+        text_data_json = json.loads(text_data)
+        device_id = text_data_json['dev_id']          
+        self.my_device_id = device_id
         message = await sync_to_async(light_view)(text_data)
+       
+        
+        
         await self.send(text_data=json.dumps(message))
 
-
-   
+    async def chat_message(self, event):
+        text_data_json = json.loads(event['text'])
+        if text_data_json['dev_id'] == self.my_device_id:
+            message = await sync_to_async(light_view)(event['text'])
+            await self.send(text_data=json.dumps(message))
+        
 
 class GenConsumer(AsyncWebsocketConsumer):
     async def connect(self):
@@ -203,10 +218,10 @@ class DiagConsumer(AsyncWebsocketConsumer):
             #result = await sync_to_async(sync_device_db)()
 
         elif message == 'test':
-            from .capabilities import Capabilities
+            print('hello')
+            hue = HueUtilities()
+            await sync_to_async(hue.update_all_device_status)(1)
             result = 'ok'
-            cap = Capabilities
-            await sync_to_async(cap.Color)(18,255,0,0)
 
 
         await self.channel_layer.group_send(
