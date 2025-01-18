@@ -159,6 +159,7 @@ class HueUtilities():
                 #query Light model
                 light_qs = HueLight.objects.get(device=device)
                 light_item = hub.get_item('light',light_qs.rid)
+                print(light_item['on']['on'], type(light_item['on']['on']))
                 if light_item['on']['on'] == True:
                     light_qs.switch = 'on'
                 elif light_item['on']['on'] == False:

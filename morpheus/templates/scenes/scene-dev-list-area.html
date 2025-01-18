@@ -1,0 +1,20 @@
+<input type="text" id="scene-id" class = "d-none" value="{{ scene_id }}">
+
+<div class="row">
+    <div class="container-fluid">
+    <div class="col">
+        <button id="btn-list-adjust-scene" class="btn btn-outline-primary m-2" type="button">Adjust Scene</button>
+        <div id="sc-dev-list-area" hx-get="{{ dev_list_url }}" hx-trigger="load" hx-swap="outerHTML">
+
+        </div>
+    </div>
+    </div>
+</div>
+
+
+<script>
+    checkboxes = document.querySelectorAll("[name=chk-selected]");
+
+
+    
+</script>

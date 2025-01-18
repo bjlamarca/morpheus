@@ -1,0 +1,23 @@
+{% load render_table from django_tables2 %}
+
+{% render_table table %}
+
+
+<script>
+    checkboxes = document.querySelectorAll("[name=chk-favorite]");
+
+    for (var i = 0; i < checkboxes.length; i++) {
+        checkboxes[i].addEventListener("click", checkClicked);
+    }
+    function checkClicked(e) {
+        console.log(e.target.checked, e.target.value)
+        genSocket.send(JSON.stringify({
+                            'type': 'color_favorite','color_id': e.target.value, 'checked': e.target.checked
+                        }));
+        
+
+    }
+
+
+
+</script>

@@ -9,6 +9,7 @@ from django.contrib.auth.models import User
 
 
 
+
 class Hub():
     def __init__(self) -> None:
         self.hub_name = ''
@@ -154,13 +155,25 @@ class Hub():
         convert = Converter(light_qs.gamut_type)
         xy = convert.rgb_to_xy(red, green, blue)
         if on_state == 'on':
-            on_data = '{"on": {"on": true}}'
+            on_data = '"on": {"on": true}'
         elif on_state == 'off':
-            on_data = '{"on": {"on": false}}'
+            on_data = '"on": {"on": false}'
         data = '{"color":{"xy":{"x":' + str(xy[0]) + ',"y":' + str(xy[1]) + '}}, "dimming":{"brightness":' + str(dim_level) + '},' + on_data + '}'
         result = requests.put(url, data=data, headers=self.header, verify=False)
         print(result)
 
+    def light_set_dim_on(self, dim_level, on_state, light_id):
+        light_qs = HueLight.objects.get(pk=light_id)
+        url = self.url_pre + '/clip/v2/resource/light/' + light_qs.rid
+        if on_state == 'on':
+            on_data = '"on": {"on": true}'
+        elif on_state == 'off':
+            on_data = '"on": {"on": false}'
+        data = '{"dimming":{"brightness":' + str(dim_level) + '},' + on_data + '}'
+        result = requests.put(url, data=data, headers=self.header, verify=False)
+        print(result)
+
+    
 
         
 

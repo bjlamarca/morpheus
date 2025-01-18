@@ -19,7 +19,6 @@ class SceneAddTable(tables.Table):
     selected = tables.CheckBoxColumn(accessor='selected')
     dev_name = tables.Column(verbose_name='Name')
     dev_type_display = tables.Column(verbose_name='Device Type')
-    switch = tables.Column(verbose_name='Switch')
     dev_id = tables.Column(
            attrs={
             "td": {
@@ -29,9 +28,9 @@ class SceneAddTable(tables.Table):
     )
     def render_selected(self, record):
         if record['selected']:
-            return mark_safe('<input class="nameCheckBox" name="selected" value="' + str(record['dev_id']) + '" type="checkbox" checked/>')
+            return mark_safe('<input class="nameCheckBox" name="chk-selected" value="' + str(record['dev_id']) + '" type="checkbox" checked/>')
         else:
-            return mark_safe('<input class="nameCheckBox" name="selected" value="' + str(record['dev_id']) + '" type="checkbox"/>')
+            return mark_safe('<input class="nameCheckBox" name="chk-selected" value="' + str(record['dev_id']) + '" type="checkbox"/>')
                              
     class Meta:
         template_name = "htmx-table.html"
@@ -45,14 +44,12 @@ class SceneDeviceTable(tables.Table):
     dimming = tables.Column(verbose_name='Dimming')
     color_hex = tables.Column(verbose_name='Color')
     
-    dev_id = tables.Column(
-           attrs={
-            "td": {
-                'name': 'dev-id'
-            }
-        }
-    )
     
+    
+     
+    def render_selected(self, record):
+
+        return mark_safe('<input class="nameCheckBox" name="chk-dev-selected" value="' + str(record['scene_dev_id']) + '" type="checkbox"/>')
     
     def render_color_hex(self, record):
         if 'color' in record['capability']:
@@ -62,5 +59,6 @@ class SceneDeviceTable(tables.Table):
     class Meta:
         template_name = "htmx-table.html"
         div_name = 'scene-dev-table-div'
+        
     
     

@@ -1,0 +1,32 @@
+<div class="container my-5">
+    <div class="color-tile-display mb-2" id="display-tile" data-colorid="0">
+
+    </div>
+    <p class="text-start mb-4">Choose a Color</p>
+    <div class="row row-cols-auto">
+    
+         {% for color in colors %}
+            <div class="col">
+                <button class="color-tile-button m-1 p-1 text-dark" style="background-color: {{ color.hex_code }}" title="{{ color.name }}" value="{{ color.id }}">
+                    
+                </button>
+            </div>
+        {% endfor %}
+    </div>
+    
+</div>
+
+<script>
+    choiceTile = document.querySelector('#display-tile');
+    colorTiles = document.querySelectorAll('.color-tile-button');
+    for (var i = 0; i < colorTiles.length; i++) {
+        colorTiles[i].addEventListener("click", colorClicked);
+    }
+    function colorClicked(e) {
+        console.log(e.target.style.backgroundColor, e.target.value)
+        choiceTile.style.backgroundColor = e.target.style.backgroundColor;
+        choiceTile.setAttribute('data-colorid', e.target.value);
+        // genSocket.send(JSON.stringify({
+        //     'type': 'color_selected','color': e.target.style.backgroundColor
+        // }));
+    }

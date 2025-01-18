@@ -1,3 +1,26 @@
 {% load render_table from django_tables2 %}
 
 {% render_table table %}
+
+
+<script>
+
+
+    devCheckboxes = document.querySelectorAll("[name=chk-dev-selected]");
+    
+    document.querySelector('#btn-list-adjust-scene').onclick = function(e) {
+      
+        adjust_checked_id_list = [];
+        for (var i = 0; i < devCheckboxes.length; i++) {
+            if (devCheckboxes[i].checked === true) {
+                adjust_checked_id_list.push(devCheckboxes[i].value)        
+            }
+        }   
+        if (adjust_checked_id_list.length === 0) {
+            alert("Select at least one device to adjust")
+        } else {
+            triggerTab('sc-adjust')
+            htmx.ajax("GET", "{% url 'scenes:scene-adjust' %}", "#sc-detail-adjust-area")
+        }
+    };
+</script>

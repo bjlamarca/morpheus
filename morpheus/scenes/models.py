@@ -14,7 +14,12 @@ class Scene(models.Model):
 
     def get_absolute_url(self):
         return reverse('scenes:detail', args=[self.pk])
-    
+
+SWITCH_CHOICES = [
+    ['on', 'On'],
+    ['off', 'Off']
+] 
+
 class SceneDevices(models.Model):
     
     scene = models.ForeignKey(
@@ -37,6 +42,13 @@ class SceneDevices(models.Model):
         blank=True,
         null=True,
         verbose_name='Light On'
+    )
+    switch = models.CharField(
+        max_length=50,
+        blank=True,
+        null=True,
+        choices=SWITCH_CHOICES,
+        verbose_name='Switch'
     )
     dimming = models.IntegerField(
         blank=True,

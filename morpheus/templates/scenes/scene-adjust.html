@@ -1,0 +1,138 @@
+{% load static %}
+
+
+
+<div class="container ">
+    <div class="row">
+        <div class="col">
+            <button id="btn-adjust-scene" class="btn btn-outline-primary m-2" type="button">Adjust Scene</button>
+        </div>
+        <div class="col">
+            <button id="btn-adjust-cancel" class="btn btn-outline-primary m-2" type="button">Cancel</button>
+        </div>
+        
+    </div>
+    <div class="row">
+        
+            <div class="container p-2 mb-2 border rounded">
+                <div class="form-check mb-3">
+                    <input class="form-check-input" type="checkbox" value="" id="chkSwitch">
+                    <label class="form-check-label" for="chkSwitch">Switch</label>
+                </div>
+                <div class="form-check ms-2">
+                    <input class="form-check-input" type="radio" id="sw-on" name="rad-switch" value="on" checked="checked">
+                    <label class="form-check-label"for="sw-on">On</label><br>
+                    <input class="form-check-input" type="radio" id="sw-off" name="rad-switch" value="off">
+                    <label class="form-check-label" for="sw-off">Off</label><br>
+                </div>
+               
+            </div>
+        
+        
+    </div>
+    <div class="row">
+            <div class="container p-2 mb-2 border rounded">
+                <div class="form-check mb-3">
+                    <input class="form-check-input"  type="checkbox" value="" id="chkDim">
+                    <label class="form-check-label" for="chkDim">Dim Level</label>
+                </div>
+                <div class="mb-3">
+                    <input id="txt-dim" class="form-control w-25" style="max-width: 75px;" type="number" id="quantity" name="quantity" min="1" max="100" value="100">
+                </div>
+                <div class="mb-3">
+                    <div class="slidecontainer m-2">
+                        <input type="range" min="1" max-width="150" max="100" value="50" class="slider form-control" id="dim-slider">
+                    </div>
+                </div>
+            </div>
+        
+    </div>
+    <div class="row">
+        
+            <div class="container p-2 mb-2 border rounded">
+                <div class="form-check mb-3">
+                    <input class="form-check-input" type="checkbox" value="" id="chkColor">
+                    <label class="form-check-label" for="chkColor">Color</label>
+                </div>
+                <div id="color-area" hx-get="{% url 'devices:colorpicker' %}" hx-trigger="load" hx-swap="outerHTML">
+
+                </div>
+            </div>
+     </div>
+</div>
+
+
+<script>
+
+    document.querySelector('#btn-adjust-cancel').onclick = function(e) {
+        console.log('Cancel')
+        triggerTab('sc-detail-list')
+        document.querySelector('#sc-detail-adjust-area').innerHTML = '<p>Select Devices to Adjust </p>'
+    }
+
+    document.querySelector('#btn-adjust-scene').onclick = function(e) {
+        chkSwitch = document.querySelector('#chkSwitch')
+        chkDim = document.querySelector('#chkDim')
+        chkColor = document.querySelector('#chkColor')
+        console.log('Adjust', chkSwitch.checked, chkDim.checked, chkColor.checked)
+        
+        if (chkSwitch.checked || chkDim.checked || chkColor.checked) {
+            console.log('Adjusting')
+            sceneParms = []
+            if (chkSwitch.checked) {
+                if (switchOn = document.querySelector('#sw-on').checked === true) {
+                    console.log('Switch On')
+                    sceneParms.push({'switch': 'on'})
+                }
+                else {
+                    console.log('Switch Off')
+                    sceneParms.push({'switch': 'off'})
+                }
+                
+
+            }
+            if (chkDim.checked) {
+                dimLevel = document.querySelector('#txt-dim').value
+                console.log('Dim Level', dimLevel)
+                sceneParms.push({'dim': dimLevel})
+            }
+            if (chkColor.checked) {
+                
+                color = document.querySelector('#display-tile')
+                colorID = color.dataset.colorid
+                console.log('Color', color, colorID)
+                sceneParms.push({'color_id': colorID})
+                
+
+            }
+            console.log(sceneParms)
+            Socket.send(JSON.stringify({
+                    'type': 'adjust_scene','scene_dev_id_list': adjust_checked_id_list, 'scene_parms': sceneParms
+                }));
+        }
+        else {
+            alert('Nothing to adjust')
+        }  
+        
+    }
+
+                
+    
+    console.log(adjust_checked_id_list)
+    dimSlider = document.querySelector('#dim-slider')
+    dimInput = document.querySelector('#txt-dim')
+    
+    dimSlider.onchange = function(e) {
+        console.log(e.target.value)
+        dimInput.value = e.target.value;
+    };
+
+    dimInput.oninput = function(e) {
+        console.log(e.target.value)
+        dimSlider.value = e.target.value;
+    };
+
+
+</script>
+
+

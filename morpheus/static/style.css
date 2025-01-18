@@ -115,7 +115,7 @@
     appearance: none; /* removes browser-specific styling */
     width: 300px; /* width of slider */
     height: 25px; /* height of slider */
-    background: var(--color-primary-a20);
+    background: var(--color-surface-mixed-a40);
     outline: none; /* remove outline */
     border-radius: 50px; /* round corners */
 }
@@ -127,4 +127,46 @@
   border-radius: 50%; /* make it circular */
   background: #FFFFFF; /* white color */
   cursor: pointer; /* cursor on hover */
+}
+
+.color-tile-button {
+    height: 50px;
+    width: 80px;
+    /* min-width: 80px;
+    max-width: 100px; */
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 12px;
+    color: white;
+    transition: transform 0.3s ease;
+}
+
+.color-tile-display {
+    height: 50px;
+    width: 120px;
+    border-style: solid;
+    border-color: white;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 12px;
+    color: black;
+    transition: transform 0.3s ease;
+}
+
+.color-tile-item:hover {
+    transform: scale(1.05);
+}
+
+.color-tile-item:focus {
+    transform: scale(1.05);
+}
+
+.bento-tall {
+    height: 100px;
 }

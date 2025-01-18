@@ -6,6 +6,7 @@ from .utilities import HueUtilities
 from .models import HueLight, HueDevice
 from .device import light_view
 from django.dispatch import receiver
+from devices.color import create_color_families, colors_db_sync, color_sort, color_add_favorites
 
 
 
@@ -218,9 +219,8 @@ class DiagConsumer(AsyncWebsocketConsumer):
             #result = await sync_to_async(sync_device_db)()
 
         elif message == 'test':
-            print('hello')
             hue = HueUtilities()
-            await sync_to_async(hue.update_all_device_status)(1)
+            await sync_to_async(color_add_favorites)()
             result = 'ok'
 
 

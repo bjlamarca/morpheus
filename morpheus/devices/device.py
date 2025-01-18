@@ -1,4 +1,5 @@
 from importlib import import_module
+from .models import Color
 
 DEVICE_TYPES = [
     {
@@ -12,3 +13,10 @@ def import_test():
     thisClass = getattr(module, 'Capability')
     instance = thisClass()
     instance.On(True)
+
+
+def update_color_favorite(color_id, checked):
+    color = Color.objects.get(pk=color_id)
+    color.favorite = checked
+    color.save()
+    

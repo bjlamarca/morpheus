@@ -12,4 +12,7 @@ urlpatterns = [
     path('scene-add-device/<int:scene_id>', views.scene_add_device_view, name='add-device'),
     path('scene-add-device-list/<int:scene_id>', views.scene_add_device_list_view, name='add-device-list'),
     path('scene-device-list/<int:scene_id>', views.scene_device_list_view, name='device-list'),
+    path('scene-device-list-area/<int:scene_id>', views.scene_device_list_area_view, name='device-list-area'),
+    path('scene-adjust/', views.scene_adjust_view, name='scene-adjust'),
+    
     ]

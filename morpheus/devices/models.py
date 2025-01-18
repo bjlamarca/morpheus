@@ -5,6 +5,20 @@ from django.contrib.contenttypes.fields import GenericRelation
 from django.contrib.contenttypes.fields import GenericForeignKey
 
 # Create your models here.
+class Room(models.Model):
+    name = models.CharField(
+        max_length=100,
+        verbose_name='Name',
+        blank=True,
+        null=True
+    )
+
+    def __str__(self):
+        return self.name
+
+    def get_absolute_url(self):
+        return reverse('devices:device-room', args=[self.pk])
+    
 
 class DeviceType(models.Model):
     name = models.CharField(
@@ -36,9 +50,6 @@ class DeviceType(models.Model):
         return reverse('devices:devicetype', args=[self.pk])
     
     
-
-
-
 class Device(models.Model):
     name = models.CharField(
         max_length=100,
@@ -69,6 +80,13 @@ class Device(models.Model):
         on_delete = models.CASCADE,
         verbose_name='Device Type'
     )
+    room = models.ForeignKey(
+        Room,
+        on_delete=models.CASCADE,
+        verbose_name='Room', 
+        blank=True,
+        null=True   
+    )
 
     def __str__(self):
         return self.name
@@ -80,4 +98,50 @@ class Device(models.Model):
     def interface_name(self):
         return (self.device_content_type.app_label).capitalize()
 
+class ColorFamily(models.Model):
+    name = models.CharField(
+        max_length=100,
+        verbose_name='Name'
+    )
+
+    def __str__(self):
+        return self.name
+
+    def get_absolute_url(self):
+        return reverse('devices:colorfamily', args=[self.pk])
+
+class Color(models.Model):
+    name = models.CharField(
+        max_length=100,
+        verbose_name='Name'
+    )
+    favorite = models.BooleanField(
+        verbose_name='Favorite'
+    )
+    hex_code = models.CharField(
+        max_length=7,
+        verbose_name='Hex Code'
+    )
+    red = models.IntegerField(
+        verbose_name='Red'
+    )
+    green = models.IntegerField(
+        verbose_name='Green'
+    )
+    blue = models.IntegerField(
+        verbose_name='Blue'
+    )
+    color_family = models.ManyToManyField(
+        ColorFamily,
+        verbose_name='Color Family'
+    )
+    sort = models.IntegerField(
+        verbose_name='Sort',
+        blank=True,
+        null=True
+    )    
+
+
+    def __str__(self):
+        return self.name
 

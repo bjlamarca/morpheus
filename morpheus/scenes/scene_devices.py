@@ -1,7 +1,7 @@
 from devices.models import Device, DeviceType
 from .models import Scene, SceneDevices
 from utilities.logging import SystemLogger
-from devices.models import Device
+from devices.models import Device, Color
 from devices.capabilities import get_on, get_dim, get_color, activate_device_scene
 
  
@@ -29,6 +29,7 @@ def get_avail_devices(scene_id):
 
             }
             avail_devs.append(avail_color)
+            
     dim_types = DeviceType.objects.filter(capability__contains='dimmer').exclude(capability__contains='color')
     for dim_type in dim_types:
         dim_qs = Device.objects.filter(device_type=dim_type)
@@ -77,10 +78,12 @@ def get_device_list(scene_id):
     for scene_dev in scene_dev_qs:
         capabilites = scene_dev.scene_device_capability
         if 'switch' in capabilites:
-            if scene_dev.light_on == True:
+            if scene_dev.switch == 'on':
                 switch = 'On'
-            elif scene_dev.light_on == False:
+            elif scene_dev.switch == 'off':
                 switch  = 'Off'
+            else:
+                switch = '-'
         else:
             switch = '-'
         if 'dimmer' in capabilites:
@@ -131,7 +134,7 @@ def add_remove_devices(checked_id_list, not_check_id_list, scene_id):
                 new_scene_dev.scene_device_capability = dev_type_qs.capability
 
                 if 'switch' in dev_type_qs.capability:
-                    new_scene_dev.light_on = get_on(dev_type_qs.interface, dev_id)
+                    new_scene_dev.switch = get_on(dev_type_qs.interface, dev_id)
                 if 'dimmer' in dev_type_qs.capability:
                     new_scene_dev.dimming = get_dim(dev_type_qs.interface, dev_id)
                 if 'color' in dev_type_qs.capability:
@@ -157,7 +160,7 @@ def add_remove_devices(checked_id_list, not_check_id_list, scene_id):
     #         sys_log = SystemLogger(__name__,'update_device_status', str(error), 'ERROR')
     #         sys_log.log()
     #         return str(error)
-    
+
     
 def activate_scene(scene_id):
     scene_qs = Scene.objects.get(pk=int(scene_id))
@@ -171,7 +174,7 @@ def activate_scene(scene_id):
         scene_dev_dict = {}
         scene_dev_dict['device_id'] = scene_dev.device_id
         if 'switch' in dev_type_qs.capability:
-            scene_dev_dict['switch'] =  scene_dev.light_on
+            scene_dev_dict['switch'] =  scene_dev.switch
         if 'dimmer' in dev_type_qs.capability:
             scene_dev_dict['dimmer'] = scene_dev.dimming
         if 'color' in dev_type_qs.capability:
@@ -179,5 +182,65 @@ def activate_scene(scene_id):
         scene_dict[dev_type_qs.interface].append(scene_dev_dict)
     for interface in scene_dict:
         activate_device_scene(interface, scene_dict[interface])
+    return {'type': 'scene_activated'}
+
+
+def delete_scene(scene_id):
+    scene_qs = Scene.objects.get(pk=int(scene_id))
+    scene_qs.delete()
+    return {'type': 'scene_deleted'}
+
+def adjust_scene(scene_dev_id_list, scene_parms):
+    adj_switch = False
+    adj_dim = False
+    adj_color = False
+    print('scene_parms', type(scene_parms))
+    for sc_parm in scene_parms:
+        print('sc_parm', sc_parm, type(sc_parm))
+        if 'switch' in sc_parm:
+            print('switch', sc_parm['switch'])
+            switch_value = sc_parm['switch']
+            adj_switch = True
+        
+        if 'dim' in sc_parm:
+            print('dimmer', sc_parm['dim'])
+            try:
+                dim_level = int(sc_parm['dim'])
+            except:
+                return {'type': 'scene_adjusted', 'result': 'error', 'message': 'Dimmer level must be an number'}
+            if dim_level < 0 or dim_level > 100:
+                return {'type': 'scene_adjusted', 'result': 'error', 'message': 'Dimmer level must be between 0 and 100'}
+            adj_dim = True
+        
+        if 'color_id' in sc_parm:
+            print('color', sc_parm['color_id'])
+            color_id = int(sc_parm['color_id'])
+            if color_id == 0:
+                return {'type': 'scene_adjusted', 'result': 'error', 'message': 'Color must be selected'}
+            adj_color = True
+            color_qs = Color.objects.get(pk=color_id)
+            red = color_qs.red
+            green = color_qs.green
+            blue = color_qs.blue
+
+    for scene_dev_id in scene_dev_id_list:
+        print('sd',int(scene_dev_id))
+        scene_dev_qs = SceneDevices.objects.get(id=int(scene_dev_id))
+        dev_type_qs = DeviceType.objects.get(device=scene_dev_qs.device)
+        if 'switch' in dev_type_qs.capability:
+            if adj_switch:
+                scene_dev_qs.switch = switch_value
+            
+        if 'dimmer' in dev_type_qs.capability:
+            if adj_dim:
+                scene_dev_qs.dimming = dim_level
+
+        if 'color' in dev_type_qs.capability:
+            if adj_color:
+                scene_dev_qs.red = red
+                scene_dev_qs.green = green
+                scene_dev_qs.blue = blue
+        scene_dev_qs.save()
+    return {'type': 'scene_adjusted', 'result': 'success', 'message': 'Scene has been adjusted'}
 
         

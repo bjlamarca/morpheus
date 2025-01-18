@@ -14,9 +14,11 @@
             </div>
             <div class="col-auto">
                 <button type="submit" class="btn btn-outline-primary btn-sm">Save</button>
+                <button id="btn-scene-delete" type="button" class="btn btn-outline-danger btn-sm">Delete</button>
             </div>
         </div>
     </form>
+    
 </div>
 
 <div class = "{{ create }}">
@@ -31,33 +33,49 @@
             <button class="nav-link  active" id="sc-detail-devices-tab" data-bs-toggle="tab" data-bs-target="#sc-detail-list" type="button" role="tab" aria-controls="sc-detail-list" aria-selected="true">Devices</button>
         </li>
         <li class="nav-item" role="presentation">
-            <button class="nav-link" id="sc-detail-add-tab" data-bs-toggle="tab" data-bs-target="#sc-detail-add" type="button" role="tab" aria-controls="sc-detail-add" aria-selected="false">Add Devices</button>
-            </li>
+            <button class="nav-link" id="sc-detail-add-tab" data-bs-toggle="tab" data-bs-target="#sc-detail-add" type="button" role="tab" aria-controls="sc-detail-add" aria-selected="false">Add / Remove Devices</button>
+        </li>
+        <li class="nav-item" role="presentation">
+            <button class="nav-link" id="sc-adjust-tab" data-bs-toggle="tab" data-bs-target="#sc-adjust" type="button" role="tab" aria-controls="sc-adjust" aria-selected="false">Adjust Scene</button>
+        </li>
         
     </ul>
     <div class="tab-content mt-3" id="myTabContent">
-    <div class="tab-pane fade show active" id="sc-detail-list" role="tabpanel" aria-labelledby="sc-detail-devices-tab">
-        
-            <div id="sc-detail-list-area" hx-get="{{ list_url }}" hx-trigger="load" >
+        <div class="tab-pane fade show active" id="sc-detail-list" role="tabpanel" aria-labelledby="sc-detail-devices-tab">
+            <div id="sc-detail-list-area" hx-get="{{ dev_list_area_url }}" hx-trigger="load" >
                 <p>Add a Device</p>
+            </div>
+        </div>
+        <div class="tab-pane fade" id="sc-detail-add" role="tabpanel" aria-labelledby="sc-detail-add-tab">
+            <div id="sc-detail-add-area" hx-get="{{ add_url }}" hx-trigger="load" >
+                <p>No available Devices</p>
+            </div>
+        </div>
+        <div class="tab-pane fade " id="sc-adjust" role="tabpanel" aria-labelledby="sc-adjust-tab">
+            <div id="sc-detail-adjust-area" >
+                <p>Select Devices to Adjust </p>
+              </div>
             
         </div>
     </div>
-    <div class="tab-pane fade" id="sc-detail-add" role="tabpanel" aria-labelledby="sc-detail-add-tab">
-        
-        <div id="sc-detail-add-area" hx-get="{{ add_url }}" hx-trigger="load" >
-            <p>No available Devices</p>
-        </div>
-        
-    </div>
-    </div>
 </div>
     <script>
+
+      
+        
+        
         triggerTab('sc-detail')
         document.querySelector('#btn-activate').onclick = function(e) {
             Socket.send(JSON.stringify({
                     'type': 'activate','scene_id': sceneID
                 }));
+            }
+            document.querySelector('#btn-scene-delete').onclick = function(e) {
+                if (confirm('Are you sure you want to delete this scene?') == true) {    
+                    Socket.send(JSON.stringify({
+                            'type': 'delete','scene_id': sceneID
+                        }));
+                }
             }
         
         var Socket = new WebSocket(
@@ -77,8 +95,27 @@
             console.log(data)
             if (data['type'] === 'add_remove_complete') {
                 alert(data['message'])
-                htmx.trigger(deviceList, 'load')
+                htmx.ajax("GET", "{{ list_url }}", "#sc-detail-list-area")
 
+            }
+            if (data['type'] === 'scene_deleted') {
+                triggerTab('sc-list')
+                htmx.ajax("GET", "{% url 'scenes:scene-list' %}", "#sc-list-area")
+                sceneDetail.innerHTML = "<p>Select a Scene</p>"
+
+            }
+            if (data['type'] === 'scene_adjusted') {
+                if (data['result'] === 'success') {
+                    alert('Scene Adjusted')
+                    htmx.ajax("GET", "{{ dev_list_area_url }}", "#sc-detail-list-area")
+                    //triggerTab('sc-list')
+                    document.querySelector('#sc-detail-adjust-area').innerHTML = '<p>Select Devices to Adjust </p>'
+                    
+                }
+                else {
+                    alert(data['message'])
+                }
+                console.log(data['message'])
             }
         }
         
