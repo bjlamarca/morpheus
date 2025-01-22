@@ -164,9 +164,53 @@
 }
 
 .color-tile-item:focus {
-    transform: scale(1.05);
+    transform: scale(.95);
 }
 
-.bento-tall {
-    height: 100px;
+.ui-scene-tile {
+    height: 125px;
+    width: 125px;
+    border: white 2px solid;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    background-color: blue;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.ui-nav-tile {
+    height: 75px;
+    width: 125px;
+    border: white 2px solid;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    background-color: green;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.ui-info-tile-1 {
+    height: 75px;
+    width: 125px;
+    border: white 2px solid;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    background-color: rgb(145, 86, 171);
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+
+
+.ui-tile-clicked {
+    border: rgb(184, 23, 23) 4px solid;
 }

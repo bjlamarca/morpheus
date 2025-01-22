@@ -1,0 +1,3146 @@
+{
+  "content_type": "hue",
+  "modeule": "hue.hub",
+  "method": "",
+  "message": "Stream started",
+  "details": "Hue stream receiving data",
+  "level": "INFO",
+  "module": "hue_receive_stream",
+  "date_time": "2025-01-18 23:52:57.997380"
+},
+{
+  "content_type": "hue",
+  "modeule": "hue.hub",
+  "method": "",
+  "message": "Stream started",
+  "details": "Hue stream receiving data",
+  "level": "INFO",
+  "module": "hue_receive_stream",
+  "date_time": "2025-01-19 00:25:03.607156"
+},
+{
+  "content_type": "hue",
+  "modeule": "hue.hub",
+  "method": "",
+  "message": "Problem setting light",
+  "details": "{\"data\":[],\"errors\":[{\"description\":\"JSON parse error: The document root must not be followed by other values.(29)\\n\"}]}\r\n",
+  "level": "ERROR",
+  "module": "light_set_dimming",
+  "date_time": "2025-01-19 00:25:19.293434",
+  "area": "System Log"
+},
+{
+  "content_type": "hue",
+  "modeule": "hue.hub",
+  "method": "",
+  "message": "Light Succesfully Set",
+  "details": "{\"data\":[{\"rid\":\"7d2b22e1-d12f-4895-a5c3-59c2d22399b9\",\"rtype\":\"light\"}],\"errors\":[]}\r\n",
+  "level": "DEBUG",
+  "module": "light_set_on",
+  "date_time": "2025-01-19 00:25:31.797088",
+  "area": "System Log"
+},
+{
+  "content_type": "hue",
+  "modeule": "hue.hub",
+  "method": "",
+  "message": "Stream started",
+  "details": "Hue stream receiving data",
+  "level": "INFO",
+  "module": "hue_receive_stream",
+  "date_time": "2025-01-19 00:35:18.141251"
+},
+{
+  "content_type": "hue",
+  "modeule": "hue.hub",
+  "method": "",
+  "message": "Stream started",
+  "details": "Hue stream receiving data",
+  "level": "INFO",
+  "module": "hue_receive_stream",
+  "date_time": "2025-01-19 00:37:17.271149"
+},
+{
+  "content_type": "hue",
+  "modeule": "hue.hub",
+  "method": "",
+  "message": "Stream started",
+  "details": "Hue stream receiving data",
+  "level": "INFO",
+  "module": "hue_receive_stream",
+  "date_time": "2025-01-19 00:39:08.395419"
+},
+{
+  "content_type": "hue",
+  "modeule": "hue.hub",
+  "method": "",
+  "message": "Stream started",
+  "details": "Hue stream receiving data",
+  "level": "INFO",
+  "module": "hue_receive_stream",
+  "date_time": "2025-01-19 00:41:39.728198"
+},
+{
+  "content_type": "hue",
+  "modeule": "hue.hub",
+  "method": "",
+  "message": "Stream started",
+  "details": "Hue stream receiving data",
+  "level": "INFO",
+  "module": "hue_receive_stream",
+  "date_time": "2025-01-19 00:42:13.914029"
+},
+{
+  "content_type": "hue",
+  "modeule": "hue.hub",
+  "method": "",
+  "message": "Stream started",
+  "details": "Hue stream receiving data",
+  "level": "INFO",
+  "module": "hue_receive_stream",
+  "date_time": "2025-01-19 00:43:28.054345"
+},
+{
+  "content_type": "hue",
+  "modeule": "hue.hub",
+  "method": "",
+  "message": "Stream started",
+  "details": "Hue stream receiving data",
+  "level": "INFO",
+  "module": "hue_receive_stream",
+  "date_time": "2025-01-19 00:43:44.132388"
+},
+{
+  "content_type": "hue",
+  "modeule": "hue.hub",
+  "method": "",
+  "message": "Stream started",
+  "details": "Hue stream receiving data",
+  "level": "INFO",
+  "module": "hue_receive_stream",
+  "date_time": "2025-01-19 00:51:01.138101"
+},
+{
+  "content_type": "hue",
+  "modeule": "hue.hub",
+  "method": "",
+  "message": "Stream started",
+  "details": "Hue stream receiving data",
+  "level": "INFO",
+  "module": "hue_receive_stream",
+  "date_time": "2025-01-19 00:53:23.092683"
+},
+{
+  "content_type": "hue",
+  "modeule": "hue.hub",
+  "method": "",
+  "message": "Stream started",
+  "details": "Hue stream receiving data",
+  "level": "INFO",
+  "module": "hue_receive_stream",
+  "date_time": "2025-01-19 00:54:53.141116"
+},
+{
+  "content_type": "hue",
+  "modeule": "hue.hub",
+  "method": "",
+  "message": "Stream started",
+  "details": "Hue stream receiving data",
+  "level": "INFO",
+  "module": "hue_receive_stream",
+  "date_time": "2025-01-19 00:57:37.268333"
+},
+{
+  "content_type": "hue",
+  "modeule": "hue.hub",
+  "method": "",
+  "message": "Stream started",
+  "details": "Hue stream receiving data",
+  "level": "INFO",
+  "module": "hue_receive_stream",
+  "date_time": "2025-01-19 01:00:04.364339"
+},
+{
+  "content_type": "hue",
+  "modeule": "hue.hub",
+  "method": "",
+  "message": "Stream started",
+  "details": "Hue stream receiving data",
+  "level": "INFO",
+  "module": "hue_receive_stream",
+  "date_time": "2025-01-19 01:00:36.472952"
+},
+{
+  "content_type": "hue",
+  "modeule": "hue.hub",
+  "method": "",
+  "message": "Stream started",
+  "details": "Hue stream receiving data",
+  "level": "INFO",
+  "module": "hue_receive_stream",
+  "date_time": "2025-01-19 01:07:45.945567"
+},
+{
+  "content_type": "hue",
+  "modeule": "hue.hub",
+  "method": "",
+  "message": "Stream started",
+  "details": "Hue stream receiving data",
+  "level": "INFO",
+  "module": "hue_receive_stream",
+  "date_time": "2025-01-19 01:08:10.830830"
+},
+{
+  "content_type": "hue",
+  "modeule": "hue.hub",
+  "method": "",
+  "message": "Stream started",
+  "details": "Hue stream receiving data",
+  "level": "INFO",
+  "module": "hue_receive_stream",
+  "date_time": "2025-01-19 01:10:00.720771"
+},
+{
+  "content_type": "hue",
+  "modeule": "hue.hub",
+  "method": "",
+  "message": "Stream started",
+  "details": "Hue stream receiving data",
+  "level": "INFO",
+  "module": "hue_receive_stream",
+  "date_time": "2025-01-19 01:15:27.821152"
+},
+{
+  "content_type": "hue",
+  "modeule": "hue.hub",
+  "method": "",
+  "message": "Stream started",
+  "details": "Hue stream receiving data",
+  "level": "INFO",
+  "module": "hue_receive_stream",
+  "date_time": "2025-01-19 01:16:57.634682"
+},
+{
+  "content_type": "hue",
+  "modeule": "hue.hub",
+  "method": "",
+  "message": "Stream started",
+  "details": "Hue stream receiving data",
+  "level": "INFO",
+  "module": "hue_receive_stream",
+  "date_time": "2025-01-19 01:19:10.032227"
+},
+{
+  "content_type": "hue",
+  "modeule": "hue.hub",
+  "method": "",
+  "message": "Stream started",
+  "details": "Hue stream receiving data",
+  "level": "INFO",
+  "module": "hue_receive_stream",
+  "date_time": "2025-01-19 01:19:59.782050"
+},
+{
+  "content_type": "hue",
+  "modeule": "hue.hub",
+  "method": "",
+  "message": "Stream started",
+  "details": "Hue stream receiving data",
+  "level": "INFO",
+  "module": "hue_receive_stream",
+  "date_time": "2025-01-19 02:48:54.818120"
+},
+{
+  "content_type": "hue",
+  "modeule": "hue.utilities",
+  "method": "",
+  "message": "Hue device statue update completed",
+  "details": "Completed succesfully",
+  "level": "INFO",
+  "module": "update_all_device_status",
+  "date_time": "2025-01-19 02:49:08.904683"
+},
+{
+  "content_type": "hue",
+  "modeule": "hue.hub",
+  "method": "",
+  "message": "Stream started",
+  "details": "Hue stream receiving data",
+  "level": "INFO",
+  "module": "hue_receive_stream",
+  "date_time": "2025-01-19 02:57:03.138600"
+},
+{
+  "content_type": "hue",
+  "modeule": "hue.utilities",
+  "method": "",
+  "message": "Hue device statue update completed",
+  "details": "Completed succesfully",
+  "level": "INFO",
+  "module": "update_all_device_status",
+  "date_time": "2025-01-19 02:57:10.060938"
+},
+{
+  "content_type": "hue",
+  "modeule": "hue.hub",
+  "method": "",
+  "message": "Stream started",
+  "details": "Hue stream receiving data",
+  "level": "INFO",
+  "module": "hue_receive_stream",
+  "date_time": "2025-01-19 02:59:38.697224"
+},
+{
+  "content_type": "hue",
+  "modeule": "hue.utilities",
+  "method": "",
+  "message": "Hue device statue update completed",
+  "details": "Completed succesfully",
+  "level": "INFO",
+  "module": "update_all_device_status",
+  "date_time": "2025-01-19 02:59:41.716090"
+},
+{
+  "content_type": "hue",
+  "modeule": "hue.hub",
+  "method": "",
+  "message": "Stream started",
+  "details": "Hue stream receiving data",
+  "level": "INFO",
+  "module": "hue_receive_stream",
+  "date_time": "2025-01-19 03:00:24.136458"
+},
+{
+  "content_type": "hue",
+  "modeule": "hue.utilities",
+  "method": "",
+  "message": "Hue device statue update completed",
+  "details": "Completed succesfully",
+  "level": "INFO",
+  "module": "update_all_device_status",
+  "date_time": "2025-01-19 03:00:27.275661"
+},
+{
+  "content_type": "hue",
+  "modeule": "hue.utilities",
+  "method": "",
+  "message": "Hue device statue update completed",
+  "details": "Completed succesfully",
+  "level": "INFO",
+  "module": "update_all_device_status",
+  "date_time": "2025-01-19 03:02:27.341193",
+  "area": "System Log"
+},
+{
+  "content_type": "hue",
+  "modeule": "hue.hub",
+  "method": "",
+  "message": "Stream started",
+  "details": "Hue stream receiving data",
+  "level": "INFO",
+  "module": "hue_receive_stream",
+  "date_time": "2025-01-19 03:15:17.929792"
+},
+{
+  "content_type": "hue",
+  "modeule": "hue.utilities",
+  "method": "",
+  "message": "Hue device statue update completed",
+  "details": "Completed succesfully",
+  "level": "INFO",
+  "module": "update_all_device_status",
+  "date_time": "2025-01-19 03:15:29.280601"
+},
+{
+  "content_type": "hue",
+  "modeule": "hue.hub",
+  "method": "",
+  "message": "Stream started",
+  "details": "Hue stream receiving data",
+  "level": "INFO",
+  "module": "hue_receive_stream",
+  "date_time": "2025-01-19 03:16:05.303098"
+},
+{
+  "content_type": "hue",
+  "modeule": "hue.utilities",
+  "method": "",
+  "message": "Hue device statue update completed",
+  "details": "Completed succesfully",
+  "level": "INFO",
+  "module": "update_all_device_status",
+  "date_time": "2025-01-19 03:16:07.683185"
+},
+{
+  "content_type": "hue",
+  "modeule": "hue.hub",
+  "method": "",
+  "message": "Stream started",
+  "details": "Hue stream receiving data",
+  "level": "INFO",
+  "module": "hue_receive_stream",
+  "date_time": "2025-01-19 03:16:33.576331"
+},
+{
+  "content_type": "hue",
+  "modeule": "hue.utilities",
+  "method": "",
+  "message": "Error updating device status",
+  "details": "'button_report'",
+  "level": "ERROR",
+  "module": "update_all_device_status",
+  "date_time": "2025-01-19 03:16:44.141900"
+},
+{
+  "content_type": "hue",
+  "modeule": "hue.hub",
+  "method": "",
+  "message": "Cannot retrieve data from Hub",
+  "details": [
+    {
+      "description": "Not Found"
+    }
+  ],
+  "level": "ERROR",
+  "module": "get_item",
+  "date_time": "2025-01-19 03:16:44.507655",
+  "area": "System Log"
+},
+{
+  "content_type": "hue",
+  "modeule": "hue.utilities",
+  "method": "",
+  "message": "Error updating device status",
+  "details": "'NoneType' object is not subscriptable",
+  "level": "ERROR",
+  "module": "update_all_device_status",
+  "date_time": "2025-01-19 03:16:44.521895",
+  "area": "System Log"
+},
+{
+  "content_type": "hue",
+  "modeule": "hue.utilities",
+  "method": "",
+  "message": "Hue device statue update completed",
+  "details": "Completed succesfully",
+  "level": "INFO",
+  "module": "update_all_device_status",
+  "date_time": "2025-01-19 03:16:51.361335",
+  "area": "System Log"
+},
+{
+  "content_type": "hue",
+  "modeule": "hue.hub",
+  "method": "",
+  "message": "Stream started",
+  "details": "Hue stream receiving data",
+  "level": "INFO",
+  "module": "hue_receive_stream",
+  "date_time": "2025-01-19 03:19:29.687183"
+},
+{
+  "content_type": "hue",
+  "modeule": "hue.utilities",
+  "method": "",
+  "message": "Error updating device status",
+  "details": "'button_report'",
+  "level": "ERROR",
+  "module": "update_all_device_status",
+  "date_time": "2025-01-19 03:19:39.422175"
+},
+{
+  "content_type": "hue",
+  "modeule": "hue.hub",
+  "method": "",
+  "message": "Cannot retrieve data from Hub",
+  "details": [
+    {
+      "description": "Not Found"
+    }
+  ],
+  "level": "ERROR",
+  "module": "get_item",
+  "date_time": "2025-01-19 03:19:39.809588",
+  "area": "System Log"
+},
+{
+  "content_type": "hue",
+  "modeule": "hue.utilities",
+  "method": "",
+  "message": "Error updating device status",
+  "details": "'NoneType' object is not subscriptable",
+  "level": "ERROR",
+  "module": "update_all_device_status",
+  "date_time": "2025-01-19 03:19:39.824336",
+  "area": "System Log"
+},
+{
+  "content_type": "hue",
+  "modeule": "hue.utilities",
+  "method": "",
+  "message": "Hue device statue update completed",
+  "details": "Completed succesfully",
+  "level": "INFO",
+  "module": "update_all_device_status",
+  "date_time": "2025-01-19 03:19:46.306318",
+  "area": "System Log"
+},
+{
+  "content_type": "hue",
+  "modeule": "hue.hub",
+  "method": "",
+  "message": "Stream started",
+  "details": "Hue stream receiving data",
+  "level": "INFO",
+  "module": "hue_receive_stream",
+  "date_time": "2025-01-19 03:21:47.073260"
+},
+{
+  "content_type": "hue",
+  "modeule": "hue.utilities",
+  "method": "",
+  "message": "Error updating device status",
+  "details": "'button_report'",
+  "level": "ERROR",
+  "module": "update_all_device_status",
+  "date_time": "2025-01-19 03:21:59.194759"
+},
+{
+  "content_type": "hue",
+  "modeule": "hue.hub",
+  "method": "",
+  "message": "Cannot retrieve data from Hub",
+  "details": [
+    {
+      "description": "Not Found"
+    }
+  ],
+  "level": "ERROR",
+  "module": "get_item",
+  "date_time": "2025-01-19 03:21:59.566245",
+  "area": "System Log"
+},
+{
+  "content_type": "hue",
+  "modeule": "hue.utilities",
+  "method": "",
+  "message": "Error updating device status",
+  "details": "'NoneType' object is not subscriptable",
+  "level": "ERROR",
+  "module": "update_all_device_status",
+  "date_time": "2025-01-19 03:21:59.580528",
+  "area": "System Log"
+},
+{
+  "content_type": "hue",
+  "modeule": "hue.utilities",
+  "method": "",
+  "message": "Hue device statue update completed",
+  "details": "Completed succesfully",
+  "level": "INFO",
+  "module": "update_all_device_status",
+  "date_time": "2025-01-19 03:22:06.135011",
+  "area": "System Log"
+},
+{
+  "content_type": "hue",
+  "modeule": "hue.hub",
+  "method": "",
+  "message": "Stream started",
+  "details": "Hue stream receiving data",
+  "level": "INFO",
+  "module": "hue_receive_stream",
+  "date_time": "2025-01-19 03:28:38.195941"
+},
+{
+  "content_type": "hue",
+  "modeule": "hue.hub",
+  "method": "",
+  "message": "Stream started",
+  "details": "Hue stream receiving data",
+  "level": "INFO",
+  "module": "hue_receive_stream",
+  "date_time": "2025-01-19 03:30:21.536809"
+},
+{
+  "content_type": "hue",
+  "modeule": "hue.utilities",
+  "method": "",
+  "message": "Error updating all status",
+  "details": "object NoneType can't be used in 'await' expression",
+  "level": "ERROR",
+  "module": "update_all_device_status",
+  "date_time": "2025-01-19 03:30:24.520935"
+},
+{
+  "content_type": "hue",
+  "modeule": "hue.hub",
+  "method": "",
+  "message": "Stream started",
+  "details": "Hue stream receiving data",
+  "level": "INFO",
+  "module": "hue_receive_stream",
+  "date_time": "2025-01-19 03:32:38.711402"
+},
+{
+  "content_type": "hue",
+  "modeule": "hue.hub",
+  "method": "",
+  "message": "Cannot retrieve data from Hub",
+  "details": [
+    {
+      "description": "Not Found"
+    }
+  ],
+  "level": "ERROR",
+  "module": "get_item",
+  "date_time": "2025-01-19 03:32:47.485666",
+  "area": "System Log"
+},
+{
+  "content_type": "hue",
+  "modeule": "hue.utilities",
+  "method": "",
+  "message": "Error updating device status",
+  "details": "'NoneType' object is not subscriptable",
+  "level": "ERROR",
+  "module": "update_all_device_status",
+  "date_time": "2025-01-19 03:32:47.499902"
+},
+{
+  "content_type": "hue",
+  "modeule": "hue.utilities",
+  "method": "",
+  "message": "Error updating device status",
+  "details": "'button_report'",
+  "level": "ERROR",
+  "module": "update_all_device_status",
+  "date_time": "2025-01-19 03:32:52.500477",
+  "area": "System Log"
+},
+{
+  "content_type": "hue",
+  "modeule": "hue.utilities",
+  "method": "",
+  "message": "Hue device statue update completed",
+  "details": "Completed succesfully",
+  "level": "INFO",
+  "module": "update_all_device_status",
+  "date_time": "2025-01-19 03:32:54.396148",
+  "area": "System Log"
+},
+{
+  "content_type": "hue",
+  "modeule": "hue.hub",
+  "method": "",
+  "message": "Stream started",
+  "details": "Hue stream receiving data",
+  "level": "INFO",
+  "module": "hue_receive_stream",
+  "date_time": "2025-01-19 03:52:23.345599"
+},
+{
+  "content_type": "hue",
+  "modeule": "hue.utilities",
+  "method": "",
+  "message": "Morph Device Sync Complete",
+  "details": "Sync Complete",
+  "level": "INFO",
+  "module": "sync_morph_devices",
+  "date_time": "2025-01-19 03:52:31.019302"
+},
+{
+  "content_type": "hue",
+  "modeule": "hue.hub",
+  "method": "",
+  "message": "Stream started",
+  "details": "Hue stream receiving data",
+  "level": "INFO",
+  "module": "hue_receive_stream",
+  "date_time": "2025-01-19 03:57:40.470376"
+},
+{
+  "content_type": "hue",
+  "modeule": "hue.utilities",
+  "method": "",
+  "message": "Morph Device Sync Complete",
+  "details": "Sync Complete",
+  "level": "INFO",
+  "module": "sync_morph_devices",
+  "date_time": "2025-01-19 03:59:01.815162"
+},
+{
+  "content_type": "hue",
+  "modeule": "hue.hub",
+  "method": "",
+  "message": "Stream started",
+  "details": "Hue stream receiving data",
+  "level": "INFO",
+  "module": "hue_receive_stream",
+  "date_time": "2025-01-19 04:09:48.985434"
+},
+{
+  "content_type": "hue",
+  "modeule": "hue.hub",
+  "method": "",
+  "message": "Stream started",
+  "details": "Hue stream receiving data",
+  "level": "INFO",
+  "module": "hue_receive_stream",
+  "date_time": "2025-01-19 04:10:46.942439"
+},
+{
+  "content_type": "hue",
+  "modeule": "hue.hub",
+  "method": "",
+  "message": "Stream started",
+  "details": "Hue stream receiving data",
+  "level": "INFO",
+  "module": "hue_receive_stream",
+  "date_time": "2025-01-19 04:10:50.583020"
+},
+{
+  "content_type": "hue",
+  "modeule": "hue.hub",
+  "method": "",
+  "message": "Stream started",
+  "details": "Hue stream receiving data",
+  "level": "INFO",
+  "module": "hue_receive_stream",
+  "date_time": "2025-01-19 04:10:54.259990"
+},
+{
+  "content_type": "hue",
+  "modeule": "hue.hub",
+  "method": "",
+  "message": "Stream started",
+  "details": "Hue stream receiving data",
+  "level": "INFO",
+  "module": "hue_receive_stream",
+  "date_time": "2025-01-19 04:12:22.873488"
+},
+{
+  "content_type": "hue",
+  "modeule": "hue.utilities",
+  "method": "",
+  "message": "Morph Device Sync Complete",
+  "details": "Sync Complete",
+  "level": "INFO",
+  "module": "sync_morph_devices",
+  "date_time": "2025-01-19 04:12:38.736315"
+},
+{
+  "content_type": "hue",
+  "modeule": "hue.hub",
+  "method": "",
+  "message": "Stream started",
+  "details": "Hue stream receiving data",
+  "level": "INFO",
+  "module": "hue_receive_stream",
+  "date_time": "2025-01-19 04:15:33.363070"
+},
+{
+  "content_type": "hue",
+  "modeule": "hue.utilities",
+  "method": "",
+  "message": "Morph Device Type Sync Complete",
+  "details": "Sync Complete",
+  "level": "INFO",
+  "module": "sync_morph_device_types",
+  "date_time": "2025-01-19 04:15:36.263983"
+},
+{
+  "content_type": "hue",
+  "modeule": "hue.utilities",
+  "method": "",
+  "message": "Morph Device Sync Complete",
+  "details": "Sync Complete",
+  "level": "INFO",
+  "module": "sync_morph_devices",
+  "date_time": "2025-01-19 04:15:43.015499",
+  "area": "System Log"
+},
+{
+  "content_type": "hue",
+  "modeule": "hue.utilities",
+  "method": "",
+  "message": "Sync Databse: Completed",
+  "details": "Completed succesfully",
+  "level": "INFO",
+  "module": "sync_device_db",
+  "date_time": "2025-01-19 04:15:54.789437",
+  "area": "System Log"
+},
+{
+  "content_type": "hue",
+  "modeule": "hue.utilities",
+  "method": "",
+  "message": "Morph Device Sync Complete",
+  "details": "Sync Complete",
+  "level": "INFO",
+  "module": "sync_morph_devices",
+  "date_time": "2025-01-19 04:16:08.349375",
+  "area": "System Log"
+},
+{
+  "content_type": "hue",
+  "modeule": "hue.hub",
+  "method": "",
+  "message": "Stream started",
+  "details": "Hue stream receiving data",
+  "level": "INFO",
+  "module": "hue_receive_stream",
+  "date_time": "2025-01-19 04:18:52.046331"
+},
+{
+  "content_type": "hue",
+  "modeule": "hue.utilities",
+  "method": "",
+  "message": "Sync Databse: Completed",
+  "details": "Completed succesfully",
+  "level": "INFO",
+  "module": "sync_device_db",
+  "date_time": "2025-01-19 04:18:58.645005"
+},
+{
+  "content_type": "hue",
+  "modeule": "hue.hub",
+  "method": "",
+  "message": "Stream started",
+  "details": "Hue stream receiving data",
+  "level": "INFO",
+  "module": "hue_receive_stream",
+  "date_time": "2025-01-19 04:20:50.539911"
+},
+{
+  "content_type": "hue",
+  "modeule": "hue.utilities",
+  "method": "",
+  "message": "Morph Device Sync Complete",
+  "details": "Sync Complete",
+  "level": "INFO",
+  "module": "sync_morph_devices",
+  "date_time": "2025-01-19 04:20:54.769442"
+},
+{
+  "content_type": "hue",
+  "modeule": "hue.hub",
+  "method": "",
+  "message": "Stream started",
+  "details": "Hue stream receiving data",
+  "level": "INFO",
+  "module": "hue_receive_stream",
+  "date_time": "2025-01-19 04:21:17.642375"
+},
+{
+  "content_type": "hue",
+  "modeule": "hue.utilities",
+  "method": "",
+  "message": "Morph Device Sync Complete",
+  "details": "Sync Complete",
+  "level": "INFO",
+  "module": "sync_morph_devices",
+  "date_time": "2025-01-19 04:21:24.298465"
+},
+{
+  "content_type": "hue",
+  "modeule": "hue.utilities",
+  "method": "",
+  "message": "Morph Device Sync Complete",
+  "details": "Sync Complete",
+  "level": "INFO",
+  "module": "sync_morph_devices",
+  "date_time": "2025-01-19 04:25:28.156074",
+  "area": "System Log"
+},
+{
+  "content_type": "hue",
+  "modeule": "hue.hub",
+  "method": "",
+  "message": "Stream started",
+  "details": "Hue stream receiving data",
+  "level": "INFO",
+  "module": "hue_receive_stream",
+  "date_time": "2025-01-19 04:51:03.336898"
+},
+{
+  "content_type": "hue",
+  "modeule": "hue.hub",
+  "method": "",
+  "message": "Stream started",
+  "details": "Hue stream receiving data",
+  "level": "INFO",
+  "module": "hue_receive_stream",
+  "date_time": "2025-01-19 05:01:20.335840"
+},
+{
+  "content_type": "hue",
+  "modeule": "hue.hub",
+  "method": "",
+  "message": "Stream started",
+  "details": "Hue stream receiving data",
+  "level": "INFO",
+  "module": "hue_receive_stream",
+  "date_time": "2025-01-19 05:01:51.133206"
+},
+{
+  "content_type": "hue",
+  "modeule": "hue.hub",
+  "method": "",
+  "message": "Stream started",
+  "details": "Hue stream receiving data",
+  "level": "INFO",
+  "module": "hue_receive_stream",
+  "date_time": "2025-01-19 05:03:08.279678"
+},
+{
+  "content_type": "hue",
+  "modeule": "hue.hub",
+  "method": "",
+  "message": "Stream started",
+  "details": "Hue stream receiving data",
+  "level": "INFO",
+  "module": "hue_receive_stream",
+  "date_time": "2025-01-19 05:07:40.959163"
+},
+{
+  "content_type": "scenes",
+  "modeule": "scenes.scene_devices",
+  "method": "",
+  "message": "Error getting devices",
+  "details": "type object 'SceneDevices' has no attribute 'objects'",
+  "level": "ERROR",
+  "module": "get_device_list",
+  "date_time": "2025-01-19 05:07:49.067580"
+},
+{
+  "content_type": "scenes",
+  "modeule": "scenes.scene_devices",
+  "method": "",
+  "message": "Error getting devices",
+  "details": "type object 'SceneDevices' has no attribute 'objects'",
+  "level": "ERROR",
+  "module": "get_avail_devices",
+  "date_time": "2025-01-19 05:07:49.074699",
+  "area": "System Log"
+},
+{
+  "content_type": "hue",
+  "modeule": "hue.hub",
+  "method": "",
+  "message": "Stream started",
+  "details": "Hue stream receiving data",
+  "level": "INFO",
+  "module": "hue_receive_stream",
+  "date_time": "2025-01-19 05:09:12.882720"
+},
+{
+  "content_type": "scenes",
+  "modeule": "scenes.scene_devices",
+  "method": "",
+  "message": "Error getting devices",
+  "details": "type object 'SceneDevices' has no attribute 'objects'",
+  "level": "ERROR",
+  "module": "get_device_list",
+  "date_time": "2025-01-19 05:09:15.951084"
+},
+{
+  "content_type": "scenes",
+  "modeule": "scenes.scene_devices",
+  "method": "",
+  "message": "Unable to write error to DB",
+  "details": "'area'",
+  "level": "WARNING",
+  "module": "get_avail_devices",
+  "date_time": "2025-01-19 05:09:15.952421",
+  "area": "System Log"
+},
+{
+  "content_type": "hue",
+  "modeule": "hue.hub",
+  "method": "",
+  "message": "Stream started",
+  "details": "Hue stream receiving data",
+  "level": "INFO",
+  "module": "hue_receive_stream",
+  "date_time": "2025-01-19 05:12:17.819436"
+},
+{
+  "content_type": "scenes",
+  "modeule": "scenes.scene_devices",
+  "method": "",
+  "message": "Error getting devices",
+  "details": "type object 'SceneDevices' has no attribute 'objects'",
+  "level": "ERROR",
+  "module": "get_device_list",
+  "date_time": "2025-01-19 05:12:21.726971"
+},
+{
+  "content_type": "scenes",
+  "modeule": "scenes.scene_devices",
+  "method": "",
+  "message": "Error getting devices",
+  "details": "type object 'SceneDevices' has no attribute 'objects'",
+  "level": "ERROR",
+  "module": "get_avail_devices",
+  "date_time": "2025-01-19 05:12:21.734997",
+  "area": "System Log"
+},
+{
+  "content_type": "hue",
+  "modeule": "hue.hub",
+  "method": "",
+  "message": "Light Succesfully Set",
+  "details": "{\"data\":[{\"rid\":\"612262c6-cb56-4a0a-856b-5b5030eece0d\",\"rtype\":\"light\"}],\"errors\":[]}\r\n",
+  "level": "DEBUG",
+  "module": "light_set_on",
+  "date_time": "2025-01-19 05:13:26.922170",
+  "area": "System Log"
+},
+{
+  "content_type": "hue",
+  "modeule": "hue.hub",
+  "method": "",
+  "message": "Light Succesfully Set",
+  "details": "{\"data\":[{\"rid\":\"612262c6-cb56-4a0a-856b-5b5030eece0d\",\"rtype\":\"light\"}],\"errors\":[]}\r\n",
+  "level": "DEBUG",
+  "module": "light_set_on",
+  "date_time": "2025-01-19 05:13:30.921789",
+  "area": "System Log"
+},
+{
+  "content_type": "hue",
+  "modeule": "hue.hub",
+  "method": "",
+  "message": "Stream started",
+  "details": "Hue stream receiving data",
+  "level": "INFO",
+  "module": "hue_receive_stream",
+  "date_time": "2025-01-19 05:13:54.349273"
+},
+{
+  "content_type": "scenes",
+  "modeule": "scenes.scene_devices",
+  "method": "",
+  "message": "Error getting devices",
+  "details": "type object 'SceneDevices' has no attribute 'objects'",
+  "level": "ERROR",
+  "module": "get_device_list",
+  "date_time": "2025-01-19 05:14:03.520350"
+},
+{
+  "content_type": "scenes",
+  "modeule": "scenes.scene_devices",
+  "method": "",
+  "message": "Error getting devices",
+  "details": "type object 'SceneDevices' has no attribute 'objects'",
+  "level": "ERROR",
+  "module": "get_avail_devices",
+  "date_time": "2025-01-19 05:14:03.523133",
+  "area": "System Log"
+},
+{
+  "content_type": "hue",
+  "modeule": "hue.hub",
+  "method": "",
+  "message": "Stream started",
+  "details": "Hue stream receiving data",
+  "level": "INFO",
+  "module": "hue_receive_stream",
+  "date_time": "2025-01-19 05:17:19.091934"
+},
+{
+  "content_type": "hue",
+  "modeule": "hue.hub",
+  "method": "",
+  "message": "Stream started",
+  "details": "Hue stream receiving data",
+  "level": "INFO",
+  "module": "hue_receive_stream",
+  "date_time": "2025-01-19 05:26:18.590008"
+},
+{
+  "content_type": "hue",
+  "modeule": "hue.hub",
+  "method": "",
+  "message": "Stream started",
+  "details": "Hue stream receiving data",
+  "level": "INFO",
+  "module": "hue_receive_stream",
+  "date_time": "2025-01-19 05:29:12.761378"
+},
+{
+  "content_type": "hue",
+  "modeule": "hue.hub",
+  "method": "",
+  "message": "Stream started",
+  "details": "Hue stream receiving data",
+  "level": "INFO",
+  "module": "hue_receive_stream",
+  "date_time": "2025-01-19 05:32:29.495068"
+},
+{
+  "content_type": "hue",
+  "modeule": "hue.hub",
+  "method": "",
+  "message": "Stream started",
+  "details": "Hue stream receiving data",
+  "level": "INFO",
+  "module": "hue_receive_stream",
+  "date_time": "2025-01-19 05:33:33.370354"
+},
+{
+  "content_type": "hue",
+  "modeule": "hue.hub",
+  "method": "",
+  "message": "Stream started",
+  "details": "Hue stream receiving data",
+  "level": "INFO",
+  "module": "hue_receive_stream",
+  "date_time": "2025-01-19 05:34:38.361901"
+},
+{
+  "content_type": "hue",
+  "modeule": "hue.hub",
+  "method": "",
+  "message": "Stream started",
+  "details": "Hue stream receiving data",
+  "level": "INFO",
+  "module": "hue_receive_stream",
+  "date_time": "2025-01-19 05:35:12.070220"
+},
+{
+  "content_type": "hue",
+  "modeule": "hue.hub",
+  "method": "",
+  "message": "Stream started",
+  "details": "Hue stream receiving data",
+  "level": "INFO",
+  "module": "hue_receive_stream",
+  "date_time": "2025-01-19 06:03:27.184389"
+},
+{
+  "content_type": "hue",
+  "modeule": "hue.hub",
+  "method": "",
+  "message": "Light Succesfully Set",
+  "details": "{\"data\":[{\"rid\":\"7759e919-2535-41c9-b745-5c65b5d2accd\",\"rtype\":\"light\"}],\"errors\":[]}\r\n",
+  "level": "DEBUG",
+  "module": "light_set_color_dim_on",
+  "date_time": "2025-01-19 06:10:47.731978",
+  "area": "System Log"
+},
+{
+  "content_type": "hue",
+  "modeule": "hue.hub",
+  "method": "",
+  "message": "Light Succesfully Set",
+  "details": "{\"data\":[{\"rid\":\"e13f8489-8d8a-4d97-8a39-60dd774a729b\",\"rtype\":\"light\"}],\"errors\":[]}\r\n",
+  "level": "DEBUG",
+  "module": "light_set_color_dim_on",
+  "date_time": "2025-01-19 06:10:48.369487",
+  "area": "System Log"
+},
+{
+  "content_type": "hue",
+  "modeule": "hue.hub",
+  "method": "",
+  "message": "Light Succesfully Set",
+  "details": "{\"data\":[{\"rid\":\"e0512c27-10ee-40ad-8481-aca509b83dd5\",\"rtype\":\"light\"}],\"errors\":[]}\r\n",
+  "level": "DEBUG",
+  "module": "light_set_color_dim_on",
+  "date_time": "2025-01-19 06:10:48.742327",
+  "area": "System Log"
+},
+{
+  "content_type": "hue",
+  "modeule": "hue.hub",
+  "method": "",
+  "message": "Light Succesfully Set",
+  "details": "{\"data\":[{\"rid\":\"416792cf-1aed-4f3e-ba2d-8b3fdc9e082f\",\"rtype\":\"light\"}],\"errors\":[]}\r\n",
+  "level": "DEBUG",
+  "module": "light_set_color_dim_on",
+  "date_time": "2025-01-19 06:10:49.157511",
+  "area": "System Log"
+},
+{
+  "content_type": "hue",
+  "modeule": "hue.hub",
+  "method": "",
+  "message": "Stream started",
+  "details": "Hue stream receiving data",
+  "level": "INFO",
+  "module": "hue_receive_stream",
+  "date_time": "2025-01-19 06:21:06.630352"
+},
+{
+  "content_type": "hue",
+  "modeule": "hue.hub",
+  "method": "",
+  "message": "Light Succesfully Set",
+  "details": "{\"data\":[{\"rid\":\"7759e919-2535-41c9-b745-5c65b5d2accd\",\"rtype\":\"light\"}],\"errors\":[]}\r\n",
+  "level": "DEBUG",
+  "module": "light_set_color_dim_on",
+  "date_time": "2025-01-19 06:21:28.747572",
+  "area": "System Log"
+},
+{
+  "content_type": "hue",
+  "modeule": "hue.hub",
+  "method": "",
+  "message": "Light Succesfully Set",
+  "details": "{\"data\":[{\"rid\":\"e13f8489-8d8a-4d97-8a39-60dd774a729b\",\"rtype\":\"light\"}],\"errors\":[]}\r\n",
+  "level": "DEBUG",
+  "module": "light_set_color_dim_on",
+  "date_time": "2025-01-19 06:21:29.349506",
+  "area": "System Log"
+},
+{
+  "content_type": "hue",
+  "modeule": "hue.hub",
+  "method": "",
+  "message": "Light Succesfully Set",
+  "details": "{\"data\":[{\"rid\":\"e0512c27-10ee-40ad-8481-aca509b83dd5\",\"rtype\":\"light\"}],\"errors\":[]}\r\n",
+  "level": "DEBUG",
+  "module": "light_set_color_dim_on",
+  "date_time": "2025-01-19 06:21:29.708448",
+  "area": "System Log"
+},
+{
+  "content_type": "hue",
+  "modeule": "hue.hub",
+  "method": "",
+  "message": "Light Succesfully Set",
+  "details": "{\"data\":[{\"rid\":\"416792cf-1aed-4f3e-ba2d-8b3fdc9e082f\",\"rtype\":\"light\"}],\"errors\":[]}\r\n",
+  "level": "DEBUG",
+  "module": "light_set_color_dim_on",
+  "date_time": "2025-01-19 06:21:30.154374",
+  "area": "System Log"
+},
+{
+  "content_type": "hue",
+  "modeule": "hue.hub",
+  "method": "",
+  "message": "Light Succesfully Set",
+  "details": "{\"data\":[{\"rid\":\"7759e919-2535-41c9-b745-5c65b5d2accd\",\"rtype\":\"light\"}],\"errors\":[]}\r\n",
+  "level": "DEBUG",
+  "module": "light_set_color_dim_on",
+  "date_time": "2025-01-19 06:21:50.939153",
+  "area": "System Log"
+},
+{
+  "content_type": "hue",
+  "modeule": "hue.hub",
+  "method": "",
+  "message": "Light Succesfully Set",
+  "details": "{\"data\":[{\"rid\":\"e13f8489-8d8a-4d97-8a39-60dd774a729b\",\"rtype\":\"light\"}],\"errors\":[]}\r\n",
+  "level": "DEBUG",
+  "module": "light_set_color_dim_on",
+  "date_time": "2025-01-19 06:21:51.353724",
+  "area": "System Log"
+},
+{
+  "content_type": "hue",
+  "modeule": "hue.hub",
+  "method": "",
+  "message": "Light Succesfully Set",
+  "details": "{\"data\":[{\"rid\":\"e0512c27-10ee-40ad-8481-aca509b83dd5\",\"rtype\":\"light\"}],\"errors\":[]}\r\n",
+  "level": "DEBUG",
+  "module": "light_set_color_dim_on",
+  "date_time": "2025-01-19 06:21:51.647152",
+  "area": "System Log"
+},
+{
+  "content_type": "hue",
+  "modeule": "hue.hub",
+  "method": "",
+  "message": "Light Succesfully Set",
+  "details": "{\"data\":[{\"rid\":\"416792cf-1aed-4f3e-ba2d-8b3fdc9e082f\",\"rtype\":\"light\"}],\"errors\":[]}\r\n",
+  "level": "DEBUG",
+  "module": "light_set_color_dim_on",
+  "date_time": "2025-01-19 06:21:51.910604",
+  "area": "System Log"
+},
+{
+  "content_type": "hue",
+  "modeule": "hue.hub",
+  "method": "",
+  "message": "Light Succesfully Set",
+  "details": "{\"data\":[{\"rid\":\"c6744e5d-513d-4357-909c-00b912767a75\",\"rtype\":\"light\"}],\"errors\":[]}\r\n",
+  "level": "DEBUG",
+  "module": "light_set_on",
+  "date_time": "2025-01-19 06:24:03.816057",
+  "area": "System Log"
+},
+{
+  "content_type": "hue",
+  "modeule": "hue.hub",
+  "method": "",
+  "message": "Light Succesfully Set",
+  "details": "{\"data\":[{\"rid\":\"c6744e5d-513d-4357-909c-00b912767a75\",\"rtype\":\"light\"}],\"errors\":[]}\r\n",
+  "level": "DEBUG",
+  "module": "light_set_on",
+  "date_time": "2025-01-19 06:24:37.011927",
+  "area": "System Log"
+},
+{
+  "content_type": "hue",
+  "modeule": "hue.hub",
+  "method": "",
+  "message": "Light Succesfully Set",
+  "details": "{\"data\":[{\"rid\":\"c6744e5d-513d-4357-909c-00b912767a75\",\"rtype\":\"light\"}],\"errors\":[]}\r\n",
+  "level": "DEBUG",
+  "module": "light_set_on",
+  "date_time": "2025-01-19 06:26:02.071052",
+  "area": "System Log"
+},
+{
+  "content_type": "hue",
+  "modeule": "hue.hub",
+  "method": "",
+  "message": "Stream started",
+  "details": "Hue stream receiving data",
+  "level": "INFO",
+  "module": "hue_receive_stream",
+  "date_time": "2025-01-19 06:35:01.068572"
+},
+{
+  "content_type": "hue",
+  "modeule": "hue.hub",
+  "method": "",
+  "message": "Stream started",
+  "details": "Hue stream receiving data",
+  "level": "INFO",
+  "module": "hue_receive_stream",
+  "date_time": "2025-01-19 06:35:15.785740"
+},
+{
+  "content_type": "hue",
+  "modeule": "hue.hub",
+  "method": "",
+  "message": "Stream started",
+  "details": "Hue stream receiving data",
+  "level": "INFO",
+  "module": "hue_receive_stream",
+  "date_time": "2025-01-19 06:35:56.717763"
+},
+{
+  "content_type": "hue",
+  "modeule": "hue.hub",
+  "method": "",
+  "message": "Stream started",
+  "details": "Hue stream receiving data",
+  "level": "INFO",
+  "module": "hue_receive_stream",
+  "date_time": "2025-01-19 06:38:27.325248"
+},
+{
+  "content_type": "hue",
+  "modeule": "hue.hub",
+  "method": "",
+  "message": "Stream started",
+  "details": "Hue stream receiving data",
+  "level": "INFO",
+  "module": "hue_receive_stream",
+  "date_time": "2025-01-19 06:40:14.158516"
+},
+{
+  "content_type": "hue",
+  "modeule": "hue.hub",
+  "method": "",
+  "message": "Stream started",
+  "details": "Hue stream receiving data",
+  "level": "INFO",
+  "module": "hue_receive_stream",
+  "date_time": "2025-01-19 06:55:21.671312"
+},
+{
+  "content_type": "hue",
+  "modeule": "hue.hub",
+  "method": "",
+  "message": "Stream started",
+  "details": "Hue stream receiving data",
+  "level": "INFO",
+  "module": "hue_receive_stream",
+  "date_time": "2025-01-19 06:56:26.386656"
+},
+{
+  "content_type": "hue",
+  "modeule": "hue.hub",
+  "method": "",
+  "message": "Stream started",
+  "details": "Hue stream receiving data",
+  "level": "INFO",
+  "module": "hue_receive_stream",
+  "date_time": "2025-01-19 06:57:25.215828"
+},
+{
+  "content_type": "hue",
+  "modeule": "hue.hub",
+  "method": "",
+  "message": "Stream started",
+  "details": "Hue stream receiving data",
+  "level": "INFO",
+  "module": "hue_receive_stream",
+  "date_time": "2025-01-19 06:58:36.485041"
+},
+{
+  "content_type": "hue",
+  "modeule": "hue.hub",
+  "method": "",
+  "message": "Stream started",
+  "details": "Hue stream receiving data",
+  "level": "INFO",
+  "module": "hue_receive_stream",
+  "date_time": "2025-01-19 07:26:39.416819"
+},
+{
+  "content_type": "hue",
+  "modeule": "hue.hub",
+  "method": "",
+  "message": "Stream started",
+  "details": "Hue stream receiving data",
+  "level": "INFO",
+  "module": "hue_receive_stream",
+  "date_time": "2025-01-19 07:29:15.580278"
+},
+{
+  "content_type": "hue",
+  "modeule": "hue.hub",
+  "method": "",
+  "message": "Stream started",
+  "details": "Hue stream receiving data",
+  "level": "INFO",
+  "module": "hue_receive_stream",
+  "date_time": "2025-01-19 07:30:34.138170"
+},
+{
+  "content_type": "hue",
+  "modeule": "hue.hub",
+  "method": "",
+  "message": "Stream started",
+  "details": "Hue stream receiving data",
+  "level": "INFO",
+  "module": "hue_receive_stream",
+  "date_time": "2025-01-19 07:35:32.718204"
+},
+{
+  "content_type": "hue",
+  "modeule": "hue.hub",
+  "method": "",
+  "message": "Stream started",
+  "details": "Hue stream receiving data",
+  "level": "INFO",
+  "module": "hue_receive_stream",
+  "date_time": "2025-01-19 07:36:48.457705"
+},
+{
+  "content_type": "hue",
+  "modeule": "hue.hub",
+  "method": "",
+  "message": "Stream started",
+  "details": "Hue stream receiving data",
+  "level": "INFO",
+  "module": "hue_receive_stream",
+  "date_time": "2025-01-19 07:37:41.418152"
+},
+{
+  "content_type": "hue",
+  "modeule": "hue.hub",
+  "method": "",
+  "message": "Stream started",
+  "details": "Hue stream receiving data",
+  "level": "INFO",
+  "module": "hue_receive_stream",
+  "date_time": "2025-01-19 07:38:00.643674"
+},
+{
+  "content_type": "hue",
+  "modeule": "hue.hub",
+  "method": "",
+  "message": "Stream started",
+  "details": "Hue stream receiving data",
+  "level": "INFO",
+  "module": "hue_receive_stream",
+  "date_time": "2025-01-19 07:40:25.213550"
+},
+{
+  "content_type": "hue",
+  "modeule": "hue.hub",
+  "method": "",
+  "message": "Stream started",
+  "details": "Hue stream receiving data",
+  "level": "INFO",
+  "module": "hue_receive_stream",
+  "date_time": "2025-01-19 07:40:53.999715"
+},
+{
+  "content_type": "hue",
+  "modeule": "hue.hub",
+  "method": "",
+  "message": "Stream started",
+  "details": "Hue stream receiving data",
+  "level": "INFO",
+  "module": "hue_receive_stream",
+  "date_time": "2025-01-19 07:42:13.690515"
+},
+{
+  "content_type": "hue",
+  "modeule": "hue.hub",
+  "method": "",
+  "message": "Stream started",
+  "details": "Hue stream receiving data",
+  "level": "INFO",
+  "module": "hue_receive_stream",
+  "date_time": "2025-01-19 07:56:44.434337"
+},
+{
+  "content_type": "hue",
+  "modeule": "hue.hub",
+  "method": "",
+  "message": "Stream started",
+  "details": "Hue stream receiving data",
+  "level": "INFO",
+  "module": "hue_receive_stream",
+  "date_time": "2025-01-19 08:28:29.094136"
+},
+{
+  "content_type": "hue",
+  "modeule": "hue.hub",
+  "method": "",
+  "message": "Stream started",
+  "details": "Hue stream receiving data",
+  "level": "INFO",
+  "module": "hue_receive_stream",
+  "date_time": "2025-01-19 21:48:00.669264"
+},
+{
+  "content_type": "hue",
+  "modeule": "hue.hub",
+  "method": "",
+  "message": "Stream started",
+  "details": "Hue stream receiving data",
+  "level": "INFO",
+  "module": "hue_receive_stream",
+  "date_time": "2025-01-19 21:50:46.304201"
+},
+{
+  "content_type": "hue",
+  "modeule": "hue.hub",
+  "method": "",
+  "message": "Stream started",
+  "details": "Hue stream receiving data",
+  "level": "INFO",
+  "module": "hue_receive_stream",
+  "date_time": "2025-01-19 21:51:17.688175"
+},
+{
+  "content_type": "hue",
+  "modeule": "hue.hub",
+  "method": "",
+  "message": "Stream started",
+  "details": "Hue stream receiving data",
+  "level": "INFO",
+  "module": "hue_receive_stream",
+  "date_time": "2025-01-19 21:51:32.254235"
+},
+{
+  "content_type": "hue",
+  "modeule": "hue.hub",
+  "method": "",
+  "message": "Stream started",
+  "details": "Hue stream receiving data",
+  "level": "INFO",
+  "module": "hue_receive_stream",
+  "date_time": "2025-01-19 21:51:45.925801"
+},
+{
+  "content_type": "hue",
+  "modeule": "hue.hub",
+  "method": "",
+  "message": "Stream started",
+  "details": "Hue stream receiving data",
+  "level": "INFO",
+  "module": "hue_receive_stream",
+  "date_time": "2025-01-19 21:52:02.791896"
+},
+{
+  "content_type": "hue",
+  "modeule": "hue.hub",
+  "method": "",
+  "message": "Stream started",
+  "details": "Hue stream receiving data",
+  "level": "INFO",
+  "module": "hue_receive_stream",
+  "date_time": "2025-01-19 21:52:47.067250"
+},
+{
+  "content_type": "hue",
+  "modeule": "hue.hub",
+  "method": "",
+  "message": "Stream started",
+  "details": "Hue stream receiving data",
+  "level": "INFO",
+  "module": "hue_receive_stream",
+  "date_time": "2025-01-19 22:31:09.452409"
+},
+{
+  "content_type": "hue",
+  "modeule": "hue.hub",
+  "method": "",
+  "message": "Stream started",
+  "details": "Hue stream receiving data",
+  "level": "INFO",
+  "module": "hue_receive_stream",
+  "date_time": "2025-01-19 22:31:45.082016"
+},
+{
+  "content_type": "hue",
+  "modeule": "hue.hub",
+  "method": "",
+  "message": "Stream started",
+  "details": "Hue stream receiving data",
+  "level": "INFO",
+  "module": "hue_receive_stream",
+  "date_time": "2025-01-19 22:32:09.541092"
+},
+{
+  "content_type": "hue",
+  "modeule": "hue.hub",
+  "method": "",
+  "message": "Stream started",
+  "details": "Hue stream receiving data",
+  "level": "INFO",
+  "module": "hue_receive_stream",
+  "date_time": "2025-01-19 22:33:44.265523"
+},
+{
+  "content_type": "hue",
+  "modeule": "hue.hub",
+  "method": "",
+  "message": "Stream started",
+  "details": "Hue stream receiving data",
+  "level": "INFO",
+  "module": "hue_receive_stream",
+  "date_time": "2025-01-19 22:35:18.752071"
+},
+{
+  "content_type": "hue",
+  "modeule": "hue.hub",
+  "method": "",
+  "message": "Stream started",
+  "details": "Hue stream receiving data",
+  "level": "INFO",
+  "module": "hue_receive_stream",
+  "date_time": "2025-01-19 22:36:09.886667"
+},
+{
+  "content_type": "hue",
+  "modeule": "hue.hub",
+  "method": "",
+  "message": "Stream started",
+  "details": "Hue stream receiving data",
+  "level": "INFO",
+  "module": "hue_receive_stream",
+  "date_time": "2025-01-19 22:38:23.862840"
+},
+{
+  "content_type": "hue",
+  "modeule": "hue.hub",
+  "method": "",
+  "message": "Stream started",
+  "details": "Hue stream receiving data",
+  "level": "INFO",
+  "module": "hue_receive_stream",
+  "date_time": "2025-01-19 22:40:25.918464"
+},
+{
+  "content_type": "hue",
+  "modeule": "hue.hub",
+  "method": "",
+  "message": "Stream started",
+  "details": "Hue stream receiving data",
+  "level": "INFO",
+  "module": "hue_receive_stream",
+  "date_time": "2025-01-19 22:43:53.415563"
+},
+{
+  "content_type": "hue",
+  "modeule": "hue.hub",
+  "method": "",
+  "message": "Stream started",
+  "details": "Hue stream receiving data",
+  "level": "INFO",
+  "module": "hue_receive_stream",
+  "date_time": "2025-01-19 22:45:48.433086"
+},
+{
+  "content_type": "hue",
+  "modeule": "hue.hub",
+  "method": "",
+  "message": "Stream started",
+  "details": "Hue stream receiving data",
+  "level": "INFO",
+  "module": "hue_receive_stream",
+  "date_time": "2025-01-19 22:47:34.950682"
+},
+{
+  "content_type": "hue",
+  "modeule": "hue.hub",
+  "method": "",
+  "message": "Stream started",
+  "details": "Hue stream receiving data",
+  "level": "INFO",
+  "module": "hue_receive_stream",
+  "date_time": "2025-01-19 22:48:02.034042"
+},
+{
+  "content_type": "hue",
+  "modeule": "hue.hub",
+  "method": "",
+  "message": "Stream started",
+  "details": "Hue stream receiving data",
+  "level": "INFO",
+  "module": "hue_receive_stream",
+  "date_time": "2025-01-19 22:51:12.699940"
+},
+{
+  "content_type": "hue",
+  "modeule": "hue.hub",
+  "method": "",
+  "message": "Stream started",
+  "details": "Hue stream receiving data",
+  "level": "INFO",
+  "module": "hue_receive_stream",
+  "date_time": "2025-01-19 22:51:29.772106"
+},
+{
+  "content_type": "hue",
+  "modeule": "hue.hub",
+  "method": "",
+  "message": "Stream started",
+  "details": "Hue stream receiving data",
+  "level": "INFO",
+  "module": "hue_receive_stream",
+  "date_time": "2025-01-19 22:53:03.032174"
+},
+{
+  "content_type": "hue",
+  "modeule": "hue.hub",
+  "method": "",
+  "message": "Stream started",
+  "details": "Hue stream receiving data",
+  "level": "INFO",
+  "module": "hue_receive_stream",
+  "date_time": "2025-01-19 22:53:21.078394"
+},
+{
+  "content_type": "hue",
+  "modeule": "hue.hub",
+  "method": "",
+  "message": "Stream started",
+  "details": "Hue stream receiving data",
+  "level": "INFO",
+  "module": "hue_receive_stream",
+  "date_time": "2025-01-19 23:00:51.205879"
+},
+{
+  "content_type": "hue",
+  "modeule": "hue.hub",
+  "method": "",
+  "message": "Stream started",
+  "details": "Hue stream receiving data",
+  "level": "INFO",
+  "module": "hue_receive_stream",
+  "date_time": "2025-01-19 23:05:38.554178"
+},
+{
+  "content_type": "hue",
+  "modeule": "hue.hub",
+  "method": "",
+  "message": "Stream started",
+  "details": "Hue stream receiving data",
+  "level": "INFO",
+  "module": "hue_receive_stream",
+  "date_time": "2025-01-19 23:05:51.094081"
+},
+{
+  "content_type": "hue",
+  "modeule": "hue.hub",
+  "method": "",
+  "message": "Stream started",
+  "details": "Hue stream receiving data",
+  "level": "INFO",
+  "module": "hue_receive_stream",
+  "date_time": "2025-01-19 23:10:49.041161"
+},
+{
+  "content_type": "hue",
+  "modeule": "hue.hub",
+  "method": "",
+  "message": "Stream started",
+  "details": "Hue stream receiving data",
+  "level": "INFO",
+  "module": "hue_receive_stream",
+  "date_time": "2025-01-19 23:11:28.036251"
+},
+{
+  "content_type": "hue",
+  "modeule": "hue.hub",
+  "method": "",
+  "message": "Stream started",
+  "details": "Hue stream receiving data",
+  "level": "INFO",
+  "module": "hue_receive_stream",
+  "date_time": "2025-01-19 23:12:35.145640"
+},
+{
+  "content_type": "hue",
+  "modeule": "hue.hub",
+  "method": "",
+  "message": "Stream started",
+  "details": "Hue stream receiving data",
+  "level": "INFO",
+  "module": "hue_receive_stream",
+  "date_time": "2025-01-19 23:13:07.603041"
+},
+{
+  "content_type": "hue",
+  "modeule": "hue.hub",
+  "method": "",
+  "message": "Stream started",
+  "details": "Hue stream receiving data",
+  "level": "INFO",
+  "module": "hue_receive_stream",
+  "date_time": "2025-01-19 23:14:54.008076"
+},
+{
+  "content_type": "hue",
+  "modeule": "hue.hub",
+  "method": "",
+  "message": "Stream started",
+  "details": "Hue stream receiving data",
+  "level": "INFO",
+  "module": "hue_receive_stream",
+  "date_time": "2025-01-19 23:15:35.749245"
+},
+{
+  "content_type": "hue",
+  "modeule": "hue.hub",
+  "method": "",
+  "message": "Stream started",
+  "details": "Hue stream receiving data",
+  "level": "INFO",
+  "module": "hue_receive_stream",
+  "date_time": "2025-01-19 23:16:36.135261"
+},
+{
+  "content_type": "hue",
+  "modeule": "hue.hub",
+  "method": "",
+  "message": "Stream started",
+  "details": "Hue stream receiving data",
+  "level": "INFO",
+  "module": "hue_receive_stream",
+  "date_time": "2025-01-20 01:30:49.580790"
+},
+{
+  "content_type": "hue",
+  "modeule": "hue.hub",
+  "method": "",
+  "message": "Stream started",
+  "details": "Hue stream receiving data",
+  "level": "INFO",
+  "module": "hue_receive_stream",
+  "date_time": "2025-01-20 01:31:12.384993"
+},
+{
+  "content_type": "hue",
+  "modeule": "hue.hub",
+  "method": "",
+  "message": "Stream started",
+  "details": "Hue stream receiving data",
+  "level": "INFO",
+  "module": "hue_receive_stream",
+  "date_time": "2025-01-20 01:32:27.969421"
+},
+{
+  "content_type": "hue",
+  "modeule": "hue.hub",
+  "method": "",
+  "message": "Stream started",
+  "details": "Hue stream receiving data",
+  "level": "INFO",
+  "module": "hue_receive_stream",
+  "date_time": "2025-01-20 01:35:39.490886"
+},
+{
+  "content_type": "hue",
+  "modeule": "hue.hub",
+  "method": "",
+  "message": "Stream started",
+  "details": "Hue stream receiving data",
+  "level": "INFO",
+  "module": "hue_receive_stream",
+  "date_time": "2025-01-20 01:41:18.679976"
+},
+{
+  "content_type": "hue",
+  "modeule": "hue.hub",
+  "method": "",
+  "message": "Stream started",
+  "details": "Hue stream receiving data",
+  "level": "INFO",
+  "module": "hue_receive_stream",
+  "date_time": "2025-01-20 01:42:17.008571"
+},
+{
+  "content_type": "hue",
+  "modeule": "hue.hub",
+  "method": "",
+  "message": "Stream started",
+  "details": "Hue stream receiving data",
+  "level": "INFO",
+  "module": "hue_receive_stream",
+  "date_time": "2025-01-20 01:47:28.630228"
+},
+{
+  "content_type": "hue",
+  "modeule": "hue.hub",
+  "method": "",
+  "message": "Stream started",
+  "details": "Hue stream receiving data",
+  "level": "INFO",
+  "module": "hue_receive_stream",
+  "date_time": "2025-01-20 01:49:45.659752"
+},
+{
+  "content_type": "scenes",
+  "modeule": "scenes.scene_devices",
+  "method": "",
+  "message": "Error deleting Scene",
+  "details": "relation \"tiles_scenetile\" does not exist\nLINE 1: DELETE FROM \"tiles_scenetile\" WHERE \"tiles_scenetile\".\"scene...\n                    ^\n",
+  "level": "ERROR",
+  "module": "delete_scene",
+  "date_time": "2025-01-20 03:03:50.247645"
+},
+{
+  "content_type": "hue",
+  "modeule": "hue.hub",
+  "method": "",
+  "message": "Stream started",
+  "details": "Hue stream receiving data",
+  "level": "INFO",
+  "module": "hue_receive_stream",
+  "date_time": "2025-01-20 03:11:21.475331"
+},
+{
+  "content_type": "hue",
+  "modeule": "hue.hub",
+  "method": "",
+  "message": "Stream started",
+  "details": "Hue stream receiving data",
+  "level": "INFO",
+  "module": "hue_receive_stream",
+  "date_time": "2025-01-20 03:11:26.723243"
+},
+{
+  "content_type": "hue",
+  "modeule": "hue.hub",
+  "method": "",
+  "message": "Stream started",
+  "details": "Hue stream receiving data",
+  "level": "INFO",
+  "module": "hue_receive_stream",
+  "date_time": "2025-01-20 03:11:35.863135"
+},
+{
+  "content_type": "hue",
+  "modeule": "hue.hub",
+  "method": "",
+  "message": "Stream started",
+  "details": "Hue stream receiving data",
+  "level": "INFO",
+  "module": "hue_receive_stream",
+  "date_time": "2025-01-20 14:19:36.317930"
+},
+{
+  "content_type": "hue",
+  "modeule": "hue.hub",
+  "method": "",
+  "message": "Stream started",
+  "details": "Hue stream receiving data",
+  "level": "INFO",
+  "module": "hue_receive_stream",
+  "date_time": "2025-01-20 14:27:44.912164"
+},
+{
+  "content_type": "hue",
+  "modeule": "hue.hub",
+  "method": "",
+  "message": "Stream started",
+  "details": "Hue stream receiving data",
+  "level": "INFO",
+  "module": "hue_receive_stream",
+  "date_time": "2025-01-20 14:30:06.797209"
+},
+{
+  "content_type": "hue",
+  "modeule": "hue.hub",
+  "method": "",
+  "message": "Stream started",
+  "details": "Hue stream receiving data",
+  "level": "INFO",
+  "module": "hue_receive_stream",
+  "date_time": "2025-01-20 15:03:18.404223"
+},
+{
+  "content_type": "hue",
+  "modeule": "hue.hub",
+  "method": "",
+  "message": "Stream started",
+  "details": "Hue stream receiving data",
+  "level": "INFO",
+  "module": "hue_receive_stream",
+  "date_time": "2025-01-20 15:04:56.148014"
+},
+{
+  "content_type": "hue",
+  "modeule": "hue.hub",
+  "method": "",
+  "message": "Stream started",
+  "details": "Hue stream receiving data",
+  "level": "INFO",
+  "module": "hue_receive_stream",
+  "date_time": "2025-01-20 15:06:19.374343"
+},
+{
+  "content_type": "hue",
+  "modeule": "hue.hub",
+  "method": "",
+  "message": "Stream started",
+  "details": "Hue stream receiving data",
+  "level": "INFO",
+  "module": "hue_receive_stream",
+  "date_time": "2025-01-20 15:07:14.380370"
+},
+{
+  "content_type": "hue",
+  "modeule": "hue.hub",
+  "method": "",
+  "message": "Stream started",
+  "details": "Hue stream receiving data",
+  "level": "INFO",
+  "module": "hue_receive_stream",
+  "date_time": "2025-01-20 15:13:18.509467"
+},
+{
+  "content_type": "hue",
+  "modeule": "hue.hub",
+  "method": "",
+  "message": "Stream started",
+  "details": "Hue stream receiving data",
+  "level": "INFO",
+  "module": "hue_receive_stream",
+  "date_time": "2025-01-20 15:13:51.829505"
+},
+{
+  "content_type": "hue",
+  "modeule": "hue.hub",
+  "method": "",
+  "message": "Stream started",
+  "details": "Hue stream receiving data",
+  "level": "INFO",
+  "module": "hue_receive_stream",
+  "date_time": "2025-01-20 15:24:16.979659"
+},
+{
+  "content_type": "hue",
+  "modeule": "hue.hub",
+  "method": "",
+  "message": "Stream started",
+  "details": "Hue stream receiving data",
+  "level": "INFO",
+  "module": "hue_receive_stream",
+  "date_time": "2025-01-20 15:28:00.929773"
+},
+{
+  "content_type": "hue",
+  "modeule": "hue.hub",
+  "method": "",
+  "message": "Stream started",
+  "details": "Hue stream receiving data",
+  "level": "INFO",
+  "module": "hue_receive_stream",
+  "date_time": "2025-01-20 15:31:32.047267"
+},
+{
+  "content_type": "hue",
+  "modeule": "hue.hub",
+  "method": "",
+  "message": "Stream started",
+  "details": "Hue stream receiving data",
+  "level": "INFO",
+  "module": "hue_receive_stream",
+  "date_time": "2025-01-20 15:35:06.840845"
+},
+{
+  "content_type": "hue",
+  "modeule": "hue.hub",
+  "method": "",
+  "message": "Stream started",
+  "details": "Hue stream receiving data",
+  "level": "INFO",
+  "module": "hue_receive_stream",
+  "date_time": "2025-01-20 15:41:40.333957"
+},
+{
+  "content_type": "hue",
+  "modeule": "hue.hub",
+  "method": "",
+  "message": "Stream started",
+  "details": "Hue stream receiving data",
+  "level": "INFO",
+  "module": "hue_receive_stream",
+  "date_time": "2025-01-20 15:42:06.703902"
+},
+{
+  "content_type": "hue",
+  "modeule": "hue.hub",
+  "method": "",
+  "message": "Stream started",
+  "details": "Hue stream receiving data",
+  "level": "INFO",
+  "module": "hue_receive_stream",
+  "date_time": "2025-01-20 15:42:42.145146"
+},
+{
+  "content_type": "hue",
+  "modeule": "hue.hub",
+  "method": "",
+  "message": "Stream started",
+  "details": "Hue stream receiving data",
+  "level": "INFO",
+  "module": "hue_receive_stream",
+  "date_time": "2025-01-20 15:50:19.006400"
+},
+{
+  "content_type": "hue",
+  "modeule": "hue.hub",
+  "method": "",
+  "message": "Stream started",
+  "details": "Hue stream receiving data",
+  "level": "INFO",
+  "module": "hue_receive_stream",
+  "date_time": "2025-01-20 15:52:00.624513"
+},
+{
+  "content_type": "hue",
+  "modeule": "hue.hub",
+  "method": "",
+  "message": "Stream started",
+  "details": "Hue stream receiving data",
+  "level": "INFO",
+  "module": "hue_receive_stream",
+  "date_time": "2025-01-20 15:58:37.834139"
+},
+{
+  "content_type": "hue",
+  "modeule": "hue.hub",
+  "method": "",
+  "message": "Stream started",
+  "details": "Hue stream receiving data",
+  "level": "INFO",
+  "module": "hue_receive_stream",
+  "date_time": "2025-01-20 15:59:53.345371"
+},
+{
+  "content_type": "hue",
+  "modeule": "hue.hub",
+  "method": "",
+  "message": "Stream started",
+  "details": "Hue stream receiving data",
+  "level": "INFO",
+  "module": "hue_receive_stream",
+  "date_time": "2025-01-20 16:00:29.816949"
+},
+{
+  "content_type": "hue",
+  "modeule": "hue.hub",
+  "method": "",
+  "message": "Stream started",
+  "details": "Hue stream receiving data",
+  "level": "INFO",
+  "module": "hue_receive_stream",
+  "date_time": "2025-01-20 16:01:49.741197"
+},
+{
+  "content_type": "hue",
+  "modeule": "hue.hub",
+  "method": "",
+  "message": "Stream started",
+  "details": "Hue stream receiving data",
+  "level": "INFO",
+  "module": "hue_receive_stream",
+  "date_time": "2025-01-20 16:03:44.849989"
+},
+{
+  "content_type": "hue",
+  "modeule": "hue.hub",
+  "method": "",
+  "message": "Stream started",
+  "details": "Hue stream receiving data",
+  "level": "INFO",
+  "module": "hue_receive_stream",
+  "date_time": "2025-01-20 17:12:01.962432"
+},
+{
+  "content_type": "hue",
+  "modeule": "hue.hub",
+  "method": "",
+  "message": "Stream started",
+  "details": "Hue stream receiving data",
+  "level": "INFO",
+  "module": "hue_receive_stream",
+  "date_time": "2025-01-20 17:42:37.440602"
+},
+{
+  "content_type": "hue",
+  "modeule": "hue.hub",
+  "method": "",
+  "message": "Stream started",
+  "details": "Hue stream receiving data",
+  "level": "INFO",
+  "module": "hue_receive_stream",
+  "date_time": "2025-01-20 20:07:01.458198"
+},
+{
+  "content_type": "hue",
+  "modeule": "hue.hub",
+  "method": "",
+  "message": "Stream started",
+  "details": "Hue stream receiving data",
+  "level": "INFO",
+  "module": "hue_receive_stream",
+  "date_time": "2025-01-20 20:19:16.098152"
+},
+{
+  "content_type": "hue",
+  "modeule": "hue.hub",
+  "method": "",
+  "message": "Stream started",
+  "details": "Hue stream receiving data",
+  "level": "INFO",
+  "module": "hue_receive_stream",
+  "date_time": "2025-01-20 20:22:06.962358"
+},
+{
+  "content_type": "hue",
+  "modeule": "hue.hub",
+  "method": "",
+  "message": "Stream started",
+  "details": "Hue stream receiving data",
+  "level": "INFO",
+  "module": "hue_receive_stream",
+  "date_time": "2025-01-20 20:24:29.559305"
+},
+{
+  "content_type": "hue",
+  "modeule": "hue.hub",
+  "method": "",
+  "message": "Stream started",
+  "details": "Hue stream receiving data",
+  "level": "INFO",
+  "module": "hue_receive_stream",
+  "date_time": "2025-01-20 20:25:07.264151"
+},
+{
+  "content_type": "hue",
+  "modeule": "hue.hub",
+  "method": "",
+  "message": "Stream started",
+  "details": "Hue stream receiving data",
+  "level": "INFO",
+  "module": "hue_receive_stream",
+  "date_time": "2025-01-20 21:44:51.336537"
+},
+{
+  "content_type": "hue",
+  "modeule": "hue.hub",
+  "method": "",
+  "message": "Stream started",
+  "details": "Hue stream receiving data",
+  "level": "INFO",
+  "module": "hue_receive_stream",
+  "date_time": "2025-01-20 21:45:59.761648"
+},
+{
+  "content_type": "hue",
+  "modeule": "hue.hub",
+  "method": "",
+  "message": "Stream started",
+  "details": "Hue stream receiving data",
+  "level": "INFO",
+  "module": "hue_receive_stream",
+  "date_time": "2025-01-20 22:02:58.916570"
+},
+{
+  "content_type": "hue",
+  "modeule": "hue.hub",
+  "method": "",
+  "message": "Stream started",
+  "details": "Hue stream receiving data",
+  "level": "INFO",
+  "module": "hue_receive_stream",
+  "date_time": "2025-01-20 22:08:39.805919"
+},
+{
+  "content_type": "hue",
+  "modeule": "hue.hub",
+  "method": "",
+  "message": "Stream started",
+  "details": "Hue stream receiving data",
+  "level": "INFO",
+  "module": "hue_receive_stream",
+  "date_time": "2025-01-20 22:10:08.294628"
+},
+{
+  "content_type": "hue",
+  "modeule": "hue.hub",
+  "method": "",
+  "message": "Stream started",
+  "details": "Hue stream receiving data",
+  "level": "INFO",
+  "module": "hue_receive_stream",
+  "date_time": "2025-01-20 22:12:15.535184"
+},
+{
+  "content_type": "hue",
+  "modeule": "hue.hub",
+  "method": "",
+  "message": "Stream started",
+  "details": "Hue stream receiving data",
+  "level": "INFO",
+  "module": "hue_receive_stream",
+  "date_time": "2025-01-20 22:12:57.930586"
+},
+{
+  "content_type": "hue",
+  "modeule": "hue.hub",
+  "method": "",
+  "message": "Stream started",
+  "details": "Hue stream receiving data",
+  "level": "INFO",
+  "module": "hue_receive_stream",
+  "date_time": "2025-01-20 22:16:34.858209"
+},
+{
+  "content_type": "hue",
+  "modeule": "hue.hub",
+  "method": "",
+  "message": "Stream started",
+  "details": "Hue stream receiving data",
+  "level": "INFO",
+  "module": "hue_receive_stream",
+  "date_time": "2025-01-20 22:16:55.909252"
+},
+{
+  "content_type": "hue",
+  "modeule": "hue.hub",
+  "method": "",
+  "message": "Stream started",
+  "details": "Hue stream receiving data",
+  "level": "INFO",
+  "module": "hue_receive_stream",
+  "date_time": "2025-01-20 22:20:36.090180"
+},
+{
+  "content_type": "hue",
+  "modeule": "hue.hub",
+  "method": "",
+  "message": "Stream started",
+  "details": "Hue stream receiving data",
+  "level": "INFO",
+  "module": "hue_receive_stream",
+  "date_time": "2025-01-20 22:21:12.247949"
+},
+{
+  "content_type": "hue",
+  "modeule": "hue.hub",
+  "method": "",
+  "message": "Stream started",
+  "details": "Hue stream receiving data",
+  "level": "INFO",
+  "module": "hue_receive_stream",
+  "date_time": "2025-01-20 22:22:23.402462"
+},
+{
+  "content_type": "hue",
+  "modeule": "hue.hub",
+  "method": "",
+  "message": "Stream started",
+  "details": "Hue stream receiving data",
+  "level": "INFO",
+  "module": "hue_receive_stream",
+  "date_time": "2025-01-20 22:23:49.022277"
+},
+{
+  "content_type": "hue",
+  "modeule": "hue.hub",
+  "method": "",
+  "message": "Stream started",
+  "details": "Hue stream receiving data",
+  "level": "INFO",
+  "module": "hue_receive_stream",
+  "date_time": "2025-01-20 22:24:40.060634"
+},
+{
+  "content_type": "hue",
+  "modeule": "hue.hub",
+  "method": "",
+  "message": "Stream started",
+  "details": "Hue stream receiving data",
+  "level": "INFO",
+  "module": "hue_receive_stream",
+  "date_time": "2025-01-20 22:26:59.183331"
+},
+{
+  "content_type": "hue",
+  "modeule": "hue.hub",
+  "method": "",
+  "message": "Stream started",
+  "details": "Hue stream receiving data",
+  "level": "INFO",
+  "module": "hue_receive_stream",
+  "date_time": "2025-01-20 23:24:31.551255"
+},
+{
+  "content_type": "hue",
+  "modeule": "hue.hub",
+  "method": "",
+  "message": "Stream started",
+  "details": "Hue stream receiving data",
+  "level": "INFO",
+  "module": "hue_receive_stream",
+  "date_time": "2025-01-20 23:24:47.117153"
+},
+{
+  "content_type": "hue",
+  "modeule": "hue.hub",
+  "method": "",
+  "message": "Stream started",
+  "details": "Hue stream receiving data",
+  "level": "INFO",
+  "module": "hue_receive_stream",
+  "date_time": "2025-01-20 23:45:31.459071"
+},
+{
+  "content_type": "hue",
+  "modeule": "hue.hub",
+  "method": "",
+  "message": "Stream started",
+  "details": "Hue stream receiving data",
+  "level": "INFO",
+  "module": "hue_receive_stream",
+  "date_time": "2025-01-20 23:56:56.572201"
+},
+{
+  "content_type": "hue",
+  "modeule": "hue.hub",
+  "method": "",
+  "message": "Stream started",
+  "details": "Hue stream receiving data",
+  "level": "INFO",
+  "module": "hue_receive_stream",
+  "date_time": "2025-01-20 23:57:27.019068"
+},
+{
+  "content_type": "hue",
+  "modeule": "hue.hub",
+  "method": "",
+  "message": "Stream started",
+  "details": "Hue stream receiving data",
+  "level": "INFO",
+  "module": "hue_receive_stream",
+  "date_time": "2025-01-20 23:58:19.382092"
+},
+{
+  "content_type": "hue",
+  "modeule": "hue.hub",
+  "method": "",
+  "message": "Stream started",
+  "details": "Hue stream receiving data",
+  "level": "INFO",
+  "module": "hue_receive_stream",
+  "date_time": "2025-01-20 23:59:50.597331"
+},
+{
+  "content_type": "hue",
+  "modeule": "hue.hub",
+  "method": "",
+  "message": "Stream started",
+  "details": "Hue stream receiving data",
+  "level": "INFO",
+  "module": "hue_receive_stream",
+  "date_time": "2025-01-21 14:12:40.740954"
+},
+{
+  "content_type": "hue",
+  "modeule": "hue.hub",
+  "method": "",
+  "message": "Stream started",
+  "details": "Hue stream receiving data",
+  "level": "INFO",
+  "module": "hue_receive_stream",
+  "date_time": "2025-01-21 14:22:13.589075"
+},
+{
+  "content_type": "hue",
+  "modeule": "hue.hub",
+  "method": "",
+  "message": "Stream started",
+  "details": "Hue stream receiving data",
+  "level": "INFO",
+  "module": "hue_receive_stream",
+  "date_time": "2025-01-21 14:24:27.952596"
+},
+{
+  "content_type": "hue",
+  "modeule": "hue.hub",
+  "method": "",
+  "message": "Stream started",
+  "details": "Hue stream receiving data",
+  "level": "INFO",
+  "module": "hue_receive_stream",
+  "date_time": "2025-01-21 14:25:11.649781"
+},
+{
+  "content_type": "hue",
+  "modeule": "hue.hub",
+  "method": "",
+  "message": "Stream started",
+  "details": "Hue stream receiving data",
+  "level": "INFO",
+  "module": "hue_receive_stream",
+  "date_time": "2025-01-21 14:26:25.295760"
+},
+{
+  "content_type": "hue",
+  "modeule": "hue.hub",
+  "method": "",
+  "message": "Stream started",
+  "details": "Hue stream receiving data",
+  "level": "INFO",
+  "module": "hue_receive_stream",
+  "date_time": "2025-01-21 14:29:12.989036"
+},
+{
+  "content_type": "hue",
+  "modeule": "hue.hub",
+  "method": "",
+  "message": "Stream started",
+  "details": "Hue stream receiving data",
+  "level": "INFO",
+  "module": "hue_receive_stream",
+  "date_time": "2025-01-21 14:31:33.977099"
+},
+{
+  "content_type": "hue",
+  "modeule": "hue.hub",
+  "method": "",
+  "message": "Stream started",
+  "details": "Hue stream receiving data",
+  "level": "INFO",
+  "module": "hue_receive_stream",
+  "date_time": "2025-01-21 15:20:29.011054"
+},
+{
+  "content_type": "hue",
+  "modeule": "hue.hub",
+  "method": "",
+  "message": "Stream started",
+  "details": "Hue stream receiving data",
+  "level": "INFO",
+  "module": "hue_receive_stream",
+  "date_time": "2025-01-21 15:27:07.197582"
+},
+{
+  "content_type": "hue",
+  "modeule": "hue.hub",
+  "method": "",
+  "message": "Stream started",
+  "details": "Hue stream receiving data",
+  "level": "INFO",
+  "module": "hue_receive_stream",
+  "date_time": "2025-01-21 15:27:19.788892"
+},
+{
+  "content_type": "hue",
+  "modeule": "hue.hub",
+  "method": "",
+  "message": "Stream started",
+  "details": "Hue stream receiving data",
+  "level": "INFO",
+  "module": "hue_receive_stream",
+  "date_time": "2025-01-21 15:37:00.893069"
+},
+{
+  "content_type": "hue",
+  "modeule": "hue.hub",
+  "method": "",
+  "message": "Stream started",
+  "details": "Hue stream receiving data",
+  "level": "INFO",
+  "module": "hue_receive_stream",
+  "date_time": "2025-01-21 15:37:13.648817"
+},
+{
+  "content_type": "hue",
+  "modeule": "hue.hub",
+  "method": "",
+  "message": "Stream started",
+  "details": "Hue stream receiving data",
+  "level": "INFO",
+  "module": "hue_receive_stream",
+  "date_time": "2025-01-21 15:55:20.893085"
+},
+{
+  "content_type": "hue",
+  "modeule": "hue.hub",
+  "method": "",
+  "message": "Stream started",
+  "details": "Hue stream receiving data",
+  "level": "INFO",
+  "module": "hue_receive_stream",
+  "date_time": "2025-01-21 15:56:31.719821"
+},
+{
+  "content_type": "hue",
+  "modeule": "hue.hub",
+  "method": "",
+  "message": "Stream started",
+  "details": "Hue stream receiving data",
+  "level": "INFO",
+  "module": "hue_receive_stream",
+  "date_time": "2025-01-21 15:57:04.909620"
+},
+{
+  "content_type": "hue",
+  "modeule": "hue.hub",
+  "method": "",
+  "message": "Stream started",
+  "details": "Hue stream receiving data",
+  "level": "INFO",
+  "module": "hue_receive_stream",
+  "date_time": "2025-01-21 17:25:16.954065"
+},
+{
+  "content_type": "hue",
+  "modeule": "hue.hub",
+  "method": "",
+  "message": "Stream started",
+  "details": "Hue stream receiving data",
+  "level": "INFO",
+  "module": "hue_receive_stream",
+  "date_time": "2025-01-21 17:25:31.484360"
+},
+{
+  "content_type": "hue",
+  "modeule": "hue.hub",
+  "method": "",
+  "message": "Stream started",
+  "details": "Hue stream receiving data",
+  "level": "INFO",
+  "module": "hue_receive_stream",
+  "date_time": "2025-01-21 17:34:43.169803"
+},
+{
+  "content_type": "hue",
+  "modeule": "hue.hub",
+  "method": "",
+  "message": "Stream started",
+  "details": "Hue stream receiving data",
+  "level": "INFO",
+  "module": "hue_receive_stream",
+  "date_time": "2025-01-21 17:37:01.660252"
+},
+{
+  "content_type": "hue",
+  "modeule": "hue.hub",
+  "method": "",
+  "message": "Stream started",
+  "details": "Hue stream receiving data",
+  "level": "INFO",
+  "module": "hue_receive_stream",
+  "date_time": "2025-01-21 17:39:34.128883"
+},
+{
+  "content_type": "hue",
+  "modeule": "hue.hub",
+  "method": "",
+  "message": "Stream started",
+  "details": "Hue stream receiving data",
+  "level": "INFO",
+  "module": "hue_receive_stream",
+  "date_time": "2025-01-21 17:41:04.810809"
+},
+{
+  "content_type": "hue",
+  "modeule": "hue.hub",
+  "method": "",
+  "message": "Stream started",
+  "details": "Hue stream receiving data",
+  "level": "INFO",
+  "module": "hue_receive_stream",
+  "date_time": "2025-01-21 17:44:34.746135"
+},
+{
+  "content_type": "hue",
+  "modeule": "hue.hub",
+  "method": "",
+  "message": "Stream started",
+  "details": "Hue stream receiving data",
+  "level": "INFO",
+  "module": "hue_receive_stream",
+  "date_time": "2025-01-21 17:51:07.309487"
+},
+{
+  "content_type": "hue",
+  "modeule": "hue.hub",
+  "method": "",
+  "message": "Stream started",
+  "details": "Hue stream receiving data",
+  "level": "INFO",
+  "module": "hue_receive_stream",
+  "date_time": "2025-01-21 17:51:33.105297"
+},
+{
+  "content_type": "hue",
+  "modeule": "hue.hub",
+  "method": "",
+  "message": "Stream started",
+  "details": "Hue stream receiving data",
+  "level": "INFO",
+  "module": "hue_receive_stream",
+  "date_time": "2025-01-21 18:36:23.729846"
+},
+{
+  "content_type": "hue",
+  "modeule": "hue.hub",
+  "method": "",
+  "message": "Stream started",
+  "details": "Hue stream receiving data",
+  "level": "INFO",
+  "module": "hue_receive_stream",
+  "date_time": "2025-01-21 18:36:31.372064"
+},
+{
+  "content_type": "hue",
+  "modeule": "hue.hub",
+  "method": "",
+  "message": "Stream started",
+  "details": "Hue stream receiving data",
+  "level": "INFO",
+  "module": "hue_receive_stream",
+  "date_time": "2025-01-21 18:42:07.306509"
+},
+{
+  "content_type": "hue",
+  "modeule": "hue.hub",
+  "method": "",
+  "message": "Stream started",
+  "details": "Hue stream receiving data",
+  "level": "INFO",
+  "module": "hue_receive_stream",
+  "date_time": "2025-01-21 18:44:06.625298"
+},
+{
+  "content_type": "hue",
+  "modeule": "hue.hub",
+  "method": "",
+  "message": "Stream started",
+  "details": "Hue stream receiving data",
+  "level": "INFO",
+  "module": "hue_receive_stream",
+  "date_time": "2025-01-21 18:44:54.095603"
+},
+{
+  "content_type": "hue",
+  "modeule": "hue.hub",
+  "method": "",
+  "message": "Stream started",
+  "details": "Hue stream receiving data",
+  "level": "INFO",
+  "module": "hue_receive_stream",
+  "date_time": "2025-01-21 18:45:14.766322"
+},
+{
+  "content_type": "hue",
+  "modeule": "hue.hub",
+  "method": "",
+  "message": "Stream started",
+  "details": "Hue stream receiving data",
+  "level": "INFO",
+  "module": "hue_receive_stream",
+  "date_time": "2025-01-21 18:45:27.928401"
+},
+{
+  "content_type": "hue",
+  "modeule": "hue.hub",
+  "method": "",
+  "message": "Stream started",
+  "details": "Hue stream receiving data",
+  "level": "INFO",
+  "module": "hue_receive_stream",
+  "date_time": "2025-01-21 18:58:36.940671"
+},
+{
+  "content_type": "hue",
+  "modeule": "hue.hub",
+  "method": "",
+  "message": "Stream started",
+  "details": "Hue stream receiving data",
+  "level": "INFO",
+  "module": "hue_receive_stream",
+  "date_time": "2025-01-21 18:59:14.125199"
+},
+{
+  "content_type": "hue",
+  "modeule": "hue.hub",
+  "method": "",
+  "message": "Stream started",
+  "details": "Hue stream receiving data",
+  "level": "INFO",
+  "module": "hue_receive_stream",
+  "date_time": "2025-01-21 19:05:24.370526"
+},
+{
+  "content_type": "hue",
+  "modeule": "hue.hub",
+  "method": "",
+  "message": "Stream started",
+  "details": "Hue stream receiving data",
+  "level": "INFO",
+  "module": "hue_receive_stream",
+  "date_time": "2025-01-21 19:08:59.172301"
+},
+{
+  "content_type": "hue",
+  "modeule": "hue.hub",
+  "method": "",
+  "message": "Stream started",
+  "details": "Hue stream receiving data",
+  "level": "INFO",
+  "module": "hue_receive_stream",
+  "date_time": "2025-01-21 19:09:21.548759"
+},
+{
+  "content_type": "hue",
+  "modeule": "hue.hub",
+  "method": "",
+  "message": "Stream started",
+  "details": "Hue stream receiving data",
+  "level": "INFO",
+  "module": "hue_receive_stream",
+  "date_time": "2025-01-21 19:14:56.747411"
+},
+{
+  "content_type": "hue",
+  "modeule": "hue.hub",
+  "method": "",
+  "message": "Stream started",
+  "details": "Hue stream receiving data",
+  "level": "INFO",
+  "module": "hue_receive_stream",
+  "date_time": "2025-01-21 19:42:24.287168"
+},
+{
+  "content_type": "hue",
+  "modeule": "hue.hub",
+  "method": "",
+  "message": "Stream started",
+  "details": "Hue stream receiving data",
+  "level": "INFO",
+  "module": "hue_receive_stream",
+  "date_time": "2025-01-21 19:43:17.322688"
+},
+{
+  "content_type": "hue",
+  "modeule": "hue.hub",
+  "method": "",
+  "message": "Stream started",
+  "details": "Hue stream receiving data",
+  "level": "INFO",
+  "module": "hue_receive_stream",
+  "date_time": "2025-01-21 20:35:58.099980"
+},
+{
+  "content_type": "hue",
+  "modeule": "hue.hub",
+  "method": "",
+  "message": "Stream started",
+  "details": "Hue stream receiving data",
+  "level": "INFO",
+  "module": "hue_receive_stream",
+  "date_time": "2025-01-21 20:36:37.591643"
+},
+{
+  "content_type": "hue",
+  "modeule": "hue.hub",
+  "method": "",
+  "message": "Stream started",
+  "details": "Hue stream receiving data",
+  "level": "INFO",
+  "module": "hue_receive_stream",
+  "date_time": "2025-01-21 21:10:49.313817"
+},
+{
+  "content_type": "hue",
+  "modeule": "hue.hub",
+  "method": "",
+  "message": "Stream started",
+  "details": "Hue stream receiving data",
+  "level": "INFO",
+  "module": "hue_receive_stream",
+  "date_time": "2025-01-22 13:53:21.225769"
+},
+{
+  "content_type": "hue",
+  "modeule": "hue.hub",
+  "method": "",
+  "message": "Stream started",
+  "details": "Hue stream receiving data",
+  "level": "INFO",
+  "module": "hue_receive_stream",
+  "date_time": "2025-01-22 13:55:38.458894"
+},
+{
+  "content_type": "hue",
+  "modeule": "hue.hub",
+  "method": "",
+  "message": "Stream started",
+  "details": "Hue stream receiving data",
+  "level": "INFO",
+  "module": "hue_receive_stream",
+  "date_time": "2025-01-22 13:56:32.082887"
+},
+{
+  "content_type": "hue",
+  "modeule": "hue.hub",
+  "method": "",
+  "message": "Stream started",
+  "details": "Hue stream receiving data",
+  "level": "INFO",
+  "module": "hue_receive_stream",
+  "date_time": "2025-01-22 13:57:10.119063"
+},
+{
+  "content_type": "hue",
+  "modeule": "hue.hub",
+  "method": "",
+  "message": "Stream started",
+  "details": "Hue stream receiving data",
+  "level": "INFO",
+  "module": "hue_receive_stream",
+  "date_time": "2025-01-22 13:57:58.613596"
+},
+{
+  "content_type": "hue",
+  "modeule": "hue.hub",
+  "method": "",
+  "message": "Stream started",
+  "details": "Hue stream receiving data",
+  "level": "INFO",
+  "module": "hue_receive_stream",
+  "date_time": "2025-01-22 13:58:14.269000"
+},
+{
+  "content_type": "hue",
+  "modeule": "hue.hub",
+  "method": "",
+  "message": "Stream started",
+  "details": "Hue stream receiving data",
+  "level": "INFO",
+  "module": "hue_receive_stream",
+  "date_time": "2025-01-22 13:59:00.374324"
+},
+{
+  "content_type": "hue",
+  "modeule": "hue.hub",
+  "method": "",
+  "message": "Stream started",
+  "details": "Hue stream receiving data",
+  "level": "INFO",
+  "module": "hue_receive_stream",
+  "date_time": "2025-01-22 14:01:54.459078"
+},
+{
+  "content_type": "hue",
+  "modeule": "hue.hub",
+  "method": "",
+  "message": "Stream started",
+  "details": "Hue stream receiving data",
+  "level": "INFO",
+  "module": "hue_receive_stream",
+  "date_time": "2025-01-22 14:02:23.253358"
+},
+{
+  "content_type": "hue",
+  "modeule": "hue.hub",
+  "method": "",
+  "message": "Stream started",
+  "details": "Hue stream receiving data",
+  "level": "INFO",
+  "module": "hue_receive_stream",
+  "date_time": "2025-01-22 14:05:34.829846"
+},
+{
+  "content_type": "hue",
+  "modeule": "hue.hub",
+  "method": "",
+  "message": "Stream started",
+  "details": "Hue stream receiving data",
+  "level": "INFO",
+  "module": "hue_receive_stream",
+  "date_time": "2025-01-22 14:08:19.770554"
+},
+{
+  "content_type": "hue",
+  "modeule": "hue.hub",
+  "method": "",
+  "message": "Stream started",
+  "details": "Hue stream receiving data",
+  "level": "INFO",
+  "module": "hue_receive_stream",
+  "date_time": "2025-01-22 14:09:16.469330"
+},
+{
+  "content_type": "hue",
+  "modeule": "hue.hub",
+  "method": "",
+  "message": "Stream started",
+  "details": "Hue stream receiving data",
+  "level": "INFO",
+  "module": "hue_receive_stream",
+  "date_time": "2025-01-22 14:12:32.839484"
+},
+{
+  "content_type": "hue",
+  "modeule": "hue.hub",
+  "method": "",
+  "message": "Stream started",
+  "details": "Hue stream receiving data",
+  "level": "INFO",
+  "module": "hue_receive_stream",
+  "date_time": "2025-01-22 14:15:47.685023"
+},
+{
+  "content_type": "hue",
+  "modeule": "hue.hub",
+  "method": "",
+  "message": "Stream started",
+  "details": "Hue stream receiving data",
+  "level": "INFO",
+  "module": "hue_receive_stream",
+  "date_time": "2025-01-22 14:17:24.001510"
+},
+{
+  "content_type": "hue",
+  "modeule": "hue.hub",
+  "method": "",
+  "message": "Stream started",
+  "details": "Hue stream receiving data",
+  "level": "INFO",
+  "module": "hue_receive_stream",
+  "date_time": "2025-01-22 14:19:32.054247"
+},
+{
+  "content_type": "hue",
+  "modeule": "hue.hub",
+  "method": "",
+  "message": "Stream started",
+  "details": "Hue stream receiving data",
+  "level": "INFO",
+  "module": "hue_receive_stream",
+  "date_time": "2025-01-22 14:22:17.949208"
+},
+{
+  "content_type": "hue",
+  "modeule": "hue.hub",
+  "method": "",
+  "message": "Stream started",
+  "details": "Hue stream receiving data",
+  "level": "INFO",
+  "module": "hue_receive_stream",
+  "date_time": "2025-01-22 14:23:43.550275"
+},
+{
+  "content_type": "hue",
+  "modeule": "hue.hub",
+  "method": "",
+  "message": "Stream started",
+  "details": "Hue stream receiving data",
+  "level": "INFO",
+  "module": "hue_receive_stream",
+  "date_time": "2025-01-22 14:24:57.262635"
+},
+{
+  "content_type": "hue",
+  "modeule": "hue.hub",
+  "method": "",
+  "message": "Stream started",
+  "details": "Hue stream receiving data",
+  "level": "INFO",
+  "module": "hue_receive_stream",
+  "date_time": "2025-01-22 14:25:34.553634"
+},
+{
+  "content_type": "hue",
+  "modeule": "hue.hub",
+  "method": "",
+  "message": "Stream started",
+  "details": "Hue stream receiving data",
+  "level": "INFO",
+  "module": "hue_receive_stream",
+  "date_time": "2025-01-22 14:26:11.173176"
+},
+{
+  "content_type": "hue",
+  "modeule": "hue.hub",
+  "method": "",
+  "message": "Stream started",
+  "details": "Hue stream receiving data",
+  "level": "INFO",
+  "module": "hue_receive_stream",
+  "date_time": "2025-01-22 14:43:01.234484"
+},
+{
+  "content_type": "hue",
+  "modeule": "hue.hub",
+  "method": "",
+  "message": "Stream started",
+  "details": "Hue stream receiving data",
+  "level": "INFO",
+  "module": "hue_receive_stream",
+  "date_time": "2025-01-22 14:43:25.118615"
+},
+{
+  "content_type": "hue",
+  "modeule": "hue.hub",
+  "method": "",
+  "message": "Stream started",
+  "details": "Hue stream receiving data",
+  "level": "INFO",
+  "module": "hue_receive_stream",
+  "date_time": "2025-01-22 14:43:39.406479"
+},
+{
+  "content_type": "hue",
+  "modeule": "hue.hub",
+  "method": "",
+  "message": "Stream started",
+  "details": "Hue stream receiving data",
+  "level": "INFO",
+  "module": "hue_receive_stream",
+  "date_time": "2025-01-22 14:55:50.836649"
+},

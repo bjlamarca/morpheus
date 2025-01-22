@@ -14,7 +14,6 @@ def scene_main_view(request):
     return render(request, 'scenes/scenes.html')
 
 def scene_create_view(request):
-    print('request', request)
     scene_form = SceneForm(request.POST or None)
     context = {
         'form': scene_form,
@@ -32,7 +31,7 @@ def scene_create_view(request):
             'form': scene_form,
             'post_url': reverse('scenes:detail', kwargs={'scene_id':scene_obj.pk}),
             'add_url': reverse('scenes:add-device', kwargs={'scene_id':scene_obj.pk}), 
-            'list_url': reverse('scenes:device-list', kwargs={'scene_id':scene_obj.pk}),
+            'dev_list_area_url': reverse('scenes:device-list-area', kwargs={'scene_id':scene_obj.pk}),
             'scene_obj': scene_obj,
             'create': ''
         }

@@ -11,15 +11,19 @@
 <input type="hidden" id="token" value="{{ csrf_token }}">
 
 <div class="container-fluid rounded p-4">
-    
-    <div class="row">
+
+ 
+<div id="alertContainer"></div>
+ 
+  
+  <div class="row">
         <div class="col col-lg-8">
           <ul class="nav nav-tabs" id="myTab" role="tablist">
             <li class="nav-item" role="presentation">
-              <button class="nav-link  active" id="sc-list-tab" data-bs-toggle="tab" data-bs-target="#sc-list" type="button" role="tab" aria-controls="sc-list" aria-selected="true">Scenes</button>
+              <button class="nav-link  active" id="sc-list-tab" data-bs-toggle="tab" data-bs-target="#sc-list" type="button" role="tab">Scenes</button>
             </li>
             <li class="nav-item" role="presentation">
-              <button class="nav-link" id="sc-detail-tab" data-bs-toggle="tab" data-bs-target="#sc-detail" type="button" role="tab" aria-controls="sc-detail" aria-selected="false">Detail</button>
+              <button class="nav-link" id="sc-detail-tab" data-bs-toggle="tab" data-bs-target="#sc-detail" type="button" role="tab">Detail</button>
             </li>
             
             
@@ -28,15 +32,19 @@
           <div class="tab-content mt-3" id="myTabContent">
             
           
-            <div class="tab-pane fade  show active" id="sc-list" role="tabpanel" aria-labelledby="sc-list-tab">
-             
-                  <button class="btn btn-primary" type="button" hx-get="{% url 'scenes:create' %}" hx-target="#sc-detail-area">Add Scene</button>
-                  <div id="sc-list-area" hx-get="{% url 'scenes:scene-list' %}" hx-trigger="load" hx-target="#sc-list-area">
-                    <p>Scenes</p>
-
+            <div class="tab-pane fade  show active" id="sc-list" role="tabpanel">
+              <div id="div-cf-sc-list" class="container-fluid">
+                <div class="row">
+                  <div class="col-auto">
+                    <button class="btn btn-primary" type="button" hx-get="{% url 'scenes:create' %}" hx-target="#sc-detail-area">Add Scene</button>
                   </div>
-                
-              
+                </div>
+                <div class="row">
+                    <div id="sc-list-area" hx-get="{% url 'scenes:scene-list' %}" hx-trigger="load" hx-target="#sc-list-area">
+                      <p>Scenes</p>
+                    </div>
+                </div>
+              </div>
             </div>
 
             <div class="tab-pane fade" id="sc-detail" role="tabpanel" aria-labelledby="sc-detail-tab">
@@ -49,16 +57,8 @@
               
             </div>
 
-            
-            
-
         </div>
-
-
-
-           
-            
-        </div>
+      </div>
     </div>      
 </div>
 
@@ -72,46 +72,34 @@
   };
   sceneList = document.querySelector("#sc-list-area");
   sceneDetail = document.querySelector("#sc-detail-area");
+
+  function showAlert(type, msg) {
+            //types are: success, info, warning, danger
+            const cont = 
+                document.getElementById('alertContainer');
+            while (cont.firstChild) {
+                cont.removeChild(cont.firstChild);
+            }
+            cont.appendChild(document.createElement('br'));
+            const aDiv = document.createElement('div');
+            aDiv.classList.
+                add('alert', 'alert-' + 
+                    type, 'alert-dismissible', 
+                    'fade', 'show');
+            aDiv.setAttribute('role', 'alert');
+            aDiv.innerHTML = 
+            '<strong>' + msg +
+            `<button type="button"
+                class="btn-close" data-bs-dismiss="alert"
+                aria-label="Close">
+            </button>`;
+            cont.appendChild(aDiv);
+            // setTimeout(function () {
+            //     aDiv.classList.remove('show');
+            // }, 3000);
+        }
  
-    // sc = htmx.find("#sc-list-area")
-    // htmx.ajax("GET", "{% url 'scenes:scene-list' %}", "#sc-list-area")
-    
-  
-//   var hueLightWebsocketLoaded = false
 
-//   const triggerTab = (tabId) => {
-//         const tabTriggerEl = document.querySelector(`button[data-bs-target="#${tabId}"]`);
-//         const tab = new bootstrap.Tab(tabTriggerEl);
-//         tab.show(); 
-//   };
-//   const genSocket = new WebSocket(
-//       'ws://'
-//       + window.location.host
-//       + '/ws/devices/gen/'
-      
-//   );
-//   document.querySelector('#sc-detail-area').change = function(e) {
-//     console.log("Changed")
-//   };
-  
-//   function contentChanged() {
-//    console.log("Changed")
-//   }
-//   genSocket.onmessage = function(e) {
-//     const data = JSON.parse(e.data);
-//     document.querySelector('#message').innerHTML = data.message;
-//   };
-
-//   genSocket.onclose = function(e) {
-//     console.error('Dashboard socket closed unexpectedly');
-//   };
-
-//   document.querySelector('#sync-device-db').onclick = function(e) {
-//     genSocket.send(JSON.stringify({
-//       'message': 'sync_device_db'
-//     }));
-//   };
-  
 
 </script>
 

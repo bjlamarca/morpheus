@@ -85,7 +85,10 @@ class HueDevice(models.Model):
         default=None,
         verbose_name='Battery Level'
     )
-
+    morph_sync = models.BooleanField(  
+        default=False,
+        verbose_name='Sync to Devices'
+    )
     class Meta:
         verbose_name = 'Hue Device'
 

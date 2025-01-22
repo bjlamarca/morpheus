@@ -7,7 +7,7 @@ from .models import HueDevice, HueLight, HueButton
 from .color import Converter
 from django.contrib.auth.models import User
 
-
+logger = SystemLogger('hue', __name__)
 
 
 class Hub():
@@ -59,23 +59,20 @@ class Hub():
             url = self.url_pre + '/clip/v2/resource/device_power'
         
         else:
-            sys_log = SystemLogger('Hue Hub', 'Get Items','Not vaild Item(s)', 'ERROR')
-            sys_log.log()
+            logger.log('get_items', 'Not vaild Item(s)', url,  'ERROR')
             return None
         try:
             result = requests.get(url, headers=self.header, verify=False)
             return_dict = dict(json.loads(result.text))
             errors_list = return_dict['errors']
             if bool(errors_list):
-                sys_log = SystemLogger('Hue Hub','Hub returned Errors attempting to get Items', errors_list, 'ERROR')
-                sys_log.log()
+                logger.log('get_items','Hub returned Errors attempting to get Items', errors_list, 'ERROR')
                 return None
             else:
                 data_list = return_dict['data']
                 return data_list
         except Exception as error:
-            sys_log = SystemLogger('Hue Hub','Cannot retrieve items from Hub.', str(error), 'ERROR')
-            sys_log.log()
+            logger.log('get_items','Cannot retrieve items from Hub.', str(error), 'ERROR')
             return None
 
     #Get an item from the hub, returns a dict
@@ -91,87 +88,117 @@ class Hub():
         elif item == 'power':
             url = self.url_pre + '/clip/v2/resource/device_power/' + device_id
         else:
-            sys_log = SystemLogger('Hue Hub', 'Get All Devices','Not a vaild Item(s)', 'ERROR')
-            sys_log.log()
-            return None
+            logger.log('get_item', 'Get All Devices','Not a vaild Item(s)', 'ERROR')
         try:
             result = requests.get(url, headers=self.header, verify=False)
             return_dict = dict(json.loads(result.text))
             errors_list = return_dict['errors']
             if bool(errors_list):
-                sys_log = SystemLogger('Hue Hub','Cannot retrieve data from Hub', errors_list, 'ERROR')
-                sys_log.log()
+                logger.log('get_item','Cannot retrieve data from Hub', errors_list, 'ERROR')
                 return None
             else:
                 data_list = return_dict['data']
                 #return first (only) item from list as a dict
                 return dict(data_list[0])
         except Exception as error:
-            sys_log = SystemLogger('Hue Hub','Cannot retrieve item from Hub.', error, 'ERROR')
-            sys_log.log()
-            return None         
+            logger.log('get_item','Cannot retrieve item from Hub.', error, 'ERROR')
+                    
     
     
     ###Functions to control devices
-    def light_control(self, light_id, data):
-        url = self.url_pre + '/clip/v2/resource/light/' + light_id
-        
-        result = requests.put(url, data=data, headers=self.header, verify=False)
-        print(result.text)
-        return result
-
     def light_set_on(self, state, light_id):
+        try:
             #State is string, 'on' or 'off'
             #light is pk from Light Model
             light_qs = HueLight.objects.get(pk=light_id)
             url = self.url_pre + '/clip/v2/resource/light/' + light_qs.rid
             if state == 'on':
-                 data = '{"on": {"on": true}}'
+                    data = '{"on": {"on": true}}'
             elif state == 'off':
-                 data = '{"on": {"on": false}}'
+                    data = '{"on": {"on": false}}'
             result = requests.put(url, data=data, headers=self.header, verify=False)
-            print(result)
+            if result.status_code == 200:
+                logger.log('light_set_on', 'Light Succesfully Set',  result.text, 'DEBUG')
+            else:
+                logger.log('light_set_on', 'Problem setting light', result.text, 'ERROR')
+        except Exception as error:
+            logger.log('light_set_on','Cannot set Light', error, 'ERROR')
+             
+                
+        
 
     def light_set_dimming(self, dim_level, light_id):
-            #light is pk from Light Model
+        #light is pk from Light Model
+        try:
             light_qs = HueLight.objects.get(pk=light_id)
             url = self.url_pre + '/clip/v2/resource/light/' + light_qs.rid
             data = '{"dimming":{"brightness":' + str(dim_level) + '}}'
-            result = requests.put(url, data=data, headers=self.header, verify=False)
-            print(result)
+            result = requests.put(url, data=data+'dsfsdf', headers=self.header, verify=False)
+            if result.status_code == 200:
+                logger.log('light_set_dimming', 'Light Succesfully Set',  result.text, 'DEBUG')
+            else:
+                logger.log('light_set_dimming', 'Problem setting light', result.text, 'ERROR')
+        except Exception as error:
+            logger.log('light_set_dimming','Cannot set Light', error, 'ERROR')
+            return None 
+        
 
     def light_set_color(self, red, green, blue, light_id):
-        light_qs = HueLight.objects.get(pk=light_id)
-        url = self.url_pre + '/clip/v2/resource/light/' + light_qs.rid
-        convert = Converter(light_qs.gamut_type)
-        xy = convert.rgb_to_xy(red, green, blue)
-        data = '{"color":{"xy":{"x":' + str(xy[0]) + ',"y":' + str(xy[1]) + '}}}'
-        result = requests.put(url, data=data, headers=self.header, verify=False)
-        print(result)
+        try:
+            light_qs = HueLight.objects.get(pk=light_id)
+            url = self.url_pre + '/clip/v2/resource/light/' + light_qs.rid
+            convert = Converter(light_qs.gamut_type)
+            xy = convert.rgb_to_xy(red, green, blue)
+            data = '{"color":{"xy":{"x":' + str(xy[0]) + ',"y":' + str(xy[1]) + '}}}'
+            result = requests.put(url, data=data, headers=self.header, verify=False)
+            if result.status_code == 200:
+                logger.log('light_set_color', 'Light Succesfully Set',  result.text, 'DEBUG')
+            else:
+                logger.log('light_set_color', 'Problem setting light', result.text, 'ERROR')
+        except Exception as error:
+            logger.log('light_set_color','Cannot set Light', error, 'ERROR')
+            
+            
 
     def light_set_color_dim_on(self, red, green, blue, dim_level, on_state, light_id):
-        light_qs = HueLight.objects.get(pk=light_id)
-        url = self.url_pre + '/clip/v2/resource/light/' + light_qs.rid
-        convert = Converter(light_qs.gamut_type)
-        xy = convert.rgb_to_xy(red, green, blue)
-        if on_state == 'on':
-            on_data = '"on": {"on": true}'
-        elif on_state == 'off':
-            on_data = '"on": {"on": false}'
-        data = '{"color":{"xy":{"x":' + str(xy[0]) + ',"y":' + str(xy[1]) + '}}, "dimming":{"brightness":' + str(dim_level) + '},' + on_data + '}'
-        result = requests.put(url, data=data, headers=self.header, verify=False)
-        print(result)
+        try:
+            light_qs = HueLight.objects.get(pk=light_id)
+            url = self.url_pre + '/clip/v2/resource/light/' + light_qs.rid
+            convert = Converter(light_qs.gamut_type)
+            xy = convert.rgb_to_xy(red, green, blue)
+            if on_state == 'on':
+                on_data = '"on": {"on": true}'
+            elif on_state == 'off':
+                on_data = '"on": {"on": false}'
+            data = '{"color":{"xy":{"x":' + str(xy[0]) + ',"y":' + str(xy[1]) + '}}, "dimming":{"brightness":' + str(dim_level) + '},' + on_data + '}'
+            result = requests.put(url, data=data, headers=self.header, verify=False)
+            if result.status_code == 200:
+                logger.log('light_set_color_dim_on', 'Light Succesfully Set',  result.text, 'DEBUG')
+            else:
+                logger.log('light_set_color_dim_on', 'Problem setting light', result.text, 'ERROR')
+        except Exception as error:
+            logger.log('light_set_color_dim_on','Cannot set Light', error, 'ERROR')
+            
+            
 
     def light_set_dim_on(self, dim_level, on_state, light_id):
-        light_qs = HueLight.objects.get(pk=light_id)
-        url = self.url_pre + '/clip/v2/resource/light/' + light_qs.rid
-        if on_state == 'on':
-            on_data = '"on": {"on": true}'
-        elif on_state == 'off':
-            on_data = '"on": {"on": false}'
-        data = '{"dimming":{"brightness":' + str(dim_level) + '},' + on_data + '}'
-        result = requests.put(url, data=data, headers=self.header, verify=False)
-        print(result)
+        try:
+            light_qs = HueLight.objects.get(pk=light_id)
+            url = self.url_pre + '/clip/v2/resource/light/' + light_qs.rid
+            if on_state == 'on':
+                on_data = '"on": {"on": true}'
+            elif on_state == 'off':
+                on_data = '"on": {"on": false}'
+            data = '{"dimming":{"brightness":' + str(dim_level) + '},' + on_data + '}'
+            result = requests.put(url, data=data, headers=self.header, verify=False)
+            if result.status_code == 200:
+                logger.log('light_set_dim_on', 'Light Succesfully Set',  result.text, 'DEBUG')
+            else:
+                logger.log('light_set_dim_on', 'Problem setting light', result.text, 'ERROR')
+        except Exception as error:
+            logger.log('light_set_dim_on','Cannot set Light', error, 'ERROR')
+        
+
 
     
 
@@ -179,25 +206,34 @@ class Hub():
 
     #System for processing messages from Hub
     def get_stream(self):
-        url = self.url_pre + '/eventstream/clip/v2'
-        with httpx.stream('GET', url, headers=self.header, verify=False, timeout=None) as s:
-            s.read()
-            yield s.text
-            
+        try:
+            url = self.url_pre + '/eventstream/clip/v2'
+            with httpx.stream('GET', url, headers=self.header, verify=False, timeout=None) as s:
+                s.read()
+                yield s.text
+        except Exception as error:
+            logger.log('get_stream','Error getting stream', error, 'ERROR')
 
     def loop_stream(self):
-        while True:
-            result = self.get_stream()
-            for data in result:
-                self.hue_process_events(data) 
+        try:
+            while True:
+                result = self.get_stream()
+                for data in result:
+                    self.hue_process_events(data)
+        except Exception as error:
+            logger.log('loop_stream','Error looping stream', error, 'ERROR') 
            
 
     def hue_receive_events(self):
-        print("Start Hue")
-        t = threading.Thread(target=self.loop_stream)
-        t.daemon = True
-        t.start()
-    
+        try:
+            t = threading.Thread(target=self.loop_stream)
+            t.daemon = True
+            t.start()
+        except Exception as error:
+            logger.log('hue_receive_stream','Error starting stream', error, 'ERROR')
+        else:
+            logger.log('hue_receive_stream','Stream started', 'Hue stream receiving data', 'INFO')
+
     def hue_process_events(self, hue_data):
         #refer to hueupdates.md
         try:
@@ -262,27 +298,24 @@ class Hub():
                         pass
                     elif update_type == 'scene':
                         pass
+                    elif update_type == 'button_report':
+                        pass
+                    elif update_type == 'device_software_update':
+                        pass
+                    elif update_type == 'behavior_instance':
+                        pass
+
+
                     else:
-                        sys_log = SystemLogger(__name__,'hue_process_events', update_type + ' is an unknow device type', 'WARNING')
-                        sys_log.log()
+                        logger.log('hue_process_events', 'Error processing events', update_type + ' is an unknow device type', 'ERROR')
+                        
 
                         
 
                     
         except Exception as error:
-            sys_log = SystemLogger(__name__,'hue_process_events', str(error), 'ERROR')
-            sys_log.log()
-
-        
-
-
-              
-
-def list_lights(device_list):
-    for device in device_list:
-        for service in device['services']:
-            if service['rtype'] == 'light':
-                print(device['metadata']['name'], service['rid'], device['product_data']['product_name'], device['product_data']['model_id'])
+            logger.log('hue_process_events', 'Error processing events', str(error), 'ERROR')
+            
 
 
 

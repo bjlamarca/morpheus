@@ -1,10 +1,23 @@
 from django.db import models
 from django.urls import reverse
+from django.contrib.contenttypes.models import ContentType
 
 
 class SystemLog(models.Model):
     date_time = models.DateTimeField()
-    area = models.CharField(
+    content_type = models.ForeignKey(
+        ContentType,
+        null=True,
+        blank=True,
+        on_delete=models.SET_NULL,
+        verbose_name='Content Type'
+    )
+    module = models.CharField(
+        max_length=100,
+        blank=True,
+        null=True
+    ) 
+    method = models.CharField(
         max_length=100,
         blank=True
     )

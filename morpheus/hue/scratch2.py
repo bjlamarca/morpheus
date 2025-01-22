@@ -1,1 +1,1 @@
-{"color":{"xy":{"x":0.4579479647033113,"y":0.4088061886576084}}, "dimming":{"brightness":100}, "on": {"on": true}}
+{'content': {'name': 'illuminance', 'value': '8', 'displayName': 'Multi Sensor - Hall Motion', 'deviceId': '642', 'descriptionText': 'Multi Sensor - Hall Motion: illuminance is 8lux', 'unit': 'lux', 'type': None, 'data': None}}

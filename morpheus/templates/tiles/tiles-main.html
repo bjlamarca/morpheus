@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block layout %}
+
+<div class="container-fluid my-5">
+    
+        <div id="page-tile-area-one" hx-get="{% url 'tiles:page-tile' %}" hx-trigger="load" hx-target="#page-tile-area-one">
+            <p>Scenes</p>
+        </div>
+    
+    
+</div>
+
+
+
+
+<script>
+    const Socket = new WebSocket(
+      'ws://'
+      + window.location.host
+      + '/ws/tiles/gen/'
+      
+  );
+
+</script>
+
+{% endblock %}
+
+
+

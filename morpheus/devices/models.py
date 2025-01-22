@@ -77,12 +77,14 @@ class Device(models.Model):
     )
     device_type = models.ForeignKey(
         DeviceType,
-        on_delete = models.CASCADE,
-        verbose_name='Device Type'
+        on_delete = models.SET_NULL,
+        verbose_name='Device Type',
+        blank=True,
+        null=True
     )
     room = models.ForeignKey(
         Room,
-        on_delete=models.CASCADE,
+        on_delete=models.SET_NULL,
         verbose_name='Room', 
         blank=True,
         null=True   

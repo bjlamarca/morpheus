@@ -59,34 +59,33 @@ class GenConsumer(AsyncWebsocketConsumer):
         text_data_json = json.loads(text_data)
         message = text_data_json['message']
         
-        result = 'Ok'
+        
         if message == 'sync_device_db':
             hue = HueUtilities()
-            result = await sync_to_async(hue.sync_device_db)(1)
+            await sync_to_async(hue.sync_device_db)(1, True, 'hue-gen') 
         elif message == 'sync_morph_dev_type':
             hue = HueUtilities()
-            result = await sync_to_async(hue.sync_morph_device_types)()
+            await sync_to_async(hue.sync_morph_device_types)(True, 'hue-gen')
         elif message == 'sync_morph_dev':
             hue = HueUtilities()
-            result = await sync_to_async(hue.sync_morph_devices)()
+            await sync_to_async(hue.sync_morph_devices)(True, 'hue-gen')
         elif message == 'update_status':
             hue = HueUtilities()
-            result = await sync_to_async(hue.update_all_device_status)(1)
+            await sync_to_async(hue.update_all_device_status)(1, True, 'hue-gen')
+        elif message == 'test':
+            from hubitat.hub import hub
+            await sync_to_async(hub)()
         
-
-        else:
-            result = "Unknown command"
         
         
-        await self.channel_layer.group_send(
-             self.group_name, {"type": "chat.message", "message": result}
-        )
+        # await self.channel_layer.group_send(
+        #      self.group_name, {"type": "chat.message", "message": result}
+        # )
 
     async def chat_message(self, event):
-        message = event["message"]
-        
+                       
         # Send message to WebSocket
-        await self.send(text_data=json.dumps({"message": message}))
+        await self.send(text_data=json.dumps(event['text']))
             
 
 
@@ -219,8 +218,9 @@ class DiagConsumer(AsyncWebsocketConsumer):
             #result = await sync_to_async(sync_device_db)()
 
         elif message == 'test':
-            hue = HueUtilities()
-            await sync_to_async(color_add_favorites)()
+            # from morpheus.tiles.choices import PageTypes
+            # pt = PageTypes()
+            # await sync_to_async(pt.get_page_types_choices)()
             result = 'ok'
 
 

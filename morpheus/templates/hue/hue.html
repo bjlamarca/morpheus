@@ -31,11 +31,11 @@
         
           <div class="tab-content mt-3" id="myTabContent">
             <div class="tab-pane fade show active" id="general" role="tabpanel" aria-labelledby="hue-general-tab">
-              <div class="card">
-                <div class = "card-body">
+              <div class="container-fluid border rounded">
+                <div class="row">
                   <div class="d-grid gap-2 col-6 d-md-block">
                   
-                    <p id="message">Message</p>
+                    
                       <input id="sync-device-db" class="btn btn-outline-primary m-2" type="button"
                           value="Sync Hue Device DB">
                       <input id="update-status" class="btn btn-outline-primary m-2" type="button"
@@ -48,6 +48,11 @@
                       <input id="test" class="btn btn-outline-primary m-2" type="button"
                           value="Test">
                   
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-8">
+                    <textarea class="form-control m-2" id="txt-msg" rows="10"></textarea>
                   </div>
                 </div>
               </div>
@@ -105,9 +110,18 @@
     console.log("open")
   };
   genSocket.onmessage = function(e) {
+    
     const data = JSON.parse(e.data);
-    document.querySelector('#message').innerHTML = data.message;
-  };
+    console.log(data)
+    if (data && data.type === 'display_msg') {
+      if (data.msg_type === 'start_msg') {
+        document.querySelector('#txt-msg').value = data.message;
+      }
+      else if (data.msg_type === 'update_msg') {
+        document.querySelector('#txt-msg').value += '\n' + data.message;
+      }
+    }
+};
 
   genSocket.onclose = function(e) {
     console.error('Dashboard socket closed unexpectedly');

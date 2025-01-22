@@ -8,8 +8,10 @@ from decimal import Decimal
 from utilities.logging import SystemLogger
 from .device import HueDeviceTypes
 from devices.models import Device, DeviceType
-from .signals import hue_device_signal
+from channels.layers import get_channel_layer
+from asgiref.sync import async_to_sync
 
+logger = SystemLogger('hue', __name__)
 
         
       
@@ -19,6 +21,8 @@ class HueUtilities():
     def __init__(self):
         self.hub_id = ''
         self.device_dict = {}
+        self.channel_name = ''
+        self.send_channel_msg = False
 
     def huetype_from_modelid(self, model_id):
         
@@ -32,6 +36,7 @@ class HueUtilities():
             ['LCA005','COLORLAMP'],
             ['LCT016','COLORLAMP'],
             ['RWL020','DIMSWITCH'],
+            ['LCA009', 'COLORLAMP'],
         ]
 
         exists = False
@@ -44,9 +49,13 @@ class HueUtilities():
         else:
             return None
     
-    def sync_device_db(self, hub_id):
-        print('sync')
+    def sync_device_db(self, hub_id, send_channel_msg=False, channel_name=None):
+       
         try:
+            if send_channel_msg:
+                self.send_channel_msg = True
+                self.channel_name = channel_name
+                self.send_message('start_msg', 'Starting Morph Device Type Update')
             self.hub_id = hub_id
             hub = Hub()
             hub.set_hub(self.hub_id)
@@ -121,90 +130,112 @@ class HueUtilities():
 
                         
                     else:
-                        #device type not found
-                        sys_log = SystemLogger(__name__,'Sync Databse: Item type not found, not added to DB', 
-                                            'Hue Type: ' + device['product_data']['model_id'], 'ERROR')
-                        sys_log.log()
-            return 'Database Sync Complete'
-        except Exception as error:
-            sys_log = SystemLogger(__name__,'update_device_status', str(error), 'ERROR')
-            sys_log.log()
-            return str(error)   
+                        self.send_message('update_msg', 'Item type not found, not added to DB' + device['product_data']['model_id'])
+                        logger.log('sync_device_db','Sync Databse: Item type not found, not added to DB', 'Hue Type: ' + device['product_data']['model_id'], 'ERROR')
+            #remove devices that are no longer in the hub
+            self.send_message('update_msg', 'Checking for devices not in hub to remove')
+            morph_devices = HueDevice.objects.all(morph_sync=True)
+            for morph_device in morph_devices:
+                exists = False
+                for device in devices:
+                    if morph_device.hue_id == device['id']:
+                        exists = True
+                        break
+                if not exists:
+                    morph_device.delete()
+                    self.send_message('update_msg', 'Device Removed: ' + morph_device.name)
+            
 
-    def update_device_status(self, device_id, hub_id):
+            logger.log('sync_device_db','Sync Databse: Completed', 'Completed succesfully', 'INFO')
+            self.send_message('update_msg', 'Device Sync Complete')
+        except Exception as error:
+            logger.log('sync_device_db','Sync Databse: Item type not found, not added to DB', 'Hue Type: ' + device['product_data']['model_id'], 'ERROR')
+            self.send_message('update_msg', 'Device Sync Failed') 
+
+             
+
+
+    def update_all_device_status(self, hub_id, send_channel_msg=False, channel_name=None):
+        
         try:
-            device = HueDevice.objects.get(pk=device_id)
+            if send_channel_msg:
+                self.send_channel_msg = True
+                self.channel_name = channel_name
+                self.send_message('start_msg', 'Starting Device Status Update')
+
             hub = Hub()
-            hub.set_hub(hub_id)
-            
-            #Get online status
-            zigbee_rid = device.zigbee_rid
-            if zigbee_rid:
-                zigbee_item = hub.get_item('zigbee',zigbee_rid)
-                if zigbee_item['status'] == 'connectivity_issue':
-                    device.online = False
-                elif zigbee_item['status'] == 'connected':
-                    device.online = True
-                device.save()
-            
-            #Get Power Status
-            power_rid = device.power_rid
-            if power_rid:
-                power_item = hub.get_item('power', power_rid)
-                device.battery_level =  int(power_item['power_state']['battery_level'])
-                device.save()
-
-                        
-            if device.hue_device_type == 'COLORLAMP' or device.hue_device_type == 'WHITELAMP':
-                #query Light model
-                light_qs = HueLight.objects.get(device=device)
-                light_item = hub.get_item('light',light_qs.rid)
-                print(light_item['on']['on'], type(light_item['on']['on']))
-                if light_item['on']['on'] == True:
-                    light_qs.switch = 'on'
-                elif light_item['on']['on'] == False:
-                    light_qs.switch = 'off'
-                if light_item['on']['on'] == True:
-                    light_qs.switch = 'on'
-                elif light_item['on']['on'] == False:
-                    light_qs.switch = 'off'
-                light_qs.dimming =  int(light_item['dimming']['brightness'])
-                light_qs.effect = light_item['effects']['status']
-                if device.hue_device_type == 'COLORLAMP':
-                    convert = Converter(light_qs.gamut_type)
-                    rgb = convert.xy_to_rgb(light_item['color']['xy']['x'], light_item['color']['xy']['y'])
-                    light_qs.red = rgb[0]
-                    light_qs.green = rgb[1]
-                    light_qs.blue = rgb[2]
-                light_qs.save()
-
-            if device.hue_device_type == 'DIMSWITCH':
-                button_qs = HueButton.objects.filter(device=device)
-                for button in button_qs:
-                    button_item = hub.get_item('button', button.rid)
-                    button.updated = button_item['button']['button_report']['updated']
-                    button.event = button_item['button']['button_report']['event']
-                    button.save()
-
-        except Exception as error:
-            sys_log = SystemLogger(__name__,'update_device_status', str(error), 'ERROR')
-            sys_log.log()
-
-
-    def update_all_device_status(self, hub_id):
-        print('update')
-        try: 
+            hub.set_hub(hub_id) 
             devices = HueDevice.objects.all()
+            self.send_message('update_msg', 'Number of devices to update: ' + str(devices.count()))
             for device in devices:
-                self.update_device_status(device.pk, hub_id)
-            return 'Update All Hue Complete'
-        except Exception as error:
-            sys_log = SystemLogger(__name__,'update_device_status', str(error), 'ERROR')
-            sys_log.log()
-            return str(error)
+                try:
+                    self.send_message('update_msg', 'Updating Device: ' + device.name)
+                    zigbee_rid = device.zigbee_rid
+                    if zigbee_rid:
+                        zigbee_item = hub.get_item('zigbee',zigbee_rid)
+                        if zigbee_item['status'] == 'connectivity_issue':
+                            device.online = False
+                        elif zigbee_item['status'] == 'connected':
+                            device.online = True
+                        device.save()
+                    
+                    #Get Power Status
+                    power_rid = device.power_rid
+                    if power_rid:
+                        power_item = hub.get_item('power', power_rid)
+                        device.battery_level =  int(power_item['power_state']['battery_level'])
+                        device.save()
 
-    def sync_morph_device_types(self):
+                                
+                    if device.hue_device_type == 'COLORLAMP' or device.hue_device_type == 'WHITELAMP':
+                        #query Light model
+                        light_qs = HueLight.objects.get(device=device)
+                        light_item = hub.get_item('light',light_qs.rid)
+                        if light_item['on']['on'] == True:
+                            light_qs.switch = 'on'
+                        elif light_item['on']['on'] == False:
+                            light_qs.switch = 'off'
+                        if light_item['on']['on'] == True:
+                            light_qs.switch = 'on'
+                        elif light_item['on']['on'] == False:
+                            light_qs.switch = 'off'
+                        light_qs.dimming =  int(light_item['dimming']['brightness'])
+                        light_qs.effect = light_item['effects']['status']
+                        if device.hue_device_type == 'COLORLAMP':
+                            convert = Converter(light_qs.gamut_type)
+                            rgb = convert.xy_to_rgb(light_item['color']['xy']['x'], light_item['color']['xy']['y'])
+                            light_qs.red = rgb[0]
+                            light_qs.green = rgb[1]
+                            light_qs.blue = rgb[2]
+                        light_qs.save()
+
+                    if device.hue_device_type == 'DIMSWITCH':
+                        button_qs = HueButton.objects.filter(device=device)
+                        for button in button_qs:
+                            button_item = hub.get_item('button', button.rid)
+                            button.updated = button_item['button']['button_report']['updated']
+                            button.event = button_item['button']['button_report']['event']
+                            button.save()
+                except Exception as error:
+                    logger.log('update_all_device_status','Error updating device status', str(error), 'ERROR')
+                    self.send_message('update_msg', 'Device Failed to Update!')
+                else:
+                    self.send_message('update_msg', 'Device Updated')
+
+            
+            logger.log('update_all_device_status','Hue device statue update completed', 'Completed succesfully',  'INFO')
+            self.send_message('update_msg', 'Device Status Update Complete')
+        except Exception as error:
+            logger.log('update_all_device_status','Error updating all status', str(error), 'ERROR')
+            self.send_message('update_msg', 'Device Status Update Failed')
+           
+
+    def sync_morph_device_types(self, send_channel_msg=False, channel_name=None):
         try:
+            if send_channel_msg:
+                self.send_channel_msg = True
+                self.channel_name = channel_name
+                self.send_message('start_msg', 'Starting Morph Device Type Update')
             hue_dev = HueDeviceTypes()
             dev_list = hue_dev.get_device_list()
             for dev in dev_list:
@@ -216,7 +247,7 @@ class HueUtilities():
                         dev_type_qs[0].interface = 'hue'
                         dev_type_qs[0].interface_device_type = dev['hue_device_type']
                         dev_type_qs[0].capability = dev['capability']
-                        dev_type_qs[0].save
+                        dev_type_qs[0].save()
                     else:
                         new_dev_type = DeviceType(
                             display_name = dev['morph_display_name'],
@@ -225,41 +256,81 @@ class HueUtilities():
                             interface_name = dev['hue_name'],
                             capability = dev['capability']
                         )
-                        new_dev_type.save()         
-            return 'Sync Complete'
+                        new_dev_type.save()
+                        self.send_message('update_msg', 'Device Type Added: ' + dev['morph_name'])         
+            logger.log('sync_morph_device_types','Morph Device Type Sync Complete', 'Sync Complete', 'INFO')
+            self.send_message('update_msg', 'Morph Device Type Sync Complete')
         except Exception as error:
-            sys_log = SystemLogger(__name__,'sync_morph_device_types', str(error), 'ERROR')
-            sys_log.log()
-            return str(error)
+            logger.log('sync_morph_device_types','Error syncing Morph Device Types', str(error), 'ERROR')
+            self.send_message('update_msg', 'Error syncing Morph Device Types')
 
-    def sync_morph_devices(self):
+    def sync_morph_devices(self, send_channel_msg=False, channel_name=None):
         try:
+            if send_channel_msg:
+                self.send_channel_msg = True
+                self.channel_name = channel_name
+                self.send_message('start_msg', 'Starting Morph Device Sync')
             hue_dev_content_type = ContentType.objects.get(app_label='hue', model='huedevice')
-            print('content', hue_dev_content_type)
             hue_dev_types = HueDeviceTypes()
             hue_dev_type_list = hue_dev_types.get_device_list()
-            hue_devices = HueDevice.objects.all()
+            hue_devices = HueDevice.objects.filter(morph_sync=True)
             for hue_device in hue_devices:
                 for hue_dev_type in hue_dev_type_list:
                     if hue_device.hue_device_type == hue_dev_type['hue_device_type']:
                         if hue_dev_type['morph_sync'] == True:
-                            morph_dev_type_qs = DeviceType.objects.get(interface_device_type=hue_dev_type['hue_device_type'])
-                            #morph_dev_qs = Device.objects.filter()
-                            
-                            new_morph_dev = Device(
-                                name = hue_device.name,
-                                device_content_type = hue_dev_content_type,
-                                device_object_id = hue_device.pk,
-                                device_type = morph_dev_type_qs
-                            )
-                            new_morph_dev.save()
-                        #print(hue_dev_type['morph_sync'], hue_dev_type['hue_device_type'])
-            return 'Device Sync Complete'
+                            #check if device already exists
+                            morph_device_qs = Device.objects.filter(device_content_type=hue_dev_content_type, device_object_id=hue_device.pk)
+                            if morph_device_qs:
+                                self.send_message('update_msg', 'Device Already Synced: ' + hue_device.name)
+                            else:
+                                morph_dev_type_qs = DeviceType.objects.get(interface_device_type=hue_dev_type['hue_device_type'])
+                                #morph_dev_qs = Device.objects.filter()
+                                
+                                new_morph_dev = Device(
+                                    name = hue_device.name,
+                                    device_content_type = hue_dev_content_type,
+                                    device_object_id = hue_device.pk,
+                                    device_type = morph_dev_type_qs
+                                )
+                                new_morph_dev.save()
+                                self.send_message('update_msg', 'Device Synced: ' + hue_device.name)
+            #remove devices that are no longer in the hub
+            self.send_message('update_msg', 'Checking for devices not in hub to remove')
+            morph_devices = Device.objects.filter(device_content_type=hue_dev_content_type)
+            for morph_device in morph_devices:
+                exists = False
+                for hue_device in hue_devices:
+                    if morph_device.device_object_id == hue_device.pk:
+                        exists = True
+                        break
+                if not exists:
+                    morph_device.delete()
+                    self.send_message('update_msg', 'Device Removed: ' + morph_device.name)
+                        
+            logger.log('sync_morph_devices','Morph Device Sync Complete', 'Sync Complete', 'INFO')
+            self.send_message('update_msg', 'Morph Device Sync Complete')
         except Exception as error:
-            sys_log = SystemLogger(__name__,'sync_morph_devices', str(error), 'ERROR')
-            sys_log.log()
-            return str(error)
+            logger.log('sync_morph_devices','Error syncing Morph Deices', str(error), 'ERROR')
+            self.send_message('update_msg', 'Error syncing Morph Devices')
 
+    def send_message(self, msg_type, message):
+        if self.send_channel_msg:
+            channel_layer = get_channel_layer()
+            send_dict = {'type': 'display_msg','msg_type': msg_type, 'message': message}
+            async_to_sync(channel_layer.group_send)(self.channel_name, {"type": "chat.message", "text": send_dict})
+            
+
+
+    def test(self):
+        print('test')
+        
+        
+        channel_layer = get_channel_layer()
+        print('Test', channel_layer)
+        async_to_sync(channel_layer.group_send)('hue-gen', {"type": "chat.message", "data": "Hello"})
+
+        #return 'Test Complete'
+    
 
         
 

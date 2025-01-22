@@ -1,0 +1,120 @@
+{% extends 'layout.html' %}
+{% load static %}
+{% load render_table from django_tables2 %}
+
+{% block page %}
+
+
+
+
+
+<input type="hidden" id="token" value="{{ csrf_token }}">
+
+<div class="container-fluid rounded p-4">
+
+ 
+  <div id="tilesAlertContainer">
+  </div>
+ 
+  
+  <div class="row">
+        <div class="col col-lg-8">
+          <ul class="nav nav-tabs" id="myTab" role="tablist">
+            <li class="nav-item" role="presentation">
+              <button class="nav-link  active" id="t-pages-tab" data-bs-toggle="tab" data-bs-target="#t-pages" type="button" role="tab">Pages</button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" id="t-setting-tab" data-bs-toggle="tab" data-bs-target="#t-settings" type="button" role="tab">Settings</button>
+            </li>
+            
+            
+          </ul>
+        
+          <div class="tab-content mt-3" id="myTabContent">
+            <div class="tab-pane fade  show active" id="t-pages" role="tabpanel">
+              <div id="t-page-detail-area" class="container-fluid">
+                <div class="row">
+                  <div class="col-auto">
+                    <button class="btn btn-primary" type="button"  hx-get="{% url 'tiles:create' %}"hx-target="#t-page-detail-area">Add Page</button>
+                    
+                  </div>
+                </div>
+                <div class="row">
+                  <div id="t-page-list-area" hx-get="{% url 'tiles:page-list' %}" hx-trigger="load" hx-target="#t-page-list-area">
+                    <p>List</p>
+                  </div>
+                </div>
+              
+              
+              
+              </div>
+            </div>  
+          </div>
+
+            <div class="tab-pane fade" id="t-settings" role="tabpanel">
+              
+                
+                  <div id="t-settings-area" >
+                    <p>Settings</p>
+                  </div>
+                
+              
+            </div>
+
+        </div>
+    </div>
+        
+</div>
+
+<script>
+  var Socket = new WebSocket(
+            'ws://'
+            + window.location.host
+            + '/ws/tiles/gen/'
+        );
+    
+  Socket.onmessage = function(e) {
+      const data = JSON.parse(e.data);
+      console.log(data)
+
+      if (data['type'] === 'page_deleted') {
+        if (data['msg_type'] === 'success') {
+            showTileAlert('success', data['message'])
+            htmx.ajax("GET", "{% url 'tiles:page-list' %}", "#t-page-detail-area")
+        }
+        else {
+            showTileAlert('danger', data['message'])
+        }
+        }
+
+  }
+
+
+  function showTileAlert(type, msg) {
+      //types are: success, info, warning, danger
+      const cont = 
+          document.getElementById('tilesAlertContainer');
+      while (cont.firstChild) {
+          cont.removeChild(cont.firstChild);
+      }
+      cont.appendChild(document.createElement('br'));
+      const aDiv = document.createElement('div');
+      aDiv.classList.
+          add('alert', 'alert-' + 
+              type, 'alert-dismissible', 
+              'fade', 'show');
+      aDiv.setAttribute('role', 'alert');
+      aDiv.innerHTML = 
+      '<strong>' + msg +
+      `<button type="button"
+          class="btn-close" data-bs-dismiss="alert"
+          aria-label="Close">
+      </button>`;
+      cont.appendChild(aDiv);
+      // setTimeout(function () {
+      //     aDiv.classList.remove('show');
+      // }, 3000);
+        }
+</script>
+
+{% endblock %}

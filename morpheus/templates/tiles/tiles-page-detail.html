@@ -1,0 +1,77 @@
+<div class="container-fluid border rounded">
+    <div class="container-fluid m-3">
+        <input class="d-none" id="txt-page-id" value="{{ page_id }}">
+        <form hx-post="{{ post_url }}" hx-target="#t-page-detail-area">
+            {% csrf_token %}
+            <div class="row g-3 align-items-center">
+                
+                <div class="col-auto">
+                    <label for="name" class="col-form-label">Name</label>
+                </div>
+                <div class="col-auto">
+                    {{ form.name }}  
+                </div>
+                <div class="col-auto">
+                    <label for="name" class="col-form-label">Page Type</label>
+                </div>
+                <div class="col-auto">
+                    {{ form.page_type }}  
+                </div>
+                <div class="col-auto">
+                    <button type="submit" class="btn btn-outline-primary btn-sm">Save</button>
+                    {% if form_type == "edit" %}
+                    <button id="btn-page-delete" type="button" class="btn btn-outline-danger btn-sm">Delete</button>
+                    {% endif %}
+                    <button id="btn-page-close" type="button" class="btn btn-outline-secondary btn-sm">Close</button>
+                    
+                </div>
+            </div>
+        </form>
+     </div>
+
+
+
+</div>
+
+<div id="t-page-detail-sub" class = "{{ sub_class }}">
+    <p>Area</p>
+</div>
+
+<div class="modal fade" id="modal-window" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div id="modal-delete-page-area" class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="staticBackdropLabel">Delete Page</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          Are you sure you want to delete this page?
+        </div>
+        <div id="" class="modal-footer">
+          <button id="" type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+          <button id="btn-modal-delete-page" type="button" class="btn btn-danger">Delete</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<script>
+    document.querySelector('#btn-page-close').addEventListener('click', () => {
+        htmx.ajax("GET", "{% url 'tiles:page-list' %}", "#t-page-detail-area")
+    });
+
+    var modal = new bootstrap.Modal(document.querySelector('#modal-window'));
+    
+    document.querySelector('#btn-page-delete').addEventListener('click', () => {
+        modal.show()
+    });
+    document.querySelector('#btn-modal-delete-page').addEventListener('click', () => {
+        pageID = document.querySelector('#txt-page-id').value;
+        modal.hide()
+        Socket.send(JSON.stringify({
+                    'type': 'delete_page','page_id': pageID
+                }));
+        } 
+        
+    );
+</script>

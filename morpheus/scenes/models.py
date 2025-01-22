@@ -71,6 +71,7 @@ class SceneDevices(models.Model):
         verbose_name='Blue'
         )
     
+ 
     
 
 

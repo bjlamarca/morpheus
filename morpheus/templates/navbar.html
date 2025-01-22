@@ -10,20 +10,23 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="{% url 'devices:main' %}">Devices</a>
+                    <a class="nav-link active" href="{% url 'devices:main' %}">Devices</a>
                   </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle nav-link" href="#" id="navbarDropdownMenuLink" 
-                            role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            role="button" data-bs-toggle="dropdown">
                             Interfaces
                     </a>
-                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                    <ul class="dropdown-menu">
                       <li><a class="dropdown-item" href="{% url 'hue:main' %}">Philips Hue</a></li>
                     </ul>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="{% url 'scenes:main' %}">Scenes</a>
-                  </li>
+                    <a class="nav-link" href="{% url 'scenes:main' %}">Scenes</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'tiles:home' %}">Tiles</a>
+                </li>
             </ul>		  
         </div>
     </div>

@@ -5,7 +5,7 @@ class DeviceTable(tables.Table):
     class Meta:
         model = HueDevice
         div_name = 'device_div'
-        fields = ('name', 'hue_device_type', 'online', 'battery_level')
+        fields = ('name', 'hue_device_type', 'online', 'battery_level', 'morph_sync')
         template_name = "htmx-table.html"
 
 class LightTable(tables.Table):

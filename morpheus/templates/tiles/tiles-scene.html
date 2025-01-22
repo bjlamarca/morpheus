@@ -1,0 +1,69 @@
+
+    
+        
+            <div id="tiles-scene-1"  class="ui-scene-tile p-1 mb-2"  title="A Scene" >
+                <div classs="container">
+                   <div class="row">
+                       <div class="col">
+                           <h5>Scene is cool</h5>
+                       </div>
+                    </div>
+                   <div class="row">
+                       <div class="col">
+                           <p>Click Me</p>
+                       </div>
+                   </div> 
+                </div>
+                
+            </div>
+
+      
+  
+
+
+
+<script>
+tile1 = document.querySelector('#tiles-scene-1');
+tile1.addEventListener('click', function(){
+    console.log('Tile 1 clicked');
+    Socket.send(JSON.stringify({
+      'message': 'click',
+    }));
+    
+});
+tile1.addEventListener('touchstart', function(){
+    console.log('Tile 1 ts');
+    tile1.classList.add('ui-tile-clicked');
+    Socket.send(JSON.stringify({
+      'message': 'ts',
+    }));
+    
+});
+tile1.addEventListener('touchend', function(){
+    console.log('Tile 1 te');
+    tile1.classList.remove('ui-tile-clicked');
+    Socket.send(JSON.stringify({
+      'message': 'te',
+    }));
+    
+});
+tile1.addEventListener('mousedown', function(){
+    console.log('Tile 1 ts');
+    tile1.classList.add('ui-tile-clicked');
+    Socket.send(JSON.stringify({
+      'message': 'mu',
+    }));
+    
+});
+tile1.addEventListener('mouseup', function(){
+    console.log('Tile 1 te');
+    tile1.classList.remove('ui-tile-clicked');
+    Socket.send(JSON.stringify({
+      'message': 'te',
+    }));
+    
+});
+
+
+
+</script>

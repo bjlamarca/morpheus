@@ -1,0 +1,14 @@
+
+  
+    
+    <div class="row row-cols-auto">
+        {% for tile in tiles %}
+            <div class="col">
+                <div id="tile-area-{{ tile.number }}" hx-get="{{ tile.url }}" hx-trigger="load" hx-target="#tile-area-{{ tile.number }}">
+                    
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+        
+        
