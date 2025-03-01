@@ -1,7 +1,7 @@
 from asgiref.sync import sync_to_async
 import json
 from channels.generic.websocket import AsyncWebsocketConsumer
-from .tiles import delete_page
+from .tiles import delete_page, delete_section
 
 
 
@@ -24,7 +24,8 @@ class TileConsumer(AsyncWebsocketConsumer):
         result = {'type': 'no data'}
         if text_data_json['type'] == 'delete_page':
             result = await sync_to_async(delete_page)(text_data_json['page_id'])
-          
+        if text_data_json['type'] == 'delete_section':
+            result = await sync_to_async(delete_section)(text_data_json['section_id'])
 
         await self.send(text_data=json.dumps(result))
 

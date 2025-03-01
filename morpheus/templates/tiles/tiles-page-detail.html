@@ -1,8 +1,14 @@
 <div class="container-fluid border rounded">
-    <div class="container-fluid m-3">
+    <div id="t-page-detail-area" class="container-fluid m-3">
         <input class="d-none" id="txt-page-id" value="{{ page_id }}">
-        <form hx-post="{{ post_url }}" hx-target="#t-page-detail-area">
+        <form hx-post="{{ post_url }}" hx-target="#t-page-area">
             {% csrf_token %}
+            <div class="row my-3">
+                <div class="col-auto">
+                    <a href="{% url 'tiles:page-main' %}" hx-get="#t-page-area" class="link-underline-primary">Back</a>
+                    <h1 class="display-6">Page</h1>
+                </div>
+            </div>
             <div class="row g-3 align-items-center">
                 
                 <div class="col-auto">
@@ -31,41 +37,40 @@
 
 
 
-</div>
 
-<div id="t-page-detail-sub" class = "{{ sub_class }}">
-    <p>Area</p>
-</div>
 
-<div class="modal fade" id="modal-window" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div id="modal-delete-page-area" class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="staticBackdropLabel">Delete Page</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+    <div id="t-page-section-area" class = "container-fluid my-3 {{ sub_class }}">
+        <div class="row">
+            <div class="col-auto">
+            <button class="btn btn-primary" type="button" hx-get="{{ add_section_url }}"  hx-target="#t-page-area">Add Section</button>
+            
+            </div>
         </div>
-        <div class="modal-body">
-          Are you sure you want to delete this page?
+        {% if form_type == "edit" %}
+        <div class="row">
+            <div id="t-page-list-area" hx-get="{{ section_list_url }}" hx-trigger="load" hx-target="#t-page-list-area">
+                <p>List</p>
+            </div>
         </div>
-        <div id="" class="modal-footer">
-          <button id="" type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
-          <button id="btn-modal-delete-page" type="button" class="btn btn-danger">Delete</button>
-        </div>
-      </div>
+        {% endif %}
     </div>
-  </div>
+</div>
+
+
 
 <script>
     document.querySelector('#btn-page-close').addEventListener('click', () => {
-        htmx.ajax("GET", "{% url 'tiles:page-list' %}", "#t-page-detail-area")
+        htmx.ajax("GET", "{% url 'tiles:page-main' %}", "#t-page-area")
     });
 
     var modal = new bootstrap.Modal(document.querySelector('#modal-window'));
     
     document.querySelector('#btn-page-delete').addEventListener('click', () => {
+        document.querySelector('#modal-title').innerHTML = 'Delete Page';
+        document.querySelector('#modal-body').innerHTML = 'Are you sure you want to delete this page?';
         modal.show()
     });
-    document.querySelector('#btn-modal-delete-page').addEventListener('click', () => {
+    document.querySelector('#btn-modal-delete').addEventListener('click', () => {
         pageID = document.querySelector('#txt-page-id').value;
         modal.hide()
         Socket.send(JSON.stringify({

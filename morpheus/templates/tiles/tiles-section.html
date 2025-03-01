@@ -1,0 +1,70 @@
+<div class="container-fluid border rounded">
+    <div id="t-section-detail-area" class="container-fluid m-3">
+        <form hx-post="{{ post_url }}" hx-target="#t-page-area">
+            {% csrf_token %}
+            <div class="row my-3">
+                <div class="col-auto">
+                    <a hx-get="{% url 'tiles:detail' page_obj.id %}" class="link-underline-primary" style='cursor: pointer;' hx-target="#t-page-area">Back</a>
+                  <h1 class="display-6">Section</h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-auto">
+                    <h5>Page: {{ page_obj.name }} </h5>
+                </div>
+            </div>
+            <div class="row g-3 align-items-center">
+                
+                <div class="col-auto">
+                    <label for="name" class="col-form-label">Name</label>
+                </div>
+                <div class="col-auto">
+                    {{ form.name }}  
+                </div>
+                <div class="col-auto">
+                    <label for="name" class="col-form-label">Sort</label>
+                </div>
+                <div class="col-auto">
+                    {{ form.sort }}  
+                </div>
+                <div class="col-auto d-none">
+                    {{ form.page }}  
+                </div>
+                <div class="col-auto">
+                    <button type="submit" class="btn btn-outline-primary btn-sm">Save</button>
+                    {% if form_type == "edit" %}
+                    <button id="btn-section-delete" type="button" class="btn btn-outline-danger btn-sm">Delete</button>
+                    {% endif %}
+                    <button id="btn-section-close" type="button" class="btn btn-outline-secondary btn-sm">Close</button>
+                   
+                    
+                </div>
+            </div>
+        </form>
+     </div>
+
+
+
+</div>
+
+
+<script>
+    document.querySelector('#btn-section-close').addEventListener('click', () => {
+        htmx.ajax("GET", "{% url 'tiles:detail' page_obj.id %}", "#t-page-area")
+    });
+
+    var modal = new bootstrap.Modal(document.querySelector('#modal-window'));
+    
+    document.querySelector('#btn-section-delete').addEventListener('click', () => {
+        document.querySelector('#modal-title').innerHTML = 'Delete Section';
+        document.querySelector('#modal-body').innerHTML = 'Are you sure you want to delete this section?';
+        modal.show()
+    });
+    document.querySelector('#btn-modal-delete').addEventListener('click', () => {
+        modal.hide()
+        Socket.send(JSON.stringify({
+                    'type': 'delete_section','section_id': "{{ section_obj.id }}"
+                }));
+        } 
+        
+    );
