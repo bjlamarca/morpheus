@@ -47,6 +47,7 @@ class TileTypes():
             return_list.append(tile_tuple)
 
         print(return_list)
+        return return_list
 
 
 

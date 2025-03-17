@@ -1,0 +1,43 @@
+<div class="container-fluid border rounded">
+    <div id="t-tile-detail-area" class="container-fluid m-3">
+        <input class="d-none" id="txt-page-id" value="{{ page_id }}">
+        <form hx-post="{{ post_url }}" hx-target="#t-tile-area">
+            {% csrf_token %}
+            <div class="row my-3">
+                <div class="col-auto">
+                    <a href="{% url 'tiles:section-detail' section_obj.id %}" hx-get="#t-page-area" class="link-underline-primary">Back</a>
+                    <h4 class="display-6">Tile</h4>
+                </div>
+            </div>
+            <div class="row g-3 align-items-center">
+                
+                <div class="col-auto">
+                    <label for="name" class="col-form-label">Name</label>
+                </div>
+                <div class="col-auto">
+                    {{ form.name }}  
+                </div>
+                <div class="col-auto">
+                    <label for="name" class="col-form-label">Tile Type</label>
+                </div>
+                <div class="col-auto">
+                    {{ form.tile_type }}  
+                </div>
+                <div class="col-auto">
+                    <button type="submit" class="btn btn-outline-primary btn-sm">Save</button>
+                    {% if form_type == "edit" %}
+                    <button id="btn-tile-delete" type="button" class="btn btn-outline-danger btn-sm">Delete</button>
+                    {% endif %}
+                    <button id="btn-tile-close" type="button" class="btn btn-outline-secondary btn-sm">Close</button>
+                    
+                </div>
+            </div>
+        </form>
+     </div>
+
+
+
+
+
+    
+</div>

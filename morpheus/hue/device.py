@@ -50,6 +50,7 @@ class HueDeviceTypes():
             },
             
         ]
+    
     def get_device_list(self):
         return self.device_list
     

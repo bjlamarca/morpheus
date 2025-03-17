@@ -22,7 +22,10 @@ urlpatterns = [
     path("admin/section-list/<int:page_id>", views.section_list_view, name="section-list"),
     path("admin/section-create/<int:page_id>" , views.section_create_view, name="section-create"),
     path("admin/section-detail/<int:section_id>", views.section_detail_view, name="section-detail"),
-    path("admin/tiles-list/<int:section_id>", views.tiles_list_view, name="tiles-list"),
+    path("admin/tile-list/<int:section_id>", views.tiles_list_view, name="tile-list"),
+    path("admin/tile-create/<int:section_id>", views.tile_create_view, name="tile-create"),
+    path("admin/tile-detail/<int:tile_id>", views.tile_detail_view, name="tile-detail"),
+    
 
 
 

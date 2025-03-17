@@ -5,12 +5,12 @@
             <div class="row my-3">
                 <div class="col-auto">
                     <a hx-get="{% url 'tiles:detail' page_obj.id %}" class="link-underline-primary" style='cursor: pointer;' hx-target="#t-page-area">Back</a>
-                  <h1 class="display-6">Section</h1>
+                  <p class="h3">Section</p>
                 </div>
             </div>
             <div class="row">
                 <div class="col-auto">
-                    <h5>Page: {{ page_obj.name }} </h5>
+                    <p class="h6">Page: {{ page_obj.name }} </p>
                 </div>
             </div>
             <div class="row g-3 align-items-center">
@@ -43,6 +43,21 @@
         </form>
      </div>
 
+     <div id="t-section-tile-area" class = "container-fluid my-3 {{ sub_class }}">
+        <div class="row">
+            <div class="col-auto">
+            <button class="btn btn-primary" type="button" hx-get="{{ add_tile_url }}"  hx-target="#t-page-area">Add Tile</button>
+            
+            </div>
+        </div>
+        {% if form_type == "edit" %}
+        <div class="row">
+            <div id="t-tile-list-area" hx-get="{{ tile_list_url }}" hx-trigger="load" hx-target="#t-tile-list-area">
+                <p>List</p>
+            </div>
+        </div>
+        {% endif %}
+    </div>
 
 
 </div>

@@ -39,7 +39,7 @@ class SystemLogger():
             content_type = ContentType.objects.get(app_label=self.logitem['content_type'])
         except:
             content_type = None
-        f = open('logs/systemlog.json', 'a')
+        f = open('logs/systemlog.log', 'a')
         self.logitem['date_time'] = str(datetime.now())
         log_json = json.dumps(self.logitem, indent=2) 
         f.write(log_json + ',\n')
@@ -57,7 +57,7 @@ class SystemLogger():
             new_log.save()
 
         except Exception as error:
-            f = open('systemlog.json', 'a')
+            f = open('systemlog.log', 'a')
             self.logitem['date_time'] = str(datetime.now())
             self.logitem['area'] = 'System Log'
             self.logitem['message'] = 'Unable to write error to DB'

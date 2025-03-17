@@ -6,7 +6,7 @@
             <div class="row my-3">
                 <div class="col-auto">
                     <a href="{% url 'tiles:page-main' %}" hx-get="#t-page-area" class="link-underline-primary">Back</a>
-                    <h1 class="display-6">Page</h1>
+                    <p class="h3">Page</p>
                 </div>
             </div>
             <div class="row g-3 align-items-center">
@@ -48,7 +48,7 @@
         </div>
         {% if form_type == "edit" %}
         <div class="row">
-            <div id="t-page-list-area" hx-get="{{ section_list_url }}" hx-trigger="load" hx-target="#t-page-list-area">
+            <div id="t-section-list-area" hx-get="{{ section_list_url }}" hx-trigger="load" hx-target="#t-section-list-area">
                 <p>List</p>
             </div>
         </div>

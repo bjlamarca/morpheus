@@ -1,9 +1,9 @@
 from django.shortcuts import render
 from django.urls import reverse
-from .forms import PageForm, SectionForm
+from .forms import PageForm, SectionForm, TileForm
 from .models import Page, PageSection, Tile
 from django_tables2 import SingleTableView, RequestConfig
-from .tables import PageTable, PageSectionTable
+from .tables import PageTable, PageSectionTable, TileTable
 
 
 def admin_view(request):
@@ -11,6 +11,13 @@ def admin_view(request):
 
 def page_main_view(request):
     return render(request, 'tiles/tiles-pages.html')
+
+
+class PageListView(SingleTableView):
+    model = Page
+    paginate_by = 100
+    table_class = PageTable
+    template_name = 'tiles/tiles-page-list.html'
 
 def page_create_view(request):
     print('page_create_view', request.POST)
@@ -94,6 +101,9 @@ def section_detail_view(request, section_id):
         'form': section_form,
         'section_obj': section_obj,
         'form_type': 'edit',
+        'ub_class': '',
+        'add_tile_url': reverse('tiles:tile-create', kwargs={'section_id':section_obj.pk}),
+        'tile_list_url': reverse('tiles:tile-list', kwargs={'section_id':section_obj.pk}),
     }
     
     if section_form.is_valid():
@@ -113,17 +123,57 @@ def section_list_view(request, page_id):
     }
     return render(request, 'tiles/tiles-section-list.html', context=context)
 
-class PageListView(SingleTableView):
-    model = Page
-    paginate_by = 100
-    table_class = PageTable
-    template_name = 'tiles/tiles-page-list.html'
-    
-
 def tiles_list_view(request, section_id):
     section_obj = PageSection.objects.get(pk=section_id)
     tiles = Tile.objects.filter(page_section=section_obj)
+    table = TileTable(tiles)
+    RequestConfig(request, paginate=False).configure(table)
+    context = {
+        'table': table,
+        'section_obj': section_obj,
+    }
+    return render(request, 'tiles/tiles-tile-list.html', context=context)
     
+
+def tile_detail_view(request, tile_id):
+    tile_obj = Tile.objects.get(pk=tile_id)
+    tile_form = TileForm(request.POST or None, instance=tile_obj)
+    print('tile_obj', tile_obj)
+    context = {
+        'tile_obj': tile_obj,
+        'post_url': reverse('tiles:tile-detail', kwargs={'tile_id':tile_obj.pk}),
+        'form': tile_form,
+        'form_type': 'edit',
+
+    }
+    return render(request, 'tiles/tiles-tile-detail.html', context=context)
+
+def tile_create_view(request, section_id):
+    section_obj = PageSection.objects.get(pk=section_id)
+    print('section_obj', section_obj)
+    tile_form = TileForm(request.POST or None, section_obj=section_obj)
+    context = {
+        'section_obj': section_obj,
+        'post_url': reverse('tiles:tile-create', kwargs={'section_id':section_id}),
+        'form': tile_form,
+        'form_type': 'create',
+    }
+    
+
+    if tile_form.is_valid():
+        tile_obj = tile_form.save()
+        tile_form = TileForm(request.POST or None, section_obj=section_obj)
+        context = {
+            'section_obj': section_obj,
+            'post_url': reverse('tiles:tile-detail', kwargs={'tile_id':tile_obj.pk}),
+            'form': tile_form,
+            'tile_obj': tile_obj,
+            'form_type': 'edit',
+        }
+        
+    return render(request, 'tiles/tiles-tile-detail.html', context=context)
+    
+
 
 
 #### Tiles UI
